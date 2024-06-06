@@ -8,10 +8,17 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "starship1": "url('/images/starship1.jpg')",
+        "starship2": "url('/images/starship2.jpg')",
+        "starship3": "url('/images/starship3.jpeg')",
+        "starlink1": "url('/images/starlink1.jpg')",
+        "moon1": "url('/images/moon1.png')",
+        "moon2": "url('/images/moon2.jpeg')",
+        "lol": "url('/images/lol.jpg')",
       },
+      fontFamily: {
+        'supreme': ['Supreme', 'sans-serif'],
+      }
     },
   },
   plugins: [],
