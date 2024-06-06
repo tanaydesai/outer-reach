@@ -9,6 +9,7 @@ export const Navbar = () => {
                 SPACE
                 <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
             </div>   
+            
         </div>
         <div className=' border-r-2 group border-white/70 cursor-default flex-1 py-4 px-3 '>
             <div className='w-fit'>
