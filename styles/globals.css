@@ -4,7 +4,11 @@
 
 
   @font-face {
-    font-family: "Supreme";
+    font-family: "rajdhani-bold";
     src: url("../assests/fonts/Rajdhani/Rajdhani-SemiBold.otf") format("opentype");
   }
-  
+
+  @font-face {
+    font-family: "rajdhani-regular";
+    src: url("../assests/fonts/Rajdhani/Rajdhani-Regular.otf") format("opentype");
+  }

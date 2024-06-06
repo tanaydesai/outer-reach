@@ -14,10 +14,14 @@ module.exports = {
         "starlink1": "url('/images/starlink1.jpg')",
         "moon1": "url('/images/moon1.png')",
         "moon2": "url('/images/moon2.jpeg')",
+        "moon3": "url('/images/moon3.jpeg')",
+        "mars1": "url('/images/mars1.jpeg')",
+        "mars2": "url('/images/mars2.jpeg')",
         "lol": "url('/images/lol.jpg')",
       },
       fontFamily: {
-        'supreme': ['Supreme', 'sans-serif'],
+        'rajdhani-bold': ['rajdhani-bold', 'sans-serif'],
+        'rajdhani-regular': ['rajdhani-regular', 'sans-serif'],
       }
     },
   },
