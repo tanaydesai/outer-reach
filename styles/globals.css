@@ -12,3 +12,8 @@
     font-family: "rajdhani-regular";
     src: url("../assests/fonts/Rajdhani/Rajdhani-Regular.otf") format("opentype");
   }
+
+  @font-face {
+    font-family: "planer-m";
+    src: url("../assests/fonts/Planer/PlanerTest-Light-BF662b1a5e1e838.otf") format("opentype");
+  }
