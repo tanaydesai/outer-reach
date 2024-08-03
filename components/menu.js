@@ -18,22 +18,22 @@ export const Menu = ({children}) => {
             <DrawerTitle className="font-planer-m text-[#706e6e] text-center text-[19px] mb-1 uppercase">Select Domain</DrawerTitle>
 
             <div className='grid w-full mb-2 max-w-[800px] place-items-center mx-auto grid-flow-row grid-cols-2 md:grid-cols-3 gap-3 md:gap-2'>
-                <div className='group min-w-[50px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
+                <div className='group min-w-[100px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
                     <Image src={bag} alt="image" className='w-full h-auto' />
                 </div>
-                <div className='min-w-[50px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
+                <div className='min-w-[100px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
                     <Image src={blue} alt="image" className='w-full h-full' />
                 </div>
-                <div className='min-w-[50px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
+                <div className='min-w-[100px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
                     <Image src={space} alt="image" className='w-full h-auto' />
                 </div>
-                <div className='min-w-[50px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
+                <div className='min-w-[100px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
                     <Image src={blue} alt="image" className='w-full h-full' />
                 </div>
-                <div className='min-w-[50px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
+                <div className='min-w-[100px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
                     <Image src={space} alt="image" className='w-full h-auto' />
                 </div>
-                <div className='min-w-[50px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
+                <div className='min-w-[100px] hover:opacity-85  max-w-[250px] h-auto rounded-[9px] overflow-auto'>
                     <Image src={bag} alt="image" className='w-full h-auto' />
                 </div>
             </div>
