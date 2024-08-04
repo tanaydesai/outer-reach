@@ -47,6 +47,7 @@ module.exports = {
         "bg1": "url('/images/bg1.png')",
         "bg2": "url('/images/bg2.png')",
         "bg3": "url('/images/bg3.png')",
+        "grain": "url('/images/grain.png')",
       },
       fontFamily: {
         'rajdhani-bold': ['rajdhani-bold', 'sans-serif'],
