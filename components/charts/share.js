@@ -76,6 +76,7 @@ export function Share({ className }) {
                         y={viewBox.cy}
                         textAnchor="middle"
                         dominantBaseline="middle"
+                        className="font-planer-m"
                       >
                         <tspan
                           x={viewBox.cx}
