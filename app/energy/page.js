@@ -14,18 +14,18 @@ export default function Home() {
                 <div className="w-full md:w-1/4 border-r-[1px] border-b-[1px] border-white/[.80] flex-shrink-0 h-fit md:h-full">
                   <div className="w-full h-fit p-5 border-b-[1px] border-white/[.80]">
                     <h1 className="text-[60px] font-planer-m">{">"} Energy</h1>
-                    <h1 className="text-[25px] font-planer-m text-slate-500">Storage</h1>
+                    <h1 className="text-[25px] font-planer-m text-[#092635]">Storage</h1>
                   </div>
-                  <div className="h-fit px-5 py-3 md:p-5">
-                    <div className="flex gap-2 mb-2 items-start mt-3 text-[14px] md:text-[15px] font-rajdhani-regular">
+                  <div className="h-fit w-full px-5 py-3 md:p-5">
+                    <div className="flex gap-2 mb-2 items-start mt-3 text-[15px] font-rajdhani-regular">
                       <div className="w-3 h-3 flex-shrink-0 bg-[#092635] mt-1"/>
                       <div>10,000 kWh is the annual avg. US energy consumption.</div>
                     </div>
-                    <div className="flex gap-2 mb-2 items-start mt-3 text-[14px] md:text-[15px] font-rajdhani-regular">
+                    <div className="flex gap-2 mb-2 items-start mt-3 text-[15px] font-rajdhani-regular">
                       <div className="w-3 h-3 flex-shrink-0 bg-[#092635] mt-1"/>
                       <div>10,000 kWh is the annual avg. US energy consumption.</div>
                     </div>
-                    <div className="flex gap-2 mb-2 items-start mt-3 text-[14px] md:text-[15px] font-rajdhani-regular">
+                    <div className="flex gap-2 mb-2 items-start mt-3 text-[15px] font-rajdhani-regular">
                       <div className="w-3 h-3 flex-shrink-0 bg-[#092635] mt-1"/>
                       <div>10,000 kWh is the annual avg. US energy consumption.</div>
                     </div>
