@@ -1,5 +1,8 @@
 "use client"
-import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
+
+import * as React from "react"
+import { Label, Pie, PieChart } from "recharts"
+
 import {
   ChartConfig,
   ChartContainer,
@@ -9,58 +12,92 @@ import {
 
 
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { browser: "chrome", visitors: 275, fill: "#392467" },
+  { browser: "safari", visitors: 200, fill: "#5D3587" },
+  { browser: "firefox", visitors: 287, fill: "#A367B1" },
+  { browser: "edge", visitors: 173, fill: "#FFD1E3" },
+  { browser: "other", visitors: 190, fill: "#E0AED0" },
 ]
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  visitors: {
+    label: "Visitors",
+  },
+  chrome: {
+    label: "Chrome",
     color: "hsl(var(--chart-1))",
   },
-  mobile: {
-    label: "Mobile",
+  safari: {
+    label: "Safari",
     color: "hsl(var(--chart-2))",
   },
-} 
+  firefox: {
+    label: "Firefox",
+    color: "hsl(var(--chart-3))",
+  },
+  edge: {
+    label: "Edge",
+    color: "hsl(var(--chart-4))",
+  },
+  other: {
+    label: "Other",
+    color: "hsl(var(--chart-5))",
+  },
+}
 
-export function Share({className}) {
+export function Share({ className }) {
+  const totalVisitors = React.useMemo(() => {
+    return chartData.reduce((acc, curr) => acc + curr.visitors, 0)
+  }, [])
+
   return (
-        <ChartContainer config={chartConfig} className={className}>
-          <AreaChart accessibilityLayer data={chartData} >
-            {/* <CartesianGrid vertical={false} /> */}
-            {/* <XAxis
-              dataKey="month"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)}
-            /> */}
+        <ChartContainer
+          config={chartConfig}
+          className={className}
+        >
+          <PieChart>
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent indicator="dot" />}
+              content={<ChartTooltipContent hideLabel />}
             />
-            <Area
-              dataKey="mobile"
-              type="natural"
-              fill="var(--color-mobile)"
-              fillOpacity={0.4}
-              stroke="var(--color-mobile)"
-              stackId="a"
-            />
-            <Area
-              dataKey="desktop"
-              type="natural"
-              fill="var(--color-desktop)"
-              fillOpacity={0.4}
-              stroke="var(--color-desktop)"
-              stackId="a"
-            />
-          </AreaChart>
+            <Pie
+              data={chartData}
+              dataKey="visitors"
+              nameKey="browser"
+              innerRadius={60}
+              strokeWidth={5}
+            >
+              <Label
+                content={({ viewBox }) => {
+                  if (viewBox && "cx" in viewBox && "cy" in viewBox) {
+                    return (
+                      <text
+                        x={viewBox.cx}
+                        y={viewBox.cy}
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                      >
+                        <tspan
+                          x={viewBox.cx}
+                          y={viewBox.cy}
+                          className="fill-foreground text-3xl font-bold"
+                        >
+                          {totalVisitors.toLocaleString()}
+                        </tspan>
+                        <tspan
+                          x={viewBox.cx}
+                          y={(viewBox.cy || 0) + 24}
+                          className="fill-muted-foreground"
+                        >
+                          Visitors
+                        </tspan>
+                      </text>
+                    )
+                  }
+                }}
+              />
+            </Pie>
+          </PieChart>
         </ChartContainer>
   )
 }
