@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div>
       <div className='relative bg-cover bg-bg3 bg-right overflow-x-hidden  w-[100vw] h-screen'>
-          <hr className="absolute left-3 md:left-7 h-full w-[1px] bg-white/[.80]"/>
-          <hr className="absolute right-3 md:right-7 h-full w-[1px] bg-white/[.80]"/>
+          {/* <hr className="absolute left-3 md:left-7 h-full w-[1px] bg-white/[.80]"/>
+          <hr className="absolute right-3 md:right-7 h-full w-[1px] bg-white/[.80]"/> */}
 
           {/* <video className='w-full h-full object-cover' autoPlay loop muted>
             <source src='/videos/wind2.mp4' type='video/mp4'  className="w-full h-auto"/>

@@ -51,25 +51,25 @@ export function Mix({className}) {
             <Area
               dataKey="mobile"
               type="natural"
-              fill="var(--color-mobile)"
-              fillOpacity={0.4}
-              stroke="var(--color-mobile)"
+              fill="#ffffff"
+              fillOpacity={0.1}
+              stroke="#f1f1f1"
+              stackId="a"
+            />
+           <Area
+              dataKey="mobile"
+              type="natural"
+              fill="#ffffff"
+              fillOpacity={0.1}
+              stroke="#f1f1f1"
               stackId="a"
             />
             <Area
-              dataKey="desktop"
+              dataKey="mobile"
               type="natural"
-              fill="var(--color-desktop)"
-              fillOpacity={0.4}
-              stroke="var(--color-desktop)"
-              stackId="a"
-            />
-            <Area
-              dataKey="app"
-              type="natural"
-              fill="var(--color-app)"
-              fillOpacity={0.4}
-              stroke="var(--color-app)"
+              fill="#ffffff"
+              fillOpacity={0.1}
+              stroke="#f1f1f1"
               stackId="a"
             />
           </AreaChart>
