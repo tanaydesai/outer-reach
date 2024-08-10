@@ -36,14 +36,6 @@ export function Mix({className}) {
   return (
         <ChartContainer config={chartConfig} className={className}>
           <AreaChart accessibilityLayer data={chartData} >
-            {/* <CartesianGrid vertical={false} /> */}
-            {/* <XAxis
-              dataKey="month"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)}
-            /> */}
             <ChartTooltip
               cursor={false}
               content={<ChartTooltipContent indicator="dot" />}
@@ -51,25 +43,25 @@ export function Mix({className}) {
             <Area
               dataKey="mobile"
               type="natural"
-              fill="#ffffff"
-              fillOpacity={0.1}
-              stroke="#f1f1f1"
+              fill="#231a0f"
+              fillOpacity={0.5}
+              stroke="#231a0f"
               stackId="a"
             />
            <Area
               dataKey="mobile"
               type="natural"
-              fill="#ffffff"
-              fillOpacity={0.1}
-              stroke="#f1f1f1"
+              fill="#000000"
+              fillOpacity={0.4}
+              stroke="#000000"
               stackId="a"
             />
             <Area
               dataKey="mobile"
               type="natural"
-              fill="#ffffff"
+              fill="#211a1d"
               fillOpacity={0.1}
-              stroke="#f1f1f1"
+              stroke="#000000"
               stackId="a"
             />
           </AreaChart>
