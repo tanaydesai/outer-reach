@@ -1,7 +1,7 @@
 "use client"
 import { ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Menu } from '@/components/menu';
+import { Menu } from '@/components/app/menu';
 
 export default function Home() {
   return (

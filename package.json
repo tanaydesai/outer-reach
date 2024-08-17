@@ -14,10 +14,14 @@
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-tabs": "^1.1.0",
+    "@react-three/drei": "^9.109.5",
+    "@react-three/fiber": "^8.17.5",
     "autoprefixer": "10.4.19",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dat.gui": "^0.7.9",
     "framer-motion": "^11.3.21",
+    "gsap": "^3.12.5",
     "lucide-react": "^0.419.0",
     "next": "14.2.3",
     "postcss": "8.4.38",
@@ -29,6 +33,7 @@
     "tailwind-merge": "^2.4.0",
     "tailwindcss": "3.4.3",
     "tailwindcss-animate": "^1.0.7",
+    "three": "^0.167.1",
     "vaul": "^0.9.1"
   }
 }
