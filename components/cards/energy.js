@@ -10,7 +10,7 @@ export const EnergyData = ({children}) => {
   return (
     <Drawer>
     <DrawerTrigger>{children}</DrawerTrigger>
-    <DrawerContent className='w-fit right-[calc(50%-200px)] min-h-[400px] md:right-2 h-fit bottom-2 rounded-[5px] bg-[#231a0f] text-white pb-3'> 
+    <DrawerContent className='w-full md:w-fit min-h-[400px] md:right-2 h-fit md:bottom-2 rounded-t-[25px] md:rounded-[5px] bg-[#231a0f] text-white pb-3'> 
         <DrawerTitle className="font-planer-m text-left text-[24px] p-5 uppercase">Solar</DrawerTitle>
         <Mix className="w-[400px] h-[250px]"/>
     </DrawerContent>
