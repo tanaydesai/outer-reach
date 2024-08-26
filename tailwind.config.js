@@ -25,11 +25,8 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        "bg2": "url('/images/bg2.png')",
-        "bg3": "url('/images/bg3.png')",
-        "bg6": "url('/images/bg6.png')",
-        "drake": "url('/images/drake.jpg')",
-        "eco3": "url('/images/eco3.png')",
+        "main": "url('/images/main.png')",
+        "energy": "url('/images/energy.png')",
       },
       fontFamily: {
         'rajdhani-bold': ['rajdhani-bold', 'sans-serif'],

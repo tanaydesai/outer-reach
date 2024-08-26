@@ -20,7 +20,9 @@
   }
 }
 
-
+* ::-webkit-scrollbar {
+  display: none;
+}
 
   @font-face {
     font-family: "rajdhani-bold";
