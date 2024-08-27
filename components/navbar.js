@@ -6,21 +6,21 @@ import { motion } from 'framer-motion';
 
 export const Navbar = () => {
   return (
-    <div className='fixed w-full top-3 z-[100] flex justify-between items-start px-2 md:px-3 gap-2'>
+    <div className='fixed w-full top-3.5 z-[100] flex justify-between items-start px-2 md:px-3 gap-2'>
         <Select>
             <SelectTrigger className="justify-start">
-                <SelectValue placeholder={<SunMediumIcon size={19}/>}/>
+                <SelectValue placeholder={<SunMediumIcon size={20}/>}/>
             </SelectTrigger>
           <SelectContent>
-            <SelectItem value="nuclear" name="nuclear"><AtomIcon size={19}/></SelectItem>
-            <SelectItem value="pollution" name="pollution"><LeafIcon size={19} /></SelectItem>
-            <SelectItem value="ev" name="ev"><Zap size={19}/></SelectItem>
-            <SelectItem value="space" name="space"><RocketIcon size={19} /></SelectItem>
+            <SelectItem value="nuclear" name="nuclear"><AtomIcon size={20}/></SelectItem>
+            <SelectItem value="pollution" name="pollution"><LeafIcon size={20} /></SelectItem>
+            <SelectItem value="ev" name="ev"><Zap size={20}/></SelectItem>
+            <SelectItem value="space" name="space"><RocketIcon size={20} /></SelectItem>
           </SelectContent>
         </Select>
 
         <div className='absolute left-[calc(50%-25px)] w-[50px]'>
-          <div className='font-planer-m py-2 h-full text-center font-bold uppercase text-[#231a0f] text-[18px]'>{">_"}</div>
+          <div className='font-planer-m h-full text-center font-bold uppercase text-[#231a0f] text-[20px]'>{">_"}</div>
         </div>
 
         <Select>

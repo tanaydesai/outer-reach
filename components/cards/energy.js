@@ -4,16 +4,28 @@ import { Drawer,DrawerClose,DrawerContent,DrawerDescription,DrawerFooter,DrawerH
 import { motion } from 'framer-motion';
 import { Area, AreaChart,Line, LineChart,  Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 import { ChartConfig,ChartContainer,ChartTooltip,ChartTooltipContent,ChartLegend,ChartLegendContent} from "@/components/ui/chart"
+import { Tabs,TabsContent,TabsList,TabsTrigger,} from "@/components/ui/tabs"
+import { SunMediumIcon, AtomIcon, RocketIcon, LeafIcon, Zap } from 'lucide-react';
 
 
 export const EnergyData = ({children}) => {
   return (
     <Drawer>
-    <DrawerTrigger>{children}</DrawerTrigger>
-    <DrawerContent className='w-full md:w-fit min-h-[400px] md:right-2 h-fit md:bottom-2 rounded-t-[25px] md:rounded-[5px] bg-[#231a0f] text-white pb-3'> 
-        <DrawerTitle className="font-planer-m text-left text-[24px] p-5 uppercase">Solar</DrawerTitle>
-        <Mix className="w-[400px] h-[250px]"/>
-    </DrawerContent>
+      <DrawerTrigger>{children}</DrawerTrigger>
+      <DrawerContent className='w-full md:w-[400px] min-h-[70%] md:right-2 h-fit md:bottom-2 rounded-t-[25px] md:rounded-[5px] bg-[#161414] text-white pb-3'> 
+          <DrawerTitle className="font-rajdhani-regular text-left flex gap-2 items-center text-[24px] px-4 py-3"><SunMediumIcon /> Energy Mix</DrawerTitle>
+          <Tabs defaultValue="solar">
+            <TabsList className="mx-5 w-[90%] overflow-auto">
+              <TabsTrigger value="solar">Solar</TabsTrigger>
+              <TabsTrigger value="wind">Wind</TabsTrigger>
+              <TabsTrigger value="hydro">Hydro</TabsTrigger>
+              <TabsTrigger value="nuclear">Nuclear</TabsTrigger>
+              <TabsTrigger value="nr">Non-renewables</TabsTrigger>
+              <TabsTrigger value="other">Other</TabsTrigger>
+            </TabsList>
+          </Tabs>
+          <Mix className="w-full h-[300px] mt-5"/>
+      </DrawerContent>
     </Drawer>
   );
 }
@@ -47,7 +59,7 @@ export const Mix = ({className}) =>{
         <ChartContainer config={MixchartConfig} className={className}>
           <LineChart accessibilityLayer data={MixchartData} margin={{right:0, left:0}}>
           <XAxis dataKey="month"  tickLine={false} tickMargin={10} axisLine={false} />
-          <ChartLegend content={<ChartLegendContent />} />
+          {/* <ChartLegend content={<ChartLegendContent />} /> */}
             <ChartTooltip
               cursor={false}
               content={({ active, payload, label }) => {
