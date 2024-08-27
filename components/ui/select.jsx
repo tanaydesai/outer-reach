@@ -17,11 +17,11 @@ const SelectTrigger = React.forwardRef(({ className, children, icon=false, ...pr
     <SelectPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex min-w-[70px] items-start hover:opacity-60 duration-300 transition justify-center gap-0.5 rounded-[11px] font-semibold font-planer-m h-full border-none uppercase px-2 text-[14px] outline-none placeholder:text-stone-500 disabled:cursor-not-allowed ",
+        "flex min-w-[50px] items-start justify-center gap-0.5 rounded-[11px] font-planer-m h-full border-none uppercase px-1 text-[14px] outline-none placeholder:text-stone-500 disabled:cursor-not-allowed ",
         className
       )}
       {...props}>
-      <motion.div whileTap={{scale: 0.9}}>{children}</motion.div>
+      {children}
       <SelectPrimitive.Icon asChild>
         {icon && <ChevronDown className="h-4 w-4 opacity-50" />}
       </SelectPrimitive.Icon>
@@ -55,7 +55,7 @@ const SelectContent = React.forwardRef(({ className, children, position = "poppe
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
-        "relative z-50 min-w-[10rem] overflow-hidden rounded-[5px] mt-2 bg-[#231a0f] text-white py-1 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-stone-800 dark:bg-stone-950 dark:text-stone-50",
+        "relative z-50 min-w-[10rem] overflow-hidden rounded-[5px] mt-2 bg-[#030202] text-white py-1 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-stone-800 dark:bg-stone-950 dark:text-stone-50",
         position === "popper" &&
           "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
         className
