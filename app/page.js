@@ -1,23 +1,32 @@
 "use client"
-import { ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { TypeAnimation } from 'react-type-animation';
+import { Fade } from 'react-awesome-reveal';
 
 export default function Home() {
   return (
-      <div className='fixed w-full h-full bg-cover bg-main bg-right overflow-x-hidden'>
-          {/* <hr className="absolute left-3 md:left-7 h-full w-[1px] bg-white/[.80]"/>
-          <hr className="absolute right-3 md:right-7 h-full w-[1px] bg-white/[.80]"/> */}
+      <div className='fixed w-full h-full bg-[#efefef] overflow-x-hidden'>
+        <div className='absolute w-full h-full flex items-center justify-center'>
+          <Fade><TypeAnimation speed={40} cursor={false} sequence={["Outer", "Outer->", 'Outer->Reach']} className='text-[45px] md:text-[80px] leading-[60px] md:leading-[85px] text-[#1e1f2b] uppercase font-a2'/></Fade>
+        </div>
 
-          {/* <video className='w-full h-full object-cover' autoPlay loop muted>
-            <source src='/videos/wind2.mp4' type='video/mp4'  className="w-full h-auto"/>
-          </video> */}
-          
-          <div className="p-5 md:p-10 absolute bottom-[100px] md:bottom-9">
-            <h1 className='text-[60px] md:text-[80px] leading-[60px] md:leading-[85px] md:w-[600px] text-white font-planer-m'> {">"}THE OUTER REACH_</h1>
-            <h3 className='text-[16px] pl-1 md:text-[20px] font-rajdhani-regular text-white w-auto md:w-[50%]'>This open-source project aims to keep track of the progress and impact of the world's best frontier technology companies that are solving the worlds biggest problems across space, energy, pollution, transport and biology.</h3>
-            <Link href="/dashboard/energy"><motion.div whileTap={{scale: 0.97}} className="group text-[11px] mt-5 ml-1 w-fit bg-white/[.80] px-5 py-3 cursor-default backdrop-blur-[5px] hover:bg-white[.60] rounded-[11px] font-planer-m tracking-[1.75px] flex items-center gap-1">START NOW <ChevronRight className='mb-0.5 group-hover:translate-x-0.5 transition' size={13}/></motion.div></Link>
+        <Fade>
+        <div className='absolute bottom-0 px-5 p-4 text-[12.5px] w-full flex items-end text-[#1e1f2b] justify-between uppercase font-rajdhani-regular'>
+          <div className='border-l-[2px] h-[55px] md:h-[36px] break-words w-[160px] md:w-[200px] border-l-[#9b9b9b] px-2'>
+            <div><TypeAnimation speed={40} cursor={false} sequence={["Data", "Data to Track", "Data to Track Progress", "Data to Track Progress of the", "Data to Track Progress of the world's", "Data to Track Progress of the world's frontier", "Data to Track Progress of the world's frontier technologies"]} /></div>
           </div>
+          <div className='hidden md:block border-l-[2px] h-[36px] border-l-[#9b9b9b] px-2'>
+            <div><TypeAnimation speed={40} cursor={false} sequence={["Open","Open Source","Open Source Project"]}/></div>
+            <Link href="https://github.com/tanaydesai" target="_blank"><div className='group cursor-default'><TypeAnimation speed={40} cursor={false} sequence={["GitHub"]} /><div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
+          </div>
+          <div className='border-l-[2px] h-[55px] md:h-[36px] border-l-[#9b9b9b] px-2'>
+            <div><TypeAnimation speed={40} cursor={false} sequence={["Est.", "Est. 2024"]} /></div>
+            <Link href="https://tanaydesai.com" target="_blank"><div className='group cursor-default'><TypeAnimation speed={40} cursor={false} sequence={["Tanay","Tanay Desai",]} /><div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
+            <Link href="https://github.com/tanaydesai" target="_blank"><div className='block md:hidden group cursor-default'><TypeAnimation speed={40} cursor={false} sequence={["GitHub"]} /><div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
+          </div>
+        </div>
+        </Fade>
       </div>
   )
 }

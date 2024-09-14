@@ -39,4 +39,14 @@
     src: url("../assests/fonts/Planer/PlanerTest-Light-BF662b1a5e1e838.otf") format("opentype");
   }
 
+  @font-face {
+    font-family: "a1";
+    src: url("../assests/fonts/Alliance/A1.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "a2";
+    src: url("../assests/fonts/Alliance/A2.otf") format("opentype");
+  }
+
   
