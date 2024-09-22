@@ -8,9 +8,11 @@ export default function Home() {
   return (
       <div className='fixed w-full h-full bg-[#efefef] overflow-x-hidden'>
         <div className='absolute w-full h-full flex items-center justify-center'>
-          <Fade><TypeAnimation speed={40} cursor={false} sequence={["Outer", "Outer->", 'Outer->Reach']} className='text-[45px] md:text-[80px] leading-[60px] md:leading-[85px] text-[#1e1f2b] uppercase font-a2'/></Fade>
+            <div>
+              <div className='flex justify-center'><Fade><TypeAnimation speed={40} cursor={false} sequence={["Outer", "Outer->", 'Outer->Reach']} className='text-[45px] md:text-[80px] text-center leading-[60px] md:leading-[85px] text-[#1e1f2b] uppercase font-a2'/></Fade></div>
+              <div className='mt-5 mx-auto w-[400px] text-center text-[16px] text-[#1e1f2b] uppercase font-rajdhani-regular'><Fade>Data to Track Progress of the world's frontier technologies</Fade></div>
+            </div>
         </div>
-
         <Fade>
         <div className='absolute bottom-0 px-5 p-4 text-[12.5px] w-full flex items-end text-[#1e1f2b] justify-between uppercase font-rajdhani-regular'>
           <div className='border-l-[2px] h-[55px] md:h-[36px] break-words w-[160px] md:w-[200px] border-l-[#9b9b9b] px-2'>
