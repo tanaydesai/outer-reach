@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
 import { Fade } from 'react-awesome-reveal';
 
+
+
 export default function Home() {
   return (
       <div className='fixed w-full h-full bg-[#efefef] overflow-x-hidden'>
         <div className='absolute w-full h-full flex items-center justify-center'>
-            <div>
+            <div> 
               <div className='flex justify-center'><Fade><TypeAnimation speed={40} cursor={false} sequence={["Outer", "Outer->", 'Outer->Reach']} className='text-[45px] md:text-[80px] text-center leading-[60px] md:leading-[85px] text-[#1e1f2b] uppercase font-a2'/></Fade></div>
               <div className='mt-5 mx-auto w-[400px] text-center text-[16px] text-[#1e1f2b] uppercase font-rajdhani-regular'><Fade>Data to Track Progress of the world's frontier technologies</Fade></div>
             </div>
