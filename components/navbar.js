@@ -15,7 +15,7 @@ export const Navbar = () => {
         <Link href="/energy"><div className='group hover:text-[#1e1f2b] duration-300'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[90%] transition-all duration-700"></div>Energy<div className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
         <Link href="/nuclear"><div className='group hover:text-[#1e1f2b] duration-300'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[90%] transition-all duration-700"></div>Nuclear<div className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
         <Link href="/space"><div className='group hover:text-[#1e1f2b] duration-300'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[90%] transition-all duration-700"></div>Space<div className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
-        <Link href="/pollution"><div className='group hover:text-[#1e1f2b] duration-300'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[90%] transition-all duration-700"></div>Pollution<div className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
+        <Link href="/pollution"><div className='group hover:text-[#1e1f2b] duration-300'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[90%] transition-all duration-700"></div>AI<div className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
       </div>
       <div className='block md:hidden' onClick={() => setOpen(true)}><LayersIcon size={18} className='text-[#9b9b9b] hover:text-[#000000] duration-300'/></div>
       {open && 
@@ -27,7 +27,7 @@ export const Navbar = () => {
           <Link href="/energy"><div onClick={() => setOpen(false)} className='mt-5 group w-full rounded-md px-1 hover:bg-[#dbdbdb]'>Energy<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
           <Link href="/nuclear"><div onClick={() => setOpen(false)} className='group w-full rounded-md px-1 hover:bg-[#dbdbdb]'>Nuclear<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
           <Link href="/space"><div onClick={() => setOpen(false)} className='group w-full rounded-md px-1 hover:bg-[#dbdbdb]'>Space<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
-          <Link href="/pollution"><div onClick={() => setOpen(false)} className='group w-full rounded-md px-1 hover:bg-[#dbdbdb]'>Pollution<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
+          <Link href="/pollution"><div onClick={() => setOpen(false)} className='group w-full rounded-md px-1 hover:bg-[#dbdbdb]'>AI<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
         </Fade>
       </div>}
     </div>
