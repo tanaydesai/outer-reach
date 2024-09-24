@@ -5,7 +5,6 @@ import { TypeAnimation } from 'react-type-animation';
 import { Fade } from 'react-awesome-reveal';
 
 
-
 export default function Home() {
   return (
       <div className='fixed w-full h-full bg-[#efefef] overflow-x-hidden'>
@@ -18,10 +17,10 @@ export default function Home() {
         <Fade>
         <div className='absolute bottom-0 px-5 p-4 text-[12.5px] w-full flex items-end text-[#1e1f2b] justify-between uppercase font-rajdhani-regular'>
           <div className='border-l-[2px] h-[55px] md:h-[36px] break-words w-[160px] md:w-[200px] border-l-[#9b9b9b] px-2'>
-            <div><TypeAnimation speed={40} cursor={false} sequence={["Data", "Data to Track", "Data to Track Progress", "Data to Track Progress of the", "Data to Track Progress of the world's", "Data to Track Progress of the world's frontier", "Data to Track Progress of the world's frontier technologies"]} /></div>
+            <div><TypeAnimation speed={40} cursor={false} sequence={["Optimistic", "Optimistic, accelerationist", "Optimistic, accelerationist & technocapitalistic"]} /></div>
           </div>
           <div className='hidden md:block border-l-[2px] h-[36px] border-l-[#9b9b9b] px-2'>
-            <div><TypeAnimation speed={40} cursor={false} sequence={["Open","Open Source","Open Source Project"]}/></div>
+            <div><TypeAnimation speed={40} cursor={false} sequence={["Open","Open Source"]}/></div>
             <Link href="https://github.com/tanaydesai" target="_blank"><div className='group cursor-default'><TypeAnimation speed={40} cursor={false} sequence={["GitHub"]} /><div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
           </div>
           <div className='border-l-[2px] h-[55px] md:h-[36px] border-l-[#9b9b9b] px-2'>

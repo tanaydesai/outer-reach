@@ -12,7 +12,7 @@ import {ComposableMap,Geographies,Geography,Sphere,Graticule} from "react-simple
 
 export const MapChart = ({className}) => {
   const [data, setData] = useState([]);
-  const geoUrl = "/features.json";
+  const geoUrl = "/map/features.json";
 
     const colorScale = scaleLinear()
       .domain([0.29, 0.68])
@@ -20,7 +20,7 @@ export const MapChart = ({className}) => {
 
 
   useEffect(() => {
-    csv(`/vulnerability.csv`).then((data) => {
+    csv(`/map/vulnerability.csv`).then((data) => {
       setData(data);
     });
   }, []);
@@ -89,6 +89,7 @@ export const EnergyShare = ({className}) => {
               right: 5,
             }}
           >
+            <ChartLegend content={<ChartLegendContent />} />
             <CartesianGrid vertical={false} />
             <XAxis
               dataKey="year"
@@ -119,7 +120,6 @@ export const EnergyShare = ({className}) => {
               strokeWidth={2}
               stroke="black"
             />
-            <ChartLegend content={<ChartLegendContent />} />
           </LineChart>
         </ChartContainer>
   )
@@ -241,7 +241,7 @@ export const CO2GDP = ({className}) => {
 
 return (
     <ChartContainer config={chartConfig} className={className}>
-        <LineChart
+        <AreaChart
           accessibilityLayer
           data={chartData}
           margin={{
@@ -249,7 +249,7 @@ return (
             right: 10,
           }}
         >
-          <CartesianGrid vertical={false} />
+          {/* <CartesianGrid vertical={false} /> */}
           <XAxis
             dataKey="year"
             tickLine={false}
@@ -267,24 +267,30 @@ return (
             cursor={false}
             content={<ChartTooltipContent indicator="dot" />}
           />
-          <Line
+          <Area
             dataKey="co2"
             type="monotone"
-            stroke="black"
+            stroke="white"
+            fill='white'
+            dot
+            opacity={0.5}
             strokeWidth={2}
           >
             <LabelList
-              position="top"
+              position="bottom"
               offset={12}
               className="fill-foreground"
               fontSize={12}
             />
-          </Line>
-          <Line
+          </Area>
+          <Area
             dataKey="gdp"
             type="monotone"
+            stroke="white"
+            fill='white'
+            dot
+            opacity={0.9}
             strokeWidth={2}
-            stroke="black"
             >
             <LabelList
               position="top"
@@ -292,9 +298,9 @@ return (
               className="fill-foreground"
               fontSize={12}
             />
-          </Line>
+          </Area>
           <ChartLegend content={<ChartLegendContent />} />
-        </LineChart>
+        </AreaChart>
       </ChartContainer>
 )
 }
