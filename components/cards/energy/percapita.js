@@ -6,7 +6,7 @@ import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/co
 
 export const Percapita = ({className}) => {
     return (
-        <div className={`w-1/2 h-[400px] rounded-[30px] border-2 px-3 py-3 border-transparent text-white bg-black ${className}`}>
+        <div className={`w-1/2 min-h-[410px] rounded-[30px] border-2 px-3 py-3 border-transparent text-white bg-black ${className}`}>
             <h1 className='text-[17px] uppercase font-a2 px-2'><div className='w-3 h-3 mr-2 bg-red-400 inline-flex'/>
             <Select>
             <SelectTrigger className="ml-0 text-black">

@@ -42,7 +42,7 @@ export default function Home() {
                 <LeaderBoard className='mt-0'/>
                 <div className='mt-3 md:mt-0 md:h-auto'>
                   <Change />
-                  <AvgHouse className='h-[225px] md:h-[200px] mt-3' />
+                  <AvgHouse className='h-[200px] mt-3' />
                 </div>
               </div>
               <div className='mt-3'>

@@ -210,6 +210,7 @@ export const Capacity = ({className}) => {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
+            <ChartLegend content={<ChartLegendContent />} />
             <Bar dataKey="desktop" stackId="a" fill="var(--color-desktop)" radius={[5, 0, 0, 5]}  />
             <Bar dataKey="mobile" stackId="a" fill="var(--color-swimming)" radius={[0, 5, 5, 0]}  />
           </BarChart>

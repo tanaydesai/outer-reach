@@ -45,7 +45,7 @@ export const EnergyMix = ({className}) => {
                 <TabsContent value="password">
                     <EnergyShare className='w-full h-[280px] mt-4'/>
                 </TabsContent>
-                <TabsList>
+                <TabsList className="mt-4 sm:mt-0">
                     <TabsTrigger value="account">Absolute</TabsTrigger>
                     <TabsTrigger value="password">% Share</TabsTrigger>
                 </TabsList>
