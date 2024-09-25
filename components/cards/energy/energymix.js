@@ -8,8 +8,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export const EnergyMix = ({className}) => {
     return (
-        <div className='w-full h-[400px] rounded-[30px] border-2 px-3 py-3 border-[#9b9b9b]'>
-            <h1 className='text-[17px] uppercase font-a2 flex items-center'><div className='w-3 h-3 bg-red-400 mx-2 inline-flex'/>Share of 
+        <div className={`w-full min-h-[400px] rounded-[30px] border-2 px-3 py-3 border-[#9b9b9b] ${className}`}>
+            <h1 className='text-[17px] uppercase font-a2 px-2'><div className='w-3 h-3 bg-red-400 mr-2 inline-flex'/>Share of 
             <Select>
             <SelectTrigger>
                 <SelectValue placeholder="Energy Production" />
@@ -23,7 +23,7 @@ export const EnergyMix = ({className}) => {
             </Select>
              by indivisual 
              <Select>
-                <SelectTrigger>
+                <SelectTrigger className="mt-2 sm:mt-0">
                     <SelectValue placeholder="Source" />
                 </SelectTrigger>
                 <SelectContent>

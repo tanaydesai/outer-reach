@@ -6,8 +6,8 @@ import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/co
 
 export const Capacities = ({className}) => {
     return (
-        <div className='w-2/3 h-[400px] rounded-[30px] border-2 px-3 py-3 border-[#9b9b9b]'>
-            <h1 className='text-[17px] uppercase font-a2 flex items-center'><div className='w-3 h-3 bg-red-400 mx-2 inline-flex'/>
+        <div className={`w-1/2  h-[400px] rounded-[30px] border-2 px-3 py-3 border-[#9b9b9b] ${className}`}>
+            <h1 className='text-[17px] uppercase font-a2 px-2'><div className='w-3 h-3 bg-red-400 mr-2 inline-flex'/>
             <Select>
             <SelectTrigger className="ml-0">
                 <SelectValue placeholder="Planned" />

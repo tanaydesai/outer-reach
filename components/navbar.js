@@ -20,7 +20,7 @@ export const Navbar = () => {
       </div>
       <div className='block md:hidden' onClick={() => setOpen(true)}><LayersIcon size={18} className='text-[#9b9b9b] hover:text-[#000000] duration-300'/></div>
       {open && 
-      <div className='fixed z-[100] px-6 p-4 uppercase text-[45px] font-rajdhani-regular w-full h-full bg-[#d0d0d0]/30 backdrop-blur-[10px] top-0 left-0'>
+      <div className='fixed z-[100] px-6 p-4 uppercase text-[40px] font-rajdhani-regular w-full h-full bg-[#d0d0d0]/30 backdrop-blur-[15px] top-0 left-0'>
         <XIcon size={20} className='mt-1 mr-0 ml-auto' onClick={() => setOpen(false)}/>
         <Fade delay={300}>
           <Link href="/"><div onClick={() => setOpen(false)}  className='mt-[100px] group w-full rounded-md px-1 hover:bg-[#e0dfdf]'>Home<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
