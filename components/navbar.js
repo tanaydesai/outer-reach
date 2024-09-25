@@ -20,7 +20,7 @@ export const Navbar = () => {
       </div>
       <div className='block md:hidden' onClick={() => setOpen(true)}><LayersIcon size={18} className='text-[#9b9b9b] hover:text-[#000000] duration-300'/></div>
       {open && 
-      <div className='fixed z-[100] px-6 p-4 uppercase text-[40px] font-rajdhani-regular w-full h-full bg-[#d0d0d0]/30 backdrop-blur-[15px] top-0 left-0'>
+      <div className='fixed z-[100] px-6 p-4 uppercase text-[37px] font-rajdhani-regular w-full h-full bg-[#d0d0d0]/30 backdrop-blur-[15px] top-0 left-0'>
         <XIcon size={20} className='mt-1 mr-0 ml-auto' onClick={() => setOpen(false)}/>
         <Fade delay={300}>
           <Link href="/"><div onClick={() => setOpen(false)}  className='mt-[100px] group w-full rounded-md px-1 hover:bg-[#e0dfdf]'>Home<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
@@ -28,7 +28,7 @@ export const Navbar = () => {
           <Link href="/energy"><div onClick={() => setOpen(false)} className='mt-5 group w-full rounded-md px-1 hover:bg-[#e0dfdf]'>Energy<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
           <Link href="/nuclear"><div onClick={() => setOpen(false)} className='group w-full rounded-md px-1 hover:bg-[#e0dfdf]'>Nuclear<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
           <Link href="/ai"><div onClick={() => setOpen(false)} className='group w-full rounded-md px-1 hover:bg-[#e0dfdf]'>AI<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
-          <Link href="/ev"><div onClick={() => setOpen(false)} className='group w-full rounded-md px-1 hover:bg-[#e0dfdf]'>Electric Vehicles<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
+          <Link href="/ev"><div onClick={() => setOpen(false)} className='group w-full rounded-md px-1 hover:bg-[#e0dfdf]'>Electric Vehicles<ChevronRight className='ml-2 group-hover:translate-x-1 flex-nowrap shrink-0 duration-300 inline-flex'/></div></Link>
           <Link href="/space"><div onClick={() => setOpen(false)} className='group w-full rounded-md px-1 hover:bg-[#e0dfdf]'>Space<ChevronRight className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'/></div></Link>
         </Fade>
       </div>}

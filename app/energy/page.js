@@ -1,13 +1,13 @@
 "use client"
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { LeaderBoard } from '@/components/cards/energy/leaderboard';
-import { EnergyMix } from '@/components/cards/energy/energymix';
-import { Change } from '@/components/cards/energy/change';
-import { AvgHouse } from '@/components/cards/energy/avghouse';
-import { Capacities } from '@/components/cards/energy/capacity';
-import { Percapita } from '@/components/cards/energy/percapita';
-import { Map } from '@/components/cards/energy/map';
+import { LeaderBoard } from '@/components/cards/leaderboard';
+import { EnergyMix } from '@/components/cards/energymix';
+import { Change } from '@/components/cards/change';
+import { AvgHouse } from '@/components/cards/avghouse';
+import { Capacities } from '@/components/cards/capacity';
+import { Percapita } from '@/components/cards/percapita';
+import { Map } from '@/components/cards/map';
 
 export default function Home() {
    
