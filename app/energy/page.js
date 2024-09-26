@@ -14,7 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 export default function Home() {
    
   return (
-    <div className="absolute w-full min-h-screen h-auto bg-[#efefef] py-10">
+    <div className="absolute w-full min-h-full h-auto bg-[#efefef] py-10">
         
         <div className='hidden lg:block w-[94%] mx-auto'>
           <div className='w-full flex gap-3 mt-5 items-start '>
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='block absolute bottom-0 h-[65%] pb-5 lg:hidden w-[100%] mx-auto'>
+        <div className='block absolute bottom-0 h-[67%] pb-10 lg:hidden w-[100%] mx-auto'>
           {/* <div className='flex w-full font-a2 text-[#9b9b9b] whitespace-nowrap uppercase overflow-auto text-[25px] gap-6 h-[50px] px-5'>
             <div className='group'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>EnergyMix</div></div>
             <div className='group text-[#24252f]'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>Leaderboard</div></div>
