@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 export const EnergyMix = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] rounded-[30px] border-2 px-3 py-3 border-[#9b9b9b] ${className}`}>
-            <h1 className='text-[17px] uppercase font-a2 px-2'><div className='w-3 h-3 bg-red-400 mr-2 inline-flex'/>Share of 
+            <h1 className='text-[16px] uppercase font-a2 px-2'><div className='w-3 h-3 bg-red-400 mr-2 inline-flex'/>Share of 
             <Select>
             <SelectTrigger>
                 <SelectValue placeholder="Energy Production" />
@@ -38,7 +38,7 @@ export const EnergyMix = ({className}) => {
                 </Select>
              </h1>
             <p className='text-[14px] mx-2 my-0.5 font-rajdhani-regular'>Measured as a percentage of primary energy.</p>        
-            <Tabs defaultValue="account">
+            {/* <Tabs defaultValue="account">
                 <TabsContent value="account">
                     <EnergyShare className='w-full h-[280px] mt-4'/>
                 </TabsContent>
@@ -49,8 +49,8 @@ export const EnergyMix = ({className}) => {
                     <TabsTrigger value="account">Absolute</TabsTrigger>
                     <TabsTrigger value="password">% Share</TabsTrigger>
                 </TabsList>
-            </Tabs>
-
+            </Tabs> */}
+            <EnergyShare className='w-full h-[280px] mt-4'/>
             {/* <p className='text-[13px] mx-5 my-0.5 font-rajdhani-regular'>Data source: <span className=' underline'>Ourworldindata</span></p> */}
         </div>
     )

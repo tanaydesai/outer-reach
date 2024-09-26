@@ -7,7 +7,7 @@ import { CrownIcon } from 'lucide-react';
 export const LeaderBoard = ({className}) => {
     return (
         <div className={`w-full h-[465px] lg:h-[440px] mt-3 rounded-[30px] border-2 border-transparent text-white py-3 overflow-auto bg-black ${className}`}>
-            <h1 className='text-[17px] uppercase font-a2 pl-3 '><div className='w-3 h-3 bg-green-500 shrink-0  mx-2 inline-flex'/>Leaderboard: 
+            <h1 className='text-[16px] uppercase font-a2 pl-3 '><div className='w-3 h-3 bg-green-500 shrink-0  mx-2 inline-flex'/>Leaderboard: 
             <Select>
             <SelectTrigger className="text-black">
                 <SelectValue placeholder="Renewables" />

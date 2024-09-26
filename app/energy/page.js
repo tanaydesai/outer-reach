@@ -8,6 +8,8 @@ import { AvgHouse } from '@/components/cards/avghouse';
 import { Capacities } from '@/components/cards/capacity';
 import { Percapita } from '@/components/cards/percapita';
 import { Map } from '@/components/cards/map';
+import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function Home() {
    
@@ -34,11 +36,47 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='block lg:hidden w-[94%] mx-auto'>
-          <div className='w-full mt-5'>
-              <Map />
-              <EnergyMix className='mt-3' />
-              <div className='h-fit md:flex w-full mt-3 gap-3 items-start justify-center'>
+        <div className='block absolute bottom-0 h-[65%] pb-5 lg:hidden w-[100%] mx-auto'>
+          {/* <div className='flex w-full font-a2 text-[#9b9b9b] whitespace-nowrap uppercase overflow-auto text-[25px] gap-6 h-[50px] px-5'>
+            <div className='group'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>EnergyMix</div></div>
+            <div className='group text-[#24252f]'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>Leaderboard</div></div>
+            <div className='group'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>Capacity</div></div>
+            <div className='group'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>Avg. Houseold</div></div>
+            <div className='group'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>PerCapita</div></div>
+          </div> */}
+            <Tabs defaultValue="account">
+                <TabsList>
+                    <TabsTrigger value="energy">EnergyMix</TabsTrigger>
+                    <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
+                    <TabsTrigger value="capacity">Capacity</TabsTrigger>
+                    <TabsTrigger value="avg">Avg. Houseold</TabsTrigger>
+                    <TabsTrigger value="percapita">PerCapita</TabsTrigger>
+                </TabsList>
+                <TabsContent value="energy">
+                  <EnergyMix className='h-[450px]' />
+                </TabsContent>
+                <TabsContent value="leaderboard">
+                  <LeaderBoard className='mt-0'/>
+                </TabsContent>
+                <TabsContent value="capacity">
+                  <Capacities className='w-full h-[450px]'/>
+                </TabsContent>
+                <TabsContent value="avg">
+                  <AvgHouse className='h-[450px] mt-3' />
+                </TabsContent>
+                <TabsContent value="percapita">
+                  <Percapita className='w-full h-[450px]' />
+                </TabsContent>
+            </Tabs> 
+          <div className='w-full mt-4 px-3'>
+              {/* <Map /> */}
+              {/* <EnergyMix /> */}
+              {/* <LeaderBoard className='mt-0'/> */}
+              {/* <Change className='h-[400px]'/> */}
+              {/* <AvgHouse className='h-[400px]' /> */}
+              {/* <Capacities className='w-full'/> */}
+              {/* <Percapita className='w-full' /> */}
+              {/* <div className='h-fit md:flex w-full mt-3 gap-3 items-start justify-center'>
                 <LeaderBoard className='mt-0'/>
                 <div className='mt-3 md:mt-0 md:h-auto'>
                   <Change />
@@ -48,7 +86,7 @@ export default function Home() {
               <div className='mt-3'>
                 <Capacities className='w-full'/>
                 <Percapita className='mt-3 w-full' />
-              </div>
+              </div> */}
           </div>
         </div>
 

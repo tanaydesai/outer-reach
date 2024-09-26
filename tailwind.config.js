@@ -24,10 +24,6 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backgroundImage: {
-        "main": "url('/images/main.png')",
-        "energy": "url('/images/energy.png')",
-      },
       fontFamily: {
         'rajdhani-bold': ['rajdhani-bold', 'sans-serif'],
         'rajdhani-regular': ['rajdhani-regular', 'sans-serif'],
