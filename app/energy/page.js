@@ -39,26 +39,28 @@ export default function Home() {
         <div className='block h-full lg:hidden w-[100%] mx-auto'>
             <Tabs defaultValue="energy">
                 <TabsList>
-                    <div className='flex gap-3 m-3.5 justify-center'>
-                      <TabsTrigger value="energy">EnergyMix</TabsTrigger>
-                      <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
-                    </div>
-                    <div className='flex gap-3 m-3.5 justify-center'>
-                      <TabsTrigger value="capacity">Capacity</TabsTrigger>
-                      <TabsTrigger value="percapita">PerCapita</TabsTrigger>
-                    </div>
+                  <div className='flex gap-3 m-3.5 justify-center'>
+                    <TabsTrigger value="energy">EnergyMix</TabsTrigger>
+                    <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
+                  </div>
+                  <div className='flex gap-3 m-3.5 justify-center'>
+                    <TabsTrigger value="capacity">Capacity</TabsTrigger>
+                    <TabsTrigger value="percapita">PerCapita</TabsTrigger>
+                  </div>
+                  <div className='flex justify-center'>
                     <TabsTrigger value="avg">Avg. Houseold</TabsTrigger>
-                    <div className='w-full flex'>
-                      <Select>
-                        <SelectTrigger className="mx-auto my-5">
-                            <SelectValue placeholder="World" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="dark">India</SelectItem>
-                            <SelectItem value="light">France</SelectItem>
-                        </SelectContent>
-                        </Select>
-                    </div>
+                  </div>
+                  <div className='w-full flex'>
+                    <Select>
+                      <SelectTrigger className="mx-auto my-5">
+                          <SelectValue placeholder="World" />
+                      </SelectTrigger>
+                      <SelectContent>
+                          <SelectItem value="dark">India</SelectItem>
+                          <SelectItem value="light">France</SelectItem>
+                      </SelectContent>
+                      </Select>
+                  </div>
                 </TabsList>
                 <TabsContent value="energy">
                   <EnergyMix className='h-[450px]' />
