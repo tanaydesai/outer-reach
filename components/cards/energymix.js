@@ -50,7 +50,7 @@ export const EnergyMix = ({className}) => {
                     <TabsTrigger value="password">% Share</TabsTrigger>
                 </TabsList>
             </Tabs> */}
-            <EnergyShare className='w-full h-[280px] mt-4'/>
+            <EnergyShare className='w-full h-[320px] mt-4'/>
             {/* <p className='text-[13px] mx-5 my-0.5 font-rajdhani-regular'>Data source: <span className=' underline'>Ourworldindata</span></p> */}
         </div>
     )

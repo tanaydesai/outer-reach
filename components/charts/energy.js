@@ -258,12 +258,12 @@ return (
             tickMargin={3}
             // tickFormatter={(value) => value.slice(0, 3)}
           />
-          <YAxis
+          {/* <YAxis
             tickLine={false}
             axisLine={false}
             tickMargin={8}
             tickCount={5}
-          />
+          /> */}
           <ChartTooltip
             cursor={false}
             content={<ChartTooltipContent indicator="dot" />}

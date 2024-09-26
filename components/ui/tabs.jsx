@@ -11,7 +11,7 @@ const TabsList = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.List
     ref={ref}
     className={cn(
-      "flex items-center overflow-auto text-[25px] gap-6 h-[50px] px-5 dark:bg-stone-800 dark:text-stone-400",
+      "flex items-center justify-center flex-wrap mx-auto w-[80%] overflow-auto text-[20px] gap-3 px-5 dark:bg-stone-800 dark:text-stone-400",
       className
     )}
     {...props}></TabsPrimitive.List>
@@ -19,9 +19,9 @@ const TabsList = React.forwardRef(({ className, ...props }, ref) => (
 TabsList.displayName = TabsPrimitive.List.displayName
 
 const TabsTrigger = React.forwardRef(({ className, ...props }, ref) => (
-  // <motion.div whileTap={{scaleX:1.1}}>
+  <motion.div whileTap={{scaleX:1.1}}>
     <div className="group">
-      <div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/>
+      {/* <div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/> */}
       <TabsPrimitive.Trigger
       ref={ref}
       className={cn(
@@ -30,7 +30,7 @@ const TabsTrigger = React.forwardRef(({ className, ...props }, ref) => (
       )}
       {...props} />
     </div>
-  // </motion.div>
+  </motion.div>
 ))
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 

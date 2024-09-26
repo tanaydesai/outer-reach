@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='block absolute bottom-5 h-[75%] lg:hidden w-[100%] mx-auto'>
+        <div className='block absolute bottom-5 h-[80%] lg:hidden w-[100%] mx-auto'>
           {/* <div className='flex w-full font-a2 text-[#9b9b9b] whitespace-nowrap uppercase overflow-auto text-[25px] gap-6 h-[50px] px-5'>
             <div className='group'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>EnergyMix</div></div>
             <div className='group text-[#24252f]'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>Leaderboard</div></div>
@@ -49,8 +49,8 @@ export default function Home() {
                     <TabsTrigger value="energy">EnergyMix</TabsTrigger>
                     <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
                     <TabsTrigger value="capacity">Capacity</TabsTrigger>
-                    <TabsTrigger value="avg">Avg. Houseold</TabsTrigger>
                     <TabsTrigger value="percapita">PerCapita</TabsTrigger>
+                    <TabsTrigger value="avg">Avg. Houseold</TabsTrigger>
                 </TabsList>
                 <TabsContent value="energy">
                   <EnergyMix className='h-[450px]' />
