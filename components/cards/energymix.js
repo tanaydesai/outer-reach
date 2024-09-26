@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { EnergyShare } from '@/components/charts/energy';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/tabs"
 
 
 export const EnergyMix = ({className}) => {
@@ -38,19 +38,18 @@ export const EnergyMix = ({className}) => {
                 </Select>
              </h1>
             <p className='text-[14px] mx-2 my-0.5 font-rajdhani-regular'>Measured as a percentage of primary energy.</p>        
-            {/* <Tabs defaultValue="account">
-                <TabsContent value="account">
+            <Tabs2 defaultValue="account">
+                <TabsContent2 value="account">
                     <EnergyShare className='w-full h-[280px] mt-4'/>
-                </TabsContent>
-                <TabsContent value="password">
+                </TabsContent2>
+                <TabsContent2 value="password">
                     <EnergyShare className='w-full h-[280px] mt-4'/>
-                </TabsContent>
-                <TabsList className="mt-4 sm:mt-0">
-                    <TabsTrigger value="account">Absolute</TabsTrigger>
-                    <TabsTrigger value="password">% Share</TabsTrigger>
-                </TabsList>
-            </Tabs> */}
-            <EnergyShare className='w-full h-[320px] mt-4'/>
+                </TabsContent2>
+                <TabsList2 className="mt-4 sm:mt-0">
+                    <TabsTrigger2 value="account">Absolute</TabsTrigger2>
+                    <TabsTrigger2 value="password">% Share</TabsTrigger2>
+                </TabsList2>
+            </Tabs2>
             {/* <p className='text-[13px] mx-5 my-0.5 font-rajdhani-regular'>Data source: <span className=' underline'>Ourworldindata</span></p> */}
         </div>
     )
