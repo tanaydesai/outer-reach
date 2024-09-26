@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='block h-full pt-10 lg:hidden w-[100%] mx-auto'>
+        <div className='block h-full pt-3 lg:hidden w-[100%] mx-auto'>
             <Tabs defaultValue="energy">
                 <TabsList>
                     <div className='flex gap-3 m-4 justify-center'>
