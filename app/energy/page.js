@@ -14,7 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 export default function Home() {
    
   return (
-    <div className="absolute w-full min-h-full h-auto bg-[#efefef] py-10">
+    <div className="absolute w-full h-full bg-[#efefef] py-10">
         
         <div className='hidden lg:block w-[94%] mx-auto'>
           <div className='w-full flex gap-3 mt-5 items-start '>
