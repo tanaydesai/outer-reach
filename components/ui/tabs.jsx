@@ -12,7 +12,7 @@ const TabsList = React.forwardRef(({ className, ...props }, ref) => (
     ref={ref}
     className={cn(
       // flex items-center justify-center flex-wrap
-      " mx-auto w-[83%] text-center overflow-auto text-[20px] gap-4 dark:bg-stone-800 dark:text-stone-400",
+      " mx-auto w-[83%] text-center overflow-auto text-[17px]  dark:bg-stone-800 dark:text-stone-400",
       className
     )}
     {...props}></TabsPrimitive.List>

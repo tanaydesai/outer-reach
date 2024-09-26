@@ -36,14 +36,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='block h-full pt-3 lg:hidden w-[100%] mx-auto'>
+        <div className='block h-full lg:hidden w-[100%] mx-auto'>
             <Tabs defaultValue="energy">
                 <TabsList>
-                    <div className='flex gap-3 m-4 justify-center'>
+                    <div className='flex gap-3 m-3.5 justify-center'>
                       <TabsTrigger value="energy">EnergyMix</TabsTrigger>
                       <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
                     </div>
-                    <div className='flex gap-3 m-4 justify-center'>
+                    <div className='flex gap-3 m-3.5 justify-center'>
                       <TabsTrigger value="capacity">Capacity</TabsTrigger>
                       <TabsTrigger value="percapita">PerCapita</TabsTrigger>
                     </div>
