@@ -14,7 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 export default function Home() {
    
   return (
-    <div className="fixed w-full h-full bg-[#efefef] py-10">
+    <div className="fixed md:absolute w-full min-h-full bg-[#efefef] py-10">
         
         <div className='hidden lg:block w-[94%] mx-auto'>
           <div className='w-full flex gap-3 mt-5 items-start '>
@@ -36,21 +36,29 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='block absolute bottom-5 h-[80%] lg:hidden w-[100%] mx-auto'>
-          {/* <div className='flex w-full font-a2 text-[#9b9b9b] whitespace-nowrap uppercase overflow-auto text-[25px] gap-6 h-[50px] px-5'>
-            <div className='group'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>EnergyMix</div></div>
-            <div className='group text-[#24252f]'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>Leaderboard</div></div>
-            <div className='group'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>Capacity</div></div>
-            <div className='group'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>Avg. Houseold</div></div>
-            <div className='group'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[100%] transition-all duration-700"/><div>PerCapita</div></div>
-          </div> */}
+        <div className='block h-full pt-[100px] lg:hidden w-[100%] mx-auto'>
             <Tabs defaultValue="energy">
                 <TabsList>
-                    <TabsTrigger value="energy">EnergyMix</TabsTrigger>
-                    <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
-                    <TabsTrigger value="capacity">Capacity</TabsTrigger>
-                    <TabsTrigger value="percapita">PerCapita</TabsTrigger>
+                    <div className='flex gap-3 m-4 justify-center'>
+                      <TabsTrigger value="energy">EnergyMix</TabsTrigger>
+                      <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
+                    </div>
+                    <div className='flex gap-3 m-4 justify-center'>
+                      <TabsTrigger value="capacity">Capacity</TabsTrigger>
+                      <TabsTrigger value="percapita">PerCapita</TabsTrigger>
+                    </div>
                     <TabsTrigger value="avg">Avg. Houseold</TabsTrigger>
+                    <div className='w-full flex'>
+                      <Select>
+                        <SelectTrigger className="mx-auto my-5">
+                            <SelectValue placeholder="World" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="dark">India</SelectItem>
+                            <SelectItem value="light">France</SelectItem>
+                        </SelectContent>
+                        </Select>
+                    </div>
                 </TabsList>
                 <TabsContent value="energy">
                   <EnergyMix className='h-[450px]' />
