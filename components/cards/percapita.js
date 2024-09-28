@@ -6,8 +6,8 @@ import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/co
 
 export const Percapita = ({className}) => {
     return (
-        <div className={`w-1/2 min-h-[410px] rounded-[30px] border-2 px-3 py-3 border-transparent text-white bg-black ${className}`}>
-            <h1 className='text-[16px] uppercase font-a2 px-2'><div className='w-3 h-3 mr-2 bg-red-400 inline-flex'/>
+        <div className={`w-1/2 min-h-[410px] ${className}`}>
+            <h1 className='text-[14px] text-[#444444] uppercase font-a2 px-3'><div className='w-3 h-3 mr-2 bg-red-400 inline-flex'/>
             <Select>
             <SelectTrigger className="ml-0 text-black">
                 <SelectValue placeholder="% Change" />
@@ -18,8 +18,10 @@ export const Percapita = ({className}) => {
             </SelectContent>
             </Select>
              in CO2 emissions & GDP per capita</h1>
-            <p className='text-[14px] mx-2 my-0.5 font-rajdhani-regular'>Historical change in CO2 emissions per capita and GDP per capity</p>
-            <CO2GDP className='w-full h-[320px] mt-3'/>
+            <p className='text-[13px] mx-3 my-2 font-rajdhani-regular'>Historical change in CO2 emissions per capita and GDP per capity</p>
+            <div className='px-3 py-3 my-5 border-2 bg-black text-white border-transparent rounded-[15px]'>    
+                <CO2GDP className='w-full h-[350px]'/>
+            </div>
         </div>
     )
 }

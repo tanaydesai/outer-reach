@@ -8,8 +8,8 @@ import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/ta
 
 export const EnergyMix = ({className}) => {
     return (
-        <div className={`w-full min-h-[400px] rounded-[30px] border-2 px-3 py-3 border-[#9b9b9b] ${className}`}>
-            <h1 className='text-[16px] uppercase font-a2 px-2'><div className='w-3 h-3 bg-red-400 mr-2 inline-flex'/>Share of 
+        <div className={`w-full min-h-[400px] ${className}`}>
+            <h1 className='text-[14px] uppercase font-a2 px-3 text-[#444444]'><div className='w-3 h-3 bg-red-400 mr-2 inline-flex'/>Share of 
             <Select>
             <SelectTrigger>
                 <SelectValue placeholder="Energy Production" />
@@ -37,19 +37,21 @@ export const EnergyMix = ({className}) => {
                 </SelectContent>
                 </Select>
              </h1>
-            <p className='text-[14px] mx-2 my-0.5 font-rajdhani-regular'>Measured as a percentage of primary energy.</p>        
-            <Tabs2 defaultValue="account">
-                <TabsContent2 value="account">
-                    <EnergyShare className='w-full h-[280px] mt-4'/>
-                </TabsContent2>
-                <TabsContent2 value="password">
-                    <EnergyShare className='w-full h-[280px] mt-4'/>
-                </TabsContent2>
-                <TabsList2 className="mt-4 sm:mt-0">
-                    <TabsTrigger2 value="account">Absolute</TabsTrigger2>
-                    <TabsTrigger2 value="password">% Share</TabsTrigger2>
-                </TabsList2>
-            </Tabs2>
+            <p className='text-[13px] mx-3 mt-2 font-rajdhani-regular'>Measured as a percentage of primary energy.</p>   
+            <div className='px-3 py-3 mt-5 border-2 border-[#b3b3b3] rounded-[15px]'>    
+                <Tabs2 defaultValue="account">
+                    <TabsContent2 value="account">
+                        <EnergyShare className='w-full h-[330px] mt-4'/>
+                    </TabsContent2>
+                    <TabsContent2 value="password">
+                        <EnergyShare className='w-full h-[330px] mt-4'/>
+                    </TabsContent2>
+                    <TabsList2 className="mt-4 sm:mt-0">
+                        <TabsTrigger2 value="account">Absolute</TabsTrigger2>
+                        <TabsTrigger2 value="password">% Share</TabsTrigger2>
+                    </TabsList2>
+                </Tabs2>
+            </div> 
             {/* <p className='text-[13px] mx-5 my-0.5 font-rajdhani-regular'>Data source: <span className=' underline'>Ourworldindata</span></p> */}
         </div>
     )

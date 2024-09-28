@@ -16,27 +16,27 @@ export default function Home() {
   return (
     <div className="absolute w-full min-h-full bg-[#efefef] py-10">
         
-        <div className='hidden lg:block w-[94%] mx-auto'>
-          <div className='w-full flex gap-3 mt-5 items-start '>
-              <div className='flex-1/3'>
-                <Map />
+        <div className='w-[90%] mt-5 mx-auto'>
+          <div className='w-full lg:flex gap-5 mt-10 items-start '>
+              <div className='w-7/20'>
+                <Map/>
                 <LeaderBoard />
               </div>
               <div className='flex-1'>
-                <EnergyMix />
-                <div className='grid grid-cols-2 w-full mt-3 gap-3 items-start justify-center'>
+                <EnergyMix className='mt-10 lg:mt-0'/>
+                <div className='lg:grid grid-cols-2 w-full mt-10 gap-5 items-start justify-center'>
                   <Change />
-                  <AvgHouse />
+                  <AvgHouse className='mt-7 lg:mt-0'/>
                 </div>
               </div>
           </div>
-          <div className='w-full flex gap-3 mt-3 items-start'>
-            <Capacities />
-            <Percapita />
+          <div className='w-full lg:flex gap-5 mt-10 items-start'>
+            <Capacities className='w-full lg:w-1/2'/>
+            <Percapita className={'w-full lg:w-1/2'}/>
           </div>
         </div>
 
-        <div className='block h-full lg:hidden w-[100%] mx-auto'>
+        {/* <div className='block h-full lg:hidden w-[100%] mx-auto'>
             <Tabs defaultValue="energy">
                 <TabsList>
                   <div className='flex gap-3 m-3.5 justify-center'>
@@ -78,27 +78,7 @@ export default function Home() {
                   <Percapita className='w-full h-[450px]' />
                 </TabsContent>
             </Tabs> 
-          <div className='w-full mt-4 px-3'>
-              {/* <Map /> */}
-              {/* <EnergyMix /> */}
-              {/* <LeaderBoard className='mt-0'/> */}
-              {/* <Change className='h-[400px]'/> */}
-              {/* <AvgHouse className='h-[400px]' /> */}
-              {/* <Capacities className='w-full'/> */}
-              {/* <Percapita className='w-full' /> */}
-              {/* <div className='h-fit md:flex w-full mt-3 gap-3 items-start justify-center'>
-                <LeaderBoard className='mt-0'/>
-                <div className='mt-3 md:mt-0 md:h-auto'>
-                  <Change />
-                  <AvgHouse className='h-[200px] mt-3' />
-                </div>
-              </div>
-              <div className='mt-3'>
-                <Capacities className='w-full'/>
-                <Percapita className='mt-3 w-full' />
-              </div> */}
-          </div>
-        </div>
+        </div> */}
 
     </div>
   )
