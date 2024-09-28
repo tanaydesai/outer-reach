@@ -19,7 +19,7 @@ export const Percapita = ({className}) => {
             </Select>
              in CO2 emissions & GDP per capita</h1>
             <p className='text-[13px] mx-3 my-2 font-rajdhani-regular'>Historical change in CO2 emissions per capita and GDP per capity</p>
-            <div className='px-3 py-3 my-5 border-2 bg-black text-white border-transparent rounded-[15px]'>    
+            <div className='py-3 my-5 border-2 bg-black text-white border-transparent rounded-[15px]'>    
                 <CO2GDP className='w-full h-[350px]'/>
             </div>
         </div>

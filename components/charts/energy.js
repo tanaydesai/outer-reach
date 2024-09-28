@@ -103,6 +103,7 @@ export const EnergyShare = ({className}) => {
               axisLine={false}
               tickMargin={8}
               tickCount={5}
+              className='bg-red-300'
             />
             <ChartTooltip
               cursor={false}
@@ -246,8 +247,8 @@ return (
           accessibilityLayer
           data={chartData}
           margin={{
-            left: 5,
-            right: 10,
+            left: 20,
+            right:20,
           }}
         >
           {/* <CartesianGrid vertical={false} /> */}
@@ -256,7 +257,6 @@ return (
             tickLine={false}
             axisLine={false}
             tickMargin={3}
-            // tickFormatter={(value) => value.slice(0, 3)}
           />
           {/* <YAxis
             tickLine={false}
