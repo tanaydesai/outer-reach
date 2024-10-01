@@ -17,7 +17,7 @@ const SelectTrigger = React.forwardRef(({ className, children, icon=true, ...pro
     <SelectPrimitive.Trigger
       ref={ref}
       className={cn(
-        "text-[16px] group justify-center inline-flex gap-0.5 whitespace-nowrap items-center font-a2 px-1.5 mx-1 rounded-[3px] bg-[#dbdada] border-none uppercase outline-none placeholder:text-stone-500 disabled:cursor-not-allowed ",
+        "text-[17px] group justify-center inline-flex gap-0.5 whitespace-nowrap items-center font-a2 px-1.5 mx-1 rounded-[3px] bg-[#e5e4e4] border-none outline-none placeholder:text-stone-500 disabled:cursor-not-allowed ",
         className
       )}
       {...props}>
@@ -86,7 +86,7 @@ const SelectItem = React.forwardRef(({ className, children,name, ...props }, ref
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full items-center cursor-default font-a2 rounded-[3px] uppercase font-bold select-none py-1.5 px-2 text-[14px] outline-none focus:bg-[#e4e4e4] focus:text-black data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-stone-800 dark:focus:text-stone-50",
+      "relative flex w-full items-center cursor-default font-a2 rounded-[3px] font-bold select-none py-1.5 px-2 text-[15px] outline-none focus:bg-[#e4e4e4] focus:text-black data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-stone-800 dark:focus:text-stone-50",
       className
     )}
     {...props}>

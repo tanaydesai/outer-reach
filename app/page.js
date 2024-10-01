@@ -3,15 +3,16 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
 import { Fade } from 'react-awesome-reveal';
+import { MoveRight } from 'lucide-react';
 
 export default function Home() {
   return (
       <div className='fixed w-full h-full bg-[#efefef] overflow-x-hidden'>
         <div className='absolute w-full h-full flex items-center justify-center'>
             <div> 
-              <div className='flex justify-center'><Fade><TypeAnimation speed={40} cursor={false} sequence={["Outer", "Outer->", 'Outer->Reach']} className='text-[45px] md:text-[80px] text-center leading-[60px] md:leading-[85px] text-[#1e1f2b] uppercase font-a2'/></Fade></div>
-              <div className='mt-5 mx-auto w-[400px] text-center text-[16px] text-[#1e1f2b] uppercase font-rajdhani-regular'><Fade>Data to Track Progress of the world's frontier technologies</Fade></div>
-              <Fade><Link href="/energy"><div className='block sm:hidden mt-10 group mx-auto w-[400px] text-center text-[16px] text-[#1e1f2b] uppercase font-rajdhani-regular'>Start<div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link></Fade>
+              <div className='flex justify-center'><Fade><TypeAnimation speed={40} cursor={false} sequence={["{Outer", "{Outer,", '{Outer, Reach}']} className='text-[45px] md:text-[80px] text-center leading-[60px] md:leading-[85px] text-[#1e1f2b] uppercase font-a2'/></Fade></div>
+              <div className='mt-5 mx-auto w-[400px] text-center text-[16px] text-[#1e1f2b] font-a1'><Fade>Data to Track Progress of the world's frontier technologies</Fade></div>
+              {/* <Fade><Link href="/energy"><div className='mt-5 group mx-auto w-[400px] text-center text-[16px] text-[#1e1f2b] font-a1 flex items-center justify-center gap-2'>Start<div className='group-hover:translate-x-1 pt-1 duration-300'><MoveRight size={14}/></div></div></Link></Fade> */}
             </div>
         </div>
         <Fade>
