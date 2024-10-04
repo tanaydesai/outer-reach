@@ -18,7 +18,7 @@ export default function Home() {
     <div className="absolute w-full min-h-full bg-[#efefef] py-[55px]">
         
         <div className='w-[94%] mt-5 mx-auto'>
-          <div className='text-[40px] font-a2 w-full flex gap-2 items-center'><CornerDownRight strokeWidth={1.5} size={30}/>Energy sources and their progress</div>
+          <div className='md:text-[40px] text-[25px] font-a2 w-full flex gap-2 items-center'><CornerDownRight className='shrink-0' strokeWidth={1.5} size={30}/><div>Energy sources and their progress</div></div>
           <div className='w-full lg:flex gap-5 mt-10 items-start '>
               <div className='w-7/20'>
                 <Map/>
@@ -32,7 +32,7 @@ export default function Home() {
                 </div>
               </div>
           </div>
-          <div className='text-[40px] font-a2 w-full mt-10 flex gap-2 items-center'><CornerDownRight strokeWidth={1.5} size={30}/>The impact of energy on <span className='inline-flex underline decoration-2 decoration-red-400 underline-offset-8'>France's</span> standards of living</div>
+          <div className='md:text-[40px] text-[25px] font-a2 w-full mt-10 flex gap-2 items-center'><CornerDownRight className='shrink-0' strokeWidth={1.5} size={30}/><div>The impact of energy on <span className='inline-flex underline decoration-2 decoration-red-400 underline-offset-8'>France's</span> standards of living</div></div>
           <div className='w-full lg:flex gap-5 mt-10 items-start'>
             <Capacities className='w-full lg:w-1/2'/>
             <Percapita className={'w-full lg:w-1/2'}/>
