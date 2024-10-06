@@ -31,7 +31,7 @@ export default function Home() {
         <div className='absolute w-full h-full flex items-center justify-center'>
             <div> 
               <div className='flex justify-center'><Fade><TypeAnimation speed={40} cursor={false} sequence={["{Outer", "{Outer,", '{Outer, Reach}']} className='text-[45px] md:text-[80px] text-center leading-[60px] md:leading-[85px] text-[#1e1f2b] uppercase font-a2'/></Fade></div>
-              <div className='mt-5 mx-auto w-[400px] text-center text-[16px] text-[#1e1f2b] font-a1'><Fade>Data to demistify widely held misperceptions and track the progress of humanity's frontier technologies.</Fade></div>
+              <div className='mt-5 mx-auto w-[370px] md:w-[400px] text-center text-[16px] text-[#1e1f2b] font-a1'><Fade>Data to demistify widely held misperceptions and track the progress of humanity's frontier technologies.</Fade></div>
               {/* <Fade><Link href="/energy"><div className='mt-5 group mx-auto w-[400px] text-center text-[16px] text-[#1e1f2b] font-a1 flex items-center justify-center gap-2'>Start<div className='group-hover:translate-x-1 pt-1 duration-300'><MoveRight size={14}/></div></div></Link></Fade> */}
             </div>
         </div>

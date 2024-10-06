@@ -14,12 +14,14 @@ export const Navbar = () => {
     <div className={`fixed top-0 z-10 w-full left-0 px-5 py-3 flex bg-transparent items-start justify-between ${open ? "" : "backdrop-blur-[10px]"}`}>
       <Link href="/"><motion.div whileTap={{scale:1.1}} className='w-fit cursor-default text-[#9b9b9b] text-[18px] uppercase font-rajdhani-regular flex items-center gap-1'>{'0'} <MoveRight size={15}/> {'1'}</motion.div></Link>
      
-      {/* <div className='hidden md:flex justify-center text-[17px] cursor-default items-center text-[#9b9b9b] font-a1 w-fit gap-3'>
+      {path !== '/' && 
+      <div className='hidden md:flex justify-center text-[17px] cursor-default items-center text-[#9b9b9b] font-a1 w-fit gap-3'>
         <Link href="/energy"><div className='group hover:text-[#1e1f2b] duration-300'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[90%] transition-all duration-700"></div>Energy<div className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
         <Link href="/nuclear"><div className='group hover:text-[#1e1f2b] duration-300'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[90%] transition-all duration-700"></div>Nuclear<div className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
         <Link href="/ai"><div className='group hover:text-[#1e1f2b] duration-300'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[90%] transition-all duration-700"></div>Artificial Intelligence<div className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
         <Link href="/space"><div className='group hover:text-[#1e1f2b] duration-300'><div class="bg-[#24252f] h-[1px] my-1 w-0 group-hover:w-[90%] transition-all duration-700"></div>Space<div className='ml-2 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
-      </div> */}
+      </div>
+}
 
       {path === '/' && 
         <div className='grid grid-rows-4 place-items-end text-[15px] cursor-default text-[#9b9b9b] font-a1 w-fit gap-3'>
