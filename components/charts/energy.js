@@ -126,6 +126,91 @@ export const EnergyShare = ({className}) => {
   )
 }
 
+export const LeaderBoards = ({className}) => {
+  const chartData = [
+   {month:"United States", desktop: 95},
+   {month:"United Kingdom", desktop: 80},
+   {month:"Germany", desktop: 75},
+   {month:"France", desktop: 65},
+   {month:"Japan", desktop: 60},
+   {month:"China", desktop: 55},
+   {month:"India", desktop: 50},
+   {month:"Brazil", desktop: 45},
+   {month:"Australia", desktop: 40},
+   {month:"Canada", desktop: 35},
+   {month:"South Korea", desktop: 30},
+   {month:"Russia", desktop: 25},
+   {month:"Mexico", desktop: 20},
+   {month:"Saudi Arabia", desktop: 15},
+   {month:"Turkey", desktop: 10},
+  ]
+  const chartConfig = {
+    desktop: {
+      label: "Desktop",
+      color: "green",
+    },
+    mobile: {
+      label: "Mobile",
+      color: "hsl(var(--chart-2))",
+    },
+    label: {
+      color: "hsl(var(--background))",
+    },
+  } 
+
+  return (
+        <ChartContainer config={chartConfig} className={className}>
+          <BarChart
+            accessibilityLayer
+            data={chartData}
+            layout="vertical"
+            margin={{
+              left: 0,
+              right: 5,
+            }}
+          >
+            <YAxis
+              dataKey="month"
+              type="category"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+              tickFormatter={(value) => value.slice(0, 3)}
+              hide
+            />
+            <XAxis dataKey="desktop" type="number" hide />
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent indicator="line" />}
+            />
+            <Bar
+              dataKey="desktop"
+              layout="vertical"
+              fill="#2eec7d"
+              radius={7}
+              barSize={35}
+            >
+              <LabelList
+                dataKey="month"
+                position="insideLeft" 
+                offset={8}
+                className="fill-[--color-label]"
+                fontSize={11}
+              />
+              <LabelList
+                dataKey="desktop"
+                position="right"
+                offset={8}
+                className="fill-[#ffffff]"
+                fontSize={12}
+              />
+            </Bar>
+          </BarChart>
+        </ChartContainer>
+  )
+}
+
+
 export const PercentChange = ({className}) => {
   const chartData = [
     { month: "Solar", desktop: 2 },

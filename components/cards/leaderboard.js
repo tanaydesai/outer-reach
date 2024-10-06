@@ -2,8 +2,7 @@
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
-import { CrownIcon } from 'lucide-react';
-
+import { LeaderBoards } from '@/components/charts/energy';
 
 export const LeaderBoard = ({className}) => {
     return (
@@ -27,27 +26,12 @@ export const LeaderBoard = ({className}) => {
             </Select>
             </h1>
             <p className='text-[14px] mx-2 my-2 font-a1 text-[#656565]'>Countries leading the way by share of Renewables in the mix.</p>
-           
-            <div className='pt-3 mt-5 text-white rounded-[15px] bg-black'>    
-                <div className='px-4 w-full flex font-a1 text-[17px] text-[#656565] items-center justify-between'>Country <div>%</div></div>
-                <div className='mt-2 px-4 overflow-hidden cursor-default whitespace-nowrap'>
-                    <motion.div initial={{scale: 1.03}}  className='px-2 mt-1.5 w-full flex font-a1 text-[35px] rounded-[7px] bg-green-700 items-center justify-between'><div className='flex gap-2 items-center'><CrownIcon size={30}/> United States </div><div>40%</div></motion.div>
-                    <motion.div initial={{scale: 1.017}}  className='px-2  mt-2 w-full flex font-a1 text-[25px] rounded-[7px] bg-green-500  items-center justify-between'>United Kindom <div>40%</div></motion.div>
-                    <motion.div initial={{scale: 1}}  className='px-2  mt-2 w-full flex font-a1 text-[20px] rounded-[7px] bg-green-400   items-center justify-between'>France <div>40%</div></motion.div>
-                    <div className='overflow-auto h-[295px]'>
-                        <motion.div whileHover={{scale: 1.01, transition: {duration: 0.2, type: 'spring'}}} className='px-2  mt-1.5 w-full flex font-a1 text-[17px]  gap-3 items-center justify-between'>India <div>40%</div></motion.div>
-                        <motion.div whileHover={{scale: 1.01, transition: {duration: 0.2, type: 'spring'}}} className='px-2  mt-1.5 w-full flex font-a1 text-[17px]  gap-3 items-center justify-between'>Saudi Arabia <div>40%</div></motion.div>
-                        <motion.div whileHover={{scale: 1.01, transition: {duration: 0.2, type: 'spring'}}} className='px-2  mt-1.5 w-full flex font-a1 text-[17px]  gap-3 items-center justify-between'>China <div>40%</div></motion.div>
-                        <motion.div whileHover={{scale: 1.01, transition: {duration: 0.2, type: 'spring'}}} className='px-2  mt-1.5 w-full flex font-a1 text-[17px]  gap-3 items-center justify-between'>Ireland <div>40%</div></motion.div>
-                        <motion.div whileHover={{scale: 1.01, transition: {duration: 0.2, type: 'spring'}}} className='px-2  mt-1.5 w-full flex font-a1 text-[17px]  gap-3 items-center justify-between'>Ireland <div>40%</div></motion.div>
-                        <motion.div whileHover={{scale: 1.01, transition: {duration: 0.2, type: 'spring'}}} className='px-2  mt-1.5 w-full flex font-a1 text-[17px]  gap-3 items-center justify-between'>Ireland <div>40%</div></motion.div>
-                        <motion.div whileHover={{scale: 1.01, transition: {duration: 0.2, type: 'spring'}}} className='px-2  mt-1.5 w-full flex font-a1 text-[17px]  gap-3 items-center justify-between'>Ireland <div>40%</div></motion.div>
-                        <motion.div whileHover={{scale: 1.01, transition: {duration: 0.2, type: 'spring'}}} className='px-2  mt-1.5 w-full flex font-a1 text-[17px]  gap-3 items-center justify-between'>Ireland <div>40%</div></motion.div>
-                        <motion.div whileHover={{scale: 1.01, transition: {duration: 0.2, type: 'spring'}}} className='px-2  mt-1.5 w-full flex font-a1 text-[17px]  gap-3 items-center justify-between'>Ireland <div>40%</div></motion.div>
-                        <motion.div whileHover={{scale: 1.01, transition: {duration: 0.2, type: 'spring'}}} className='px-2  mt-1.5 w-full flex font-a1 text-[17px]  gap-3 items-center justify-between'>Ireland <div>40%</div></motion.div>
-                    </div>
-                </div>  
-            </div>                
+            <div className='px-2 mt-5 overflow-auto text-white bg-black relative rounded-[15px]'>    
+                {/* <div className='w-full flex font-a1 text-[17px] items-center justify-between'>Country <div>%</div></div> */}
+                <div className='h-[480px] w-full relative overflow-auto'>
+                    <LeaderBoards className='top-0 py-3 left-0 absolute h-[600px] w-full' />
+                </div>
+            </div>
         </div>
     )
 }
