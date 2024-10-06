@@ -31,14 +31,13 @@ export default function Home() {
         <div className='absolute w-full h-full flex items-center justify-center'>
             <div> 
               <div className='flex justify-center'><Fade><TypeAnimation speed={40} cursor={false} sequence={["{Outer", "{Outer,", '{Outer, Reach}']} className='text-[45px] md:text-[80px] text-center leading-[60px] md:leading-[85px] text-[#1e1f2b] uppercase font-a2'/></Fade></div>
-              <div className='mt-5 mx-auto w-[370px] md:w-[400px] text-center text-[16px] text-[#1e1f2b] font-a1'><Fade>Data to demistify widely held misperceptions and track the progress of humanity's frontier technologies.</Fade></div>
-              {/* <Fade><Link href="/energy"><div className='mt-5 group mx-auto w-[400px] text-center text-[16px] text-[#1e1f2b] font-a1 flex items-center justify-center gap-2'>Start<div className='group-hover:translate-x-1 pt-1 duration-300'><MoveRight size={14}/></div></div></Link></Fade> */}
+              <div className='mt-5 mx-auto w-[370px] md:w-[400px] text-center text-[14px] md:text-[16px] text-[#1e1f2b] font-a1'><Fade>Data to demistify common misperceptions and track the progress of humanity's frontier technologies.</Fade></div>
             </div>
         </div>
         <Fade>
         <div className='absolute bottom-0 px-5 p-4 text-[12.5px] w-full flex items-end text-[#9b9b9b] justify-between uppercase font-rajdhani-regular'>
           <div className='border-l-[2px] h-[55px] md:h-[36px] break-words w-[160px] md:w-[200px] border-l-[#c3c3c3] px-2'>
-            <div><TypeAnimation speed={40} cursor={false} sequence={["Optimistic", "Optimistic, accelerationist", "Optimistic, accelerationist & technocapitalistic"]} /></div>
+            <div><TypeAnimation speed={40} cursor={false} sequence={["Optimism", "Optimism, acceleration", "Optimism, acceleration & technocapitalism"]} /></div>
           </div>
           <div className='hidden md:block border-l-[2px] h-[36px] border-l-[#c3c3c3] px-2'>
             <div><TypeAnimation speed={40} cursor={false} sequence={["Open","Open Source"]}/></div>

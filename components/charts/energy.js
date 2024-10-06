@@ -441,3 +441,54 @@ export const AnnualHouse = ({className}) => {
         </ChartContainer>
   )
 }
+
+export const ShareRenewables = ({className}) => {
+  const chartData = [
+    { month: "January", desktop: 30 },
+    { month: "February", desktop: 35 },
+    { month: "March", desktop: 37 },
+    { month: "April", desktop: 40 },
+    { month: "May", desktop: 42 },
+    { month: "June", desktop: 45 },
+  ]
+  const chartConfig = {
+    desktop: {
+      label: "Desktop",
+      color: "hsl(var(--chart-2))",
+    },
+  }
+
+return (
+      <ChartContainer config={chartConfig} className={className}>
+        <AreaChart
+          accessibilityLayer
+          data={chartData}
+          margin={{
+            left: 0,
+            right: 0,
+          }}
+        >
+          <ChartTooltip
+            cursor={false}
+            content={<ChartTooltipContent indicator="line" />}
+          />
+          <Area
+            dataKey="desktop"
+            type="natural"
+            fill="hsl(var(--chart-2))"
+            fillOpacity={0.6}
+            dot={true}
+            radius={2}
+            stroke="hsl(var(--chart-2))"
+          >
+            <LabelList
+            position="top"
+            offset={12}
+            className="fill-foreground"
+            fontSize={12}
+          />
+          </Area>
+        </AreaChart>
+      </ChartContainer>
+)
+}

@@ -14,7 +14,7 @@ export const AvgHouse = ({className}) => {
             </h1>
             <p className='text-[14px] mx-3 mt-2 font-a1 text-transparent'>Avg</p>
             <div className='pt-3 mt-10 overflow-auto text-white bg-black relative rounded-[15px]'>    
-                <div className='text-[30px] px-6 pt-2 font-a1'>13,000Kwh<div className='text-[18px] text-black pl-2 font-a2 inline-flex items-center gap-1'><ArrowUp size={17} className='text-[#2eec7d]'/>5% YoY</div></div>
+                <div className='text-[30px] px-6 pt-2 font-a1'>13,000Kwh<div className='text-[10px] text-white pl-2 font-a2 inline-flex items-end gap-1'><ArrowUp size={17} className='text-[#2eec7d]'/>5% YoY</div></div>
                 <AnnualHouse className='w-full h-[180px]'/>
             </div>
         </div>

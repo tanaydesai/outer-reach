@@ -7,7 +7,7 @@ import { LeaderBoards } from '@/components/charts/energy';
 export const LeaderBoard = ({className}) => {
     return (
         <div className={`w-full mt-7 ${className}`}>
-            <h1 className='text-[17px] text-[#444444]  font-a2'><div className='w-3 h-3 bg-green-500 shrink-0  mx-2 inline-flex'/>Leaderboard: 
+            <h1 className='text-[17px] text-[#444444]  font-a2'><div className='w-3 h-3 bg-green-500 shrink-0  mx-2 inline-flex'/>King's Leaderboard: 
             <Select>
             <SelectTrigger className="text-black">
                 <SelectValue placeholder="Renewables" />
@@ -28,8 +28,8 @@ export const LeaderBoard = ({className}) => {
             <p className='text-[14px] mx-2 my-2 font-a1 text-[#656565]'>Countries leading the way by share of Renewables in the mix.</p>
             <div className='px-2 mt-5 overflow-auto text-white bg-black relative rounded-[15px]'>    
                 {/* <div className='w-full flex font-a1 text-[17px] items-center justify-between'>Country <div>%</div></div> */}
-                <div className='h-[480px] w-full relative overflow-auto'>
-                    <LeaderBoards className='top-0 py-3 left-0 absolute h-[600px] w-full' />
+                <div className='h-[470px] w-full relative overflow-auto'>
+                    <LeaderBoards className='top-0 py-3 left-0 absolute h-[650px] w-full' />
                 </div>
             </div>
         </div>
