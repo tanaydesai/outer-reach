@@ -20,12 +20,12 @@ export default function Home() {
     <div className="absolute w-full min-h-full bg-[#efefef] py-[50px]">
 
         <div className='w-[95%] mt-5 mx-auto'>
-          <Tabs defaultValue="renewable">
+          <Tabs defaultValue="mix">
             <TabsList>
               <TabsTrigger value="mix"><EnergyMixIcon className="group-hover:scale-110 scla duration-300"/>Energy Mix</TabsTrigger>
               <TabsTrigger value="renewable"><CapacityIcon className="group-hover:scale-110 duration-300"/>Renewables</TabsTrigger>
-              <TabsTrigger value="leaderboard"><RankingIcon className="group-hover:scale-110 duration-300"/>Ranking</TabsTrigger>
-              <TabsTrigger value="change"><ChangeIcon className="group-hover:scale-110 duration-300"/>Change</TabsTrigger>
+              <TabsTrigger value="leaderboard"><RankingIcon className="group-hover:scale-110 duration-300"/>Leaderboard</TabsTrigger>
+              <TabsTrigger value="change"><ChangeIcon className="group-hover:scale-110 duration-300"/>Growth</TabsTrigger>
               <TabsTrigger value="percapita"><HouseIcon className="group-hover:scale-110 duration-300"/>Per capita</TabsTrigger>
             </TabsList>
             <TabsContent value="mix">
@@ -63,25 +63,9 @@ export default function Home() {
                   <SelectItem value="light">France</SelectItem>
               </SelectContent>
               </Select>
-            </div></div> */}
-          {/* <div className='w-full lg:flex gap-5 mt-10 items-start '>
-              <div className='w-7/20'>
-                <RenewableShare/>
-                <LeaderBoard />
-              </div>
-              <div className='flex-1'>
-                <EnergyMix className='mt-10 lg:mt-0'/>
-                <div className='lg:grid grid-cols-2 w-full mt-10 gap-5 items-start justify-center'>
-                  <Change />
-                  <AvgHouse className='mt-7 lg:mt-0'/>
-                </div>
-              </div>
-          </div> */}
-          {/* <div className='md:text-[40px] text-[25px] font-a2 w-full mt-10 flex gap-2 items-center'><CornerDownRight className='shrink-0' strokeWidth={1.5} size={30}/><div><span className='inline-flex underline decoration-2 decoration-red-400 underline-offset-8'>France's</span> story in terms of per capita</div></div>
-          <div className='w-full lg:flex gap-5 mt-10 items-start'>
-            <Capacities className='w-full lg:w-1/2'/>
-            <Percapita className={'w-full lg:w-1/2'}/>
-          </div> */}
+            </div></div> 
+            <div className='md:text-[40px] text-[25px] font-a2 w-full mt-10 flex gap-2 items-center'><CornerDownRight className='shrink-0' strokeWidth={1.5} size={30}/><div><span className='inline-flex underline decoration-2 decoration-red-400 underline-offset-8'>France's</span> story in terms of per capita</div></div>
+          */}
         </div>
 
     </div>

@@ -9,7 +9,7 @@ import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/ta
 export const EnergyMix = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] ${className}`}>
-            <h1 className='text-[17px] font-a2 px-3 text-[#1e1f2b]'><div className='w-3 h-3 bg-red-400 mr-2 inline-flex'/>Share of 
+            <h1 className='text-[17px] font-a2 px-3 text-[#1e1f2b]'><div className='w-3 h-3 bg-red-400 mr-2 inline-flex'/> 
             <Select>
             <SelectTrigger>
                 <SelectValue placeholder="Energy Production" />
