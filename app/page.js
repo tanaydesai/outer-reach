@@ -3,15 +3,11 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
 import { Fade } from 'react-awesome-reveal';
-import { MoveRight } from 'lucide-react';
-import Image from 'next/image';
-import starship from "@/assests/images/starship.jpg"
-import falcon from "@/assests/images/falcon.jpg"
 
 export default function Home() {
   return (
       <div className='fixed w-full h-full bg-[#efefef] overflow-x-hidden'>
-        <div className="w-full absolute top-0 left-0 -z-10 h-full grid grid-cols-4">
+        {/* <div className="w-full absolute top-0 left-0 -z-10 h-full grid grid-cols-4">
           {Array.from({ length: 16 }).map((_, index) => (
             <div key={index} className="relative">
               <div className="absolute inset-0 flex items-center justify-center">
@@ -21,12 +17,7 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* <Image src={starship} alt="starship" className='w-[150px] h-auto rounded-full absolute top-[150px] left-[150px]' />
-        <Image src={falcon} alt="starship" className='w-[150px] h-auto rounded-full  absolute bottom-[80px] left-[150px]' />
-        <Image src={starship} alt="starship" className='w-[150px] h-auto rounded-full absolute top-[80px] right-[150px]' />
-        <Image src={starship} alt="starship" className='w-[150px] h-auto rounded-full absolute bottom-[150px] right-[150px]' /> */}
+        </div> */}
 
         <div className='absolute w-full h-full flex items-center justify-center'>
             <div> 
@@ -36,7 +27,7 @@ export default function Home() {
         </div>
         <Fade>
         <div className='absolute bottom-0 px-5 p-4 text-[12.5px] w-full flex items-end text-[#9b9b9b] justify-between uppercase font-rajdhani-regular'>
-          <div className='border-l-[2px] h-[55px] md:h-[36px] break-words w-[160px] md:w-[200px] border-l-[#c3c3c3] px-2'>
+          <div className='border-l-[2px] h-[36px] break-words w-[160px] md:w-[200px] border-l-[#c3c3c3] px-2'>
             <div><TypeAnimation speed={40} cursor={false} sequence={["Optimism", "Optimism, acceleration", "Optimism, acceleration & technocapitalism"]} /></div>
           </div>
           <div className='hidden md:block border-l-[2px] h-[36px] border-l-[#c3c3c3] px-2'>

@@ -38,7 +38,7 @@ export const EnergyMix = ({className}) => {
                 </Select>
              </h1>
             <p className='text-[14px] mx-3 mt-2 font-a1 text-[#656565]'>Measured as a percentage of primary energy.</p>   
-            <div className='py-3 mt-5 border-2 border-[#b3b3b3] rounded-[15px]'>    
+            <div className='py-3 mt-5 border-2 border-[#b3b3b3] rounded-[10px]'>    
                 <Tabs2 defaultValue="account">
                     <TabsContent2 value="account">
                         <EnergyShare className='w-full h-[330px] mt-4'/>

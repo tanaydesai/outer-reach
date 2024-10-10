@@ -280,7 +280,8 @@ export const Capacity = ({className}) => {
             data={chartData}
             layout="vertical"
             margin={{
-              left: -20,
+              left: 0,
+              right: 5,
             }}
           >
             <XAxis type="number" dataKey="desktop" hide />
