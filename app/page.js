@@ -14,7 +14,7 @@ export default function Home() {
   }, []);
 
   return (
-      <div className='absolute w-full h-full top-0 left-0 overflow-auto'>
+      <div className='absolute w-full h-full top-0 left-0 overflow-auto overflow-y-hidden'>
         <div className='absolute w-[250vw] md:w-full h-full flex items-center justify-center bg-[#efefef]'>
             {/* <div className="w-full absolute top-0 left-0 -z-10 h-full grid grid-cols-4">
             {Array.from({ length: 16 }).map((_, index) => (
@@ -92,7 +92,7 @@ export default function Home() {
 
           <div ref={ref} className='flex justify-center'><Fade><TypeAnimation speed={40} cursor={false} sequence={["Outer", "Outer->", 'Outer->Reach']} className='text-[40px] md:text-[70px] text-center leading-[60px] md:leading-[85px] text-[#1e1f2b] uppercase font-a2'/></Fade></div>
           {/* <div className='mt-5 mx-auto w-[370px] md:w-[400px] text-center text-[14px] md:text-[16px] text-[#1e1f2b] font-a1'><Fade>Data to demistify common misperceptions and track the progress of humanity's frontier technologies.</Fade></div> */}        
-          <div className='absolute bottom-[200px] left-[calc(100% - 150px)] w-[300px] md:w-[400px] h-fit rounded-[7px] border overflow-auto text-[14px] text-[#1e1f2b] font-a2 border-[#b3b3b3]'>
+          <div className='absolute bottom-[180px] md:bottom-[200px] left-[calc(100% - 150px)] w-[300px] md:w-[400px] h-fit rounded-[7px] border overflow-auto text-[14px] text-[#1e1f2b] font-a2 border-[#b3b3b3]'>
             <div className='w-full pt-2 px-2 uppercase text-[12px]'>
               <div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/>
               Description
