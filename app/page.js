@@ -29,33 +29,45 @@ export default function Home() {
           </div> */}
 
         
-          <div className='absolute top-[70px] md:top-[100px] left-[calc(100% - 125px)] w-[250px] h-fit rounded-[7px] border overflow-auto text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
-            <div className='w-full py-2 px-2 uppercase text-[12px]'>
+          <motion.div initial={{height: "35px"}} whileHover={{height: "110px", transition:{duration:0.4, type:'easeInOut'}}} className='cursor-default overflow-hidden absolute top-[70px] md:top-[100px] left-[calc(100% - 125px)] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
+            <div className='w-full pt-2 px-2 uppercase text-[12px]'>
               <div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/>
               Road to Energy Abundance
             </div>
-          </div>
+            <div className='p-2 pb-2'>
+              Energy & electricity mix, renewable capacity, leaderboards, growth and much more.
+            </div>
+          </motion.div>
 
-          <div className='absolute top-[220px] md:top-[200px] right-[150px] md:right-[100px] w-[250px] h-fit rounded-[7px] border overflow-auto text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
-            <div className='w-full py-2 px-2 uppercase text-[12px]'>
+          <motion.div initial={{height: "35px"}} whileHover={{height: "110px", transition:{duration:0.4, type:'easeInOut'}}} className='cursor-default overflow-hidden absolute top-[220px] md:top-[200px] right-[150px] md:right-[100px] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
+            <div className='w-full pt-2 px-2 uppercase text-[12px]'>
               <div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/>
               Age of Artificial Intelligence
             </div>
-          </div>
+            <div className='p-2 pb-2'>
+              Energy & electricity mix, renewable capacity, leaderboards, growth and much more.
+            </div>
+          </motion.div>
 
-          <div className='absolute bottom-[120px] md:bottom-[150px] left-[170px] md:left-[100px] w-[250px] h-fit rounded-[7px] border overflow-auto text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
-            <div className='w-full py-2 px-2 uppercase text-[12px]'>
+          <motion.div initial={{height: "35px"}} whileHover={{height: "110px", transition:{duration:0.4, type:'easeInOut'}}} className='cursor-default overflow-hidden absolute bottom-[120px] md:bottom-[150px] left-[170px] md:left-[100px] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
+            <div className='w-full pt-2 px-2 uppercase text-[12px]'>
               <div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/>
               Nuclear's Revenge
             </div>
-          </div>
+            <div className='p-2 pb-2'>
+              Energy & electricity mix, renewable capacity, leaderboards, growth and much more.
+            </div>
+          </motion.div>
 
-          <div className='absolute bottom-[75px] md:bottom-[100px] right-[100px] md:right-[150px] w-[250px] h-fit rounded-[7px] border overflow-auto text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
-            <div className='w-full py-2 px-2 uppercase text-[12px]'>
+          <motion.div initial={{height: "35px"}} whileHover={{height: "110px", transition:{duration:0.4, type:'easeInOut'}}} className='cursor-default overflow-hidden absolute bottom-[75px] md:bottom-[100px] right-[100px] md:right-[150px] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
+            <div className='w-full pt-2 px-2 uppercase text-[12px]'>
               <div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/>
               The Space Race
             </div>
-          </div>
+            <div className='p-2 pb-2'>
+              Energy & electricity mix, renewable capacity, leaderboards, growth and much more.
+            </div>
+          </motion.div>
 
           <div className='absolute top-[150px] left-[170px] md:left-[100px] w-[170px] h-[130px] rounded-[7px] border overflow-auto text-[12px] font-a2 border-[#b3b3b3]'>
             <div className='h-[105px]'></div>
