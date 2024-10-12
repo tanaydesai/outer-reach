@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
       <div className='absolute w-full h-full top-0 left-0 overflow-auto overflow-y-hidden'>
-        <div className='absolute w-[250vw] md:w-full h-full flex items-center justify-center bg-[#efefef]'>
+        <div className='absolute w-[250vw] md:w-full h-full flex items-center justify-center overflow-y-hidden bg-[#efefef]'>
             {/* <div className="w-full absolute top-0 left-0 -z-10 h-full grid grid-cols-4">
             {Array.from({ length: 16 }).map((_, index) => (
               <div key={index} className="relative">
@@ -59,7 +59,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <motion.div initial={{height: "35px"}} whileHover={{height: "110px", transition:{duration:0.4, type:'easeInOut'}}} className='cursor-default overflow-hidden absolute bottom-[75px] md:bottom-[100px] right-[100px] md:right-[150px] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
+          <motion.div initial={{height: "35px"}} whileHover={{height: "110px", transition:{duration:0.4, type:'easeInOut'}}} className='cursor-default overflow-hidden absolute bottom-[75px] md:bottom-[100px] right-[130px] md:right-[150px] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
             <div className='w-full pt-2 px-2 uppercase text-[12px]'>
               <div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/>
               The Space Race
@@ -102,15 +102,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='fixed z-[100] left-0 bottom-0 px-5 p-3 text-[12.5px] w-full flex items-end text-[#9b9b9b] justify-between uppercase font-rajdhani-regular'>
+          <div className='fixed z-[100] left-0 bottom-0 px-2 p-3 text-[14px] w-full flex items-end text-[#9b9b9b] justify-between uppercase font-rajdhani-regular'>
           <Fade>
-            <div className='border-l-[2px] h-[36px] border-l-[#c3c3c3] px-2'>
-              <div><TypeAnimation speed={40} cursor={false} sequence={["Open","Open Source"]}/></div>
+            <div className=' h-[18px] px-2'>
+              {/* <div><TypeAnimation speed={40} cursor={false} sequence={["Open","Open Source"]}/></div> */}
               <Link href="https://github.com/tanaydesai" target="_blank"><div className='group cursor-default'><TypeAnimation speed={40} cursor={false} sequence={["GitHub"]} /><div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
             </div>
-            <div className='border-r-[2px] text-right h-[36px] border-r-[#c3c3c3] px-2'>
+            <div className='text-right h-[18px] px-2'>
               <div><TypeAnimation speed={40} cursor={false} sequence={["Est.", "Est. 2024"]} /></div>
-              <Link href="https://tanaydesai.com" target="_blank"><div className='group cursor-default'><TypeAnimation speed={40} cursor={false} sequence={["Tanay","Tanay Desai",]} /><div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
+              {/* <Link href="https://tanaydesai.com" target="_blank"><div className='group cursor-default'><TypeAnimation speed={40} cursor={false} sequence={["Tanay","Tanay Desai",]} /><div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link> */}
               {/* <Link href="https://github.com/tanaydesai" target="_blank"><div className='block md:hidden group cursor-default'><TypeAnimation speed={40} cursor={false} sequence={["GitHub"]} /><div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link> */}
             </div>
             </Fade>
