@@ -24,6 +24,14 @@
   display: none;
 }
 
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: auto;
+  padding: 10px;
+  background-color: red;
+}
+
   @font-face {
     font-family: "rajdhani-bold";
     src: url("../assests/fonts/Rajdhani/Rajdhani-SemiBold.otf") format("opentype");
