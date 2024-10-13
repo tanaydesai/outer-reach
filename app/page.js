@@ -3,45 +3,53 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
 import { Fade } from 'react-awesome-reveal';
+import { EnergyMixIcon, CapacityIcon, NuclearPlantIcon, ChangeIcon, HouseIcon, RankingIcon, NuclearWasteIcon } from '@/components/icons';
+import {DecryptText} from '@/components/decrypt'
 
 export default function Home() {
   return (
-      <div className='fixed w-full h-full bg-[#efefef] overflow-x-hidden'>
-        {/* <div className="w-full absolute top-0 left-0 -z-10 h-full grid grid-cols-4">
-          {Array.from({ length: 16 }).map((_, index) => (
+      <div className='absolute w-full min-h-full px-3 py-[50px] bg-[#efefef]'>
+  
+        <div className='w-full h-fit'> 
+          <Fade className='h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[1000,"Welcome", "Welcome to", 'Welcome to']} className='text-[50px] md:text-[70px] lg:text-[100px] whitespace-nowrap leading-[60px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
+          <Fade className='h-[80px] w-full flex justify-end md:mt-4'><TypeAnimation speed={20} cursor={false} sequence={[2400,"The Outer Reach"]} className='text-[50px] md:text-[70px] lg:text-[100px] leading-[60px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
+        
+          <div className='w-full mt-10'>
+              <div className='flex items-center pb-1 h-[27px]'><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[12px] uppercase font-a2 text-[#463f3a]' text='Description' /></div>
+              <div className='text-[20px] w-[90%] lg:w-[60%] text-[#463f3a] font-a1'>Data insights to track the progress of humanity's frontier technologies, highlight their need and impact and demistify societal misconceptions.</div>
+              <div className='text-[#9b9b9b] text-[17px] h-[27px] mt-5 font-a1 gap-2 flex items-center'><div className='text-[11px]'>{`{01}`}</div><DecryptText className='text-[15px] text-[#9b9b9b]' text='Accessible & comphrensive.'/></div>
+              <div className='text-[#9b9b9b] font-a1 gap-2 h-[27px] mt-1 flex items-center'><div className='text-[11px]'>{`{02}`}</div><DecryptText className='text-[15px] text-[#9b9b9b]' text='Beginner-friendly & visual.' /></div>
+              <div className=' text-[#9b9b9b] font-a1 gap-2 h-[27px] mt-1 flex items-center'><div className='text-[11px]'>{`{03}`}</div><DecryptText className='text-[15px] text-[#9b9b9b]' text='Techno-optimistic.' /></div>
+          </div>
+        
+          <div className='gap-3 mt-[100px]'>
+            <div className='w-full flex justify-between gap-10 overflow-auto'>
+              <div className='flex items-center h-[27px] shrink-0 '><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[12px] uppercase font-a2' text='Road to Energy Abundance' /></div>
+              <div className='flex items-center h-[27px] shrink-0 '><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[12px] uppercase font-a2 text-[#9b9b9b]' text="Nuclear's Revenge" /></div>
+              <div className='flex items-center h-[27px] shrink-0 '><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[12px] uppercase font-a2 text-[#9b9b9b]' text='Age of AGI' /></div>
+              <div className='flex items-center h-[27px] shrink-0 '><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[12px] uppercase font-a2 text-[#9b9b9b]' text='The Space Race' /></div>
+            </div>
+
+            <div className='bg-[#1e1715] flex-1 p-4 mt-4 rounded-[10px] h-[600px] text-white'>
+              <div className='w-[80%] leading-[60px] font-a2 text-[50px]'>We are on a road that leads to a world of Energy Abundance.</div>
+            </div>
+          </div> 
+        </div>
+
+
+
+
+        <div className="w-full absolute z-[100] top-0 left-0 h-full grid grid-cols-4">
+          {Array.from({ length: 20 }).map((_, index) => (
             <div key={index} className="relative">
               <div className="absolute inset-0 flex items-center justify-center">
-                <svg width="7" height="7" viewBox="0 0 10 10" className="text-[#1b1919]">
+                <svg width="10" height="10" viewBox="0 0 10 10" className="text-[#463f3a]">
                   <path d="M5 0v10M0 5h10" stroke="#1b1919" strokeWidth="0.5" />
                 </svg>
               </div>
             </div>
           ))}
-        </div> */}
-
-        <div className='absolute w-full h-full flex items-center justify-center'>
-            <div> 
-              <div className='flex justify-center'><Fade><TypeAnimation speed={40} cursor={false} sequence={["{Outer", "{Outer,", '{Outer, Reach}']} className='text-[45px] md:text-[80px] text-center leading-[60px] md:leading-[85px] text-[#1e1f2b] uppercase font-a2'/></Fade></div>
-              <div className='mt-5 mx-auto w-[380px] md:w-[500px] text-center text-[14px] md:text-[16px] text-[#1e1f2b] font-a1'><Fade>Data insights to track the progress of humanity's frontier technologies, highlight their need and impact and demistify societal misperceptions.</Fade></div>
-            </div>
         </div>
-
-        <Fade>
-        <div className='absolute bottom-0 px-5 p-4 text-[12.5px] w-full flex items-end text-[#9b9b9b] justify-between uppercase font-rajdhani-regular'>
-          <div className='border-l-[2px] h-[36px] break-words w-[160px] md:w-[200px] border-l-[#c3c3c3] px-2'>
-            <div><TypeAnimation speed={40} cursor={false} sequence={["Optimism", "Optimism, acceleration", "Optimism, acceleration & technocapitalism"]} /></div>
-          </div>
-          <div className='hidden md:block border-l-[2px] h-[36px] border-l-[#c3c3c3] px-2'>
-            <div><TypeAnimation speed={40} cursor={false} sequence={["Open","Open Source"]}/></div>
-            <Link href="https://github.com/tanaydesai" target="_blank"><div className='group cursor-default'><TypeAnimation speed={40} cursor={false} sequence={["GitHub"]} /><div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
-          </div>
-          <div className='border-l-[2px] h-[55px] md:h-[36px] border-l-[#c3c3c3] px-2'>
-            <div><TypeAnimation speed={40} cursor={false} sequence={["Est.", "Est. 2024"]} /></div>
-            <Link href="https://tanaydesai.com" target="_blank"><div className='group cursor-default'><TypeAnimation speed={40} cursor={false} sequence={["Tanay","Tanay Desai",]} /><div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
-            <Link href="https://github.com/tanaydesai" target="_blank"><div className='block md:hidden group cursor-default'><TypeAnimation speed={40} cursor={false} sequence={["GitHub"]} /><div className='ml-1 group-hover:translate-x-1 duration-300 inline-flex'>/</div></div></Link>
-          </div>
-        </div>
-        </Fade>
       </div>
   )
 }

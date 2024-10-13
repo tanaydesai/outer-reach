@@ -22,7 +22,7 @@ export default function Home() {
         <div className='w-[95%] mt-5 mx-auto'>
           <Tabs defaultValue="mix">
             <TabsList>
-              <TabsTrigger value="mix"><EnergyMixIcon className="group-hover:scale-110 scla duration-300"/>Energy Mix</TabsTrigger>
+              <TabsTrigger value="mix"><EnergyMixIcon className="group-hover:scale-110 duration-300"/>Energy Mix</TabsTrigger>
               <TabsTrigger value="renewable"><CapacityIcon className="group-hover:scale-110 duration-300"/>Renewables</TabsTrigger>
               <TabsTrigger value="leaderboard"><RankingIcon className="group-hover:scale-110 duration-300"/>Leaderboard</TabsTrigger>
               <TabsTrigger value="change"><ChangeIcon className="group-hover:scale-110 duration-300"/>Growth</TabsTrigger>
