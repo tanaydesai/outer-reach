@@ -29,7 +29,7 @@ export default function Home() {
           </div> */}
 
         
-          <motion.div initial={{height: "35px"}} whileHover={{height: "110px", transition:{duration:0.4, type:'easeInOut'}}} className='cursor-default overflow-hidden absolute top-[70px] md:top-[100px] left-[calc(100% - 125px)] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
+          <div className='absolute top-[70px] md:top-[100px] left-[calc(100% - 125px)] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
             <div className='w-full pt-2 px-2 uppercase text-[12px]'>
               <div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/>
               Road to Energy Abundance
@@ -37,9 +37,9 @@ export default function Home() {
             <div className='p-2 pb-2'>
               Energy & electricity mix, renewable capacity, leaderboards, growth and much more.
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div initial={{height: "35px"}} whileHover={{height: "110px", transition:{duration:0.4, type:'easeInOut'}}} className='cursor-default overflow-hidden absolute top-[220px] md:top-[200px] right-[150px] md:right-[100px] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
+          <div className='absolute top-[220px] md:top-[200px] right-[150px] md:right-[100px] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
             <div className='w-full pt-2 px-2 uppercase text-[12px]'>
               <div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/>
               Age of Artificial Intelligence
@@ -47,9 +47,9 @@ export default function Home() {
             <div className='p-2 pb-2'>
               Energy & electricity mix, renewable capacity, leaderboards, growth and much more.
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div initial={{height: "35px"}} whileHover={{height: "110px", transition:{duration:0.4, type:'easeInOut'}}} className='cursor-default overflow-hidden absolute bottom-[120px] md:bottom-[150px] left-[170px] md:left-[100px] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
+          <div className='absolute bottom-[120px] md:bottom-[150px] left-[170px] md:left-[100px] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
             <div className='w-full pt-2 px-2 uppercase text-[12px]'>
               <div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/>
               Nuclear's Revenge
@@ -57,9 +57,9 @@ export default function Home() {
             <div className='p-2 pb-2'>
               Energy & electricity mix, renewable capacity, leaderboards, growth and much more.
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div initial={{height: "35px"}} whileHover={{height: "110px", transition:{duration:0.4, type:'easeInOut'}}} className='cursor-default overflow-hidden absolute bottom-[75px] md:bottom-[100px] right-[130px] md:right-[150px] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
+          <div className='absolute bottom-[75px] md:bottom-[80px] right-[120px] w-[250px] h-fit rounded-[7px] border text-[14px] text-white bg-black font-a2 border-[#b3b3b3]'>
             <div className='w-full pt-2 px-2 uppercase text-[12px]'>
               <div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/>
               The Space Race
@@ -67,20 +67,20 @@ export default function Home() {
             <div className='p-2 pb-2'>
               Energy & electricity mix, renewable capacity, leaderboards, growth and much more.
             </div>
-          </motion.div>
+          </div>
 
-          <div className='absolute top-[150px] left-[170px] md:left-[100px] w-[170px] h-[130px] rounded-[7px] border overflow-auto text-[12px] font-a2 border-[#b3b3b3]'>
+          <div className='absolute top-[350px] right-[30px] md:right-[60px] w-[170px] h-[130px] rounded-[7px] border overflow-auto text-[12px] font-a2 border-[#b3b3b3]'>
             <div className='h-[105px]'></div>
             <div className='mx-auto text-center font-a1 text-[#9b9b9b]'>solar.jpg</div>
           </div>
 
-          <div className='absolute top-[350px] right-[30px] md:right-[60px] w-[200px] h-[120px] rounded-[7px] border overflow-auto text-[14px] font-a2 border-[#b3b3b3]'>
+          <div className='absolute top-[150px] left-[170px] md:left-[100px] w-[250px] h-fit rounded-[7px] border overflow-auto text-[14px] font-a2 border-[#b3b3b3]'>
             <div className='w-full pt-2 px-2 uppercase text-[12px]'>
               <div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/>
               Features
             </div>
             <div className='p-2 pb-2'>
-              <ul className='list-disc list-inside text-[12px]'>
+              <ul className='list-disc list-inside text-[14px]'>
                 <li>Comphrehensive & friendly.</li>
                 <li>Visualizations & explainers.</li>
                 <li>Techno-optimistic.</li>
