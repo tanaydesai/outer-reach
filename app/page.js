@@ -11,15 +11,15 @@ export default function Home() {
       <div className='absolute w-full min-h-full px-3 py-[50px] bg-[#efefef]'>
   
         <div className='w-full h-fit'> 
-          <Fade className='h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[1000,"Welcome", "Welcome to", 'Welcome to']} className='text-[40px] md:text-[70px] lg:text-[100px] whitespace-nowrap leading-[60px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
-          <Fade className='h-[80px] w-full flex justify-end md:mt-4'><TypeAnimation speed={20} cursor={false} sequence={[2400,"The Outer Reach"]} className='text-[40px] md:text-[70px] lg:text-[100px] leading-[60px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
+          <Fade className='h-[65px] sm:h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[1000,"Welcome", "Welcome to", 'Welcome to']} className='text-[45px] md:text-[70px] lg:text-[100px] whitespace-nowrap leading-[50px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
+          <Fade className='h-[80px] w-full flex justify-end md:mt-4'><TypeAnimation speed={20} cursor={false} sequence={[2400,"The Outer Reach"]} className='text-[45px] md:text-[70px] lg:text-[100px] leading-[50px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
         
           <div className='w-full mt-10'>
               <div className='flex items-center pb-1 h-[27px]'><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[12px] uppercase font-a2 text-[#463f3a]' text='Description' /></div>
-              <div className='text-[16px] sm:text-[20px] w-[90%] lg:w-[60%] text-[#463f3a] font-a1'>Data insights to track the progress of humanity's frontier technologies, highlight their need and impact and demistify societal misconceptions.</div>
-              <div className='text-[#9b9b9b] text-[17px] h-[27px] mt-5 font-a1 gap-2 flex items-center'><div className='text-[11px]'>{`{01}`}</div><DecryptText className='text-[15px] text-[#9b9b9b]' text='Accessible & comphrensive.'/></div>
-              <div className='text-[#9b9b9b] font-a1 gap-2 h-[27px] mt-1 flex items-center'><div className='text-[11px]'>{`{02}`}</div><DecryptText className='text-[15px] text-[#9b9b9b]' text='Beginner-friendly & visual.' /></div>
-              <div className=' text-[#9b9b9b] font-a1 gap-2 h-[27px] mt-1 flex items-center'><div className='text-[11px]'>{`{03}`}</div><DecryptText className='text-[15px] text-[#9b9b9b]' text='Techno-optimistic.' /></div>
+              <div className='text-[17px] sm:text-[20px] w-full md:w-[90%] lg:w-[60%] text-[#463f3a] font-a1'>Data insights to track the progress of humanity's frontier technologies, highlight their need and impact and demistify societal misconceptions.</div>
+              <div className='text-[#9b9b9b] text-[17px] h-[27px] mt-5 font-a1 gap-2 flex items-center'><div className='text-[13px]'>{`{01}`}</div><DecryptText className='text-[17px] text-[#9b9b9b]' text='Accessible & comphrensive.'/></div>
+              <div className='text-[#9b9b9b] font-a1 gap-2 h-[27px] mt-1 flex items-center'><div className='text-[13px]'>{`{02}`}</div><DecryptText className='text-[17px] text-[#9b9b9b]' text='Beginner-friendly & visual.' /></div>
+              <div className=' text-[#9b9b9b] font-a1 gap-2 h-[27px] mt-1 flex items-center'><div className='text-[13px]'>{`{03}`}</div><DecryptText className='text-[17px] text-[#9b9b9b]' text='Techno-optimistic.' /></div>
           </div>
         
           <div className='gap-3 mt-[100px]'>
@@ -36,9 +36,6 @@ export default function Home() {
           </div> 
         </div>
 
-
-
-
         <div className="w-full absolute z-[100] top-0 left-0 h-full grid grid-cols-4">
           {Array.from({ length: 20 }).map((_, index) => (
             <div key={index} className="relative">
@@ -50,6 +47,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+
       </div>
   )
 }
