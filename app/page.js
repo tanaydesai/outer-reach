@@ -5,38 +5,45 @@ import { TypeAnimation } from 'react-type-animation';
 import { Fade } from 'react-awesome-reveal';
 import { EnergyMixIcon, CapacityIcon, NuclearPlantIcon, ChangeIcon, HouseIcon, RankingIcon, NuclearWasteIcon } from '@/components/icons';
 import {DecryptText} from '@/components/decrypt'
+import { Tabs3, TabsContent3, TabsList3, TabsTrigger3 } from "@/components/ui/tabs"
+
+
 
 export default function Home() {
   return (
-      <div className='absolute w-full min-h-full px-3 py-[70px] bg-[#efefef]'>
+      <div className='absolute w-full min-h-full z-10 px-3 py-[70px] bg-[#efefef]'>
   
         <div className='w-full h-fit'> 
           <Fade className='h-[70px] sm:h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[1000,"Welcome", "Welcome to", 'Welcome to']} className='text-[65px] md:text-[90px] lg:text-[120px] whitespace-nowrap leading-[85px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
           <Fade className='min-h-[90px] w-full flex justify-start md:mt-6 lg:mt-10'><TypeAnimation speed={20} cursor={false} sequence={[2400,"The Outer Reach"]} className='text-[65px] md:text-[90px] lg:text-[120px] leading-[70px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
         
           <div className='w-full mt-10 sm:mt-[100px]'>
-              <div className='flex items-center pb-1 h-[27px]'><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[12px] uppercase font-a2 text-[#463f3a]' text='Description' /></div>
-              <div className='text-[18px] sm:text-[22px] lg:text-[24px] w-full md:w-[85%] lg:w-[70%] leading-6 sm:leading-8 font-semibold text-[#463f3a] font-a1'>Data insights to track the progress of humanity's frontier technologies, highlight their need and impact and demistify societal misconceptions.</div>
-              <div className='text-[#9b9b9b] text-[17px] h-[27px] mt-5 font-a1 gap-2 flex items-center'><div className='text-[13px]'>{`{01}`}</div><DecryptText className='text-[18px] text-[#9b9b9b]' text='Accessible & comphrensive.'/></div>
-              <div className='text-[#9b9b9b] font-a1 gap-2 h-[27px] mt-1 flex items-center'><div className='text-[13px]'>{`{02}`}</div><DecryptText className='text-[18px] text-[#9b9b9b]' text='Beginner-friendly & visual.' /></div>
-              <div className=' text-[#9b9b9b] font-a1 gap-2 h-[27px] mt-1 flex items-center'><div className='text-[13px]'>{`{03}`}</div><DecryptText className='text-[18px] text-[#9b9b9b]' text='Techno-optimistic.' /></div>
+              <div className='flex items-center h-[27px]'><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[13px] uppercase font-a2 text-[#463f3a]' text='Description' /></div>
+              <div className='text-[16px] sm:text-[22px] mt-2 lg:text-[24px] w-full md:w-[85%] lg:w-[70%] leading-6 sm:leading-8 font-semibold text-[#463f3a] font-a1'>Data insights to track the progress of humanity's frontier technologies, highlight their need and impact and demistify societal misconceptions.</div>
+              <div className='md:flex gap-4 mt-5'>
+                <div className='text-[#9b9b9b] h-[27px] font-a1 gap-2 flex items-center'><div className='text-[12px]'>{`{01}`}</div><DecryptText className='text-[14px] sm:text-[17px] text-[#9b9b9b]' text='Accessible & comphrensive'/></div>
+                <div className='text-[#9b9b9b] md:mt-0  font-a1 gap-2 h-[27px] flex items-center'><div className='text-[12px]'>{`{02}`}</div><DecryptText className='text-[14px] sm:text-[17px] text-[#9b9b9b]' text='Beginner-friendly & visual' /></div>
+                <div className=' text-[#9b9b9b] md:mt-0  font-a1 gap-2 h-[27px] flex items-center'><div className='text-[12px]'>{`{03}`}</div><DecryptText className='text-[14px] sm:text-[17px] text-[#9b9b9b]' text='Techno-optimistic' /></div>
+              </div>
           </div>
         
-          <div className='gap-3 mt-[100px]'>
-            <div className='w-full flex justify-between gap-10 overflow-auto'>
-              <div className='flex items-center h-[27px] shrink-0 '><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[12px] uppercase font-a2' text='Road to Energy Abundance' /></div>
-              <div className='flex items-center h-[27px] shrink-0 '><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[12px] uppercase font-a2 text-[#9b9b9b]' text="Nuclear's Revenge" /></div>
-              <div className='flex items-center h-[27px] shrink-0 '><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[12px] uppercase font-a2 text-[#9b9b9b]' text='Age of AGI' /></div>
-              <div className='flex items-center h-[27px] shrink-0 '><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[12px] uppercase font-a2 text-[#9b9b9b]' text='The Space Race' /></div>
-            </div>
-
-            <div className='bg-[#1e1715] flex-1 p-4 mt-4 rounded-[10px] h-[600px] text-white'>
-              <div className='w-[80%] leading-[60px] font-a2 text-[50px]'>We are on a road that leads to a world of Energy Abundance.</div>
-            </div>
+          <div className='mt-[100px]'>
+            <Tabs3 defaultValue='energy'>
+              <TabsList3>
+                <TabsTrigger3 value='energy'><DecryptText text='Road to Energy Abundance' /></TabsTrigger3>
+                <TabsTrigger3 value='nuclear'><DecryptText text="Nuclear's Revenge" /></TabsTrigger3>
+                <TabsTrigger3 value='ai'><DecryptText text="Age of AGI" /></TabsTrigger3>
+                <TabsTrigger3 value='space'><DecryptText text='The Space Race' /></TabsTrigger3>
+              </TabsList3>
+              <TabsContent3 value='energy'>
+                <div className='w-[80%] leading-[60px] font-a2 text-[50px]'>We are on a road that leads to a world of Energy Abundance.</div>
+              </TabsContent3>
+            </Tabs3>
           </div> 
+
         </div>
 
-        <div className="w-full absolute z-[100] top-0 left-0 h-full grid grid-cols-4">
+        <div className="w-full absolute pointer-events-none -z-1 top-0 left-0 h-full grid grid-cols-4">
           {Array.from({ length: 20 }).map((_, index) => (
             <div key={index} className="relative">
               <div className="absolute inset-0 flex items-center justify-center">
