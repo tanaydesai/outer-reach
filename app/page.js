@@ -5,17 +5,15 @@ import { TypeAnimation } from 'react-type-animation';
 import { Fade } from 'react-awesome-reveal';
 import { EnergyMixIcon, CapacityIcon, NuclearPlantIcon, ChangeIcon, HouseIcon, RankingIcon, NuclearWasteIcon } from '@/components/icons';
 import {DecryptText} from '@/components/decrypt'
-import { Tabs3, TabsContent3, TabsList3, TabsTrigger3 } from "@/components/ui/tabs"
-
 
 
 export default function Home() {
   return (
-      <div className='absolute w-full min-h-full z-10 px-3 py-[70px] bg-[#efefef]'>
+      <div className='absolute w-full h-full z-10 px-3 pt-[70px] overflow-hidden bg-[#efefef]'>
   
         <div className='w-full h-fit'> 
-          <Fade className='h-[70px] sm:h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[1000,"Welcome", "Welcome to", 'Welcome to']} className='text-[65px] md:text-[90px] lg:text-[120px] whitespace-nowrap leading-[85px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
-          <Fade className='min-h-[90px] w-full flex justify-end md:mt-6 lg:mt-10'><TypeAnimation speed={20} cursor={false} sequence={[2400,"Outer Reach"]} className='text-[65px] md:text-[90px] lg:text-[120px] leading-[70px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
+          <Fade className='h-[70px] sm:h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[1000,"Welcome", "Welcome to", 'Welcome to']} className='text-[60px] sm:text-[90px] lg:text-[120px] whitespace-nowrap leading-[85px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
+          <Fade className='min-h-[90px] w-full flex justify-end md:mt-6 lg:mt-10'><TypeAnimation speed={20} cursor={false} sequence={[2400,"Outer Reach"]} className='text-[60px] sm:text-[90px] lg:text-[120px] leading-[70px] md:leading-[85px] text-[#463f3a] font-a2'/></Fade>
          
           <div className='w-full mt-10 sm:mt-[100px]'>
               <div className='flex items-center h-[27px]'><div className='w-2 h-2 bg-red-400 mr-2 inline-flex'/><DecryptText className='text-[13px] uppercase font-a2 text-[#463f3a]' text='Description' /></div>
@@ -27,23 +25,20 @@ export default function Home() {
               </div>
           </div>
         
-          <div className='mt-[100px]'>
-            <Tabs3 defaultValue='energy'>
-              <TabsList3>
-                <TabsTrigger3 value='energy'><DecryptText text='Road to Energy Abundance' /></TabsTrigger3>
-                <TabsTrigger3 value='nuclear'><DecryptText text="Nuclear's Revenge" /></TabsTrigger3>
-                <TabsTrigger3 value='ai'><DecryptText text="Age of AGI" /></TabsTrigger3>
-                <TabsTrigger3 value='space'><DecryptText text='The Space Race' /></TabsTrigger3>
-              </TabsList3>
-              <TabsContent3 value='energy'>
-                <div className='w-[80%] leading-[60px] font-a2 text-[50px]'>We are on a road that leads to a world of Energy Abundance.</div>
-              </TabsContent3>
-            </Tabs3>
+          <div className='absolute w-full bottom-3 left-0 px-3'>
+              <div className='w-full flex items-center justify-between gap-10 overflow-auto text-[13px] text-[#9b9b9b] h-[27px] shrink-0 font-a2 uppercase hover:text-[#463f3a] transition-all duration-300 whitespace-nowrap'>
+                <div className="flex items-center"><div className='w-2 h-2 bg-red-400 mr-2'/><DecryptText text='Road to Energy Abundance' /></div>
+                <div className="flex items-center"><div className='w-2 h-2 bg-red-400 mr-2'/><DecryptText text="Nuclear's Revenge" /></div>
+                <div className="flex items-center"><div className='w-2 h-2 bg-red-400 mr-2'/><DecryptText text="Age of AGI" /></div>
+                <div className="flex items-center"><div className='w-2 h-2 bg-red-400 mr-2'/><DecryptText text='The Space Race' /></div>
+              </div>
           </div> 
-
         </div>
 
-        <div className="w-full absolute pointer-events-none -z-1 top-0 left-0 h-screen grid grid-cols-4">
+
+
+
+        <div className="w-full absolute pointer-events-none -z-1 top-0 left-0 h-[110vh] grid grid-cols-4">
           {Array.from({ length: 12 }).map((_, index) => (
             <div key={index} className="relative">
               <div className="absolute inset-0 flex items-center justify-center">

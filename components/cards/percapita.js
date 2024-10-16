@@ -8,7 +8,7 @@ import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/ta
 export const Percapita = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] ${className}`}>
-            <h1 className='text-[17px] text-[#444444]  font-a2 px-3'><div className='w-3 h-3 mr-2 bg-red-400 inline-flex'/>Change in CO2 emissions & GDP per capita</h1>
+            <h1 className='text-[17px] text-[#463f3a]  font-a2 px-3'><div className='w-3 h-3 mr-2 bg-red-400 inline-flex'/>Change in CO2 emissions & GDP per capita</h1>
             <p className='text-[14px] mx-3 my-2 font-a1 text-[#656565] '>Historical change in CO2 emissions per capita and GDP per capita </p>
             <div className='py-3 mt-5 border-2 bg-black text-white border-transparent rounded-[10px]'>    
                 <Tabs2 defaultValue="account">

@@ -17,13 +17,13 @@ const SelectTrigger = React.forwardRef(({ className, children, icon=true, ...pro
     <SelectPrimitive.Trigger
       ref={ref}
       className={cn(
-        "text-[17px] group justify-center inline-flex gap-0.5 whitespace-nowrap items-center font-a2 px-1.5 mx-1 rounded-[3px] bg-[#e5e4e4] border-none outline-none placeholder:text-stone-500 disabled:cursor-not-allowed ",
+        "text-[15px] group justify-center inline-flex gap-0.5 hover:opacity-60 text-black whitespace-nowrap items-center font-a2 px-1.5 mx-1 rounded-[5px] border border-[#aeaeae] outline-none placeholder:text-stone-500 disabled:cursor-not-allowed ",
         className
       )}
       {...props}>
       {children}
       <SelectPrimitive.Icon asChild>
-        {icon && <ChevronDown size={16} />}
+        {icon && <ChevronDown size={16} className="pt-0.5"/>}
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
 ))

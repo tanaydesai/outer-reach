@@ -85,11 +85,11 @@ export const EnergyShare = ({className}) => {
             accessibilityLayer
             data={chartData}
             margin={{
-              left: 0,
+              left: -15,
               right: 5,
             }}
           >
-            <ChartLegend content={<ChartLegendContent />} />
+            {/* <ChartLegend content={<ChartLegendContent />} /> */}
             <CartesianGrid vertical={false} />
             <XAxis
               dataKey="year"
@@ -280,7 +280,7 @@ export const Capacity = ({className}) => {
             data={chartData}
             layout="vertical"
             margin={{
-              left: 0,
+              left: -20,
               right: 5,
             }}
           >

@@ -64,84 +64,18 @@ export { Tabs, TabsList, TabsTrigger, TabsContent }
 
 
 
-const Tabs3 = TabsPrimitive.Root
-
-const TabsList3 = React.forwardRef(({ className, ...props }, ref) => (
-  <TabsPrimitive.List
-    ref={ref}
-    className={cn(
-      "w-full flex items-center justify-between gap-10 overflow-auto dark:bg-stone-800 dark:text-stone-400",
-      className
-    )}
-    {...props}></TabsPrimitive.List>
-))
-TabsList3.displayName = TabsPrimitive.List.displayName
-
-const TabsTrigger3 = React.forwardRef(({ className, ...props }, ref) => (
-  <div className="flex items-center">
-      <div className='w-2 h-2 bg-red-400 mr-2'/>
-      <TabsPrimitive.Trigger
-      ref={ref}
-      className={cn(
-        "text-[13px] text-[#9b9b9b] h-[27px] shrink-0 font-a2 uppercase hover:text-[#463f3a] data-[state=active]:text-[#463f3a] transition-all duration-300  whitespace-nowrap disabled:pointer-events-none  dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
-        className
-      )}
-      {...props} />
-  </div>
-))
-TabsTrigger3.displayName = TabsPrimitive.Trigger.displayName
-
-const TabsContent3 = React.forwardRef(({ className, ...props }, ref) => (
-  <TabsPrimitive.Content
-    ref={ref}
-    className={cn(
-      "bg-[#1e1715] p-4 mt-4 rounded-[10px] h-[600px] text-white  ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300",
-      className
-    )}
-    {...props} />
-))
-TabsContent3.displayName = TabsPrimitive.Content.displayName
-
-export { Tabs3, TabsList3, TabsTrigger3, TabsContent3 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const Tabs2 = TabsPrimitive.Root
 
 const TabsList2 = React.forwardRef(({ className, ...props }, ref) => (
-  <TabsPrimitive.List
+  <div className="w-fit absolute right-0 bottom-0 lg:-top-7">
+    <TabsPrimitive.List
     ref={ref}
     className={cn(
-      "inline-flex items-center border-2 border-[#e4e4e4]  gap-1 rounded-[20px] justify-center dark:bg-stone-800 dark:text-stone-400",
+      "flex w-fit items-center border-2 border-[#e4e4e4] justify-end gap-1 rounded-[5px] dark:bg-stone-800 dark:text-stone-400",
       className
     )}
     {...props}></TabsPrimitive.List>
+  </div>
 ))
 TabsList2.displayName = TabsPrimitive.List.displayName
 
@@ -149,7 +83,7 @@ const TabsTrigger2 = React.forwardRef(({ className, ...props }, ref) => (
     <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "inline-flex items-center justify-center rounded-[20px] text-[12px] font-semibold whitespace-nowrap font-rajdhani-regular uppercase py-1 px-2 duration-500 data-[state=active]:bg-[#0f0f0f]  data-[state=active]:text-white  disabled:pointer-events-none transition-all dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
+      "inline-flex items-center justify-center rounded-[5px] text-[12px] font-semibold whitespace-nowrap font-rajdhani-regular uppercase py-1 px-2.5 duration-500 data-[state=active]:bg-[#0f0f0f]  data-[state=active]:text-white  disabled:pointer-events-none transition-all dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
       className
     )}
     {...props} />
