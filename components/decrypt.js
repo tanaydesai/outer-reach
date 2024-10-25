@@ -45,7 +45,7 @@ export const DecryptText = ({
   }
 
   return (
-    <div className={`h-[27px] flex items-center ${className}`}>
+    <div className={`min-h-[27px] flex items-center ${className}`}>
       {/* ml-1.5 mt-5  */}
       {outputText}
       {remainder}
