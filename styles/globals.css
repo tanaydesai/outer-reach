@@ -24,6 +24,10 @@
   display: none;
 }
 
+html {
+  background-color: #efefef;
+}
+
   @font-face {
     font-family: "rajdhani-bold";
     src: url("../assests/fonts/Rajdhani/Rajdhani-SemiBold.otf") format("opentype");
