@@ -21,87 +21,40 @@ export default function Home() {
   return (
     <div className="absolute w-full min-h-full bg-[#efefef] py-[50px]">
 
-        <div className='w-[95%] mt-5 mx-auto'>
+        <div className='w-full px-2 md:px-5 mt-6 md:mt-2 mx-auto'>
           <Tabs defaultValue="mix">
             <TabsList>
-              <TabsTrigger value="mix"><EnergyMixIcon className="group-hover:scale-110 duration-300"/>Energy Mix</TabsTrigger>
-              <TabsTrigger value="renewable"><CapacityIcon className="group-hover:scale-110 duration-300"/>Renewables</TabsTrigger>
-              <TabsTrigger value="leaderboard"><RankingIcon className="group-hover:scale-110 duration-300"/>Leaderboard</TabsTrigger>
-              <TabsTrigger value="change"><ChangeIcon className="group-hover:scale-110 duration-300"/>Growth</TabsTrigger>
-              <TabsTrigger value="percapita"><HouseIcon className="group-hover:scale-110 duration-300"/>Per capita</TabsTrigger>
+              <TabsTrigger value="mix"><div className='w-2.5 h-2.5 bg-red-400 mr-1 inline-flex'/> Energy Mix</TabsTrigger>
+              <TabsTrigger value="renewable">Renewables</TabsTrigger>
+              <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
+              <TabsTrigger value="change">Growth</TabsTrigger>
+              <TabsTrigger value="percapita">Per capita</TabsTrigger>
             </TabsList>
             <TabsContent value="mix">
-              <div className='lg:flex gap-5'>
-                <div className='lg:w-1/3'>
-                  <div className="flex items-center text-[13px] w-full text-[#9b9b9b] h-[27px] font-a2 uppercase"><div className='w-2 h-2 bg-red-400 mr-2'/><DecryptText text='Road to Energy Abundance' /></div>
-                  <div className='text-[25px] leading-8 font-a2 w-full mt-4 flex gap-2 h-fit items-center'>
-                    {/* <CornerDownRight className='shrink-0' strokeWidth={1.5} size={30}/> */}
-                    <div>The current energy landscape of 
-                      <Select>
-                      <SelectTrigger  className="underline border-none decoration-2 text-[25px] font-a2 p-0 m-0  decoration-red-400 underline-offset-8">
+                <div className='text-[30px] leading-10 px-2 font-a2 md:mt-5 text-[#463f3a] h-fit'>
+                  The current energy landscape of 
+                    <Select>
+                      <SelectTrigger className="underline border-none decoration-2 text-[30px] font-a2 decoration-red-400 underline-offset-8">
                           <SelectValue placeholder="France" />
                       </SelectTrigger>
                       <SelectContent>
                           <SelectItem value="dark">India</SelectItem>
                           <SelectItem value="light">France</SelectItem>
                       </SelectContent>
-                      </Select>
-                    </div>
-                  </div> 
-                </div>
-                <EnergyMix className={'flex-1 mt-10 lg:mt-0'}/>
-              </div>
-              <div className='lg:flex gap-5 mt-10'>
-                  <div className='text-[25px] lg:w-1/3 leading-8 font-a2 w-full mt-4 flex gap-2 h-fit items-center'>
-                    {/* <CornerDownRight className='shrink-0' strokeWidth={1.5} size={30}/> */}
-                    <div>The current energy landscape of 
-                      <Select>
-                      <SelectTrigger className="underline border-none decoration-2 text-[25px] font-a2 p-0 m-0  decoration-red-400 underline-offset-8">
-                          <SelectValue placeholder="France" />
-                      </SelectTrigger>
-                      <SelectContent>
-                          <SelectItem value="dark">India</SelectItem>
-                          <SelectItem value="light">France</SelectItem>
-                      </SelectContent>
-                      </Select>
-                    </div>
-                  </div> 
+                    </Select>
+                </div> 
+                <p className='text-[14px] px-3 mb-10 mt-4 font-a1 md:w-[50%] text-[#656565]'>The world is adding renewable capacity faster than ever before</p>
+                {/* <div className='text-[#9b9b9b] h-[27px] px-2 mt-10 font-a1 gap-2 flex items-center'>{"{02}"} <hr className='flex-1 bg-[#9b9b9b] h-[1px]'/> {"{03}"}</div> */}
+
+                <EnergyMix className={'mt-5'}/>
+                <div className='md:flex gap-2 mt-5'>
                   <RenewableShare className={'flex-1'}/>
-              </div>
-            </TabsContent>
-            <TabsContent value="renewable">
-              <div className='lg:flex gap-5'>
-                <Capacities className={'flex-1'}/>
-                {/* <TestDModel /> */}
-                <div className='lg:w-1/3 mt-10 lg:mt-0'>
-                  <div className="flex items-center text-[13px] w-full text-[#9b9b9b] h-[27px] font-a2 uppercase"><div className='w-2 h-2 bg-red-400 mr-2'/><DecryptText text='Road to Energy Abundance' /></div>
-                  <div className='text-[25px] leading-8 font-a2 w-full mt-4 flex gap-2 h-fit items-center'>
-                    <div>The current energy landscape of 
-                      <Select>
-                      <SelectTrigger  className="underline border-none decoration-2 text-[25px] font-a2 p-0 m-0  decoration-red-400 underline-offset-8">
-                          <SelectValue placeholder="France" />
-                      </SelectTrigger>
-                      <SelectContent>
-                          <SelectItem value="dark">India</SelectItem>
-                          <SelectItem value="light">France</SelectItem>
-                      </SelectContent>
-                      </Select>
-                    </div>
-                  </div> 
+                  <AvgHouse className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
-              </div>
-            </TabsContent>
-            <TabsContent value="leaderboard">
-              <LeaderBoard />
-            </TabsContent>
-            <TabsContent value="change">
-              <Change />
-            </TabsContent>
-            <TabsContent value="percapita">
-              <div className='lg:flex gap-5'>
-                <AvgHouse className={'lg:w-1/3'}/>
-                <Percapita className={'flex-1 mt-5 lg:mt-0'}/>
-              </div>
+
+                <div className='text-[#9b9b9b] h-[27px] px-2 mt-10 font-a1 gap-2 flex items-center'>{"{02}"} <hr className='flex-1 bg-[#9b9b9b] h-[1px]'/> {"{03}"}</div>
+                <div className='text-[25px] leading-8 font-a2 px-2 mt-5 mb-10 text-[#463f3a] h-fit'>The world is adding renewable capacity faster than ever before</div>
+              
             </TabsContent>
           </Tabs>
         </div>

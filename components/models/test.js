@@ -9,10 +9,10 @@ const Model = () => {
 
 
 
-export const TestDModel = () => {
+export const TestDModel = ({className}) => {
   return (
-    <div className='lg:w-1/3 border-2 w-full relative mt-5 lg:mt-[75px] border-[#b3b3b3] rounded-[10px]'>
-        <Canvas style={{ height: 360, width: "100%" }}>
+    <div>
+        <Canvas className={className} style={{ width: '100%', height: '240px' }}>
             <ambientLight intensity={0.5} />
             <pointLight position={[10, 10, 10]} />
             <Suspense fallback={null}>
@@ -21,7 +21,7 @@ export const TestDModel = () => {
             <PerspectiveCamera makeDefault position={[0, 0, 2.5, 90]} />
             <OrbitControls enableZoom={false}/>
         </Canvas>
-        <div className='font-a1 text-[#9b9b9b] text-[13px] w-full text-center absolute bottom-3'>satelite.obj</div>
+        {/* <div className='font-a1 text-[#9b9b9b] text-[13px] w-full text-center absolute bottom-3'>satelite.obj</div> */}
     </div>
   );
 };

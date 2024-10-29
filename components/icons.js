@@ -1,4 +1,4 @@
-export const CapacityIcon = ({className, size=80}) => {
+export const CapacityIcon = ({className, size=50}) => {
     return (
         <div className={`w-full flex items-center justify-center pb-2 ${className}`}>
             <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,7 +16,7 @@ export const CapacityIcon = ({className, size=80}) => {
     )
 }
 
-export const EnergyMixIcon = ({className, size=80}) => {
+export const EnergyMixIcon = ({className, size=50}) => {
     return (
         <div className={`w-full flex items-center justify-center pb-2 ${className}`}>
             <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@ export const EnergyMixIcon = ({className, size=80}) => {
     )
 }
 
-export const HouseIcon = ({className, size=80}) => {
+export const HouseIcon = ({className, size=50}) => {
     return (
         <div className={`w-full flex items-center justify-center pb-2 ${className}`}>
             <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +63,7 @@ export const HouseIcon = ({className, size=80}) => {
     )
 }
 
-export const NuclearPlantIcon = ({className, size=80}) => {
+export const NuclearPlantIcon = ({className, size=50}) => {
     return (
         <div className={`w-full flex items-center justify-center pb-2 ${className}`}>
             <svg width={size} height={size} viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@ export const NuclearPlantIcon = ({className, size=80}) => {
     )
 }
 
-export const ChangeIcon = ({className, size=80}) => {
+export const ChangeIcon = ({className, size=50}) => {
     return (
         <div className={`w-full flex items-center justify-center pb-2 ${className}`}>
             <svg width={size} height={size} viewBox="0 0 100 100">
@@ -96,7 +96,7 @@ export const ChangeIcon = ({className, size=80}) => {
     )
 }
 
-export const NuclearWasteIcon = ({className, size=80}) => {
+export const NuclearWasteIcon = ({className, size=50}) => {
     return (
         <div className={`w-full flex items-center justify-center pb-2 ${className}`}>
             <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,7 +109,7 @@ export const NuclearWasteIcon = ({className, size=80}) => {
     )
 }
 
-export const RankingIcon = ({className, size=80}) => {
+export const RankingIcon = ({className, size=50}) => {
     return (
         <div className={`w-full flex items-center justify-center pb-2 ${className}`}>
             <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
