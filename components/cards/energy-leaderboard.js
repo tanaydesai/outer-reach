@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
 import { LeaderBoards } from '@/components/charts/energy';
 
-export const LeaderBoard = ({className}) => {
+export const EnergyLeaderBoard = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] mt-7 ${className}`}>
             <h1 className='text-[17px] text-[#463f3a] font-a2 px-3'><div className='w-3 h-3 bg-green-500 shrink-0 mr-2 inline-flex'/>King's Leaderboard: 

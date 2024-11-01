@@ -5,7 +5,7 @@ import { CO2GDP } from '@/components/charts/energy';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
 import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/tabs"
 
-export const Percapita = ({className}) => {
+export const CO2GDPPercapita = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] ${className}`}>
             <h1 className='text-[17px] text-[#463f3a]  font-a2 px-3'><div className='w-3 h-3 mr-2 bg-red-400 inline-flex'/>Change in CO2 emissions & GDP per capita</h1>
