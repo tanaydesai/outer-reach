@@ -56,21 +56,13 @@ export { Tabs, TabsList, TabsTrigger, TabsContent }
 
 
 
-
-
-
-
-
-
-
-
 const Tabs3 = TabsPrimitive.Root
 
 const TabsList3 = React.forwardRef(({ className, ...props }, ref) => (
     <TabsPrimitive.List
     ref={ref}
     className={cn(
-      "flex w-full items-center justify-start gap-3 overflow-auto pb-5 dark:bg-stone-800 dark:text-stone-400",
+      "flex w-full px-2 items-center justify-start  overflow-auto pb-5 dark:bg-stone-800 dark:text-stone-400",
       className
     )}
     {...props}></TabsPrimitive.List>
@@ -102,44 +94,3 @@ const TabsContent3 = React.forwardRef(({ className, ...props }, ref) => (
 TabsContent3.displayName = TabsPrimitive.Content.displayName
 
 export { Tabs3, TabsList3, TabsTrigger3, TabsContent3 }
-
-
-
-const Tabs2 = TabsPrimitive.Root
-
-const TabsList2 = React.forwardRef(({ className, ...props }, ref) => (
-  <div className="w-fit absolute right-0 bottom-0 lg:-top-7">
-    <TabsPrimitive.List
-    ref={ref}
-    className={cn(
-      "flex w-fit items-center border-2 border-[#e4e4e4] justify-end gap-1 rounded-[5px] dark:bg-stone-800 dark:text-stone-400",
-      className
-    )}
-    {...props}></TabsPrimitive.List>
-  </div>
-))
-TabsList2.displayName = TabsPrimitive.List.displayName
-
-const TabsTrigger2 = React.forwardRef(({ className, ...props }, ref) => (
-    <TabsPrimitive.Trigger
-    ref={ref}
-    className={cn(
-      "inline-flex items-center justify-center rounded-[5px] text-[12px] font-semibold whitespace-nowrap font-rajdhani-regular uppercase py-1 px-2.5 duration-500 data-[state=active]:bg-[#0f0f0f]  data-[state=active]:text-white  disabled:pointer-events-none transition-all dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
-      className
-    )}
-    {...props} />
-))
-TabsTrigger2.displayName = TabsPrimitive.Trigger.displayName
-
-const TabsContent2 = React.forwardRef(({ className, ...props }, ref) => (
-  <TabsPrimitive.Content
-    ref={ref}
-    className={cn(
-      "mt-2 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300",
-      className
-    )}
-    {...props} />
-))
-TabsContent2.displayName = TabsPrimitive.Content.displayName
-
-export { Tabs2, TabsList2, TabsTrigger2, TabsContent2 }

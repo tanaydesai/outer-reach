@@ -2,17 +2,14 @@
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { EnergyShare } from '@/components/charts/energy';
-import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
-import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/tabs"
 import { Tabs3, TabsContent3, TabsList3, TabsTrigger3 } from "@/components/ui/tabs"
-
 
 export const EnergyMix = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] ${className}`}>
              <h1 className='text-[18px] mt-5 font-a2 px-3'><div className='w-3 h-3 bg-red-400 mr-2 inline-flex'/> 
              Share of primary energy consumption by individual source</h1>
-           <div className='p-3 mt-5 my-3 rounded-[10px] border-[2px] border-[#d9d9d9]'>
+           <div className='py-3 mt-5 my-3 rounded-[10px] border-[2px] border-[#d9d9d9]'>
                 <Tabs3 defaultValue="ec">
                     <TabsList3>
                         <TabsTrigger3 value="ec">Energy Consumption</TabsTrigger3>

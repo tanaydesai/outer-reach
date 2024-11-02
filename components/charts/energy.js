@@ -47,8 +47,8 @@ export const EnergyShare = ({className}) => {
             data={chartData}
             margin={{
               top: 15,
-              left: -25,
-              right: 5,
+              left: -15,
+              right: 15,
             }}
           >
             <CartesianGrid vertical={false} />
@@ -165,7 +165,7 @@ export const LeaderBoards = ({className}) => {
               layout="vertical"
               fill="#2eec7d"
               radius={7}
-              barSize={35}
+              barSize={40}
             >
               <LabelList
                 dataKey="year"
@@ -320,19 +320,26 @@ export const CO2GDP = ({className}) => {
     { year: 2000, gdp: 5, co2: -10 },
     { year: 2001, gdp: 20, co2: -10 },
     { year: 2002, gdp: 37, co2: -20 },
-    { year: 2003, gdp: 103, co2: -50 },
-    { year: 2023, gdp: 209, co2: -60 },
-    { year: 2024, gdp: 514, co2: -100 },
+    { year: 2014, gdp: 103, co2: -50 },
+    { year: 2015, gdp: 153, co2: -50 },
+    { year: 2018, gdp: 353, co2: -150 },
+    { year: 2019, gdp: 453, co2: -150 },
+    { year: 2020, gdp: 553, co2: -150 },
+    { year: 2023, gdp: 609, co2: -260 },
+    { year: 2024, gdp: 814, co2: -300 },
   ]
   
   const chartConfig = {
+    year: {
+      label: "Year",
+    },
     gdp: {
-      label: "Solar",
-      color: "hsl(var(--chart-1))",
+      label: "GDP",
+      color: "#440706",
     },
     co2: {
-      label: "Wind",
-      color: "hsl(var(--chart-2))",
+      label: "CO2",
+      color: "#fe4311",
     },
   }
 
@@ -342,7 +349,7 @@ return (
           accessibilityLayer
           data={chartData}
           margin={{
-            left: 20,
+            left: -10,
             right:20,
           }}
         >
@@ -353,43 +360,35 @@ return (
             axisLine={false}
             tickMargin={3}
           />
-          {/* <YAxis
+          <YAxis
             tickLine={false}
             axisLine={false}
             tickMargin={8}
             tickCount={5}
-          /> */}
+          />
           <ChartTooltip
             cursor={false}
-            content={<ChartTooltipContent indicator="dot" />}
+            content={<ChartTooltipContent labelKey="year" />}
           />
           <Area
-            dataKey="co2"
-            type="monotone"
-            stroke="white"
-            fill='white'
-            dot
-            opacity={0.5}
-            strokeWidth={2}
-          >
+            dataKey="gdp"
+            fill='#000000'
+            stroke='none'
+            >
             <LabelList
-              position="bottom"
+              position="top"
               offset={12}
               className="fill-foreground"
               fontSize={12}
             />
           </Area>
           <Area
-            dataKey="gdp"
-            type="monotone"
-            stroke="white"
-            fill='white'
-            dot
-            opacity={0.9}
-            strokeWidth={2}
-            >
+            dataKey="co2"
+            fill='#fe4311'
+            stroke="none"
+          >
             <LabelList
-              position="top"
+              position="bottom"
               offset={12}
               className="fill-foreground"
               fontSize={12}

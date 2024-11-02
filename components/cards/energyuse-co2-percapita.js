@@ -5,10 +5,10 @@ import { CO2GDP } from '@/components/charts/energy';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
 import { Tabs3, TabsContent3, TabsList3, TabsTrigger3 } from "@/components/ui/tabs"
 
-export const CO2GDPPercapita = ({className}) => {
+export const EnergyUseCO2Percapita = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] ${className}`}>
-            <h1 className='text-[18px] text-[#463f3a] font-a2 px-3'><div className='w-3 h-3 mr-2 bg-red-400 inline-flex'/>Change in CO2 emissions & GDP per capita</h1>
+            <h1 className='text-[18px] text-[#463f3a] font-a2 px-3'><div className='w-3 h-3 mr-2 bg-red-400 inline-flex'/>Change in Energy use per person & GDP per capita</h1>
             <div className='py-3 mt-5 rounded-[10px] border-[2px] border-[#d9d9d9]'>    
                 <Tabs3 defaultValue="account">
                     <TabsList3>

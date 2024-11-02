@@ -25,11 +25,10 @@ export const EnergyLeaderBoard = ({className}) => {
             </SelectContent>
             </Select>
             </h1>
-            <p className='text-[14px] mx-3 my-2 font-a1 text-[#656565]'>Countries leading the way by share of Renewables in the mix.</p>
             <div className='px-3 pt-3 mt-5 overflow-auto text-white bg-black relative rounded-[10px]'>    
-                {/* <div className='w-full flex font-a1 text-[17px] items-center justify-between'>Country <div>%</div></div> */}
-                <div className='h-[378px] w-full overflow-auto'>
-                    <LeaderBoards className='h-[650px] w-full' />
+                <p className='text-[14px] mx-1 font-a1 md:w-[50%]'>Countries leading the way by share of Renewables in the mix.</p>
+                <div className='h-[450px] py-3 w-full overflow-auto'>
+                    <LeaderBoards className='min-h-[650px] w-full' />
                 </div>
             </div>
         </div>
