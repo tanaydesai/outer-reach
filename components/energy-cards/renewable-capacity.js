@@ -10,13 +10,13 @@ export const RenewableCapacities = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] ${className}`}>
              <h1 className='chart-title'><div className='tag-box '/> 
-                Renewable capacity by 
+                Renewable capacity composition by 
                 <Select>
                 <SelectTrigger>
-                    <SelectValue placeholder="Renewables" />
+                    <SelectValue placeholder="Sources" />
                 </SelectTrigger>
                 <SelectContent>
-                    <SelectItem value="light">All sources</SelectItem>
+                    <SelectItem value="light">All</SelectItem>
                     <SelectItem value="light">Solar</SelectItem>
                     <SelectItem value="light">Wind</SelectItem>
                     <SelectItem value="dark">Nuclear</SelectItem>

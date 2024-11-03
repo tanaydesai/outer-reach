@@ -1,15 +1,19 @@
 "use client"
 import React, { useRef,useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { EnergyLeaderBoard } from '@/components/cards/energy-leaderboard';
-import { EnergyMix } from '@/components/cards/energy-mix';
-import { RenewableCapacityChange } from '@/components/cards/capacity-change';
-import { AvgHouse } from '@/components/cards/annual-avg-house';
-import { RenewableCapacities } from '@/components/cards/renewable-capacity';
-import { CO2GDPPercapita } from '@/components/cards/co2-gdp-percapita';
-import { RenewableShare } from '@/components/cards/renewable-share';
-import { FossilShare } from '@/components/cards/fossils-share';
-import { EnergyUseCO2Percapita } from '@/components/cards/energyuse-co2-percapita';
+import { EnergyLeaderBoard } from '@/components/energy-cards/energy-leaderboard';
+import { EnergyMix } from '@/components/energy-cards/energy-mix';
+import { RenewableCapacityChange } from '@/components/energy-cards/capacity-change';
+import { RenewableCapacityChange2 } from '@/components/energy-cards/capacity-change2';
+import { AvgHouse } from '@/components/energy-cards/annual-avg-house';
+import { RenewableCapacities } from '@/components/energy-cards/renewable-capacity';
+import { CO2GDPPercapita } from '@/components/energy-cards/co2-gdp-percapita';
+import { RenewableShare } from '@/components/energy-cards/renewable-share';
+import { CO2GDPChart } from '@/components/energy-cards/co2-gdp';
+import { FossilShare } from '@/components/energy-cards/fossils-share';
+import { EnergyChange } from '@/components/energy-cards/energy-change';
+import { EnergyChange2 } from '@/components/energy-cards/energy-change2';
+import { EnergyUseCO2Percapita } from '@/components/energy-cards/energyuse-co2-percapita';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CornerDownRight } from 'lucide-react';
@@ -44,6 +48,11 @@ export default function Home() {
             </div> 
             <TabsContent value="mix">
                 <EnergyMix className={'mt-[100px]'}/>
+
+                <div className='md:flex gap-2 mt-10'>
+                  <EnergyChange className={'flex-1'}/>
+                  <EnergyChange2 className={'flex-1 mt-5 md:mt-0'}/>
+                </div>
         
                 <div className='page-line'>{"{02}"} <hr className='page-line-hr'/> {"{03}"}</div>
                 <div className='page-headers mb-10'>The world is adding renewable capacity faster than ever before</div>
@@ -59,15 +68,20 @@ export default function Home() {
                   <RenewableCapacities className={'flex-1'}/>
                   <RenewableCapacityChange className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
+
+                <RenewableCapacityChange2 className={'mt-10'}/>
             </TabsContent>
             <TabsContent value="leaderboard">          
                 <EnergyLeaderBoard className={'mt-[100px]'}/>
             </TabsContent>
             <TabsContent value="percapita">
-                <div className='md:flex gap-2 mt-[100px]'>                        
+                <CO2GDPChart className={'mt-[100px]'}/>
+
+                <div className='md:flex gap-2 mt-10'>                        
                   <EnergyUseCO2Percapita className={'flex-1'}/>
                   <CO2GDPPercapita className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
+                              
                 <div className='md:flex gap-2 mt-10'>
                   <AvgHouse className={'flex-1'}/>
                 </div>

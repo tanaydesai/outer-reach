@@ -1,11 +1,7 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react'
-import { Drawer,DrawerClose,DrawerContent,DrawerDescription,DrawerFooter,DrawerHeader,DrawerTitle,DrawerTrigger,} from "@/components/ui/drawer"
-import { motion } from 'framer-motion';
-import { Area, AreaChart,Line, LineChart,  Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList } from "recharts"
+import { Area, AreaChart,Line, LineChart,  Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList, Cell } from "recharts"
 import { ChartConfig,ChartContainer,ChartTooltip,ChartTooltipContent,ChartLegend,ChartLegendContent} from "@/components/ui/chart"
-import { Tabs,TabsContent,TabsList,TabsTrigger,} from "@/components/ui/tabs"
-import { SunMediumIcon, AtomIcon, FanIcon, DamIcon, FuelIcon } from 'lucide-react';
 
 export const EnergyShare = ({className}) => {
     const chartData = [
@@ -188,7 +184,219 @@ export const LeaderBoards = ({className}) => {
 }
 
 
-export const PercentChange = ({className}) => {
+export const EnergyMixChange = ({className}) => {
+ const chartData = [
+  { year: 2018, change: 16 },
+  { year: 2019, change: 35 },
+  { year: 2020, change: 7 },
+  { year: 2021, change: 3 },
+  { year: 2022, change: 29 },
+  { year: 2023, change: 24 },
+]
+  
+  const chartConfig = {
+    "Mix": {
+      label: "Energy Mix",
+    },
+    change: {
+      label: "Change",
+      color: "hsl(var(--chart-1))",
+    },
+  }
+
+return (
+    <ChartContainer config={chartConfig} className={className}>
+        <BarChart
+            accessibilityLayer
+            data={chartData}
+            margin={{
+              top: 20,
+            }}
+          >
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="year"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+            />
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent hideLabel />}
+            />
+            <Bar dataKey="change" fill="var(--color-change)" radius={8}>
+              <LabelList
+                position="top"
+                offset={12}
+                className="fill-foreground"
+                fontSize={12}
+              />
+            </Bar>
+          </BarChart>
+    </ChartContainer>
+  )
+}
+
+
+export const EnergyMixChange2 = ({className}) => {
+  const chartData = [
+    { year: 2015, FFchange: 16, Rchange: 26, Nchange: 6 },
+    { year: 2016, FFchange: 16, Rchange: 26, Nchange: 6 },
+    { year: 2017, FFchange: 16, Rchange: 26, Nchange: 6 },
+    { year: 2018, FFchange: 16, Rchange: 26, Nchange: 6 },
+   { year: 2019, FFchange: 35, Rchange: 52, Nchange: 15 },
+   { year: 2020, FFchange: 7, Rchange: 14, Nchange: 3 },
+   { year: 2021, FFchange: 3, Rchange: 6, Nchange: 1 },
+   { year: 2022, FFchange: 29, Rchange: 58, Nchange: 19 },
+   { year: 2023, FFchange: 24, Rchange: 48, Nchange: 14 },
+ ]
+   
+   const chartConfig = {
+     "Mix": {
+       label: "Energy Mix",
+     },
+     FFchange: {
+       label: "Fosil Fuels",
+       color: "hsl(var(--chart-1))",
+     },
+     Rchange: {
+       label: "Renewables",
+       color: "hsl(var(--chart-2))",
+     },
+     Nchange: {
+       label: "Nuclear",
+       color: "hsl(var(--chart-3))",
+     },
+   }
+ 
+ return (
+     <ChartContainer config={chartConfig} className={className}>
+         <BarChart accessibilityLayer data={chartData}>
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="year"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+            />
+            <ChartTooltip content={<ChartTooltipContent hideLabel />} />
+            <ChartLegend content={<ChartLegendContent />} />
+            <Bar
+              dataKey="FFchange"
+              stackId="a"
+              fill="#ef7020"
+              radius={[0, 0, 4, 4]}
+            />
+            <Bar
+              dataKey="Rchange"
+              stackId="a"
+              fill="#3aee7a"
+              radius={[0, 0, 0, 0]}
+            />
+            <Bar
+              dataKey="Nchange"
+              stackId="a"
+              fill="#ec7ad7"
+              radius={[4, 4, 0, 0]}
+            />
+          </BarChart>
+     </ChartContainer>
+   )
+ }
+
+export const CapacityChange = ({className}) => {
+  const chartData = [
+    { year: 2000, solar: 26, wind: 10, hydro: 10, fosils: 20 },
+    { year: 2001, solar: 35, wind: 20, hydro: 20, fosils: 30 },
+    { year: 2002, solar: 37, wind: 40, hydro: 30, fosils: 52 },
+    { year: 2013, solar: 53, wind: 45, hydro: 40, fosils: 60 },
+    { year: 2015, solar: 53, wind: 45, hydro: 40, fosils: 60 },
+    { year: 2023, solar: 60, wind: 50, hydro: 35, fosils: 65 },
+    { year: 2024, solar: 70, wind: 70, hydro: 35, fosils: 80 },
+  ]
+  
+  const chartConfig = {
+    "Mix": {
+      label: "Energy Mix",
+    },
+    solar: {
+      label: "Solar",
+      color: "#2ccfff",
+    },
+    wind: {
+      label: "Wind",
+      color: "#065374",
+    },
+    fosils: {
+      label: "Fosils",
+      color: "#b10fff",
+    },
+    hydro: {
+      label: "Hydro",
+      color: "#ff5d83",
+    },
+  }
+
+return (
+    <ChartContainer config={chartConfig} className={className}>
+        <LineChart
+          accessibilityLayer
+          data={chartData}
+          margin={{
+            top: 15,
+            left: -15,
+            right: 15,
+          }}
+        >
+          <CartesianGrid vertical={false} />
+          <XAxis
+            dataKey="year"
+            tickLine={false}
+            axisLine={false}
+            tickMargin={3}
+            // tickFormatter={(value) => value.slice(0, 3)}
+          />
+          <YAxis
+            tickLine={false}
+            axisLine={false}
+            tickMargin={8}
+            tickCount={5}
+          />
+          <ChartTooltip
+            cursor={false}
+            content={<ChartTooltipContent labelKey="Mix" indicator="dot" />}
+          />
+          <Line
+            dataKey="solar"
+            // type="monotone"
+            stroke="#2ccfff"
+          >
+          </Line>
+           <Line
+            dataKey="wind"
+            stroke="#065374"
+            // type="monotone"
+            >
+          </Line>
+          <Line
+            dataKey="hydro"
+            stroke="#ff5d83"
+            // type="monotone"
+          >
+          </Line>
+          <Line
+            dataKey="fosils"
+            stroke="#b10fff"
+            // type="monotone"
+          >
+          </Line>
+          <ChartLegend content={<ChartLegendContent />} />
+        </LineChart>
+      </ChartContainer>
+  )
+}
+
+export const CapacityChange2 = ({className}) => {
   const chartData = [
     { year: "Wind", solar: 2 },
     { year: "Wind", solar: 5 },
@@ -314,6 +522,91 @@ export const Capacity = ({className}) => {
   )
 }
 
+
+export const CO2GDPPC = ({className}) => {
+  const chartData = [
+    { year: 2000, gdp: 5, co2: -10 },
+    { year: 2001, gdp: 20, co2: -10 },
+    { year: 2002, gdp: 37, co2: -20 },
+    { year: 2014, gdp: 103, co2: -50 },
+    { year: 2015, gdp: 153, co2: -50 },
+    { year: 2018, gdp: 353, co2: -150 },
+    { year: 2019, gdp: 453, co2: -150 },
+    { year: 2020, gdp: 553, co2: -150 },
+    { year: 2023, gdp: 609, co2: -260 },
+    { year: 2024, gdp: 814, co2: -300 },
+  ]
+  
+  const chartConfig = {
+    year: {
+      label: "Year",
+    },
+    gdp: {
+      label: "GDP",
+      color: "#440706",
+    },
+    co2: {
+      label: "CO2",
+      color: "#fe4311",
+    },
+  }
+
+return (
+    <ChartContainer config={chartConfig} className={className}>
+        <AreaChart
+          accessibilityLayer
+          data={chartData}
+          margin={{
+            left: -10,
+            right:20,
+          }}
+        >
+          {/* <CartesianGrid vertical={false} /> */}
+          <XAxis
+            dataKey="year"
+            tickLine={false}
+            axisLine={false}
+            tickMargin={3}
+          />
+          <YAxis
+            tickLine={false}
+            axisLine={false}
+            tickMargin={8}
+            tickCount={5}
+          />
+          <ChartTooltip
+            cursor={false}
+            content={<ChartTooltipContent labelKey="year" />}
+          />
+          <Area
+            dataKey="gdp"
+            fill='#000000'
+            stroke='none'
+            >
+            <LabelList
+              position="top"
+              offset={12}
+              className="fill-foreground"
+              fontSize={12}
+            />
+          </Area>
+          <Area
+            dataKey="co2"
+            fill='#fe4311'
+            stroke="none"
+          >
+            <LabelList
+              position="bottom"
+              offset={12}
+              className="fill-foreground"
+              fontSize={12}
+            />
+          </Area>
+          <ChartLegend content={<ChartLegendContent />} />
+        </AreaChart>
+      </ChartContainer>
+)
+}
 
 export const CO2GDP = ({className}) => {
   const chartData = [
