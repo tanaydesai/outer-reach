@@ -25,10 +25,10 @@ export default function Home() {
         <div className='main-body'>
           <Tabs defaultValue="mix" onValueChange={setTab} value={tab}>
             <TabsList>
-              <TabsTrigger value="mix"><div className={`${tab == "mix" ? "" : "hidden"} tag-box bg-red-400 mr-1 `}/> Energy Mix</TabsTrigger>
-              <TabsTrigger value="renewable"><div className={`${tab == "renewable" ? "" : "hidden"} tag-box bg-red-400 mr-1 `}/> Renewables</TabsTrigger>
-              <TabsTrigger value="leaderboard"><div className={`${tab == "leaderboard" ? "" : "hidden"} tag-box bg-red-400 mr-1 `}/> Leaderboards</TabsTrigger>
-              <TabsTrigger value="percapita"><div className={`${tab == "percapita" ? "" : "hidden"} tag-box bg-red-400 mr-1 `}/> Economics</TabsTrigger>
+              <TabsTrigger value="mix"><div className={`${tab == "mix" ? "" : "hidden"} tag-box  mr-1 `}/> Energy Mix</TabsTrigger>
+              <TabsTrigger value="renewable"><div className={`${tab == "renewable" ? "" : "hidden"} tag-box  mr-1 `}/> Renewables</TabsTrigger>
+              <TabsTrigger value="leaderboard"><div className={`${tab == "leaderboard" ? "" : "hidden"} tag-box  mr-1 `}/> Leaderboards</TabsTrigger>
+              <TabsTrigger value="percapita"><div className={`${tab == "percapita" ? "" : "hidden"} tag-box  mr-1 `}/> Economics</TabsTrigger>
             </TabsList>
             <div className='page-headers text-center'>
               Energy landscape:  

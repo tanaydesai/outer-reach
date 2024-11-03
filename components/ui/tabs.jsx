@@ -56,9 +56,9 @@ export { Tabs, TabsList, TabsTrigger, TabsContent }
 
 
 
-const Tabs3 = TabsPrimitive.Root
+const Tabs2 = TabsPrimitive.Root
 
-const TabsList3 = React.forwardRef(({ className, ...props }, ref) => (
+const TabsList2 = React.forwardRef(({ className, ...props }, ref) => (
     <TabsPrimitive.List
     ref={ref}
     className={cn(
@@ -67,9 +67,9 @@ const TabsList3 = React.forwardRef(({ className, ...props }, ref) => (
     )}
     {...props}></TabsPrimitive.List>
 ))
-TabsList3.displayName = TabsPrimitive.List.displayName
+TabsList2.displayName = TabsPrimitive.List.displayName
 
-const TabsTrigger3 = React.forwardRef(({ className, ...props }, ref) => (
+const TabsTrigger2 = React.forwardRef(({ className, ...props }, ref) => (
     <motion.div whileTap={{ scale: 0.97 }}>
       <TabsPrimitive.Trigger
         ref={ref}
@@ -80,9 +80,9 @@ const TabsTrigger3 = React.forwardRef(({ className, ...props }, ref) => (
         {...props} />
     </motion.div>
 ))
-TabsTrigger3.displayName = TabsPrimitive.Trigger.displayName
+TabsTrigger2.displayName = TabsPrimitive.Trigger.displayName
 
-const TabsContent3 = React.forwardRef(({ className, ...props }, ref) => (
+const TabsContent2 = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
@@ -91,6 +91,6 @@ const TabsContent3 = React.forwardRef(({ className, ...props }, ref) => (
     )}
     {...props} />
 ))
-TabsContent3.displayName = TabsPrimitive.Content.displayName
+TabsContent2.displayName = TabsPrimitive.Content.displayName
 
-export { Tabs3, TabsList3, TabsTrigger3, TabsContent3 }
+export { Tabs2, TabsList2, TabsTrigger2, TabsContent2 }
