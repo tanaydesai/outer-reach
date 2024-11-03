@@ -1,3 +1,4 @@
+@import "./tailwind.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,9 +25,6 @@
   display: none;
 }
 
-html {
-  background-color: #efefef;
-}
 
   @font-face {
     font-family: "rajdhani-bold";

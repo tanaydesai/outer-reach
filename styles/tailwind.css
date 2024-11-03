@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+    html {
+        @apply bg-[#efefef]
+    }
+
+    .main {
+        @apply absolute w-full min-h-full px-3 py-[50px]
+    }
+    .main-body{
+        @apply w-full mt-6 md:mt-2
+    }
+
+    .navbar-box {
+        @apply rounded-[5px] hover:text-white hover:bg-[#463f3a] border border-[#b3b3b3] py-0.5  px-2.5 cursor-default text-[#9b9b9b] text-[12px] uppercase font-a2
+    }
+
+    .title {
+        @apply text-[60px] sm:text-[90px] lg:text-[120px] text-[#463f3a] font-a2 whitespace-nowrap
+    }
+
+    .description {
+        @apply text-[16px] sm:text-[20px] w-full md:w-[85%] lg:w-[70%] leading-6 sm:leading-8 font-semibold text-[#463f3a] font-a1
+    }
+    .description-tag {
+        @apply text-[15px] sm:text-[17px] text-[#9b9b9b] font-a1 h-[27px] gap-2 flex items-center
+    }
+
+    .tag {
+        @apply text-[13px] uppercase font-a2 text-[#463f3a] h-[27px] font-semibold flex items-center
+    }
+    .tag-box {
+        @apply w-2.5 h-2.5 inline-flex bg-red-400 mr-3
+    }
+
+    .box {
+        @apply h-[350px] border-[3px] border-t-0  border-[#463f3a] relative overflow-auto flex-1
+    }
+    .box-title {
+        @apply text-[15px] h-[30px] flex justify-start px-2 items-center bg-[#463f3a] text-white font-a2
+    }
+    .box-desc {
+        @apply text-[13px] px-2 mt-2 absolute bottom-0 h-[65px] font-a1 text-[#463f3a]
+    }
+
+    .page-headers {
+        @apply text-[25px] px-2 mt-5 font-a2 h-fit leading-8
+    }
+    .page-line {
+        @apply text-[#9b9b9b] h-[27px] px-2 mt-10 font-a1 gap-2 flex items-center
+    }
+    .page-line-hr {
+        @apply flex-1 bg-[#9b9b9b] h-[1px]
+    }
+
+
+    .chart {
+        @apply py-3 mt-5 my-3 rounded-[10px] border-[2px] border-[#d9d9d9]  overflow-auto
+    }
+    .chart-title {
+        @apply text-[18px] font-a2 px-3
+    }
+    .chart-desc {
+        @apply text-[14px] mx-3 mt-5 font-a1 md:w-[50%] text-[#656565]
+    }
+    .chart-data {
+        @apply text-[30px] px-6 text-right font-a1
+    }
+    .chart-data-span {
+        @apply text-[10px] text-white pl-2 font-a2 inline-flex items-end gap-1
+    }
+
+
+
+
+}

@@ -7,7 +7,7 @@ import { LeaderBoards } from '@/components/charts/energy';
 export const EnergyLeaderBoard = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] mt-7 ${className}`}>
-            <h1 className='text-[17px] text-[#463f3a] font-a2 px-3'><div className='w-3 h-3 bg-green-500 shrink-0 mr-2 inline-flex'/>King's Leaderboard: 
+            <h1 className='chart-title'><div className='tag-box bg-green-500'/>King's Leaderboard: 
             <Select>
             <SelectTrigger className="text-black">
                 <SelectValue placeholder="Renewables" />
@@ -25,8 +25,8 @@ export const EnergyLeaderBoard = ({className}) => {
             </SelectContent>
             </Select>
             </h1>
-            <div className='px-3 pt-3 mt-5 overflow-auto text-white bg-black relative rounded-[10px]'>    
-                <p className='text-[14px] mx-1 font-a1 md:w-[50%]'>Countries leading the way by share of Renewables in the mix.</p>
+            <div className='px-3 chart text-white bg-black pb-0'>    
+                <p className='chart-desc mt-1 text-white mx-1'>Countries leading the way by share of Renewables in the mix.</p>
                 <div className='h-[450px] py-3 w-full overflow-auto'>
                     <LeaderBoards className='min-h-[650px] w-full' />
                 </div>

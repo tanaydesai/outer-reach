@@ -7,11 +7,11 @@ import { ArrowUp } from 'lucide-react';
 export const AvgHouse = ({className}) => {
     return (
         <div className={`md:h-full rounded-[30px] ${className}`}>
-            <h1 className='text-[17px] font-a2 px-3'><div className='w-3 h-3 bg-red-400 mr-3 inline-flex'/>
+            <h1 className='chart-title'><div className='tag-box '/>
                 Avg. annual household energy use
             </h1>
-            <div className='pt-3 my-3 mt-5 overflow-auto text-white bg-black relative rounded-[10px]'>    
-                <div className='text-[30px] px-6 pt-2 font-a1'>13,000Kwh<div className='text-[10px] text-white pl-2 font-a2 inline-flex items-end gap-1'><ArrowUp size={17} className='text-[#2eec7d]'/>5% YoY</div></div>
+            <div className='chart text-white bg-black pb-0'>    
+                <div className='chart-data text-left'>13,000Kwh<div className='chart-data-span'><ArrowUp size={17} className='text-[#2eec7d]'/>5% YoY</div></div>
                 <AnnualHouse className='w-full h-[150px]'/>
             </div>
         </div>

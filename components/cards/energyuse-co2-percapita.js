@@ -8,8 +8,8 @@ import { Tabs3, TabsContent3, TabsList3, TabsTrigger3 } from "@/components/ui/ta
 export const EnergyUseCO2Percapita = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] ${className}`}>
-            <h1 className='text-[18px] text-[#463f3a] font-a2 px-3'><div className='w-3 h-3 mr-2 bg-red-400 inline-flex'/>Change in Energy use per person & GDP per capita</h1>
-            <div className='py-3 mt-5 rounded-[10px] border-[2px] border-[#d9d9d9]'>    
+            <h1 className='chart-title'><div className='tag-box'/>Change in Energy use per person & GDP per capita</h1>
+            <div className='chart'>    
                 <Tabs3 defaultValue="account">
                     <TabsList3>
                         <TabsTrigger3 value="account">Absolute</TabsTrigger3>
@@ -17,7 +17,7 @@ export const EnergyUseCO2Percapita = ({className}) => {
                     </TabsList3>
                     <TabsContent3 value="account">
                         <CO2GDP className='w-full h-[330px] mt-4'/>
-                        <p className='text-[14px] mt-5 mx-4 font-a1 md:w-[50%]'>Historical change in CO2 emissions per capita and GDP per capita.</p>
+                        <p className='chart-desc'>Historical change in CO2 emissions per capita and GDP per capita.</p>
                     </TabsContent3>
                     <TabsContent3 value="password">
                         <CO2GDP className='w-full h-[330px] mt-4'/>

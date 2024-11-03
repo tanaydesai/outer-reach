@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useEffect } from 'react';
+import React, { useRef,useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { EnergyLeaderBoard } from '@/components/cards/energy-leaderboard';
 import { EnergyMix } from '@/components/cards/energy-mix';
@@ -17,19 +17,20 @@ import {DecryptText} from '@/components/decrypt'
 
 
 export default function Home() {
+  const [tab, setTab] = useState('mix');
    
   return (
-    <div className="absolute w-full min-h-full bg-slate-50 py-[50px]">
+    <div className="main bg-slate-50">
 
-        <div className='w-full px-3 mt-6 md:mt-2 mx-auto'>
-          <Tabs defaultValue="mix">
+        <div className='main-body'>
+          <Tabs defaultValue="mix" onValueChange={setTab} value={tab}>
             <TabsList>
-              <TabsTrigger value="mix"><div className='w-2.5 h-2.5 bg-red-400 mr-1 inline-flex'/> Energy Mix</TabsTrigger>
-              <TabsTrigger value="renewable">Renewables</TabsTrigger>
-              <TabsTrigger value="leaderboard">Leaderboards</TabsTrigger>
-              <TabsTrigger value="percapita">Economics</TabsTrigger>
+              <TabsTrigger value="mix"><div className={`${tab == "mix" ? "" : "hidden"} tag-box bg-red-400 mr-1 `}/> Energy Mix</TabsTrigger>
+              <TabsTrigger value="renewable"><div className={`${tab == "renewable" ? "" : "hidden"} tag-box bg-red-400 mr-1 `}/> Renewables</TabsTrigger>
+              <TabsTrigger value="leaderboard"><div className={`${tab == "leaderboard" ? "" : "hidden"} tag-box bg-red-400 mr-1 `}/> Leaderboards</TabsTrigger>
+              <TabsTrigger value="percapita"><div className={`${tab == "percapita" ? "" : "hidden"} tag-box bg-red-400 mr-1 `}/> Economics</TabsTrigger>
             </TabsList>
-            <div className='text-[25px] text-center leading-10 px-2 mt-5 font-a2 text-[#463f3a] h-fit'>
+            <div className='page-headers text-center'>
               Energy landscape:  
                 <Select>
                   <SelectTrigger className="text-[25px]">
@@ -44,9 +45,9 @@ export default function Home() {
             <TabsContent value="mix">
                 <EnergyMix className={'mt-[100px]'}/>
         
-                <div className='text-[#9b9b9b] h-[27px] px-2 mt-10 font-a1 gap-2 flex items-center'>{"{02}"} <hr className='flex-1 bg-[#9b9b9b] h-[1px]'/> {"{03}"}</div>
-                <div className='text-[25px] leading-8 font-a2 px-2 mt-5 mb-10 text-[#463f3a] h-fit'>The world is adding renewable capacity faster than ever before</div>
-                <div className='text-[#9b9b9b] h-[27px] px-2 mt-10 font-a1 gap-2 flex items-center'>{"{02}"} <hr className='flex-1 bg-[#9b9b9b] h-[1px]'/> {"{03}"}</div>              
+                <div className='page-line'>{"{02}"} <hr className='page-line-hr'/> {"{03}"}</div>
+                <div className='page-headers mb-10'>The world is adding renewable capacity faster than ever before</div>
+                <div className='page-line'>{"{02}"} <hr className='page-line-hr'/> {"{03}"}</div>              
 
                 <div className='md:flex gap-2 mt-10'>
                   <RenewableShare className={'flex-1'}/>
