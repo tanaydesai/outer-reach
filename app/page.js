@@ -9,7 +9,7 @@ import {DecryptText} from '@/components/decrypt'
 
 export default function Home() {
   return (
-      <div className='main bg-[#efefef] py-[70px]'>
+      <div className='main py-[70px]'>
   
         <div className='w-full h-fit'> 
           <Fade className='h-[70px] sm:h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[1000,"Welcome", "Welcome to", 'Welcome to']} className='title leading-[85px] md:leading-[85px]'/></Fade>
@@ -30,25 +30,33 @@ export default function Home() {
           <div className='mt-[120px] tag'><div className='tag-box bg-teal-400'/><DecryptText text='Topics' /></div>
 
           <div className='mt-5 w-full grid gap-2 grid-flow-row md:grid-cols-2 lg:grid-cols-4'>
+              <Link href={'/energy'}>
               <div className='box'>
                   <div className='box-title'><DecryptText text='>_ Road to Energy Abundance' /></div>                
                   <div className='box-desc'>Global energy mix, renewables growth and capacity, winners & losers, per capita and more.</div>
               </div>
+              </Link>
 
+              <Link href={'/nuclear'}>
               <div className='box'>
                   <div className='box-title'><DecryptText text=">_ Nuclear's Revenge" /></div>    
                   <div className='box-desc'>Global nuclear capacity, rapid expansion, truth about safety and reuseable waste metrics.</div>
               </div>
+              </Link>
 
+              <Link href={'/agi'}>
               <div className='box'>
                   <div className='box-title'><DecryptText text='>_ Age of AGI' /></div>
                   <div className='box-desc'>World's largest GPU clusters, rapid global data center rollout, increasing energy demand and AGI's promise.</div>
               </div>
+              </Link>
 
+              <Link href={'/space'}>
               <div className='box'>
                   <div className='box-title'><DecryptText text='>_ The Space Race' /></div>      
                   <div className='box-desc'>The blessing that is SpaceX, the economics, impact and need for space exploitation.</div>
               </div>
+              </Link>
           </div>
 
         </div>

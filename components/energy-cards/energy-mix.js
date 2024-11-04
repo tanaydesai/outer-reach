@@ -9,13 +9,23 @@ export const EnergyMix = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] ${className}`}>
              <h1 className='chart-title'><div className='tag-box'/> 
-             Share of primary energy consumption by individual 
-             <Select>
+                Primary
+                <Select>
+                    <SelectTrigger>
+                        <SelectValue placeholder="Energy" />
+                    </SelectTrigger>
+                    <SelectContent>
+                        <SelectItem value="light">Energy</SelectItem>
+                        <SelectItem value="light">Electricity</SelectItem>
+                    </SelectContent>
+                </Select>
+                consumption by individual
+                <Select>
                 <SelectTrigger>
                     <SelectValue placeholder="Sources" />
                 </SelectTrigger>
                 <SelectContent>
-                    <SelectItem value="light">All</SelectItem>
+                    <SelectItem value="light">All sources</SelectItem>
                     <SelectItem value="light">Solar</SelectItem>
                     <SelectItem value="light">Wind</SelectItem>
                     <SelectItem value="dark">Nuclear</SelectItem>
@@ -26,8 +36,8 @@ export const EnergyMix = ({className}) => {
            <div className='chart'>
                 <Tabs2 defaultValue="ec">
                     <TabsList2>
-                        <TabsTrigger2 value="ec">Energy Consumption</TabsTrigger2>
-                        <TabsTrigger2 value="elc">Electricity Consumption</TabsTrigger2>
+                        <TabsTrigger2 value="ec">Absolute</TabsTrigger2>
+                        <TabsTrigger2 value="elc">% Change</TabsTrigger2>
                         {/* Abs / Share */}
                     </TabsList2>
                     <TabsContent2 value="ec">

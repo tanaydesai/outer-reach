@@ -6,11 +6,11 @@
 
 @layer components {
     html {
-        @apply bg-[#efefef]
+        @apply bg-slate-50
     }
 
     .main {
-        @apply absolute w-full min-h-full px-3 py-[50px]
+        @apply absolute w-full min-h-full px-3 py-[50px] bg-slate-50
     }
     .main-body{
         @apply w-full mt-6 md:mt-2

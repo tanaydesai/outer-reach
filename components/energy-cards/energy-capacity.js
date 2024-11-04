@@ -1,28 +1,16 @@
 "use client"
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Capacity } from '@/components/charts/energy';
+import { CurrentCapacity, PlannedCapacity } from '@/components/charts/energy';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
 import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/tabs"
 
 
-export const RenewableCapacities = ({className}) => {
+export const EnergyCapacities = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] ${className}`}>
              <h1 className='chart-title'><div className='tag-box '/> 
-                Renewable capacity composition by 
-                <Select>
-                <SelectTrigger>
-                    <SelectValue placeholder="Sources" />
-                </SelectTrigger>
-                <SelectContent>
-                    <SelectItem value="light">All</SelectItem>
-                    <SelectItem value="light">Solar</SelectItem>
-                    <SelectItem value="light">Wind</SelectItem>
-                    <SelectItem value="dark">Nuclear</SelectItem>
-                    <SelectItem value="dark">Hydro</SelectItem>
-                </SelectContent>
-                </Select>
+                Energy capacity composition by sources
             </h1>
             <div className='chart'>
                 <Tabs2 defaultValue="cc">
@@ -32,11 +20,11 @@ export const RenewableCapacities = ({className}) => {
                         {/* Abs / Share */}
                     </TabsList2>
                     <TabsContent2 value="cc">
-                        <Capacity className='w-full h-[330px] mt-4'/>
+                        <CurrentCapacity className='w-full h-[330px] mt-4'/>
                         <p className='chart-desc'>Countries leading the way by share of Renewables in the mix.</p>
                     </TabsContent2>
                     <TabsContent2 value="pc">
-                        <Capacity className='w-full h-[330px] mt-4'/>
+                        <PlannedCapacity className='w-full h-[330px] mt-4'/>
                         <p className='chart-desc'>Countries leading the way by share of Renewables in the mix.</p>
                     </TabsContent2>
                 </Tabs2>

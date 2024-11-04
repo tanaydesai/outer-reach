@@ -15,8 +15,8 @@ export const EnergyShare = ({className}) => {
     ]
     
     const chartConfig = {
-      "Mix": {
-        label: "Energy Mix",
+      "year": {
+        label: "Year",
       },
       solar: {
         label: "Solar",
@@ -63,7 +63,7 @@ export const EnergyShare = ({className}) => {
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent labelKey="Mix" indicator="dot" />}
+              content={<ChartTooltipContent labelKey="year" indicator="dot" />}
             />
             <Area
               dataKey="solar"
@@ -185,126 +185,146 @@ export const LeaderBoards = ({className}) => {
 
 
 export const EnergyMixChange = ({className}) => {
- const chartData = [
-  { year: 2018, change: 16 },
-  { year: 2019, change: 35 },
-  { year: 2020, change: 7 },
-  { year: 2021, change: 3 },
-  { year: 2022, change: 29 },
-  { year: 2023, change: 24 },
-]
-  
-  const chartConfig = {
-    "Mix": {
-      label: "Energy Mix",
-    },
-    change: {
-      label: "Change",
-      color: "hsl(var(--chart-1))",
-    },
-  }
-
-return (
-    <ChartContainer config={chartConfig} className={className}>
-        <BarChart
-            accessibilityLayer
-            data={chartData}
-            margin={{
-              top: 20,
-            }}
-          >
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="year"
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-            />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent hideLabel />}
-            />
-            <Bar dataKey="change" fill="var(--color-change)" radius={8}>
-              <LabelList
-                position="top"
-                offset={12}
-                className="fill-foreground"
-                fontSize={12}
-              />
-            </Bar>
-          </BarChart>
-    </ChartContainer>
-  )
-}
-
-
-export const EnergyMixChange2 = ({className}) => {
   const chartData = [
-    { year: 2015, FFchange: 16, Rchange: 26, Nchange: 6 },
-    { year: 2016, FFchange: 16, Rchange: 26, Nchange: 6 },
-    { year: 2017, FFchange: 16, Rchange: 26, Nchange: 6 },
-    { year: 2018, FFchange: 16, Rchange: 26, Nchange: 6 },
-   { year: 2019, FFchange: 35, Rchange: 52, Nchange: 15 },
-   { year: 2020, FFchange: 7, Rchange: 14, Nchange: 3 },
-   { year: 2021, FFchange: 3, Rchange: 6, Nchange: 1 },
-   { year: 2022, FFchange: 29, Rchange: 58, Nchange: 19 },
-   { year: 2023, FFchange: 24, Rchange: 48, Nchange: 14 },
+   { year: 2018, change: 16 },
+   { year: 2019, change: 35 },
+   { year: 2020, change: 7 },
+   { year: 2021, change: 3 },
+   { year: 2022, change: 29 },
+   { year: 2023, change: 24 },
  ]
    
    const chartConfig = {
-     "Mix": {
-       label: "Energy Mix",
-     },
-     FFchange: {
-       label: "Fosil Fuels",
+    year: {
+      label: "Year",
+    },
+     change: {
+       label: "Change",
        color: "hsl(var(--chart-1))",
-     },
-     Rchange: {
-       label: "Renewables",
-       color: "hsl(var(--chart-2))",
-     },
-     Nchange: {
-       label: "Nuclear",
-       color: "hsl(var(--chart-3))",
      },
    }
  
  return (
      <ChartContainer config={chartConfig} className={className}>
-         <BarChart accessibilityLayer data={chartData}>
-            <CartesianGrid vertical={false} />
+         <BarChart
+             accessibilityLayer
+             data={chartData}
+             margin={{
+               left: -20,
+             }}
+           >
+             {/* <CartesianGrid vertical={false} /> */}
+             <YAxis
+               tickLine={false}
+               axisLine={false}
+               tickMargin={8}
+               tickCount={5}
+             />
+             <XAxis
+               dataKey="year"
+               tickLine={false}
+               tickMargin={10}
+               axisLine={false}
+             />
+             <ChartTooltip
+               cursor={false}
+              content={<ChartTooltipContent labelKey="year" />}
+             />
+             <Bar dataKey="change" fill="var(--color-change)" radius={8}>
+               <LabelList
+                 position="top"
+                 offset={12}
+                 className="fill-foreground"
+                 fontSize={12}
+               />
+             </Bar>
+           </BarChart>
+     </ChartContainer>
+   )
+ }
+
+ export const EnergyMixChange2 = ({className}) => {
+  const chartData = [
+    { year: 2017, FFchange: 16, Rchange: 26, Nchange: 6 },
+    { year: 2018, FFchange: 16, Rchange: 26, Nchange: 6 },
+   { year: 2019, FFchange: 35, Rchange: 52, Nchange: 15 },
+   { year: 2020, FFchange: 7, Rchange: 14, Nchange: 3 },
+   { year: 2021, FFchange: 3, Rchange: 6, Nchange: 1 },
+   { year: 2022, FFchange: -29, Rchange: 58, Nchange: 19 },
+   { year: 2023, FFchange: -24, Rchange: 48, Nchange: 14 },
+ ]
+   
+   const chartConfig = {
+     "year": {
+       label: "Year",
+     },
+     FFchange: {
+       label: "Fosil Fuels",
+       color: "#ef7020",
+     },
+     Rchange: {
+       label: "Renewables",
+       color: "#3aee7a",
+     },
+     Nchange: {
+       label: "Nuclear",
+       color: "#ec7ad7"
+   }
+}
+
+ return (
+     <ChartContainer config={chartConfig} className={className}>
+         <BarChart accessibilityLayer data={chartData}
+         margin={{
+           left: -20,
+         }}
+         >
+            {/* <CartesianGrid vertical={false} /> */}
             <XAxis
               dataKey="year"
               tickLine={false}
               tickMargin={10}
               axisLine={false}
             />
-            <ChartTooltip content={<ChartTooltipContent hideLabel />} />
+            <YAxis axisLine={false} tickLine={false} />
+            <ChartTooltip cursor={false} content={<ChartTooltipContent labelKey="year" />} />
+            <Bar dataKey="FFchange" fill='#ef7020'>
+              <LabelList position="top" dataKey="FFchange" fillOpacity={1} />
+              {chartData.map((item) => (
+                <Cell
+                  key={item.month}
+                  fill='#ef7020'
+                  radius={[4, 4, 4, 4]}
+                />
+              ))}
+            </Bar>
+            <Bar dataKey="Rchange"  fill='#3aee7a'>
+              <LabelList position="top" dataKey="Rchange" fillOpacity={1} />
+              {chartData.map((item) => (
+                <Cell
+                  key={item.month}
+                  fill='#3aee7a'
+                  radius={[4, 4, 4, 4]}
+                />
+              ))}
+            </Bar>
+            <Bar dataKey="Nchange" fill='#ec7ad7'>
+              <LabelList position="top" dataKey="Nchange" fillOpacity={1} />
+              {chartData.map((item) => (
+                <Cell
+                  key={item.month}
+                  fill='#ec7ad7'
+                  radius={[4, 4, 4, 4]}
+                />
+              ))}
+            </Bar>
             <ChartLegend content={<ChartLegendContent />} />
-            <Bar
-              dataKey="FFchange"
-              stackId="a"
-              fill="#ef7020"
-              radius={[0, 0, 4, 4]}
-            />
-            <Bar
-              dataKey="Rchange"
-              stackId="a"
-              fill="#3aee7a"
-              radius={[0, 0, 0, 0]}
-            />
-            <Bar
-              dataKey="Nchange"
-              stackId="a"
-              fill="#ec7ad7"
-              radius={[4, 4, 0, 0]}
-            />
           </BarChart>
      </ChartContainer>
    )
  }
 
-export const CapacityChange = ({className}) => {
+ export const CapacityChange = ({className}) => {
   const chartData = [
     { year: 2000, solar: 26, wind: 10, hydro: 10, fosils: 20 },
     { year: 2001, solar: 35, wind: 20, hydro: 20, fosils: 30 },
@@ -317,7 +337,7 @@ export const CapacityChange = ({className}) => {
   
   const chartConfig = {
     "Mix": {
-      label: "Energy Mix",
+      label: "Year",
     },
     solar: {
       label: "Solar",
@@ -397,47 +417,66 @@ return (
 }
 
 export const CapacityChange2 = ({className}) => {
+  
   const chartData = [
-    { year: "Wind", solar: 2 },
-    { year: "Wind", solar: 5 },
-    { year: "Nuclear", solar: 30 },
-    { year: "Hydro", solar: 15 },
-    { year: "Coal", solar: -5 },
-    { year: "Gas", solar: -0.5 },
+    { type: "Solar", capacity: 24 },
+    { type: "Wind", capacity: 90 },
+    { type: "Nuclear", capacity: 100 },
+    { type: "Hydro", capacity: 5 },
+    { type: "Coal", capacity: 250 },
+    { type: "Gas", capacity: 125 },
+    { type: "Bio", capacity: 25 },
   ]
+
   const chartConfig = {
-    solar: {
-      label: "Change +/-",
-      color: "hsl(var(--chart-1))",
+    capacity: {
+      label: "Capacity",
+    },
+    type: {
+      label: "Type",
+      color: "#Nuclear",
     },
   } 
 
   return (
-    <ChartContainer config={chartConfig} className={className}>
-      <BarChart className=' ' accessibilityLayer data={chartData} margin={{
-            bottom: 0,
-            top: 0,
-            left: 0,
-            right: 0
-          }}>
-      <ChartTooltip
-        cursor={false}
-        content={<ChartTooltipContent />}
-      />
-      <XAxis dataKey="year" tickMargin={8} minTickGap={5} axisLine={false} type="category" tickLine={false} />
-        <Bar dataKey="solar" fill="var(--color-solar)" radius={8} >
-        <LabelList
-          position="top"
-          offset={6}
-          fontSize={12}
-            /></Bar>
-    </BarChart>
-    </ChartContainer>
+        <ChartContainer config={chartConfig} className={className}>
+           <BarChart
+            accessibilityLayer
+            data={chartData}
+            layout="vertical"
+            margin={{
+              left: 0,
+              right: 5,
+            }}
+          >
+            <XAxis type="number" hide />
+            <YAxis
+              dataKey="type"
+              type="category"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+            />
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent labelKey="type" labelFormatter={value => `${value}`}/>}
+            />
+            <Bar dataKey="capacity" stackId="a" fill="#ffc6f7" radius={[0, 5, 5, 0]}>
+              <LabelList
+                dataKey="capacity"
+                position="insideLeft"
+                offset={8}
+                className="fill-[--color-label]"
+                fontSize={12}
+              />
+            </Bar>
+          </BarChart>
+        </ChartContainer>
   )
 }
 
 
-export const Capacity = ({className}) => {
+export const PlannedCapacity = ({className}) => {
   
   const chartData = [
     { year: 2024, solar: 24, wind: 90, nuclear: 100 },
@@ -523,37 +562,97 @@ export const Capacity = ({className}) => {
 }
 
 
-export const CO2GDPPC = ({className}) => {
+export const CurrentCapacity = ({className}) => {
+  
   const chartData = [
-    { year: 2000, gdp: 5, co2: -10 },
-    { year: 2001, gdp: 20, co2: -10 },
-    { year: 2002, gdp: 37, co2: -20 },
-    { year: 2014, gdp: 103, co2: -50 },
-    { year: 2015, gdp: 153, co2: -50 },
-    { year: 2018, gdp: 353, co2: -150 },
-    { year: 2019, gdp: 453, co2: -150 },
-    { year: 2020, gdp: 553, co2: -150 },
-    { year: 2023, gdp: 609, co2: -260 },
-    { year: 2024, gdp: 814, co2: -300 },
+    { type: "Solar", capacity: 24 },
+    { type: "Wind", capacity: 90 },
+    { type: "Nuclear", capacity: 100 },
+    { type: "Hydro", capacity: 5 },
+    { type: "Coal", capacity: 250 },
+    { type: "Gas", capacity: 125 },
+    { type: "Bio", capacity: 25 },
+  ]
+
+  const chartConfig = {
+    capacity: {
+      label: "Capacity",
+    },
+    type: {
+      label: "Type",
+      color: "#Nuclear",
+    },
+  } 
+
+  return (
+        <ChartContainer config={chartConfig} className={className}>
+           <BarChart
+            accessibilityLayer
+            data={chartData}
+            layout="vertical"
+            margin={{
+              left: 0,
+              right: 5,
+            }}
+          >
+            <XAxis type="number" hide />
+            <YAxis
+              dataKey="type"
+              type="category"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+            />
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent labelKey="type" labelFormatter={value => `${value}`}/>}
+            />
+            <Bar dataKey="capacity" stackId="a" fill="#ffc6f7" radius={[0, 5, 5, 0]}>
+              <LabelList
+                dataKey="capacity"
+                position="insideLeft"
+                offset={8}
+                className="fill-[--color-label]"
+                fontSize={12}
+              />
+            </Bar>
+          </BarChart>
+        </ChartContainer>
+  )
+}
+
+
+export const EnergyConsumptionGDP = ({className}) => {
+  const chartData = [
+    { year: 2000, energy: 5, gdp: 10 },
+    { year: 2001, energy: 20, gdp: 10 },
+    { year: 2002, energy: 37, gdp: 20 },
+    { year: 2014, energy: 103, gdp: -0 },
+    { year: 2015, energy: 153, gdp: 50 },
+    { year: 2018, energy: 353, gdp: 150 },
+    { year: 2019, energy: 453, gdp: 150 },
+    { year: 2020, energy: 553, gdp: 150 },
+    { year: 2023, energy: 609, gdp: 260 },
+    { year: 2024, energy: 814, gdp: 300 },
   ]
   
   const chartConfig = {
     year: {
       label: "Year",
     },
+    energy: {
+      label: "Energy Consumption",
+      color: "#220706",
+    },
     gdp: {
       label: "GDP",
-      color: "#440706",
-    },
-    co2: {
-      label: "CO2",
-      color: "#fe4311",
+      color: "#de4311",
     },
   }
 
 return (
     <ChartContainer config={chartConfig} className={className}>
-        <AreaChart
+        <LineChart
           accessibilityLayer
           data={chartData}
           margin={{
@@ -561,7 +660,7 @@ return (
             right:20,
           }}
         >
-          {/* <CartesianGrid vertical={false} /> */}
+          <CartesianGrid vertical={false} />
           <XAxis
             dataKey="year"
             tickLine={false}
@@ -578,10 +677,9 @@ return (
             cursor={false}
             content={<ChartTooltipContent labelKey="year" />}
           />
-          <Area
-            dataKey="gdp"
-            fill='#000000'
-            stroke='none'
+          <Line
+            dataKey="energy"
+            stroke='#000000'
             >
             <LabelList
               position="top"
@@ -589,11 +687,10 @@ return (
               className="fill-foreground"
               fontSize={12}
             />
-          </Area>
-          <Area
-            dataKey="co2"
-            fill='#fe4311'
-            stroke="none"
+          </Line>
+          <Line
+            dataKey="gdp"
+            stroke='#fe4311'
           >
             <LabelList
               position="bottom"
@@ -601,44 +698,44 @@ return (
               className="fill-foreground"
               fontSize={12}
             />
-          </Area>
+          </Line>
           <ChartLegend content={<ChartLegendContent />} />
-        </AreaChart>
+        </LineChart>
       </ChartContainer>
 )
 }
 
-export const CO2GDP = ({className}) => {
+export const EnergyConsumptionGDPPC = ({className}) => {
   const chartData = [
-    { year: 2000, gdp: 5, co2: -10 },
-    { year: 2001, gdp: 20, co2: -10 },
-    { year: 2002, gdp: 37, co2: -20 },
-    { year: 2014, gdp: 103, co2: -50 },
-    { year: 2015, gdp: 153, co2: -50 },
-    { year: 2018, gdp: 353, co2: -150 },
-    { year: 2019, gdp: 453, co2: -150 },
-    { year: 2020, gdp: 553, co2: -150 },
-    { year: 2023, gdp: 609, co2: -260 },
-    { year: 2024, gdp: 814, co2: -300 },
+    { year: 2000, energy: 5, gdp: 10 },
+    { year: 2001, energy: 20, gdp: 10 },
+    { year: 2002, energy: 37, gdp: 20 },
+    { year: 2014, energy: 103, gdp: -0 },
+    { year: 2015, energy: 153, gdp: 50 },
+    { year: 2018, energy: 353, gdp: 150 },
+    { year: 2019, energy: 453, gdp: 150 },
+    { year: 2020, energy: 553, gdp: 150 },
+    { year: 2023, energy: 609, gdp: 260 },
+    { year: 2024, energy: 814, gdp: 300 },
   ]
   
   const chartConfig = {
     year: {
       label: "Year",
     },
+    energy: {
+      label: "Energy Consumption",
+      color: "#220706",
+    },
     gdp: {
       label: "GDP",
-      color: "#440706",
-    },
-    co2: {
-      label: "CO2",
-      color: "#fe4311",
+      color: "#de4311",
     },
   }
 
 return (
     <ChartContainer config={chartConfig} className={className}>
-        <AreaChart
+        <LineChart
           accessibilityLayer
           data={chartData}
           margin={{
@@ -646,7 +743,7 @@ return (
             right:20,
           }}
         >
-          {/* <CartesianGrid vertical={false} /> */}
+          <CartesianGrid vertical={false} />
           <XAxis
             dataKey="year"
             tickLine={false}
@@ -663,10 +760,9 @@ return (
             cursor={false}
             content={<ChartTooltipContent labelKey="year" />}
           />
-          <Area
-            dataKey="gdp"
-            fill='#000000'
-            stroke='none'
+          <Line
+            dataKey="energy"
+            stroke='#000000'
             >
             <LabelList
               position="top"
@@ -674,11 +770,10 @@ return (
               className="fill-foreground"
               fontSize={12}
             />
-          </Area>
-          <Area
-            dataKey="co2"
-            fill='#fe4311'
-            stroke="none"
+          </Line>
+          <Line
+            dataKey="gdp"
+            stroke='#fe4311'
           >
             <LabelList
               position="bottom"
@@ -686,27 +781,30 @@ return (
               className="fill-foreground"
               fontSize={12}
             />
-          </Area>
+          </Line>
           <ChartLegend content={<ChartLegendContent />} />
-        </AreaChart>
+        </LineChart>
       </ChartContainer>
 )
 }
 
 export const AnnualHouse = ({className}) => {
   const chartData = [
-    { year: 2012, solar: 1236 },
-    { year: 2014, solar: 2235 },
-    { year: 2015, solar: 3447 },
-    { year: 2016, solar: 3550 },
-    { year: 2017, solar: 6053 },
-    { year: 2018, solar: 6263 },
-    { year: 2019, solar: 7275 },
-    { year: 2024, solar: 8389 },
+    { year: 2012, use: 1236 },
+    { year: 2014, use: 2235 },
+    { year: 2015, use: 3447 },
+    { year: 2016, use: 3550 },
+    { year: 2017, use: 6053 },
+    { year: 2018, use: 6263 },
+    { year: 2019, use: 7275 },
+    { year: 2024, use: 8389 },
   ]
     const chartConfig = {
-      solar: {
-        label: "Solar",
+      year: {
+        label: "Year",
+      },
+      use: {
+        label: "Electricity Use",
         color: "#b10fff",
       },
     }
@@ -723,15 +821,70 @@ export const AnnualHouse = ({className}) => {
           >
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent indicator="line" />}
+              content={<ChartTooltipContent indicator="dot" className="text-black" labelKey="year" />}
             />
             <Area
-              dataKey="solar"
+              dataKey="use"
               type="natural"
               fill="#b10fff"
               // dot={true}
               radius={2}
               stroke="#b10fff"
+            >
+              <LabelList
+              position="top"
+              offset={12}
+              className="fill-foreground"
+              fontSize={12}
+            />
+            </Area>
+          </AreaChart>
+        </ChartContainer>
+  )
+}
+
+export const EnergyUsePP = ({className}) => {
+  const chartData = [
+    { year: 2012, use: 1236 },
+    { year: 2014, use: 2235 },
+    { year: 2015, use: 3447 },
+    { year: 2016, use: 3550 },
+    { year: 2017, use: 6053 },
+    { year: 2018, use: 6263 },
+    { year: 2019, use: 7275 },
+    { year: 2024, use: 8389 },
+  ]
+    const chartConfig = {
+      year: {
+        label: "Year",
+      },
+      use: {
+        label: "Energy Use per Capita",
+        color: "#f50ddd",
+      },
+    }
+
+  return (
+        <ChartContainer config={chartConfig} className={className}>
+          <AreaChart
+            accessibilityLayer
+            data={chartData}
+            margin={{
+              left: 0,
+              right: 0,
+            }}
+          >
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent className="text-black" indicator="dot" labelKey="year" />}
+            />
+            <Area
+              dataKey="use"
+              type="natural"
+              fill="#f50ddd"
+              // dot={true}
+              radius={2}
+              stroke="#f50ddd"
             >
               <LabelList
               position="top"
@@ -757,8 +910,8 @@ export const ShareRenewables = ({className}) => {
     { year: 2024, renewables: 89 },
   ]
   const chartConfig = {
-    share: {
-      label: "% Renewables in the mix",
+    year: {
+      label: "Year",
     },
     renewables: {
       label: "Renewables",
@@ -778,7 +931,7 @@ return (
         >
           <ChartTooltip
             cursor={false}
-            content={<ChartTooltipContent className="text-black" labelKey="share"/>}
+            content={<ChartTooltipContent className="text-black" indicator="dot" labelKey="year"/>}
           />
           <Area
             dataKey="renewables"
@@ -813,8 +966,8 @@ export const ShareFossils = ({className}) => {
     { year: 2024, ff: 35 },
   ]
   const chartConfig = {
-    share: {
-      label: "% Fossil Fuels in the mix",
+    year: {
+      label: "Year",
     },
     ff: {
       label: "Fossil Fuels",
@@ -834,7 +987,7 @@ return (
         >
           <ChartTooltip
             cursor={false}
-            content={<ChartTooltipContent className="text-black" labelKey="share"/>}
+            content={<ChartTooltipContent className="text-black" labelKey="year"/>}
           />
           <Area
             dataKey="ff"

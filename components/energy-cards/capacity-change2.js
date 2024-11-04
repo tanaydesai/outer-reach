@@ -6,24 +6,10 @@ import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/co
 import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/tabs"
 
 
-export const RenewableCapacityChange2 = ({className}) => {
+export const EnergyCapacityChange2 = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] ${className}`}>
-             <h1 className='chart-title'><div className='tag-box '/> 
-             YoY Change in installed capacity by
-             <Select>
-                <SelectTrigger>
-                    <SelectValue placeholder="Sources" />
-                </SelectTrigger>
-                <SelectContent>
-                    <SelectItem value="light">All</SelectItem>
-                    <SelectItem value="light">Solar</SelectItem>
-                    <SelectItem value="light">Wind</SelectItem>
-                    <SelectItem value="dark">Nuclear</SelectItem>
-                    <SelectItem value="dark">Hydro</SelectItem>
-                </SelectContent>
-                </Select>
-             </h1>
+             <h1 className='chart-title'><div className='tag-box '/>YoY change in installed capacity by individual sources</h1>
            <div className='chart'>
                 <Tabs2 defaultValue="cc">
                     <TabsList2>

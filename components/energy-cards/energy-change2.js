@@ -8,7 +8,7 @@ import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/ta
 export const EnergyChange2 = ({className}) => {
     return (
         <div className={`w-full min-h-[400px] ${className}`}>
-            <h1 className='chart-title'><div className='tag-box '/>Change in Fossil fuels, Renewables & nuclear energy</h1>
+            <h1 className='chart-title'><div className='tag-box '/>Change in Fossil fuel, Renewable & nuclear energy consumption</h1>
             <div className='chart'>    
                 <Tabs2 defaultValue="account">
                     <TabsList2>
