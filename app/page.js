@@ -1,7 +1,7 @@
 "use client"
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { TestDModel } from '@/components/models/test';
+import { TestDModel } from '@/components/models';
 import { TypeAnimation } from 'react-type-animation';
 import { Fade } from 'react-awesome-reveal';
 import {DecryptText} from '@/components/decrypt'

@@ -7,8 +7,8 @@ import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/ta
 
 export const EnergyMix = ({className}) => {
     return (
-        <div className={`w-full min-h-[400px] ${className}`}>
-             <h1 className='chart-title'><div className='tag-box'/> 
+        <div className={`chart ${className}`}>
+           <h1 className='chart-title'>
                 Primary
                 <Select>
                     <SelectTrigger>
@@ -33,23 +33,19 @@ export const EnergyMix = ({className}) => {
                 </SelectContent>
                 </Select>
              </h1>
-           <div className='chart'>
-                <Tabs2 defaultValue="ec">
-                    <TabsList2>
-                        <TabsTrigger2 value="ec">Absolute</TabsTrigger2>
-                        <TabsTrigger2 value="elc">% Change</TabsTrigger2>
-                        {/* Abs / Share */}
-                    </TabsList2>
-                    <TabsContent2 value="ec">
-                        <EnergyShare className='w-full h-[350px]'/>
-                        <p className='chart-desc'>Countries leading the way by share of Renewables in the mix.</p>
-                    </TabsContent2>
-                    <TabsContent2 value="elc">
-                        <EnergyShare className='w-full h-[350px]'/>
-                        <p className='chart-desc'>Countries leading the way by share of Renewables in the mix.</p>
-                    </TabsContent2>
-                </Tabs2>
-           </div>
+            <Tabs2 defaultValue="ec">
+                <TabsContent2 value="ec">
+                    <EnergyShare className='w-full h-[350px]'/>
+                </TabsContent2>
+                <TabsContent2 value="elc">
+                    <EnergyShare className='w-full h-[350px]'/>
+                </TabsContent2>
+                <TabsList2>
+                    <TabsTrigger2 value="ec">Absolute</TabsTrigger2>
+                    <TabsTrigger2 value="elc">% Change</TabsTrigger2>
+                </TabsList2>
+            </Tabs2>
+            <p className='chart-desc'>Historical change in CO2 emissions per capita and GDP per capita.</p>
         </div>
     )
 }

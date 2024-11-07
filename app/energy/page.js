@@ -17,7 +17,7 @@ import { EnergyGDPPC } from '@/components/energy-cards/energy-gdp-pc';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CornerDownRight } from 'lucide-react';
-import {DecryptText} from '@/components/decrypt'
+import { DecryptText } from '@/components/decrypt'
 
 
 export default function Home() {
@@ -34,37 +34,42 @@ export default function Home() {
               <TabsTrigger value="percapita"><div className={`${tab == "percapita" ? "" : "hidden"} tag-box  mr-1 `}/> Economics</TabsTrigger>
               <TabsTrigger value="leaderboard"><div className={`${tab == "leaderboard" ? "" : "hidden"} tag-box  mr-1 `}/> Leaderboards</TabsTrigger>
             </TabsList>
-            <div className='page-headers text-center'>
-              Energy landscape:  
-                <Select>
-                  <SelectTrigger className="text-[25px]">
-                      <SelectValue placeholder="France" />
-                  </SelectTrigger>
-                  <SelectContent>
-                      <SelectItem value="dark">India</SelectItem>
-                      <SelectItem value="light">France</SelectItem>
-                  </SelectContent>
-                </Select>
-            </div> 
+            <Select>
+              <SelectTrigger className="w-fit mt-3 font-a1 group p-2 text-[#aaaaaa] hover:text-[#1e1f2b] mx-auto text-[14px] no-underline rounded-[10px] flex border border-[#d9d9d9]">
+                  <SelectValue placeholder="Energy Landscape" />
+              </SelectTrigger>
+              <SelectContent>
+                  <SelectItem value="dark">India</SelectItem>
+                  <SelectItem value="light">France</SelectItem>
+              </SelectContent>
+            </Select>
             <TabsContent value="mix">
-                <EnergyMix className={'mt-[100px]'}/>
+                <h1 className='page-headers'>
+                   <CornerDownRight className='inline-flex mr-1' /> Countries leading the <span className='text-black'>way by share of Renewables</span> in the mix.
+                </h1>
+
+                <EnergyMix className={'mt-10'}/>
+
+                <h1 className='page-headers mt-10'>
+                   <CornerDownRight className='inline-flex mr-1' /> Countries leading the <span className='text-black'>way by share of Renewables</span> in the mix.
+                </h1>
 
                 <div className='md:flex gap-2 mt-10'>
                   <EnergyChange className={'flex-1'}/>
                   <EnergyChange2 className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
-        
-                <div className='page-line'>{"{02}"} <hr className='page-line-hr'/> {"{03}"}</div>
-                <div className='page-headers mb-10'>The world is adding renewable capacity faster than ever before</div>
-                <div className='page-line'>{"{02}"} <hr className='page-line-hr'/> {"{03}"}</div>              
 
                 <div className='md:flex gap-2 mt-10'>
                   <RenewableShare className={'flex-1'}/>
                   <FossilShare className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
             </TabsContent>
-            <TabsContent value="capacity">          
-                <div className='md:flex gap-2 mt-[100px]'>
+            <TabsContent value="capacity">  
+                <h1 className='page-headers'>
+                   <CornerDownRight className='inline-flex mr-1' /> Countries leading the <span className='text-black'>way by share of Renewables</span> in the mix.
+                </h1>
+
+                <div className='md:flex gap-2 mt-10'>
                   <EnergyCapacities className={'flex-1'}/>
                   <EnergyCapacityChange className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
@@ -72,7 +77,11 @@ export default function Home() {
                 <EnergyCapacityChange2 className={'mt-10'}/>
             </TabsContent>
             <TabsContent value="percapita">
-                <div className='md:flex gap-2 mt-[100px]'>            
+                <h1 className='page-headers'>
+                   <CornerDownRight className='inline-flex mr-1' /> Countries leading the <span className='text-black'>way by share of Renewables</span> in the mix.
+                </h1>
+
+                <div className='md:flex gap-2 mt-10'>            
                   <EnergyGDP className={'flex-1'}/>
                   <EnergyGDPPC className={'flex-1 mt-5 md:mt-0'}/>
                 </div>  
