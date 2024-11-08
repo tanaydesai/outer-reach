@@ -28,6 +28,7 @@ export default function Home() {
 
         <div className='main-body'>
           <Tabs defaultValue="mix" onValueChange={setTab} value={tab}>
+            <div className='flex gap-2 justify-start items-center'>
             <TabsList>
               <TabsTrigger value="mix"><div className={`${tab == "mix" ? "" : "hidden"} tag-box  mr-1 `}/> Energy Mix</TabsTrigger>
               <TabsTrigger value="capacity"><div className={`${tab == "capacity" ? "" : "hidden"} tag-box  mr-1 `}/> Capacity</TabsTrigger>
@@ -35,20 +36,21 @@ export default function Home() {
               <TabsTrigger value="leaderboard"><div className={`${tab == "leaderboard" ? "" : "hidden"} tag-box  mr-1 `}/> Leaderboards</TabsTrigger>
             </TabsList>
             <Select>
-              <SelectTrigger className="w-fit mt-3 font-a1 bg-transparent group p-2 text-[#aaaaaa] hover:text-[#1e1f2b] mx-auto text-[14px] no-underline rounded-[10px] flex border border-[#d9d9d9]">
-                  <SelectValue placeholder="Country" />
+              <SelectTrigger className="font-a1 bg-transparent group p-2 mx-0 text-[#aaaaaa] hover:text-[#1e1f2b] text-[14px] no-underline rounded-[10px] flex border border-[#d9d9d9]">
+                  <SelectValue placeholder={`Country`} className='sm:hidden'/>
               </SelectTrigger>
               <SelectContent>
                   <SelectItem value="dark">India</SelectItem>
                   <SelectItem value="light">France</SelectItem>
               </SelectContent>
             </Select>
+            </div>
             <TabsContent value="mix">
-                <h1 className='page-headers'><CornerDownRight size={22} className='shrink-0'/> <div>Countries leading the <span className='text-[#463f3a]'>way by share of Renewables</span> in the mix in the mix in the mix.</div></h1>
+                <h1 className='page-headers'>Countries leading the <span className='text-[#463f3a]'>way by share of Renewables</span> in the mix in the mix in the mix.</h1>
 
                 <EnergyMix className={'mt-10'}/>
 
-                <h1 className='page-headers mt-10'><CornerDownRight size={22} className='shrink-0'/> <div>Countries leading the <span className='text-[#463f3a]'>way by share of Renewables</span> in the mix.</div></h1>
+                <h1 className='page-headers mt-10'>Countries leading the <span className='text-[#463f3a]'>way by share of Renewables</span> in the mix in the mix in the mix.</h1>
 
                 <div className='md:flex gap-2 mt-10'>
                   <EnergyChange className={'flex-1'}/>
@@ -61,7 +63,7 @@ export default function Home() {
                 </div>
             </TabsContent>
             <TabsContent value="capacity">  
-                <h1 className='page-headers'><CornerDownRight size={22} className='shrink-0'/> <div>Countries leading the <span className='text-[#463f3a]'>way by share of Renewables</span> in the mix in the mix in the mix.</div></h1>
+                <h1 className='page-headers'>Countries leading the <span className='text-[#463f3a]'>way by share of Renewables</span> in the mix in the mix in the mix.</h1>
   
                 <div className='md:flex gap-2 mt-10'>
                   <EnergyCapacities className={'flex-1'}/>
@@ -71,7 +73,7 @@ export default function Home() {
                 <EnergyCapacityChange2 className={'mt-10'}/>
             </TabsContent>
             <TabsContent value="percapita">
-                <h1 className='page-headers'><CornerDownRight size={22} className='shrink-0'/> <div>Countries leading the <span className='text-[#463f3a]'>way by share of Renewables</span> in the mix in the mix in the mix.</div></h1>
+                <h1 className='page-headers'>Countries leading the <span className='text-[#463f3a]'>way by share of Renewables</span> in the mix in the mix in the mix.</h1>
 
                 <div className='md:flex gap-2 mt-10'>            
                   <EnergyGDP className={'flex-1'}/>

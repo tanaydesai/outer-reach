@@ -21,7 +21,7 @@ export const EnergyMix = ({className}) => {
                 </Select>
                 consumption by individual
                 <Select>
-                <SelectTrigger>
+                <SelectTrigger className='mt-2.5 sm:mt-0'>
                     <SelectValue placeholder="Sources" />
                 </SelectTrigger>
                 <SelectContent>

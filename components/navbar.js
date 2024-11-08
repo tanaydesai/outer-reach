@@ -16,14 +16,14 @@ export const Navbar = () => {
      
       <Link href="/"><motion.div whileTap={{scale:0.95}} className='navbar-box flex items-center gap-1'>0 <MoveRight size={15}/> {'42'}</motion.div></Link>
     
-      <div className='gap-0.5 hidden md:flex'>
-        <Link href={"/energy"}><motion.div whileTap={{scale:0.95}} className='navbar-box'>Energy</motion.div></Link>
+      <div className={`gap-0.5 ${path == "/" ? "flex" : "hidden"} sm:flex`}>
+        <Link href={"/energy"}><motion.div whileTap={{scale:0.95}} className={`navbar-box ${path == "/energy" ? "text-white border-none bg-black " : ""}`}>Energy</motion.div></Link>
         <Link href={"/nuclear"}><motion.div whileTap={{scale:0.95}} className='navbar-box'>Nuclear</motion.div></Link>
         <Link href={"/ai"}><motion.div whileTap={{scale:0.95}} className='navbar-box'>AI</motion.div></Link>
         <Link href={"/space"}><motion.div whileTap={{scale:0.95}} className='navbar-box'>Space</motion.div></Link>
       </div>
 
-      <ListEnd size={25} className='flex text-[#9b9b9b] md:hidden' onClick={() => setOpen(!open)}/>
+      {path !== "/" && <ListEnd size={25} className='flex text-[#9b9b9b] sm:hidden' onClick={() => setOpen(!open)}/>}
 
     </div>
   );
