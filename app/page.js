@@ -31,31 +31,31 @@ export default function Home() {
 
           <div className='mt-5 w-full grid gap-2 grid-flow-row md:grid-cols-2 lg:grid-cols-4'>
               <Link href={'/energy'}>
-              <div className='box'>
+              <motion.div whileHover={{scale:1.015, transition:{duration:0.3, type:'spring'}}} className='box'>
                   <div className='box-title'><DecryptText text='>_ Road to Energy Abundance' /></div>                
                   <div className='box-desc'>Global energy mix, renewables growth and capacity, winners & losers, per capita and more.</div>
-              </div>
+              </motion.div>
               </Link>
 
               <Link href={'/nuclear'}>
-              <div className='box'>
+              <motion.div whileHover={{scale:1.015, transition:{duration:0.3, type:'spring'}}} className='box'>
                   <div className='box-title'><DecryptText text=">_ Nuclear's Revenge" /></div>    
                   <div className='box-desc'>Global nuclear capacity, rapid expansion, truth about safety and reuseable waste metrics.</div>
-              </div>
+              </motion.div>
               </Link>
 
               <Link href={'/agi'}>
-              <div className='box'>
+              <motion.div whileHover={{scale:1.015, transition:{duration:0.3, type:'spring'}}} className='box'>
                   <div className='box-title'><DecryptText text='>_ Age of AGI' /></div>
                   <div className='box-desc'>World's largest GPU clusters, rapid global data center rollout, increasing energy demand and AGI's promise.</div>
-              </div>
+              </motion.div>
               </Link>
 
               <Link href={'/space'}>
-              <div className='box'>
+              <motion.div whileHover={{scale:1.015, transition:{duration:0.3, type:'spring'}}} className='box'>
                   <div className='box-title'><DecryptText text='>_ The Space Race' /></div>      
                   <div className='box-desc'>The blessing that is SpaceX, the economics, impact and need for space exploitation.</div>
-              </div>
+              </motion.div>
               </Link>
           </div>
 

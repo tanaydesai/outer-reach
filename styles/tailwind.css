@@ -39,10 +39,10 @@
     }
 
     .box {
-        @apply h-[350px] border-[2px] border-black relative overflow-auto flex-1 rounded-[5px]
+        @apply h-[350px] border-[1.5px] border-[#d9d9d9] relative overflow-auto flex-1 rounded-[5px]
     }
     .box-title {
-        @apply text-[15px] h-[30px] flex justify-start px-2 items-center border-b-[2px] border-b-black text-black font-a1
+        @apply text-[16px] h-[30px] flex justify-start px-2 items-center border-b-[1.5px] border-b-[#d9d9d9] text-black font-a1
     }
     .box-desc {
         @apply text-[13px] px-2 mt-2 absolute bottom-0 h-[65px] font-a1 
