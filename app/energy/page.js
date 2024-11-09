@@ -16,7 +16,7 @@ import { EnergyGDP } from '@/components/energy-cards/energy-gdp';
 import { EnergyGDPPC } from '@/components/energy-cards/energy-gdp-pc';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CornerDownRight } from 'lucide-react';
+import { CornerDownRight, Earth } from 'lucide-react';
 import { DecryptText } from '@/components/decrypt'
 
 
@@ -36,8 +36,11 @@ export default function Home() {
               <TabsTrigger value="leaderboard"><div className={`${tab == "leaderboard" ? "" : "hidden"} tag-box  mr-1 `}/> Leaderboards</TabsTrigger>
             </TabsList>
             <Select>
-              <SelectTrigger className="font-a1 bg-transparent group p-2 mx-0 text-[#aaaaaa] hover:text-[#1e1f2b] text-[14px] no-underline rounded-[10px] flex border border-[#d9d9d9]">
-                  <SelectValue placeholder={`Country`} className='sm:hidden'/>
+              <SelectTrigger className="font-a1 sm:hidden bg-transparent group p-2 mx-0 text-[#aaaaaa] hover:text-[#1e1f2b] text-[14px] no-underline rounded-[10px] flex border border-[#d9d9d9]">
+                  <SelectValue placeholder={<Earth />} />
+              </SelectTrigger>
+              <SelectTrigger className="font-a1 hidden sm:flex bg-transparent group p-2 mx-0 text-[#aaaaaa] hover:text-[#1e1f2b] text-[14px] no-underline rounded-[10px] border border-[#d9d9d9]">
+                  <SelectValue placeholder="Country"/>
               </SelectTrigger>
               <SelectContent>
                   <SelectItem value="dark">India</SelectItem>

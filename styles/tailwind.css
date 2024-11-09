@@ -17,7 +17,7 @@
     }
 
     .navbar-box {
-        @apply rounded-[5px] hover:text-white hover:bg-black border-[1.5px] border-[#d9d9d9] py-0.5 px-2.5 cursor-default text-[#aaaaaa] text-[13px] uppercase font-a1
+        @apply rounded-[5px] hover:text-white hover:bg-black border-[1.5px] border-[#d9d9d9] py-1 px-2.5 cursor-default text-[#aaaaaa] text-[13px] uppercase font-a1
     }
 
     .title {
@@ -42,7 +42,7 @@
         @apply h-[350px] border-[1.5px] border-[#d9d9d9] relative overflow-auto flex-1 rounded-[5px]
     }
     .box-title {
-        @apply text-[16px] h-[30px] flex justify-start px-2 items-center border-b-[1.5px] border-b-[#d9d9d9] text-black font-a1
+        @apply text-[13px] h-[30px] flex justify-start px-2 m-2 items-center w-fit bg-red-300/35 text-black rounded-[5px] font-a1
     }
     .box-desc {
         @apply text-[13px] px-2 mt-2 absolute bottom-0 h-[65px] font-a1 

@@ -5,7 +5,7 @@ import { TestDModel } from '@/components/models';
 import { TypeAnimation } from 'react-type-animation';
 import { Fade } from 'react-awesome-reveal';
 import {DecryptText} from '@/components/decrypt'
-
+import { WindIcon, NuclearPlantIcon, RoverIcon, AIIcon, RocketIcon } from '@/components/icons';
 
 export default function Home() {
   return (
@@ -32,28 +32,32 @@ export default function Home() {
           <div className='mt-5 w-full grid gap-2 grid-flow-row md:grid-cols-2 lg:grid-cols-4'>
               <Link href={'/energy'}>
               <motion.div whileHover={{scale:1.015, transition:{duration:0.3, type:'spring'}}} className='box'>
-                  <div className='box-title'><DecryptText text='>_ Road to Energy Abundance' /></div>                
+                  <div className='box-title'><DecryptText text='Road to Energy Abundance' /></div>    
+                  <WindIcon />   
                   <div className='box-desc'>Global energy mix, renewables growth and capacity, winners & losers, per capita and more.</div>
               </motion.div>
               </Link>
 
               <Link href={'/nuclear'}>
               <motion.div whileHover={{scale:1.015, transition:{duration:0.3, type:'spring'}}} className='box'>
-                  <div className='box-title'><DecryptText text=">_ Nuclear's Revenge" /></div>    
+                  <div className='box-title'><DecryptText text="Nuclear's Revenge" /></div>    
+                  <NuclearPlantIcon />
                   <div className='box-desc'>Global nuclear capacity, rapid expansion, truth about safety and reuseable waste metrics.</div>
               </motion.div>
               </Link>
 
               <Link href={'/agi'}>
               <motion.div whileHover={{scale:1.015, transition:{duration:0.3, type:'spring'}}} className='box'>
-                  <div className='box-title'><DecryptText text='>_ Age of AGI' /></div>
+                  <div className='box-title'><DecryptText text='Age of AGI' /></div>
+                  <AIIcon />
                   <div className='box-desc'>World's largest GPU clusters, rapid global data center rollout, increasing energy demand and AGI's promise.</div>
               </motion.div>
               </Link>
 
               <Link href={'/space'}>
               <motion.div whileHover={{scale:1.015, transition:{duration:0.3, type:'spring'}}} className='box'>
-                  <div className='box-title'><DecryptText text='>_ The Space Race' /></div>      
+                  <div className='box-title'><DecryptText text='The Space Race' /></div> 
+                  <RoverIcon />     
                   <div className='box-desc'>The blessing that is SpaceX, the economics, impact and need for space exploitation.</div>
               </motion.div>
               </Link>
