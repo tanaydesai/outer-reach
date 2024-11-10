@@ -1,12 +1,14 @@
 "use client"
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { CapacityChange } from '@/components/charts/energy';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
 import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/tabs"
-
+import NumberFlow from '@number-flow/react'
 
 export const EnergyCapacityChange = ({className}) => {
+    const [value, setValue] = useState('0.30');
+
     return (
         <div className={`chart ${className}`}>
             <h1 className='chart-title'>Energy capacity additions by sources</h1>
@@ -22,7 +24,10 @@ export const EnergyCapacityChange = ({className}) => {
                     <TabsTrigger2 value="pc">% Change</TabsTrigger2>
                 </TabsList2>
             </Tabs2>
-            <p className='chart-desc'>Countries leading the way by share of Renewables in the mix.</p>
+            <div className='cursor-default sm:flex' onClick={() => setValue((Math.floor(Math.random() * (1 - 0.05 + 1)) + 0.05))}>
+                <div className='chart-number'>+<NumberFlow value={value} format={{ style: 'percent' }}/></div>
+                <div className='chart-desc'>growth in clean energy capacity additions since 2019.</div>
+            </div>
         </div>
     )
 }

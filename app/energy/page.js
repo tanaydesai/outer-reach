@@ -74,7 +74,7 @@ export default function Home() {
 
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Clean energy consumption is <span className='text-black'>rising</span> while fossil fuels remain either <span className='text-black'>stagnant or falling.</span></AccordionTrigger>
+                    <AccordionTrigger><span className='text-black'>Clean energy</span> consumption is <span className='text-black'>rising</span> while fossil fuels remain either <span className='text-black'>stagnant or falling.</span></AccordionTrigger>
                     <AccordionContent>
                       Countries like <span className='text-black'>Norway, France and Denmark</span> get {">"}80% of their energy from <span className='text-black'>renewables, nuclear and wind</span> respectively.
                     </AccordionContent>
@@ -101,7 +101,16 @@ export default function Home() {
                   <EnergyCapacityChange className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
 
-                <EnergyCapacityChange2 className={'mt-10'}/>
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>Capacity installations of <span className='text-black'>solar and wind</span> are through the moon and <span className='text-black'>accelerating</span> while countries race to get <span className='text-black'>more nuclear online</span>.</AccordionTrigger>
+                    <AccordionContent>
+                      While solar and wind energy's benifits are <span className='text-black'>well understood,</span> it required <span className='text-black'>an AI arms race</span> for the world's eyes to open for <span className='text-black'>nuclear energy</span> again.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+
+                <EnergyCapacityChange2 className={'mt-5'}/>
             </TabsContent>
             <TabsContent value="percapita">
                 <Accordion type="single" collapsible>
@@ -118,7 +127,7 @@ export default function Home() {
                   <EnergyGDPPC className={'flex-1 mt-5 md:mt-0'}/>
                 </div>  
                 
-                <div className='md:flex gap-2 mt-10'>
+                <div className='md:flex gap-2 mt-5'>
                     <EnergyUse className={'flex-1'}/>
                     <AvgHouse className={'flex-1 mt-5 md:mt-0'}/>
                 </div>

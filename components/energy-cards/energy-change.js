@@ -37,7 +37,7 @@ export const EnergyChange = ({className}) => {
             </Tabs2>
             <div className='cursor-default sm:flex' onClick={() => setValue((Math.floor(Math.random() * (1 - 0.05 + 1)) + 0.05))}>
                 <div className='chart-number'>+<NumberFlow value={value} format={{ style: 'percent' }}/></div>
-                <div className='chart-desc'>growth in renewable and nuclear energy sources consumption.</div>
+                <div className='chart-desc'>growth in primary energy consumption since 2019.</div>
             </div>
         </div>
     )

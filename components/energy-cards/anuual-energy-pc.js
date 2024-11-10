@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { EnergyUsePP } from '@/components/charts/energy';
 import { ArrowUp } from 'lucide-react';

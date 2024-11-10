@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { EnergyConsumptionGDP } from '@/components/charts/energy';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"

@@ -7,7 +7,7 @@ import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/ta
 import NumberFlow from '@number-flow/react'
 
 export const EnergyChange2 = ({className}) => {
-    const [value, setValue] = useState('12');
+    const [value, setValue] = useState('0.16');
 
     return (
         <div className={`chart ${className}`}>
@@ -24,9 +24,9 @@ export const EnergyChange2 = ({className}) => {
                     <TabsTrigger2 value="password">% Share</TabsTrigger2>
                 </TabsList2>
             </Tabs2>
-             <div className='cursor-default sm:flex' onClick={() => setValue((Math.floor(Math.random() * (50 - 10 + 50)) + 10))}>
-                <div className='chart-number'><NumberFlow value={value}/>Gwh</div>
-                <div className='chart-desc'>of clean energy capacity added in the last year.</div>
+            <div className='cursor-default sm:flex' onClick={() => setValue((Math.floor(Math.random() * (1 - 0.05 + 1)) + 0.05))}>
+                <div className='chart-number'>+<NumberFlow value={value} format={{ style: 'percent' }}/></div>
+                <div className='chart-desc'>growth in clean energy consumption since 2019.</div>
             </div>
         </div>
         

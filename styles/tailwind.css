@@ -5,6 +5,10 @@
 
 
 @layer components {
+    * {
+        @apply outline-none
+    }
+
     html {
         @apply bg-slate-50
     }
