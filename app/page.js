@@ -16,7 +16,7 @@ export default function Home() {
           <Fade className='h-[70px] sm:h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[1000,"Welcome", "Welcome to", 'Welcome to']} className='title leading-[85px] md:leading-[85px]'/></Fade>
           <Fade className='min-h-[120px] w-full flex mt-4 justify-end md:mt-6 lg:mt-10'><TypeAnimation speed={20} cursor={false} sequence={[2400,"Outer Reach"]} className='title leading-[70px] md:leading-[85px]'/></Fade>
          
-          <div className='w-full mt-10 sm:mt-[60px]'>
+          <div className='w-full mt-5 sm:mt-[60px]'>
               <div className='tag'><div className='tag-box '/><DecryptText text='Description' /></div>
               <div className='description mt-2'>Providing data and insights tracking the progress of humanity's frontier technologies that are leading us to a world of abundance.</div>
               <div className='description mr-0 ml-auto text-right mt-5'>Demystifying negative misconceptions and highlighting how they contribute to humanity's prosperity.</div>
@@ -68,7 +68,7 @@ export default function Home() {
 
         </div>
 
-        <div className="w-full absolute pointer-events-none -z-1 top-0 left-0 h-[100vh] grid grid-cols-3">
+        <div className="w-full absolute pointer-events-none -z-1 top-0 left-0 h-[85vh] sm:h-[100vh] grid grid-cols-3">
           {Array.from({ length: 3*3 }).map((_, index) => (
             <div key={index} className="relative">
               <div className="absolute inset-0 rotate-45 flex items-center justify-center">

@@ -1,11 +1,14 @@
 "use client"
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { EnergyMixChange } from '@/components/charts/energy';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
 import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/tabs"
+import NumberFlow from '@number-flow/react'
 
 export const EnergyChange = ({className}) => {
+    const [value, setValue] = useState('0.06');
+
     return (
         <div className={`chart ${className}`}>
              <h1 className='chart-title'>Change in primary 
@@ -32,7 +35,10 @@ export const EnergyChange = ({className}) => {
                     <TabsTrigger2 value="password">% Change</TabsTrigger2>
                 </TabsList2>
             </Tabs2>
-            <p className='chart-desc'>Historical change in CO2 emissions per capita and GDP per capita.</p>
+            <div className='cursor-default sm:flex' onClick={() => setValue((Math.floor(Math.random() * (1 - 0.05 + 1)) + 0.05))}>
+                <div className='chart-number'>+<NumberFlow value={value} format={{ style: 'percent' }}/></div>
+                <div className='chart-desc'>growth in renewable and nuclear energy sources consumption.</div>
+            </div>
         </div>
     )
 }

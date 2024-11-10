@@ -72,7 +72,16 @@ export default function Home() {
                   <EnergyChange2 className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
 
-                <div className='md:flex gap-2 mt-10'>
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>Clean energy consumption is <span className='text-black'>rising</span> while fossil fuels remain either <span className='text-black'>stagnant or falling.</span></AccordionTrigger>
+                    <AccordionContent>
+                      Countries like <span className='text-black'>Norway, France and Denmark</span> get {">"}80% of their energy from <span className='text-black'>renewables, nuclear and wind</span> respectively.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+
+                <div className='md:flex gap-2 mt-5'>
                   <RenewableShare className={'flex-1'}/>
                   <FossilShare className={'flex-1 mt-5 md:mt-0'}/>
                 </div>

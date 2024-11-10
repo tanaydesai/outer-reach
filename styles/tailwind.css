@@ -25,10 +25,10 @@
     }
 
     .description {
-        @apply text-[18px] sm:text-[27px] w-full md:w-[85%] lg:w-[55%] leading-6 sm:leading-8 font-a1
+        @apply text-[19px] sm:text-[27px] w-full md:w-[85%] lg:w-[55%] leading-6 sm:leading-8 font-a1
     }
     .description-tag {
-        @apply text-[15px] text-[#aaaaaa] font-a1 h-[27px] gap-2 flex items-center
+        @apply text-[15.5px] text-[#aaaaaa] font-a1 h-[27px] gap-2 flex items-center
     }
 
     .tag {
@@ -39,7 +39,7 @@
     }
 
     .box {
-        @apply h-[350px] border-[1.5px] border-[#d9d9d9] relative overflow-auto flex-1 rounded-[5px]
+        @apply h-[350px] border-[1.5px] border-[#d9d9d9] relative overflow-auto flex-1 rounded-[5px] mt-4 sm:mt-0
     }
     .box-title {
         @apply text-[15px] h-[30px] px-1 m-2 flex gap-1.5 items-center w-fit rounded-[5px] font-a1
@@ -53,10 +53,13 @@
         @apply py-3 rounded-[10px] border-[1.5px] border-[#d9d9d9] overflow-auto
     }
     .chart-title {
-        @apply text-[16px] font-a1 mb-7 px-3
+        @apply text-[17px] font-a1 mb-7 px-3
     }
     .chart-desc {
-        @apply text-[14px] mt-3 px-3 font-a1 md:w-[50%] text-[#656565]
+        @apply text-[14.5px] mt-0 px-3 sm:mt-3 font-a1 lg:w-[45%] text-[#656565]
+    }
+    .chart-number {
+        @apply text-[40px] font-a1 pl-3 text-[#656565]
     }
     .chart-data {
         @apply text-[30px] px-6 text-right font-a1
