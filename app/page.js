@@ -68,8 +68,8 @@ export default function Home() {
 
         </div>
 
-        <div className="w-full absolute pointer-events-none -z-1 top-0 left-0 h-[100vh] grid grid-cols-4">
-          {Array.from({ length: 8 }).map((_, index) => (
+        <div className="w-full absolute pointer-events-none -z-1 top-0 left-0 h-[100vh] grid grid-cols-3">
+          {Array.from({ length: 3*3 }).map((_, index) => (
             <div key={index} className="relative">
               <div className="absolute inset-0 rotate-45 flex items-center justify-center">
                 <svg width="10" height="10" viewBox="0 0 10 10" className="text-[#463f3a]">

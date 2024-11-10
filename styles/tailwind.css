@@ -21,21 +21,21 @@
     }
 
     .title {
-        @apply text-[70px] sm:text-[90px] lg:text-[140px] text-[#463f3a] font-a2 whitespace-nowrap
+        @apply text-[60px] sm:text-[90px] lg:text-[140px] text-[#463f3a] font-a2 whitespace-nowrap
     }
 
     .description {
-        @apply text-[18px] sm:text-[27px] w-full md:w-[85%] lg:w-[55%] leading-6 sm:leading-8 font-semibold font-a1
+        @apply text-[18px] sm:text-[27px] w-full md:w-[85%] lg:w-[55%] leading-6 sm:leading-8 font-a1
     }
     .description-tag {
         @apply text-[15px] text-[#aaaaaa] font-a1 h-[27px] gap-2 flex items-center
     }
 
     .tag {
-        @apply text-[12.5px] uppercase font-a2 h-[27px] font-semibold flex items-center
+        @apply text-[12px] uppercase font-a2 h-[27px] flex items-center
     }
     .tag-box {
-        @apply w-2.5 h-2.5 inline-flex rounded-[2px] bg-red-400 mr-3
+        @apply w-2.5 h-2.5 inline-flex rounded-[2px] bg-red-400 mr-2
     }
 
     .box {
