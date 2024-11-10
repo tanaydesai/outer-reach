@@ -24,7 +24,7 @@ export const Navbar = () => {
         <Link href={"/space"}><motion.div whileTap={{scale:0.95}} className='navbar-box'>Space</motion.div></Link>
       </div>
 
-      {path !== "/" && <MenuIcon className='flex text-[#9b9b9b] sm:hidden' onClick={() => setOpen(!open)}/>}
+      {path !== "/" && <MenuIcon className='flex sm:hidden' onClick={() => setOpen(!open)}/>}
 
     </div>
   );

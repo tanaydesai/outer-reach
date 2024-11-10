@@ -8,8 +8,10 @@ export const EnergyShare = ({className}) => {
       { year: 2000, solar: 26, wind: 10, hydro: 10, fosils: 20 },
       { year: 2001, solar: 35, wind: 20, hydro: 20, fosils: 30 },
       { year: 2002, solar: 37, wind: 40, hydro: 30, fosils: 52 },
+      { year: 2005, solar: 37, wind: 40, hydro: 30, fosils: 52 },
+      { year: 2010, solar: 40, wind: 48, hydro: 39, fosils: 62 },
       { year: 2013, solar: 53, wind: 45, hydro: 40, fosils: 60 },
-      { year: 2015, solar: 53, wind: 45, hydro: 40, fosils: 60 },
+      { year: 2015, solar: 53, wind: 45, hydro: 40, fosils: 66 },
       { year: 2023, solar: 60, wind: 50, hydro: 35, fosils: 65 },
       { year: 2024, solar: 70, wind: 70, hydro: 35, fosils: 80 },
     ]
@@ -67,7 +69,7 @@ export const EnergyShare = ({className}) => {
             />
             <Area
               dataKey="solar"
-              // type="monotone"
+              type="monotone"
               fill="#2ccfff"
               stackId='a'
             >
@@ -75,7 +77,7 @@ export const EnergyShare = ({className}) => {
              <Area
               dataKey="wind"
               fill="#065374"
-              // type="monotone"
+              type="monotone"
               stackId='a'
               >
             </Area>
@@ -83,14 +85,14 @@ export const EnergyShare = ({className}) => {
               dataKey="hydro"
               fill="#ff5d83"
               stackId='a'
-              // type="monotone"
+              type="monotone"
             >
             </Area>
             <Area
               dataKey="fosils"
               fill="#b10fff"
               stackId='a'
-              // type="monotone"
+              type="monotone"
             >
             </Area>
             <ChartLegend content={<ChartLegendContent />} />
