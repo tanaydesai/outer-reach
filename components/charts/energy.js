@@ -103,33 +103,30 @@ export const EnergyShare = ({className}) => {
 
 export const LeaderBoards = ({className}) => {
   const chartData = [
-   {year:"United States", solar: 95},
-   {year:"United Kingdom", solar: 80},
-   {year:"Germany", solar: 75},
-   {year:"France", solar: 65},
-   {year:"Japan", solar: 60},
-   {year:"China", solar: 55},
-   {year:"India", solar: 50},
-   {year:"Brazil", solar: 45},
-   {year:"Australia", solar: 40},
-   {year:"Canada", solar: 35},
-   {year:"South Korea", solar: 30},
-   {year:"Russia", solar: 25},
-   {year:"Mexico", solar: 20},
-   {year:"Saudi Arabia", solar: 15},
-   {year:"Turkey", solar: 10},
+   {country:"United States", data: 95},
+   {country:"United Kingdom", data: 80},
+   {country:"Germany", data: 75},
+   {country:"France", data: 65},
+   {country:"Japan", data: 60},
+   {country:"China", data: 55},
+   {country:"India", data: 50},
+   {country:"Brazil", data: 45},
+   {country:"Australia", data: 40},
+   {country:"Canada", data: 35},
+   {country:"South Korea", data: 30},
+   {country:"Russia", data: 25},
+   {country:"Mexico", data: 20},
+   {country:"Saudi Arabia", data: 15},
+   {country:"Turkey", data: 10},
   ]
   const chartConfig = {
-    solar: {
-      label: "Solar",
+    country: {
+      label: "Country",
       color: "green",
     },
-    wind: {
-      label: "Wind",
+    data: {
+      label: "Value",
       color: "hsl(var(--chart-2))",
-    },
-    label: {
-      color: "hsl(var(--background))",
     },
   } 
 
@@ -140,44 +137,32 @@ export const LeaderBoards = ({className}) => {
             data={chartData}
             layout="vertical"
             margin={{
-              left: 0,
+              left: 10,
               right: 5,
             }}
           >
             <YAxis
-              dataKey="year"
+              dataKey="country"
               type="category"
               tickLine={false}
               tickMargin={10}
               axisLine={false}
-              tickFormatter={(value) => value.slice(0, 3)}
-              hide
             />
-            <XAxis dataKey="solar" type="number" hide />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent indicator="line" />}
-            />
+            <XAxis dataKey="data" type="number" hide />
             <Bar
-              dataKey="solar"
+              dataKey="data"
               layout="vertical"
               fill="#2eec7d"
               radius={7}
-              barSize={40}
+              barSize={50}
             >
-              <LabelList
-                dataKey="year"
-                position="insideLeft" 
+            <LabelList
+                dataKey="data"
+                position="insideRight"
                 offset={8}
-                className="fill-[--color-label]"
-                fontSize={11}
-              />
-              <LabelList
-                dataKey="solar"
-                position="right"
-                offset={8}
-                className="fill-[#ffffff]"
-                fontSize={12}
+                className="fill-[#656565]"
+                fontSize={20}
+                formatter={(value) => `${value} %`}
               />
             </Bar>
           </BarChart>
@@ -447,7 +432,7 @@ export const CapacityChange2 = ({className}) => {
             data={chartData}
             layout="vertical"
             margin={{
-              left: 0,
+              left: 2,
               right: 5,
             }}
           >
@@ -515,7 +500,7 @@ export const PlannedCapacity = ({className}) => {
             data={chartData}
             layout="vertical"
             margin={{
-              left: -5,
+              left: -3,
               right: 5,
             }}
           >
@@ -593,7 +578,7 @@ export const CurrentCapacity = ({className}) => {
             data={chartData}
             layout="vertical"
             margin={{
-              left: 0,
+              left: 3,
               right: 5,
             }}
           >

@@ -23,7 +23,7 @@ const TabsTrigger = React.forwardRef(({ className, ...props }, ref) => (
       <TabsPrimitive.Trigger
       ref={ref}
       className={cn(
-        "font-a1  group py-1 px-2 text-[#aaaaaa] data-[state=active]:bg-[#eeeeee] hover:bg-[#eeeeee] hover:text-[#1e1f2b] outline-none transition-all rounded-[5px] text-[14px] whitespace-nowrap disabled:pointer-events-none  data-[state=active]:text-[#1e1f2b] data-[state=active]:stroke-[#1e1f2b] dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
+        "font-a1  group py-1 px-2 text-[#aaaaaa] data-[state=active]:bg-[#eeeeee] hover:bg-[#eeeeee] hover:text-black outline-none transition-all rounded-[5px] text-[14px] whitespace-nowrap disabled:pointer-events-none  data-[state=active]:text-black data-[state=active]:stroke-[#1e1f2b] dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
         className
       )}
       {...props} />
@@ -55,14 +55,13 @@ export { Tabs, TabsList, TabsTrigger, TabsContent }
 
 
 
-
 const Tabs2 = TabsPrimitive.Root
 
 const TabsList2 = React.forwardRef(({ className, ...props }, ref) => (
-    <TabsPrimitive.List
+  <TabsPrimitive.List
     ref={ref}
     className={cn(
-      "flex w-full px-3 gap-4 items-center justify-start overflow-auto dark:bg-stone-800 dark:text-stone-400",
+      "w-fit ml-3 px-1.5 py-1 text-center rounded-[10px] flex border border-[#d9d9d9] items-center justify-start gap-3 overflow-auto dark:bg-stone-800 dark:text-stone-400",
       className
     )}
     {...props}></TabsPrimitive.List>
@@ -70,15 +69,15 @@ const TabsList2 = React.forwardRef(({ className, ...props }, ref) => (
 TabsList2.displayName = TabsPrimitive.List.displayName
 
 const TabsTrigger2 = React.forwardRef(({ className, ...props }, ref) => (
-    <motion.div whileTap={{ scale: 0.97 }}>
+  <div>
       <TabsPrimitive.Trigger
-        ref={ref}
-        className={cn(
-          "inline-flex items-center pt-4 justify-center text-[11.5px] font-semibold whitespace-nowrap hover:text-black font-a1 text-[#9b9b9b] uppercase duration-500 data-[state=active]:text-black data-[state=active]:  disabled:pointer-events-none transition-all dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
-          className
-        )}
-        {...props} />
-    </motion.div>
+      ref={ref}
+      className={cn(
+        "font-a1 group py-1 px-2 text-[#aaaaaa] data-[state=active]:bg-[#eeeeee] hover:bg-[#eeeeee] hover:text-black outline-none transition-all rounded-[5px] text-[14px] whitespace-nowrap disabled:pointer-events-none  data-[state=active]:text-black data-[state=active]:stroke-[#1e1f2b] dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
+        className
+      )}
+      {...props} />
+  </div>
 ))
 TabsTrigger2.displayName = TabsPrimitive.Trigger.displayName
 
@@ -86,7 +85,7 @@ const TabsContent2 = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      " ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300",
+      "mt-5 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300",
       className
     )}
     {...props} />

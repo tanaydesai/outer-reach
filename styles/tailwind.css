@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 
-
 @layer components {
     * {
         @apply outline-none
@@ -25,18 +24,18 @@
     }
 
     .title {
-        @apply text-[60px] sm:text-[90px] lg:text-[140px] text-[#463f3a] font-a2 whitespace-nowrap
+        @apply text-[70px] sm:text-[90px] lg:text-[140px] text-[#463f3a] font-planer-m whitespace-nowrap
     }
 
     .description {
         @apply text-[19px] sm:text-[27px] w-full md:w-[85%] lg:w-[55%] leading-6 sm:leading-8 font-a1
     }
     .description-tag {
-        @apply text-[15.5px] text-[#aaaaaa] font-a1 h-[27px] gap-2 flex items-center
+        @apply text-[25px] text-[#aaaaaa] font-planer-m h-[27px] gap-2 flex items-center
     }
 
     .tag {
-        @apply text-[12px] uppercase font-a2 h-[27px] flex items-center
+        @apply text-[12px] uppercase font-a1 h-[27px] flex items-center
     }
     .tag-box {
         @apply w-2.5 h-2.5 inline-flex rounded-[2px] bg-red-400 mr-2
@@ -54,16 +53,16 @@
 
 
     .chart {
-        @apply py-3 rounded-[10px] border-[1.5px] border-[#d9d9d9] overflow-auto
+        @apply py-3 rounded-[10px] border border-[#d9d9d9] overflow-auto flex-col flex
     }
     .chart-title {
-        @apply text-[17px] font-a1 mb-7 px-3
+        @apply text-[17px] font-a1 mx-3 rounded-[5px] w-fit
     }
     .chart-desc {
-        @apply text-[14.5px] mt-0 px-3 sm:mt-3 font-a1 lg:w-[45%] text-[#656565]
+        @apply text-[14.5px] mt-0 px-3 sm:mt-3 font-a1 lg:w-[45%] text-[#aaaaaa]
     }
     .chart-number {
-        @apply text-[40px] font-a1 pl-3 text-[#656565]
+        @apply text-[30px] md:text-[40px] font-a1 pl-3 text-[#656565] whitespace-nowrap
     }
     .chart-data {
         @apply text-[30px] px-6 text-right font-a1
@@ -71,8 +70,7 @@
     .chart-data-span {
         @apply text-[11px] text-white pl-2 font-a1 inline-flex items-end gap-1
     }
-
-
-
-
+    .acc-span {
+        @apply text-[#463f3a]
+    }
 }

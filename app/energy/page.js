@@ -36,7 +36,7 @@ export default function Home() {
               <TabsTrigger value="leaderboard"><div className={`${tab == "leaderboard" ? "" : "hidden"} tag-box  mr-1 `}/> Leaderboards</TabsTrigger>
             </TabsList>
             <Select>
-              <SelectTrigger className="font-a1 flex bg-transparent group p-2 mx-0 text-[#aaaaaa] hover:text-[#1e1f2b] text-[14px] no-underline rounded-[10px] border border-[#d9d9d9]">
+              <SelectTrigger>
                   <div className='hidden sm:block'><SelectValue placeholder="Country"/></div>
                   <div className='sm:hidden'><SelectValue placeholder={<Earth />} /></div>
               </SelectTrigger>
@@ -49,9 +49,9 @@ export default function Home() {
             <TabsContent value="mix">
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>The world's energy mix is rapidly adopting <span className='text-black'>clean energy</span> with <span className='text-black'>nuclear energy</span> making a big comeback</AccordionTrigger>
+                    <AccordionTrigger>The world's energy mix is rapidly adopting <span className="acc-span">clean energy</span> with <span className="acc-span">nuclear energy</span> making a big comeback</AccordionTrigger>
                     <AccordionContent>
-                      Countries like <span className='text-black'>Norway, France and Denmark</span> get {">"}80% of their energy from <span className='text-black'>renewables, nuclear and wind</span> respectively.
+                      Countries like <span className="acc-span">Norway, France and Denmark</span> get {">"}80% of their energy from <span className="acc-span">renewables, nuclear and wind</span> respectively.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -62,7 +62,7 @@ export default function Home() {
                   <AccordionItem value="item-1">
                     <AccordionTrigger className="mt-7">What's the progress of Renewables and Nuclear energy?</AccordionTrigger>
                     <AccordionContent>
-                      Installations <span className='text-black'>increasingly Renewable and Nuclear energy</span> which is <span className='text-black'>speeding up</span>.
+                      Installations <span className="acc-span">increasingly Renewable and Nuclear energy</span> which is <span className="acc-span">speeding up</span>.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -74,9 +74,9 @@ export default function Home() {
 
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger><span className='text-black'>Clean energy</span> consumption is <span className='text-black'>rising</span> while fossil fuels remain either <span className='text-black'>stagnant or falling.</span></AccordionTrigger>
+                    <AccordionTrigger><span className="acc-span">Clean energy</span> consumption is <span className="acc-span">rising</span> while fossil fuels remain either <span className="acc-span">stagnant or falling.</span></AccordionTrigger>
                     <AccordionContent>
-                      Countries like <span className='text-black'>Norway, France and Denmark</span> get {">"}80% of their energy from <span className='text-black'>renewables, nuclear and wind</span> respectively.
+                      Countries like <span className="acc-span">Norway, France and Denmark</span> get {">"}80% of their energy from <span className="acc-span">renewables, nuclear and wind</span> respectively.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -89,9 +89,9 @@ export default function Home() {
             <TabsContent value="capacity">  
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Capacity installations of <span className='text-black'>solar and wind</span> are through the moon and <span className='text-black'>accelerating</span> while countries race to get <span className='text-black'>more nuclear online</span>.</AccordionTrigger>
+                    <AccordionTrigger>Capacity installations of <span className="acc-span">solar and wind</span> are through the moon and <span className="acc-span">accelerating</span> while countries race to get <span className="acc-span">more nuclear online</span>.</AccordionTrigger>
                     <AccordionContent>
-                      While solar and wind energy's benifits are <span className='text-black'>well understood,</span> it required <span className='text-black'>an AI arms race</span> for the world's eyes to open for <span className='text-black'>nuclear energy</span> again.
+                      While solar and wind energy's benifits are <span className="acc-span">well understood,</span> it required <span className="acc-span">an AI arms race</span> for the world's eyes to open for <span className="acc-span">nuclear energy</span> again.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -103,9 +103,9 @@ export default function Home() {
 
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Capacity installations of <span className='text-black'>solar and wind</span> are through the moon and <span className='text-black'>accelerating</span> while countries race to get <span className='text-black'>more nuclear online</span>.</AccordionTrigger>
+                    <AccordionTrigger>Capacity installations of <span className="acc-span">solar and wind</span> are through the moon and <span className="acc-span">accelerating</span> while countries race to get <span className="acc-span">more nuclear online</span>.</AccordionTrigger>
                     <AccordionContent>
-                      While solar and wind energy's benifits are <span className='text-black'>well understood,</span> it required <span className='text-black'>an AI arms race</span> for the world's eyes to open for <span className='text-black'>nuclear energy</span> again.
+                      While solar and wind energy's benifits are <span className="acc-span">well understood,</span> it required <span className="acc-span">an AI arms race</span> for the world's eyes to open for <span className="acc-span">nuclear energy</span> again.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -115,9 +115,9 @@ export default function Home() {
             <TabsContent value="percapita">
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>There is <span className='text-black'>no energy rich poor country.</span> The <span className='text-black'>more energy</span> a country consumes the more <span className='text-black'>prosperous it's citezens are.</span></AccordionTrigger>
+                    <AccordionTrigger>There is <span className="acc-span">no energy rich poor country.</span> The <span className="acc-span">more energy</span> a country consumes the more <span className="acc-span">prosperous it's citezens are.</span></AccordionTrigger>
                     <AccordionContent>
-                      Countries like <span className='text-black'>France</span> have subsequently grew their <span className='text-black'>nuclear capacity,</span> grew their <span className='text-black'>economy</span> and <span className='text-black'>reduced carbom emissions.</span>
+                      Countries like <span className="acc-span">France</span> have subsequently grew their <span className="acc-span">nuclear capacity,</span> grew their <span className="acc-span">economy</span> and <span className="acc-span">reduced carbom emissions.</span>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -132,8 +132,17 @@ export default function Home() {
                     <AvgHouse className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
             </TabsContent>
-            <TabsContent value="leaderboard">          
-                <EnergyLeaderBoard className={'mt-[100px]'}/>
+            <TabsContent value="leaderboard">      
+              <Accordion type="single" collapsible>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>Pin the countries together. Find out the ones that are doing it right and the ones that have more work to do.</AccordionTrigger>
+                    <AccordionContent>
+                      Countries like <span className="acc-span">Norway, France and Denmark</span> get {">"}80% of their energy from <span className="acc-span">renewables, nuclear and wind</span> respectively.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+
+                <EnergyLeaderBoard className={'mt-10'}/>
             </TabsContent>
           </Tabs>
         </div>

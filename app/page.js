@@ -10,22 +10,22 @@ import Marquee from "react-fast-marquee";
 
 export default function Home() {
   return (
-      <div className='main py-[70px]'>
+      <div className='main py-[80px]'>
   
         <div className='w-full h-fit'> 
           <Fade className='h-[70px] sm:h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[1000,"Welcome", "Welcome to", 'Welcome to']} className='title leading-[85px] md:leading-[85px]'/></Fade>
-          <Fade className='min-h-[120px] w-full flex mt-4 justify-end md:mt-6 lg:mt-10'><TypeAnimation speed={20} cursor={false} sequence={[2400,"Outer Reach"]} className='title leading-[70px] md:leading-[85px]'/></Fade>
+          <Fade className='min-h-[120px] w-full mt-4 md:mt-6 lg:mt-10'><TypeAnimation speed={20} cursor={false} sequence={[2400,"Outer Reach"]} className='title leading-[70px] md:leading-[85px]'/></Fade>
          
-          <div className='w-full mt-5 sm:mt-[60px]'>
+          <div className='w-full mt-5'>
               <div className='tag'><div className='tag-box '/><DecryptText text='Description' /></div>
               <div className='description mt-2'>Providing data and insights tracking the progress of humanity's frontier technologies that are leading us to a world of abundance.</div>
               <div className='description mr-0 ml-auto text-right mt-5'>Demystifying negative misconceptions and highlighting how they contribute to humanity's prosperity.</div>
-              <Marquee className='min-h-[50px]' pauseOnHover autoFill>
+              <Marquee className='min-h-[100px]' autoFill speed={100}>
                 <div className='flex justify-between gap-[100px] mr-[100px] cursor-default mt-10'>
-                  <div className='description-tag'><div className='text-[13px] mt-0.5'>{`{01}`}</div>We need more energy</div>
-                  <div className='description-tag'><div className='text-[13px] mt-0.5'>{`{02}`}</div>We need more nuclear</div>
-                  <div className='description-tag'><div className='text-[13px] mt-0.5'>{`{03}`}</div>We need more intelligence</div>
-                  <div className='description-tag'><div className='text-[13px] mt-0.5'>{`{04}`}</div>We need more space</div>
+                  <div className='description-tag'><div className='text-[17px] mt-0.5'>{`{01}`}</div>We need more energy.</div>
+                  <div className='description-tag'><div className='text-[17px] mt-0.5'>{`{02}`}</div>We need more nuclear.</div>
+                  <div className='description-tag'><div className='text-[17px] mt-0.5'>{`{03}`}</div>We need more intelligence.</div>
+                  <div className='description-tag'><div className='text-[17px] mt-0.5'>{`{04}`}</div>We need more space.</div>
                 </div>
               </Marquee>
           </div>
