@@ -4,11 +4,13 @@ import { motion } from 'framer-motion';
 import { EnergyConsumptionGDPPC } from '@/components/charts/energy';
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 
-export const EnergyGDPPC = ({className}) => {
+export const EnergyGDPPC = ({className, data, country}) => {
+    data = data.filter((d) => d.Country == country)
+
     return (
         <div className={`chart ${className}`}>
-            <h1 className='chart-title'>Change in energy consumption per capita and GDP per capita</h1>
-            <EnergyConsumptionGDPPC className='w-full flex-1 mt-4'/>
+            <h1 className='chart-title'>Change in energy consumption per capita and GDP per capita, {country}</h1>
+            <EnergyConsumptionGDPPC data={data} className='w-full flex-1 mt-4'/>
             <ToggleGroup type="single" defaultValue="a">
                     <ToggleGroupItem value="a">ABS</ToggleGroupItem>
                     <ToggleGroupItem value="b">%</ToggleGroupItem>

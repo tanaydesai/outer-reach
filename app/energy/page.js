@@ -18,11 +18,19 @@ import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/co
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CornerDownRight, Earth } from 'lucide-react';
-import { DecryptText } from '@/components/decrypt'
+import useSWR from 'swr'
+
+
 
 export default function Home() {
   const [tab, setTab] = useState('mix');
-   
+  const [country, setCountry] = useState('World');
+
+  const fetcher = (...args) => fetch(...args).then(res => res.json())
+  const { data, error, isLoading } = useSWR('/api/energy',fetcher)
+  if (error) return <div>failed to load</div>
+  if (isLoading) return <div>loading...</div> 
+
   return (
     <div className="main">
 
@@ -35,14 +43,16 @@ export default function Home() {
               <TabsTrigger value="percapita"><div className={`${tab == "percapita" ? "" : "hidden"} tag-box  mr-1 `}/> Economics</TabsTrigger>
               <TabsTrigger value="leaderboard"><div className={`${tab == "leaderboard" ? "" : "hidden"} tag-box  mr-1 `}/> Leaderboards</TabsTrigger>
             </TabsList>
-            <Select>
+            <Select defaultValue={country} onValueChange={setCountry}>
               <SelectTrigger>
-                  <div className='hidden sm:block'><SelectValue placeholder="Country"/></div>
-                  <div className='sm:hidden'><SelectValue placeholder={<Earth />} /></div>
+                  <SelectValue placeholder="Country"/>
+                  {/* <div className='hidden sm:block'><SelectValue placeholder="Country"/></div>
+                  <div className='sm:hidden'><SelectValue placeholder={<Earth />} /></div> */}
               </SelectTrigger>
               <SelectContent>
-                  <SelectItem value="dark">India</SelectItem>
-                  <SelectItem value="light">France</SelectItem>
+                {data.countries.map((c) => (
+                  <SelectItem key={c} value={c}>{c}</SelectItem>
+                ))}
               </SelectContent>
             </Select>
             </div>
@@ -56,7 +66,7 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
 
-                <EnergyMix className={'mt-10'}/>
+                <EnergyMix data={data.energyMixData} country={country} className={'mt-10'}/>
 
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
@@ -68,8 +78,8 @@ export default function Home() {
                 </Accordion>
 
                 <div className='md:flex gap-2 mt-5'>
-                  <EnergyChange className={'flex-1'}/>
-                  <EnergyChange2 className={'flex-1 mt-5 md:mt-0'}/>
+                  <EnergyChange data={data.annualChange} country={country} className={'flex-1'}/>
+                  <EnergyChange2 data={data.annualChange2} country={country} className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
 
                 <Accordion type="single" collapsible>
@@ -124,11 +134,11 @@ export default function Home() {
                 
                 <div className='md:flex gap-2 mt-10'>            
                   <EnergyGDP className={'flex-1'}/>
-                  <EnergyGDPPC className={'flex-1 mt-5 md:mt-0'}/>
+                  <EnergyGDPPC data={data.energyGDPPC} country={country} className={'flex-1 mt-5 md:mt-0'}/>
                 </div>  
                 
                 <div className='md:flex gap-2 mt-5'>
-                    <EnergyUse className={'flex-1'}/>
+                    <EnergyUse data={data.energyGDPPC} country={country} className={'flex-1'}/>
                     <AvgHouse className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
             </TabsContent>

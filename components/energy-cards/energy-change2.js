@@ -5,13 +5,14 @@ import { EnergyMixChange2 } from '@/components/charts/energy';
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import NumberFlow from '@number-flow/react'
 
-export const EnergyChange2 = ({className}) => {
+export const EnergyChange2 = ({className, data, country}) => {
+    data = data.filter((d) => d.Country == country)
     const [value, setValue] = useState('0.16');
 
     return (
         <div className={`chart ${className}`}>
-            <h1 className='chart-title'>Change in Fossil fuel, Renewable & nuclear energy consumption</h1>
-            <EnergyMixChange2 className='w-full flex-1 mt-4'/>
+            <h1 className='chart-title'>Change in Fossil fuel, Renewable & nuclear energy consumption, {country}</h1>
+            <EnergyMixChange2 data={data} className='w-full flex-1 mt-4'/>
             <ToggleGroup type="single" defaultValue="a">
                     <ToggleGroupItem value="a">ABS</ToggleGroupItem>
                     <ToggleGroupItem value="b">%</ToggleGroupItem>
