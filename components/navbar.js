@@ -13,8 +13,7 @@ export const Navbar = () => {
   const path = usePathname();
  
   return (
-    // backdrop-blur-[10px]
-    <div className={`fixed top-0 z-[100] w-full left-0 px-3 py-3 flex bg-transparent items-center justify-between ${open ? "" : ""}`}>
+    <div className={`fixed top-0 z-[100] w-full left-0 px-3 py-3 flex bg-transparent items-center justify-between ${open ? "" : "backdrop-blur-[10px]"}`}>
      
       <Link href="/"><motion.div whileTap={{scale:0.95}} className='navbar-box flex items-center gap-1'>0 <MoveRight size={15}/> {'42'}</motion.div></Link>
     

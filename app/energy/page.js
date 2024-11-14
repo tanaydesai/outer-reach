@@ -6,8 +6,7 @@ import { EnergyMix } from '@/components/energy-cards/energy-mix';
 import { EnergyChange } from '@/components/energy-cards/energy-change';
 import { EnergyChange2 } from '@/components/energy-cards/energy-change2';
 import { EnergyCapacities } from '@/components/energy-cards/energy-capacity';
-import { EnergyCapacityChange } from '@/components/energy-cards/capacity-change';
-import { EnergyCapacityChange2 } from '@/components/energy-cards/capacity-change2';
+import { EnergyCapacityAdditions } from '@/components/energy-cards/capacity-additions';
 import { AvgHouse } from '@/components/energy-cards/annual-avg-house';
 import { EnergyUse } from '@/components/energy-cards/anuual-energy-pc';
 import { RenewableShare } from '@/components/energy-cards/renewable-share';
@@ -23,16 +22,18 @@ import useSWR from 'swr'
 
 
 export default function Home() {
+  const fetcher = (...args) => fetch(...args).then(res => res.json())
+  
+  
+  const { data, error, isLoading } = useSWR('/api/energy',fetcher)
   const [tab, setTab] = useState('mix');
   const [country, setCountry] = useState('World');
 
-  const fetcher = (...args) => fetch(...args).then(res => res.json())
-  const { data, error, isLoading } = useSWR('/api/energy',fetcher)
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div> 
 
   return (
-    <div className="main">
+    <div className="main pb-0">
 
         <div className='main-body'>
           <Tabs defaultValue="mix" onValueChange={setTab} value={tab}>
@@ -40,7 +41,7 @@ export default function Home() {
             <TabsList>
               <TabsTrigger value="mix"><div className={`${tab == "mix" ? "" : "hidden"} tag-box  mr-1 `}/> Energy Mix</TabsTrigger>
               <TabsTrigger value="capacity"><div className={`${tab == "capacity" ? "" : "hidden"} tag-box  mr-1 `}/> Capacity</TabsTrigger>
-              <TabsTrigger value="percapita"><div className={`${tab == "percapita" ? "" : "hidden"} tag-box  mr-1 `}/> Economics</TabsTrigger>
+              <TabsTrigger value="economics"><div className={`${tab == "economics" ? "" : "hidden"} tag-box  mr-1 `}/> Economics</TabsTrigger>
               <TabsTrigger value="leaderboard"><div className={`${tab == "leaderboard" ? "" : "hidden"} tag-box  mr-1 `}/> Leaderboards</TabsTrigger>
             </TabsList>
             <Select defaultValue={country} onValueChange={setCountry}>
@@ -66,7 +67,7 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
 
-                <EnergyMix data={data.energyMixData} country={country} className={'mt-10'}/>
+                <EnergyMix data={data.energyMixData} data2={data.electricityMixData} country={country} className={'mt-10'}/>
 
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
@@ -92,8 +93,8 @@ export default function Home() {
                 </Accordion>
 
                 <div className='md:flex gap-2 mt-5'>
-                  <RenewableShare className={'flex-1'}/>
-                  <FossilShare className={'flex-1 mt-5 md:mt-0'}/>
+                  <RenewableShare data={data.annualChange2} country={country} className={'flex-1'}/>
+                  <FossilShare data={data.annualChange2} country={country} className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
             </TabsContent>
             <TabsContent value="capacity">  
@@ -107,22 +108,11 @@ export default function Home() {
                 </Accordion>
 
                 <div className='md:flex gap-2 mt-10'>
-                  <EnergyCapacities className={'flex-1'}/>
-                  <EnergyCapacityChange className={'flex-1 mt-5 md:mt-0'}/>
+                  <EnergyCapacities data={data.energyCapacities} country={country} className={'flex-1'}/>
+                  <EnergyCapacityAdditions className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
-
-                <Accordion type="single" collapsible>
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger>Capacity installations of <span className="acc-span">solar and wind</span> are through the moon and <span className="acc-span">accelerating</span> while countries race to get <span className="acc-span">more nuclear online</span>.</AccordionTrigger>
-                    <AccordionContent>
-                      While solar and wind energy's benifits are <span className="acc-span">well understood,</span> it required <span className="acc-span">an AI arms race</span> for the world's eyes to open for <span className="acc-span">nuclear energy</span> again.
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-
-                <EnergyCapacityChange2 className={'mt-5'}/>
             </TabsContent>
-            <TabsContent value="percapita">
+            <TabsContent value="economics">
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
                     <AccordionTrigger>There is <span className="acc-span">no energy rich poor country.</span> The <span className="acc-span">more energy</span> a country consumes the more <span className="acc-span">prosperous it's citezens are.</span></AccordionTrigger>
