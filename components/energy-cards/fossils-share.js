@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ShareFossils } from '@/components/charts/energy';
-import { ArrowDown } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 export const FossilShare = ({className, data, country}) => {
     data = data.filter((d) => d.Country == country).map(item => ({ Year: item.Year, ["Fossil fuels"]: item["Fossil fuels"] }))
@@ -11,7 +11,7 @@ export const FossilShare = ({className, data, country}) => {
     return (
         <div className={`chart text-white bg-black border-none px-0 pb-0 ${className}`}>
             <h1 className='chart-title text-white'>Share of Fossil Fuels in the electricity mix, {country}</h1>
-            <div className='chart-data'>{data.at(-1)["Fossil fuels"].toFixed(1)}%<div className='chart-data-span'><ArrowDown size={17} className='text-[#ec542e]'/>{value}% YoY</div></div>
+            <div className='chart-data'>{data.at(-1)["Fossil fuels"].toFixed(1)}%<div className='chart-data-span'><ArrowUp size={17} data-value={value > 0 ? true : false} className='text-[#2eec7d] data-[value=false]:text-[#ec542e] data-[value=false]:rotate-180'/>{value}% YoY</div></div>
             <ShareFossils data={data} className='w-full h-[150px]'/>
         </div>
     )

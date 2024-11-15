@@ -3,12 +3,12 @@ import React, { useRef,useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { EnergyLeaderBoard } from '@/components/energy-cards/energy-leaderboard';
 import { EnergyMix } from '@/components/energy-cards/energy-mix';
-import { EnergyChange } from '@/components/energy-cards/energy-change';
-import { EnergyChange2 } from '@/components/energy-cards/energy-change2';
+import { EnergyChange } from '@/components/energy-cards/annual-energy-change';
+import { Energy3Share } from '@/components/energy-cards/energy3-share';
 import { EnergyCapacities } from '@/components/energy-cards/energy-capacity';
 import { EnergyCapacityAdditions } from '@/components/energy-cards/capacity-additions';
 import { AvgHouse } from '@/components/energy-cards/annual-avg-house';
-import { EnergyUse } from '@/components/energy-cards/anuual-energy-pc';
+import { EnergyUse } from '@/components/energy-cards/annual-energy-pc';
 import { RenewableShare } from '@/components/energy-cards/renewable-share';
 import { FossilShare } from '@/components/energy-cards/fossils-share';
 import { EnergyGDP } from '@/components/energy-cards/energy-gdp';
@@ -67,7 +67,7 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
 
-                <EnergyMix data={data.energyMixData} data2={data.electricityMixData} country={country} className={'mt-10'}/>
+                <EnergyMix data={data.energyMixData} data3={data.shareEnergyMix} data2={data.electricityMixData} country={country} className={'mt-10'}/>
 
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
@@ -79,8 +79,8 @@ export default function Home() {
                 </Accordion>
 
                 <div className='md:flex gap-2 mt-5'>
-                  <EnergyChange data={data.annualChange} country={country} className={'flex-1'}/>
-                  <EnergyChange2 data={data.annualChange2} country={country} className={'flex-1 mt-5 md:mt-0'}/>
+                  <EnergyChange data={data.energyChange} country={country} className={'flex-1'}/>
+                  <Energy3Share data={data.energyy3Change} data2={data.electricity3Change} country={country} className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
 
                 <Accordion type="single" collapsible>
@@ -93,8 +93,8 @@ export default function Home() {
                 </Accordion>
 
                 <div className='md:flex gap-2 mt-5'>
-                  <RenewableShare data={data.annualChange2} country={country} className={'flex-1'}/>
-                  <FossilShare data={data.annualChange2} country={country} className={'flex-1 mt-5 md:mt-0'}/>
+                  <RenewableShare data={data.electricity3Change} country={country} className={'flex-1'}/>
+                  <FossilShare data={data.electricity3Change} country={country} className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
             </TabsContent>
             <TabsContent value="capacity">  
@@ -109,7 +109,7 @@ export default function Home() {
 
                 <div className='md:flex gap-2 mt-10'>
                   <EnergyCapacities data={data.energyCapacities} country={country} className={'flex-1'}/>
-                  <EnergyCapacityAdditions className={'flex-1 mt-5 md:mt-0'}/>
+                  <EnergyCapacityAdditions data={data.capaictyAdditions} country={country} className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
             </TabsContent>
             <TabsContent value="economics">

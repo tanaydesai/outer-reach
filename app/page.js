@@ -14,7 +14,7 @@ export default function Home() {
   
         <div className='w-full h-fit'> 
           <Fade className='h-[70px] sm:h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[1000,"Welcome", "Welcome to", 'Welcome to']} className='title leading-[85px] md:leading-[85px]'/></Fade>
-          <Fade className='min-h-[120px] w-full mt-4 md:mt-6 lg:mt-10'><TypeAnimation speed={20} cursor={false} sequence={[2400,"Outer Reach"]} className='title leading-[70px] md:leading-[85px]'/></Fade>
+          <Fade className='min-h-[120px] w-full text-right mt-4 md:mt-6 lg:mt-10'><TypeAnimation speed={20} cursor={false} sequence={[2400,"Outer Reach"]} className='title leading-[70px] md:leading-[85px]'/></Fade>
          
           <div className='w-full mt-5'>
               <div className='tag'><div className='tag-box '/><DecryptText text='Description' /></div>

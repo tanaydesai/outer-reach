@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Area, AreaChart,Line, LineChart,  Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList, Cell } from "recharts"
 import { ChartConfig,ChartContainer,ChartTooltip,ChartTooltipContent,ChartLegend,ChartLegendContent} from "@/components/ui/chart"
 import { FossilShare } from '../energy-cards/fossils-share'
+import { Geo } from 'next/font/google'
 
 export const EnergyShare = ({className, data}) => {
     const chartData = data ? data : []
@@ -202,7 +203,7 @@ export const LeaderBoards = ({className}) => {
 }
 
 
-export const EnergyMixChange = ({className, data}) => {
+export const AnnualEnergyChange = ({className, data}) => {
    const chartData = data ? data : []
    
    const chartConfig = {
@@ -248,7 +249,7 @@ export const EnergyMixChange = ({className, data}) => {
    )
  }
 
- export const EnergyMixChange2 = ({className, data}) => {
+ export const Energy3ShareChange = ({className, data}) => {
    const chartData = data ? data : []
    
    const chartConfig = {
@@ -425,14 +426,14 @@ return (
             fill="#b10fff"
             fillOpacity={0.2}
           />
-          <Area
+          {/* <Area
             type="monotone"
             dataKey="Fossil Fuels"
             stroke="#ff58df"
             strokeWidth={2}
             fill="#ff58df"
             fillOpacity={0.2}
-          />
+          /> */}
           <ChartLegend content={<ChartLegendContent />} />
         </AreaChart>
       </ChartContainer>
@@ -440,37 +441,42 @@ return (
 }
 
 
- export const CapacityAdditions = ({className}) => {
-  const chartData = [
-    { year: 2000, solar: 26, wind: 10, hydro: 10, fosils: 20 },
-    { year: 2001, solar: 35, wind: 20, hydro: 20, fosils: 30 },
-    { year: 2002, solar: 37, wind: 40, hydro: 30, fosils: 52 },
-    { year: 2013, solar: 53, wind: 45, hydro: 40, fosils: 60 },
-    { year: 2015, solar: 53, wind: 45, hydro: 40, fosils: 60 },
-    { year: 2023, solar: 60, wind: 50, hydro: 35, fosils: 65 },
-    { year: 2024, solar: 70, wind: 70, hydro: 35, fosils: 80 },
-  ]
-  
+ export const CapacityAdditions = ({className, data}) => {
+  const chartData = data ? data : []
+
   const chartConfig = {
     "Mix": {
       label: "Year",
     },
-    solar: {
+    Solar: {
       label: "Solar",
       color: "#2ccfff",
     },
-    wind: {
+    Wind: {
       label: "Wind",
       color: "#065374",
     },
-    fosils: {
-      label: "Fosils",
+    Nuclear: {
+      label: "Nuclear",
+      color: "#065374",
+    },
+    Bioenergy: {
+      label: "Bioenergy",
+      color: "#065374",
+    },
+    Geothermal: {
+      label: "Geothermal",
+      color: "#065374",
+    },
+    "Fossil fuels": {
+      label: "Fossil fuels",
       color: "#b10fff",
     },
-    hydro: {
+    Hydro: {
       label: "Hydro",
       color: "#ff5d83",
     },
+
   }
 
 return (
@@ -486,7 +492,7 @@ return (
         >
           <CartesianGrid vertical={false} />
           <XAxis
-            dataKey="year"
+            dataKey="Year"
             tickLine={false}
             axisLine={false}
             tickMargin={3}
@@ -503,29 +509,47 @@ return (
             content={<ChartTooltipContent labelKey="Mix" indicator="dot" />}
           />
           <Line
-            dataKey="solar"
-            // type="monotone"
+            type="monotone"
+            dataKey="Solar"
             stroke="#2ccfff"
-          >
-          </Line>
-           <Line
-            dataKey="wind"
+            strokeWidth={2}
+          />
+          <Line
+            type="monotone"
+            dataKey="Wind"
             stroke="#065374"
-            // type="monotone"
-            >
-          </Line>
+            strokeWidth={2}
+          />
           <Line
-            dataKey="hydro"
+            type="monotone"
+            dataKey="Nuclear"
+            stroke="#065374"
+            strokeWidth={2}
+          />
+          <Line
+            type="monotone"
+            dataKey="Hydro"
             stroke="#ff5d83"
-            // type="monotone"
-          >
-          </Line>
+            strokeWidth={2}
+          />
           <Line
-            dataKey="fosils"
+            type="monotone"
+            dataKey="Bioenergy"
             stroke="#b10fff"
-            // type="monotone"
-          >
-          </Line>
+            strokeWidth={2}
+          />
+          {/* <Line
+            type="monotone"
+            dataKey="Fossil fuels"
+            stroke="#ff58df"
+            strokeWidth={2}
+          /> */}
+          <Line
+            type="monotone"
+            dataKey="Geothermal"
+            stroke="#ff58df"
+            strokeWidth={2}
+          />
           <ChartLegend content={<ChartLegendContent />} />
         </LineChart>
       </ChartContainer>
@@ -613,7 +637,7 @@ export const CurrentCapacity = ({className, data}) => {
             layout="vertical"
             margin={{
               left: 30,
-              right: 5,
+              right: 15,
             }}
           >
             <XAxis type="number" hide />
