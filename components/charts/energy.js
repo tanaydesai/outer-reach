@@ -511,30 +511,35 @@ return (
           <Line
             type="monotone"
             dataKey="Solar"
+            dot={false}
             stroke="#2ccfff"
             strokeWidth={2}
           />
           <Line
             type="monotone"
             dataKey="Wind"
+            dot={false}
             stroke="#065374"
             strokeWidth={2}
           />
           <Line
             type="monotone"
             dataKey="Nuclear"
+            dot={false}
             stroke="#065374"
             strokeWidth={2}
           />
           <Line
             type="monotone"
             dataKey="Hydro"
+            dot={false}
             stroke="#ff5d83"
             strokeWidth={2}
           />
           <Line
             type="monotone"
             dataKey="Bioenergy"
+            dot={false}
             stroke="#b10fff"
             strokeWidth={2}
           />
@@ -547,6 +552,7 @@ return (
           <Line
             type="monotone"
             dataKey="Geothermal"
+            dot={false}
             stroke="#ff58df"
             strokeWidth={2}
           />
