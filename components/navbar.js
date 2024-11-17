@@ -24,7 +24,19 @@ export const Navbar = () => {
         <Link href={"/space"}><motion.div whileTap={{scale:0.95}} className='navbar-box'>Space</motion.div></Link>
       </div>
 
-      {path !== "/" && <MenuIcon className='flex sm:hidden' onClick={() => setOpen(!open)}/>}
+      {path !== "/" && <MenuIcon className='flex sm:hidden z-[100]' clicked={open} onClick={() => setOpen(!open)}/>}
+
+      {open && 
+      <div className='fixed top-0 right-0 w-full px-6 p-4 h-full text-center bg-[#d0d0d0]/30 backdrop-blur-[15px] flex flex-col gap-2 items-center justify-center'>
+        <Link href="/"><motion.div whileTap={{scale:0.95}} className='navbar-box absolute top-3 left-3 flex items-center gap-1'>0 <MoveRight size={15}/> {'42'}</motion.div></Link>
+        
+        <Fade>
+          <Link href="/energy"><motion.div whileTap={{scale:0.95}} className="navbar-box text-[30px] border-none">Road to Energy Abundance</motion.div></Link>
+          <Link href="/nuclear"><motion.div whileTap={{scale:0.95}} className='navbar-box text-[30px] border-none'>Nuclear's Revenge</motion.div></Link>
+          <Link href="/ai"><motion.div whileTap={{scale:0.95}} className='navbar-box text-[30px] border-none'>Age of AGI</motion.div></Link>
+          <Link href="/space"><motion.div whileTap={{scale:0.95}} className='navbar-box text-[30px] border-none'>The Space Race</motion.div></Link>
+        </Fade>
+      </div>}
 
     </div>
   );

@@ -17,32 +17,31 @@ import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/co
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CornerDownRight, Earth } from 'lucide-react';
+import { State } from '@/components/state';
 import useSWR from 'swr'
-
 
 
 export default function Home() {
   const fetcher = (...args) => fetch(...args).then(res => res.json())
   
-  
   const { data, error, isLoading } = useSWR('/api/energy',fetcher)
   const [tab, setTab] = useState('mix');
   const [country, setCountry] = useState('World');
 
-  if (error) return <div>failed to load</div>
-  if (isLoading) return <div>loading...</div> 
+  if (error) return <State state={"Error"} />
+  if (isLoading) return <State state={"Loading..."} /> 
 
   return (
     <div className="main pb-0">
 
-        <div className='main-body'>
+        <div className='main-body overflow-hidden'>
           <Tabs defaultValue="mix" onValueChange={setTab} value={tab}>
             <div className='flex gap-2 justify-start items-center'>
             <TabsList>
-              <TabsTrigger value="mix"><div className={`${tab == "mix" ? "" : "hidden"} tag-box  mr-1 `}/> Energy Mix</TabsTrigger>
-              <TabsTrigger value="capacity"><div className={`${tab == "capacity" ? "" : "hidden"} tag-box  mr-1 `}/> Capacity</TabsTrigger>
-              <TabsTrigger value="economics"><div className={`${tab == "economics" ? "" : "hidden"} tag-box  mr-1 `}/> Economics</TabsTrigger>
-              <TabsTrigger value="leaderboard"><div className={`${tab == "leaderboard" ? "" : "hidden"} tag-box  mr-1 `}/> Leaderboards</TabsTrigger>
+              <TabsTrigger value="mix"><div data-value={tab} className="data-[value=mix]:inline-flex hidden tag-box mr-1"/> Energy Mix</TabsTrigger>
+              <TabsTrigger value="capacity"><div data-value={tab} className="data-[value=capacity]:inline-flex hidden tag-box mr-1"/> Capacity</TabsTrigger>
+              <TabsTrigger value="economics"><div data-value={tab} className="data-[value=economics]:inline-flex hidden tag-box mr-1"/> Economics</TabsTrigger>
+              <TabsTrigger value="leaderboard"><div data-value={tab} className="data-[value=leaderboard]:inline-flex hidden tag-box mr-1"/> Leaderboards</TabsTrigger>
             </TabsList>
             <Select defaultValue={country} onValueChange={setCountry}>
               <SelectTrigger>
@@ -67,7 +66,7 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
 
-                <EnergyMix data={data.energyMixData} data3={data.shareEnergyMix} data2={data.electricityMixData} country={country} className={'mt-10'}/>
+                <EnergyMix data={data.mix} country={country} className={'mt-10'}/>
 
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
@@ -79,8 +78,8 @@ export default function Home() {
                 </Accordion>
 
                 <div className='md:flex gap-2 mt-5'>
-                  <EnergyChange data={data.energyChange} country={country} className={'flex-1'}/>
-                  <Energy3Share data={data.energyy3Change} data2={data.electricity3Change} country={country} className={'flex-1 mt-5 md:mt-0'}/>
+                  <EnergyChange data={data.mix} country={country} className={'flex-1'}/>
+                  <Energy3Share data={data.mix} country={country} className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
 
                 <Accordion type="single" collapsible>
@@ -93,8 +92,8 @@ export default function Home() {
                 </Accordion>
 
                 <div className='md:flex gap-2 mt-5'>
-                  <RenewableShare data={data.electricity3Change} country={country} className={'flex-1'}/>
-                  <FossilShare data={data.electricity3Change} country={country} className={'flex-1 mt-5 md:mt-0'}/>
+                  <RenewableShare data={data.mix} country={country} className={'flex-1'}/>
+                  <FossilShare data={data.mix} country={country} className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
             </TabsContent>
             <TabsContent value="capacity">  
@@ -108,8 +107,8 @@ export default function Home() {
                 </Accordion>
 
                 <div className='md:flex gap-2 mt-10'>
-                  <EnergyCapacities data={data.energyCapacities} country={country} className={'flex-1'}/>
-                  <EnergyCapacityAdditions data={data.capaictyAdditions} country={country} className={'flex-1 mt-5 md:mt-0'}/>
+                  <EnergyCapacities data={data.capacity} country={country} className={'flex-1'}/>
+                  <EnergyCapacityAdditions data={data.capacity} country={country} className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
             </TabsContent>
             <TabsContent value="economics">
@@ -124,11 +123,11 @@ export default function Home() {
                 
                 <div className='md:flex gap-2 mt-10'>            
                   <EnergyGDP className={'flex-1'}/>
-                  <EnergyGDPPC data={data.energyGDPPC} country={country} className={'flex-1 mt-5 md:mt-0'}/>
+                  <EnergyGDPPC data={data.mix} country={country} className={'flex-1 mt-5 md:mt-0'}/>
                 </div>  
                 
                 <div className='md:flex gap-2 mt-5'>
-                    <EnergyUse data={data.energyGDPPC} country={country} className={'flex-1'}/>
+                    <EnergyUse data={data.mix} country={country} className={'flex-1'}/>
                     <AvgHouse className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
             </TabsContent>
@@ -142,7 +141,7 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
 
-                <EnergyLeaderBoard className={'mt-10'}/>
+                <EnergyLeaderBoard data={data} className={'mt-10'}/>
             </TabsContent>
           </Tabs>
         </div>

@@ -4,10 +4,11 @@ import { motion } from 'framer-motion';
 import { CurrentCapacity, PlannedCapacity, Capacity } from '@/components/charts/energy';
 import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/tabs"
 import NumberFlow from '@number-flow/react'
+import { getDomainData } from '@/lib/utils';
 
 export const EnergyCapacities = ({className, data, country}) => {
-    data = data.filter((d) => d.Country == country)
-    let value = '600'
+    data = getDomainData(data, country, "" , false)
+    let value =  Object.entries(data.at(-1)).filter(([key]) => ["Solar", "Wind", "Nuclear", "Hydro", "Bioenergy", "Other Renewables"].includes(key)).filter(([key]) => !["Year", "Country"].includes(key)).reduce((acc, [, value]) => acc + (value === "" || value == null ? 0 : value), 0).toFixed(0)
 
     return (
         <div className={`chart ${className}`}>
@@ -19,9 +20,9 @@ export const EnergyCapacities = ({className, data, country}) => {
                     <TabsTrigger2 value="pc">Projected (2030)</TabsTrigger2>
                 </TabsList2>
                 <TabsContent2 value="cc">
-                    <CurrentCapacity data={Object.entries(data.at(-1)).filter(([key]) => key === "Solar" || key === "Wind" || key === "Nuclear" || key === "Hydro" || key === "Bioenergy" || key === "Other Renewables" || key === "Fossil Fuels" ).map(([type, value]) => ({ type, value }))} className='w-full h-[370px] mt-4'/>
+                    <CurrentCapacity data={Object.entries(data.at(-1)).filter(([key]) => key === "Solar" || key === "Wind" || key === "Nuclear" || key === "Hydro" || key === "Bioenergy" || key === "Other Renewables").map(([type, value]) => ({ type, value }))} className='w-full h-[370px] mt-4'/>
                 </TabsContent2>
-                <TabsContent2 value="yc">
+                <TabsContent2 value="yc"> 
                     <Capacity data={data} className='w-full h-[370px] mt-4'/>
                 </TabsContent2>
                 <TabsContent2 value="pc">
@@ -29,8 +30,8 @@ export const EnergyCapacities = ({className, data, country}) => {
                 </TabsContent2>
             </Tabs2>
             <div className='cursor-default sm:flex'>
-                <div className='chart-number'><NumberFlow value={value}/>Kwh </div>{/* format={{ style: 'percent' }} */}
-                <div className='chart-desc'>Current comulative clean energy capacity, ranking 5th in the world.</div>
+                <div className='chart-number'><NumberFlow value={value}/>GW</div>
+            <div className='chart-desc'>Current comulative clean energy (renewables + nuclear) capacity as of {data.at(-1)["Year"]}, ranking 5th in the world.</div>
             </div>
         </div>
     )

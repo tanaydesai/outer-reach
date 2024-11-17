@@ -59,7 +59,7 @@ export default function Home() {
 
               <Link href={'/space'}>
               <div className='box group'>
-                  <div className='box-title'><FlaskIcon size={20}/>Space Race</div> 
+                  <div className='box-title'><FlaskIcon size={20}/>The Space Race</div> 
                   <RocketIcon className="group-hover:-rotate-12 transition-all duration-300"/>     
                   <div className='box-desc'>The blessing that is SpaceX, the economics, impact and need for space exploitation.</div>
               </div>

@@ -42,7 +42,7 @@
     }
 
     .box {
-        @apply h-[350px] border-[1.5px] border-[#d9d9d9] relative overflow-auto flex-1 rounded-[5px] mt-4 sm:mt-0
+        @apply flex-1 min-h-[350px] border-[1.5px] border-[#d9d9d9] relative overflow-auto flex-1 rounded-[5px] mt-4 sm:mt-0
     }
     .box-title {
         @apply text-[15px] h-[30px] px-1 m-2 flex gap-1.5 items-center w-fit rounded-[5px] font-a1

@@ -3,9 +3,10 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ShareRenewables } from '@/components/charts/energy';
 import { ArrowUp } from 'lucide-react';
+import { getDomainData } from '@/lib/utils';
 
 export const RenewableShare = ({className, data, country}) => {
-    data = data.filter((d) => d.Country == country).map(item => ({ Year: item.Year, ["Renewables"]: item["Renewables"] + item["Nuclear"] }))
+    data = getDomainData(data, country, "e-3-%").filter((d) => d.Country == country).map(item => ({ Year: item.Year, ["Renewables"]: item["Renewables"] + item["Nuclear"] }))
     let value = (((data.at(-1)["Renewables"] - data.at(-2)["Renewables"]) / data.at(-2)["Renewables"]) * 100).toFixed(1);
 
     return (

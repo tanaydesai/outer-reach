@@ -185,7 +185,7 @@ export const RocketIcon = ({className, size=170}) => {
     )
 }
 
-export const MenuIcon = ({className, size=28}) => {
+export const MenuIcon = ({className, size=28, onClick, clicked}) => {
     const controls = useAnimation();
     const lineVariants = {
       normal: {
@@ -208,8 +208,10 @@ export const MenuIcon = ({className, size=28}) => {
     return (
       <div
         className={`cursor-pointer select-none px-2 text-[#9b9b9b] hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center ${className}`}
-        onMouseEnter={() => controls.start('animate')}
-        onMouseLeave={() => controls.start('normal')}
+        onClick={() => {
+          controls.start(clicked ? 'normal' : 'animate');
+          onClick();
+        }}
         >
         <svg
           xmlns="http://www.w3.org/2000/svg"

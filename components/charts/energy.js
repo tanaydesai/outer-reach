@@ -1,9 +1,7 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react'
 import { Area, AreaChart,Line, LineChart,  Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList, Cell } from "recharts"
-import { ChartConfig,ChartContainer,ChartTooltip,ChartTooltipContent,ChartLegend,ChartLegendContent} from "@/components/ui/chart"
-import { FossilShare } from '../energy-cards/fossils-share'
-import { Geo } from 'next/font/google'
+import { ChartConfig, ChartContainer,ChartTooltip,ChartTooltipContent,ChartLegend,ChartLegendContent} from "@/components/ui/chart"
 
 export const EnergyShare = ({className, data}) => {
     const chartData = data ? data : []
@@ -133,30 +131,14 @@ export const EnergyShare = ({className, data}) => {
   )
 }
 
-export const LeaderBoards = ({className}) => {
-  const chartData = [
-   {country:"United States", data: 95},
-   {country:"United Kingdom", data: 80},
-   {country:"Germany", data: 75},
-   {country:"France", data: 65},
-   {country:"Japan", data: 60},
-   {country:"China", data: 55},
-   {country:"India", data: 50},
-   {country:"Brazil", data: 45},
-   {country:"Australia", data: 40},
-   {country:"Canada", data: 35},
-   {country:"South Korea", data: 30},
-   {country:"Russia", data: 25},
-   {country:"Mexico", data: 20},
-   {country:"Saudi Arabia", data: 15},
-   {country:"Turkey", data: 10},
-  ]
+export const LeaderBoards = ({className, data, unit}) => {
+  const chartData = data ? data : []
   const chartConfig = {
-    country: {
+    Country: {
       label: "Country",
       color: "green",
     },
-    data: {
+    Value: {
       label: "Value",
       color: "hsl(var(--chart-2))",
     },
@@ -170,38 +152,38 @@ export const LeaderBoards = ({className}) => {
             layout="vertical"
             margin={{
               left: 10,
-              right: 5,
+              right: 10,
             }}
           >
             <YAxis
-              dataKey="country"
+              dataKey="Country"
               type="category"
               tickLine={false}
-              tickMargin={10}
+              tickMargin={0}
               axisLine={false}
+              fontSize={10}
             />
-            <XAxis dataKey="data" type="number" hide />
+            <XAxis dataKey="Value" type="number" hide />
             <Bar
-              dataKey="data"
+              dataKey="Value"
               layout="vertical"
               fill="#2eec7d"
               radius={7}
               barSize={50}
             >
             <LabelList
-                dataKey="data"
-                position="insideRight"
-                offset={8}
-                className="fill-[#656565]"
-                fontSize={20}
-                formatter={(value) => `${value} %`}
+                dataKey="Value"
+                position="right"
+                offset={5}
+                className="fill-[#656565] whitespace-nowrap"
+                fontSize={13}
+                formatter={(value) => `${value.toFixed(0)}${unit}`}
               />
             </Bar>
           </BarChart>
         </ChartContainer>
   )
 }
-
 
 export const AnnualEnergyChange = ({className, data}) => {
    const chartData = data ? data : []
@@ -210,7 +192,7 @@ export const AnnualEnergyChange = ({className, data}) => {
     Year: {
       label: "Year",
     },
-     "Change (%)": {
+     "Change %": {
        label: "Change (%)",
        color: "hsl(var(--chart-1))",
      },
@@ -242,7 +224,7 @@ export const AnnualEnergyChange = ({className, data}) => {
                cursor={false}
               content={<ChartTooltipContent labelKey="Year" />}
              />
-             <Bar dataKey="Change (%)" fill="#2eec7d" radius={8}>
+             <Bar dataKey="Change %" fill="#2eec7d" radius={8}>
              </Bar>
            </BarChart>
      </ChartContainer>
@@ -310,7 +292,6 @@ export const AnnualEnergyChange = ({className, data}) => {
      </ChartContainer>
    )
  }
-
 
  export const Capacity = ({className, data}) => {
   const chartData = data ? data : []
@@ -440,7 +421,6 @@ return (
 )
 }
 
-
  export const CapacityAdditions = ({className, data}) => {
   const chartData = data ? data : []
 
@@ -562,7 +542,6 @@ return (
   )
 }
 
-
 export const PlannedCapacity = ({className}) => {
   
   const chartData = [
@@ -622,7 +601,6 @@ export const PlannedCapacity = ({className}) => {
   )
 }
 
-
 export const CurrentCapacity = ({className, data}) => {
   const chartData = data ? data : []
 
@@ -671,7 +649,6 @@ export const CurrentCapacity = ({className, data}) => {
         </ChartContainer>
   )
 }
-
 
 export const EnergyConsumptionGDP = ({className}) => {
   const chartData = [
@@ -963,7 +940,6 @@ return (
       </ChartContainer>
 )
 }
-
 
 export const ShareFossils = ({className, data}) => {
   const chartData = data ? data : []
