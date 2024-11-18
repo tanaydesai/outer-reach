@@ -125,7 +125,7 @@ export const EnergyShare = ({className, data}) => {
               fill="#ff58df"
               fillOpacity={0.2}
             />
-            <ChartLegend content={<ChartLegendContent />} />
+            <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />
           </AreaChart>
         </ChartContainer>
   )
@@ -152,7 +152,7 @@ export const LeaderBoards = ({className, data, unit}) => {
             layout="vertical"
             margin={{
               left: 10,
-              right: 10,
+              // right: 15,
             }}
           >
             <YAxis
@@ -175,9 +175,8 @@ export const LeaderBoards = ({className, data, unit}) => {
                 dataKey="Value"
                 position="right"
                 offset={5}
-                className="fill-[#656565] whitespace-nowrap"
-                fontSize={13}
-                formatter={(value) => `${value.toFixed(0)}${unit}`}
+                fontSize={14}
+                formatter={(value) => `${value ? value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") : "N/A"}${unit}`}
               />
             </Bar>
           </BarChart>
@@ -221,10 +220,10 @@ export const AnnualEnergyChange = ({className, data}) => {
                axisLine={false}
              />
              <ChartTooltip
-               cursor={false}
+              //  cursor={false}
               content={<ChartTooltipContent labelKey="Year" />}
              />
-             <Bar dataKey="Change %" fill="#2eec7d" radius={8}>
+             <Bar dataKey="Change %" fill="#2eec7d" radius={5}>
              </Bar>
            </BarChart>
      </ChartContainer>
@@ -287,7 +286,7 @@ export const AnnualEnergyChange = ({className, data}) => {
               strokeWidth={2}
               dot={false} 
             />
-            <ChartLegend content={<ChartLegendContent />} />
+            <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />
           </LineChart>
      </ChartContainer>
    )
@@ -415,7 +414,7 @@ return (
             fill="#ff58df"
             fillOpacity={0.2}
           /> */}
-          <ChartLegend content={<ChartLegendContent />} />
+          <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />
         </AreaChart>
       </ChartContainer>
 )
@@ -464,10 +463,11 @@ return (
         <LineChart
           accessibilityLayer
           data={chartData}
+          // className='px-1'
           margin={{
             top: 15,
-            left: -15,
-            right: 15,
+            left: -10,
+            // right: 5,
           }}
         >
           <CartesianGrid vertical={false} />
@@ -536,7 +536,7 @@ return (
             stroke="#ff58df"
             strokeWidth={2}
           />
-          <ChartLegend content={<ChartLegendContent />} />
+          <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />
         </LineChart>
       </ChartContainer>
   )
@@ -727,7 +727,7 @@ return (
               fontSize={12}
             />
           </Line>
-          <ChartLegend content={<ChartLegendContent />} />
+          <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />
         </LineChart>
       </ChartContainer>
 )
@@ -800,7 +800,7 @@ return (
               fontSize={12}
             /> */}
           </Line>
-          <ChartLegend content={<ChartLegendContent />} />
+          <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />
         </LineChart>
       </ChartContainer>
 )

@@ -19,10 +19,10 @@ export const EnergyMix = ({className, data, country}) => {
                     <TabsTrigger2 value="elc">Electricity</TabsTrigger2>
                 </TabsList2>
                 <TabsContent2 value="ec">
-                    <EnergyShare data={type === "abs" ? getDomainData(data, country, "e-Twh") : getDomainData(data, country, "e-%")} className='w-full flex-1 h-[350px]'/>
+                    <EnergyShare data={type === "abs" ? getDomainData(data, country, "e-TWh") : getDomainData(data, country, "e-%")} className='w-full flex-1 h-[350px]'/>
                 </TabsContent2>
                 <TabsContent2 value="elc">
-                    <EnergyShare data={getDomainData(data, country, "elc-Twh")} className='w-full flex-1 min-h-[350px]'/>
+                    <EnergyShare data={getDomainData(data, country, "elc-TWh")} className='w-full flex-1 min-h-[350px]'/>
                 </TabsContent2>
             </Tabs2>
             <ToggleGroup type="single" onValueChange={setType} defaultValue="abs">
@@ -30,7 +30,7 @@ export const EnergyMix = ({className, data, country}) => {
                 <ToggleGroupItem value="%">%</ToggleGroupItem>
             </ToggleGroup>
             <div className='cursor-default sm:flex'>
-                <div className='chart-number'><NumberFlow value={Object.entries(getDomainData(data, country, "e-Twh").at(-1)).filter(([key]) => !["Year", "Code", "Country"].includes(key)).reduce((acc, [, value]) => acc + value, 0).toFixed(0)}/>TWh </div>
+                <div className='chart-number'><NumberFlow value={Object.entries(getDomainData(data, country, "e-TWh").at(-1)).filter(([key]) => !["Year", "Code", "Country"].includes(key)).reduce((acc, [, value]) => acc + value, 0).toFixed(0)}/>TWh </div>
                 <div className='chart-desc'>is the total energy {country}'s energy comes from renewable and nuclear energy sources thus ranking 20th in the world in clean energy consumption.</div>
             </div>
         </div>

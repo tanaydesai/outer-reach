@@ -23,7 +23,7 @@ const TabsTrigger = React.forwardRef(({ className, ...props }, ref) => (
       <TabsPrimitive.Trigger
       ref={ref}
       className={cn(
-        "font-a1  group py-1 px-2 text-[#aaaaaa] data-[state=active]:bg-[#eeeeee] hover:bg-[#eeeeee] hover:text-black outline-none transition-all rounded-[5px] text-[14px] whitespace-nowrap disabled:pointer-events-none  data-[state=active]:text-black data-[state=active]:stroke-[#1e1f2b] dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
+        "font-a1 group py-1 px-2 text-[#aaaaaa] data-[state=active]:bg-[#eeeeee] hover:bg-[#eeeeee] hover:text-black outline-none transition-all rounded-[5px] text-[14px] whitespace-nowrap disabled:pointer-events-none  data-[state=active]:text-black data-[state=active]:stroke-[#1e1f2b] dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
         className
       )}
       {...props} />
@@ -35,7 +35,7 @@ const TabsContent = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "h-[calc(100vh-125px)] overflow-auto mt-5 pb-5  ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300",
+      "h-[calc(100vh-125px)] pb-5 overflow-auto mt-5",
       className
     )}
     {...props} />

@@ -6,7 +6,7 @@ import NumberFlow from '@number-flow/react'
 import { getDomainData } from '@/lib/utils';
 
 export const EnergyChange = ({className, data, country}) => {
-    data = getDomainData(data, country, "e-chng-%")
+    data = getDomainData(data, country, "e-chng-%").slice(-20)
     let value = (data.slice(-5).reduce((acc, item) => acc * (1 + item["Change %"] / 100), 1) - 1 )
     
     return (

@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import { CurrentCapacity, PlannedCapacity, Capacity } from '@/components/charts/energy';
 import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/tabs"
 import NumberFlow from '@number-flow/react'
-import { getDomainData } from '@/lib/utils';
+import { getDomainData, sortData } from '@/lib/utils';
 
 export const EnergyCapacities = ({className, data, country}) => {
-    data = getDomainData(data, country, "" , false)
+    data = getDomainData(data, country)
     let value =  Object.entries(data.at(-1)).filter(([key]) => ["Solar", "Wind", "Nuclear", "Hydro", "Bioenergy", "Other Renewables"].includes(key)).filter(([key]) => !["Year", "Country"].includes(key)).reduce((acc, [, value]) => acc + (value === "" || value == null ? 0 : value), 0).toFixed(0)
 
     return (
@@ -20,7 +20,7 @@ export const EnergyCapacities = ({className, data, country}) => {
                     <TabsTrigger2 value="pc">Projected (2030)</TabsTrigger2>
                 </TabsList2>
                 <TabsContent2 value="cc">
-                    <CurrentCapacity data={Object.entries(data.at(-1)).filter(([key]) => key === "Solar" || key === "Wind" || key === "Nuclear" || key === "Hydro" || key === "Bioenergy" || key === "Other Renewables").map(([type, value]) => ({ type, value }))} className='w-full h-[370px] mt-4'/>
+                    <CurrentCapacity data={sortData(Object.entries(data.at(-1)).filter(([key]) => key === "Solar" || key === "Wind" || key === "Nuclear" || key === "Hydro" || key === "Bioenergy" || key === "Other Renewables").map(([type, value]) => ({ type, value })), "desc", "value")} className='w-full h-[370px] mt-4'/>
                 </TabsContent2>
                 <TabsContent2 value="yc"> 
                     <Capacity data={data} className='w-full h-[370px] mt-4'/>

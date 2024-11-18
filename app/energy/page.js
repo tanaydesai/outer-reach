@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div className="main pb-0">
 
-        <div className='main-body overflow-hidden'>
+        <div className='main-body'>
           <Tabs defaultValue="mix" onValueChange={setTab} value={tab}>
             <div className='flex gap-2 justify-start items-center'>
             <TabsList>
