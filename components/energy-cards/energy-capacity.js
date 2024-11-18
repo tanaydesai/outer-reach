@@ -5,6 +5,7 @@ import { CurrentCapacity, PlannedCapacity, Capacity } from '@/components/charts/
 import { Tabs2, TabsContent2, TabsList2, TabsTrigger2 } from "@/components/ui/tabs"
 import NumberFlow from '@number-flow/react'
 import { getDomainData, sortData } from '@/lib/utils';
+import { Menu } from '@/components/menu';
 
 export const EnergyCapacities = ({className, data, country}) => {
     data = getDomainData(data, country)
@@ -12,7 +13,7 @@ export const EnergyCapacities = ({className, data, country}) => {
 
     return (
         <div className={`chart ${className}`}>
-            <h1 className='chart-title'>Renewable cumulative installed capacity by sources (GW), {country}</h1>
+            <h1 className='chart-title'>Comulative installed capacity of renewables by sources (GW), {country}</h1>
             <Tabs2 defaultValue="cc">
                 <TabsList2 className="my-3">
                     <TabsTrigger2 value="cc">Current</TabsTrigger2>
@@ -29,9 +30,10 @@ export const EnergyCapacities = ({className, data, country}) => {
                     <PlannedCapacity className='w-full h-[370px] mt-4'/>
                 </TabsContent2>
             </Tabs2>
+            <Menu />
             <div className='cursor-default sm:flex'>
                 <div className='chart-number'><NumberFlow value={value}/>GW</div>
-            <div className='chart-desc'>Current comulative clean energy (renewables + nuclear) capacity as of {data.at(-1)["Year"]}, ranking 5th in the world.</div>
+                <div className='chart-desc'>current comulative clean energy capacity as of {data.at(-1)["Year"]}.</div>
             </div>
         </div>
     )

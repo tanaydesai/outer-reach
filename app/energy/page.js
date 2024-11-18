@@ -17,7 +17,6 @@ import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/co
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CornerDownRight, Earth } from 'lucide-react';
-import { State } from '@/components/state';
 import useSWR from 'swr'
 
 
@@ -28,8 +27,8 @@ export default function Home() {
   const [tab, setTab] = useState('mix');
   const [country, setCountry] = useState('World');
 
-  if (error) return <State state={"Error"} />
-  if (isLoading) return <State state={"Loading..."} /> 
+  if (error) return <div className='third-page'>Error</div>
+  if (isLoading) return <div className='third-page'>Loading...</div>
 
   return (
     <div className="main pb-0">

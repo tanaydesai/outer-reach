@@ -5,8 +5,8 @@ import { Navbar } from "@/components/navbar"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'OUTER REACH',
-  description: "Optimistic and data-backed approach to track progress of the world's frontier technologies",
+  title: 'Outer Reach',
+  description: "Where the bells of progress ring",
 }
 
 export default function RootLayout({ children }) {

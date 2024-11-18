@@ -636,7 +636,7 @@ export const CurrentCapacity = ({className, data}) => {
               cursor={false}
               content={<ChartTooltipContent labelKey="type" labelFormatter={value => `${value}`}/>}
             />
-            <Bar dataKey="value" stackId="a" fill="#ffc6f7" radius={[0, 5, 5, 0]}>
+            <Bar dataKey="value" stackId="a" fill="#ffc6f7" radius={5}>
               <LabelList
                 dataKey="value"
                 position="right"
@@ -779,7 +779,6 @@ return (
           <Line
             dataKey="Primary energy consumption per capita (kWh/person)"
             stroke='#000000'
-            dot={false}
             >
             {/* <LabelList
               position="top"
@@ -791,7 +790,6 @@ return (
           <Line
             dataKey="GDP per capita, PPP (constant 2017 international $)"
             stroke='#fe4311'
-            dot={false}
           >
             {/* <LabelList
               position="bottom"

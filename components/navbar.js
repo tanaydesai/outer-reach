@@ -4,7 +4,6 @@ import { MoveRight } from 'lucide-react';
 import { motion, useAnimation } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import Link from 'next/link';
-import { ListEnd } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { MenuIcon } from './icons';
 
@@ -31,10 +30,10 @@ export const Navbar = () => {
         <Link href="/"><motion.div whileTap={{scale:0.95}} className='navbar-box absolute top-3 left-3 flex items-center gap-1'>0 <MoveRight size={15}/> {'42'}</motion.div></Link>
         
         <Fade>
-          <Link href="/energy"><motion.div whileTap={{scale:0.95}} className="navbar-box text-[30px] border-none">Road to Energy Abundance</motion.div></Link>
-          <Link href="/nuclear"><motion.div whileTap={{scale:0.95}} className='navbar-box text-[30px] border-none'>Nuclear's Revenge</motion.div></Link>
-          <Link href="/ai"><motion.div whileTap={{scale:0.95}} className='navbar-box text-[30px] border-none'>Age of AGI</motion.div></Link>
-          <Link href="/space"><motion.div whileTap={{scale:0.95}} className='navbar-box text-[30px] border-none'>The Space Race</motion.div></Link>
+          <Link href="/energy"><motion.div whileTap={{scale:0.95}} className="navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none">Road to Energy Abundance</motion.div></Link>
+          <Link href="/nuclear"><motion.div whileTap={{scale:0.95}} className='navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none'>Nuclear's Revenge</motion.div></Link>
+          <Link href="/ai"><motion.div whileTap={{scale:0.95}} className='navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none'>Age of AGI</motion.div></Link>
+          <Link href="/space"><motion.div whileTap={{scale:0.95}} className='navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none'>The Space Race</motion.div></Link>
         </Fade>
       </div>}
 
