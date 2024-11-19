@@ -9,7 +9,7 @@ import Marquee from "react-fast-marquee";
 
 export default function Home() {
   return (
-      <div className='main py-[80px]'>
+      <div className='main py-[80px] overflow-x-hidden'>
   
         <div className='w-full h-fit'> 
           <Fade className='h-[70px] sm:h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[200,"Welcome", "Welcome to", 'Welcome to']} className='title leading-[85px] md:leading-[85px]'/></Fade>
