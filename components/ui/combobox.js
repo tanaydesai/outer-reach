@@ -6,7 +6,7 @@ import {Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandL
 import { Popover, PopoverContent, PopoverTrigger,} from "@/components/ui/popover"
 
 
-export function ComboboxDemo({ values, value="", setValue }) {
+export function Combobox({ values, value="", setValue }) {
   const [open, setOpen] = React.useState(false)
   values = values.map((c) => ({ label: c, value: c }))
 

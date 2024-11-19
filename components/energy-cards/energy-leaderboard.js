@@ -25,7 +25,7 @@ export const EnergyLeaderBoard = ({className, data}) => {
 
     return (
         <div className={`chart ${className}`}>
-            <h1 className='chart-title mb-5'>Energy Champions</h1>
+            <h1 className='chart-title mb-5'>Energy Superstars</h1>
             <Select defaultValue={domain} onValueChange={setDomain}>
                 <SelectTrigger className="mx-3 mb-5">
                     <SelectValue placeholder="Domain" />

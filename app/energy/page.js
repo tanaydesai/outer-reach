@@ -13,12 +13,10 @@ import { RenewableShare } from '@/components/energy-cards/renewable-share';
 import { FossilShare } from '@/components/energy-cards/fossils-share';
 import { EnergyGDP } from '@/components/energy-cards/energy-gdp';
 import { EnergyGDPPC } from '@/components/energy-cards/energy-gdp-pc';
-import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue, } from "@/components/ui/select"
+import { Combobox } from '@/components/ui/combobox';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CornerDownRight, Earth } from 'lucide-react';
 import useSWR from 'swr'
-import { ComboboxDemo } from '@/components/ui/combobox';
 
 export default function Home() {
   const fetcher = (...args) => fetch(...args).then(res => res.json())
@@ -36,30 +34,20 @@ export default function Home() {
         <div className='main-body overflow-x-hidden'>
           <Tabs defaultValue="mix" onValueChange={setTab} value={tab}>
             <div className='flex gap-2 justify-start items-center'>
-            <TabsList>
-              <TabsTrigger value="mix"><div data-value={tab} className="data-[value=mix]:inline-flex hidden tag-box mr-1"/> Energy Mix</TabsTrigger>
-              <TabsTrigger value="capacity"><div data-value={tab} className="data-[value=capacity]:inline-flex hidden tag-box mr-1"/> Capacity</TabsTrigger>
-              <TabsTrigger value="economics"><div data-value={tab} className="data-[value=economics]:inline-flex hidden tag-box mr-1"/> Economics</TabsTrigger>
-              <TabsTrigger value="leaderboard"><div data-value={tab} className="data-[value=leaderboard]:inline-flex hidden tag-box mr-1"/> Leaderboards</TabsTrigger>
-            </TabsList>
-            {/* <Select onValueChange={setCountry}>
-              <SelectTrigger>
-                  <SelectValue placeholder={<Earth size={22} />}/>
-              </SelectTrigger>
-              <SelectContent>
-                {data.countries.map((c) => (
-                  <SelectItem key={c} value={c}>{c}</SelectItem>
-                ))}
-              </SelectContent>
-            </Select> */}
-            <ComboboxDemo values={data.countries} value={country} setValue={setCountry}/>
+              <TabsList>
+                <TabsTrigger value="mix"><div data-value={tab} className="data-[value=mix]:inline-flex hidden tag-box mr-1"/> Energy Mix</TabsTrigger>
+                <TabsTrigger value="capacity"><div data-value={tab} className="data-[value=capacity]:inline-flex hidden tag-box mr-1"/> Capacity</TabsTrigger>
+                <TabsTrigger value="economics"><div data-value={tab} className="data-[value=economics]:inline-flex hidden tag-box mr-1"/> Economics</TabsTrigger>
+                <TabsTrigger value="leaderboard"><div data-value={tab} className="data-[value=leaderboard]:inline-flex hidden tag-box mr-1"/> Leaderboards</TabsTrigger>
+              </TabsList>
+              <Combobox values={data.countries} value={country} setValue={setCountry}/>
             </div>
             <TabsContent value="mix">
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>The world's energy mix is rapidly adopting <span className="acc-span">clean energy</span> with <span className="acc-span">nuclear energy</span> making a big comeback</AccordionTrigger>
+                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span>.</AccordionTrigger>
                     <AccordionContent>
-                      Countries like <span className="acc-span">Norway, France and Denmark</span> get {">"}80% of their energy from <span className="acc-span">renewables, nuclear and wind</span> respectively.
+                      The world already gets almost <span className="acc-span">40% of its electricity </span> from <span className="acc-span">clean energy sources</span> while adopting even more at a <span className="acc-span">rapid pace</span> with <span className="acc-span">nuclear energy</span> making a big comeback.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -68,9 +56,11 @@ export default function Home() {
 
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger className="mt-7">What's the progress of Renewables and Nuclear energy?</AccordionTrigger>
+                    <AccordionTrigger className="mt-7">Countries like India and is increasing its energy consumption rapidly. While the UK is <span className="acc-span">losing</span> ground. Global share of <span className="acc-span">renewables and nuclear</span> in the mix is <span className="acc-span">evolving at a steady pace</span>.</AccordionTrigger>
                     <AccordionContent>
-                      Installations <span className="acc-span">increasingly Renewable and Nuclear energy</span> which is <span className="acc-span">speeding up</span>.
+                      More the <span className="acc-span">increase</span> in primary energy consumption, the <span className="acc-span">more prosperous</span> the world becomes.
+                      <br /><br />
+                      Governments are realizing the <span className="acc-span">grave mistake</span> of slowing or shutting down Nuclear reactors and are rushing to rectify their mistake by <span className="acc-span">increasing its capacity</span>.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -83,9 +73,6 @@ export default function Home() {
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
                     <AccordionTrigger><span className="acc-span">Clean energy</span> consumption is <span className="acc-span">rising</span> while fossil fuels remain either <span className="acc-span">stagnant or falling.</span></AccordionTrigger>
-                    <AccordionContent>
-                      Countries like <span className="acc-span">Norway, France and Denmark</span> get {">"}80% of their energy from <span className="acc-span">renewables, nuclear and wind</span> respectively.
-                    </AccordionContent>
                   </AccordionItem>
                 </Accordion>
 
@@ -97,9 +84,11 @@ export default function Home() {
             <TabsContent value="capacity">  
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Capacity installations of <span className="acc-span">solar and wind</span> are through the moon and <span className="acc-span">accelerating</span> while countries race to get <span className="acc-span">more nuclear online</span>.</AccordionTrigger>
+                    <AccordionTrigger>Capacity installations of <span className="acc-span">solar and wind</span> are through the moon and <span className="acc-span">accelerating</span> further.</AccordionTrigger>
                     <AccordionContent>
-                      While solar and wind energy's benifits are <span className="acc-span">well understood,</span> it required <span className="acc-span">an AI arms race</span> for the world's eyes to open for <span className="acc-span">nuclear energy</span> again.
+                    Countries like <span className="acc-span">China lead</span> the world in having the largest <span className="acc-span">solar and wind</span> capacity. While the <span className="acc-span">United States</span> leads in <span className="acc-span">nuclear</span> capacity.
+                    <br /><br />
+                    The Projected 2030 clean energy capacity is <span className="acc-span">six times</span> the current levels and becoming <span className="acc-span">more plausible</span> everyday.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -108,6 +97,12 @@ export default function Home() {
                   <EnergyCapacities data={data.capacity} country={country} className={'flex-1'}/>
                   <EnergyCapacityAdditions data={data.capacity} country={country} className={'flex-1 mt-5 md:mt-0'}/>
                 </div>
+
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>Asia leads the world in <span className="acc-span">solar capacity additions</span> at a 46% year-on-year growth. While Europe grew their solar additions by <span className="acc-span">9% every year</span> for the last 5 years.</AccordionTrigger>
+                  </AccordionItem>
+                </Accordion>
             </TabsContent>
             <TabsContent value="economics">
                 <Accordion type="single" collapsible>
@@ -132,9 +127,9 @@ export default function Home() {
             <TabsContent value="leaderboard">      
               <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Pin the countries together. Find out the ones that are doing it right and the ones that have more work to do.</AccordionTrigger>
+                    <AccordionTrigger>Find out the countries that are doing it right and the ones that have more work to do.</AccordionTrigger>
                     <AccordionContent>
-                      Countries like <span className="acc-span">Norway, France and Denmark</span> get {">"}80% of their energy from <span className="acc-span">renewables, nuclear and wind</span> respectively.
+                    <span className="acc-span">Iceland, Norway and Luxembourg</span> lead the world in renewables % in their electricity mix. With the former two having the <span className="acc-span">largest energy consumption per capita</span> in the world due to their extreme weather and smaller populations.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
