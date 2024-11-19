@@ -18,7 +18,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CornerDownRight, Earth } from 'lucide-react';
 import useSWR from 'swr'
-
+import { ComboboxDemo } from '@/components/ui/combobox';
 
 export default function Home() {
   const fetcher = (...args) => fetch(...args).then(res => res.json())
@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className="main pb-0">
 
-        <div className='main-body'>
+        <div className='main-body overflow-x-hidden'>
           <Tabs defaultValue="mix" onValueChange={setTab} value={tab}>
             <div className='flex gap-2 justify-start items-center'>
             <TabsList>
@@ -42,16 +42,17 @@ export default function Home() {
               <TabsTrigger value="economics"><div data-value={tab} className="data-[value=economics]:inline-flex hidden tag-box mr-1"/> Economics</TabsTrigger>
               <TabsTrigger value="leaderboard"><div data-value={tab} className="data-[value=leaderboard]:inline-flex hidden tag-box mr-1"/> Leaderboards</TabsTrigger>
             </TabsList>
-            <Select onValueChange={setCountry}>
+            {/* <Select onValueChange={setCountry}>
               <SelectTrigger>
-                  <SelectValue placeholder={<><div className='hidden sm:block'>Country</div><Earth className='sm:hidden'/></>}/>
+                  <SelectValue placeholder={<Earth size={22} />}/>
               </SelectTrigger>
               <SelectContent>
                 {data.countries.map((c) => (
                   <SelectItem key={c} value={c}>{c}</SelectItem>
                 ))}
               </SelectContent>
-            </Select>
+            </Select> */}
+            <ComboboxDemo values={data.countries} value={country} setValue={setCountry}/>
             </div>
             <TabsContent value="mix">
                 <Accordion type="single" collapsible>

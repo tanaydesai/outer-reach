@@ -76,7 +76,15 @@ export const EnergyShare = ({className, data}) => {
               strokeWidth={2}
               fill="#2ccfff"
               fillOpacity={0.2}
-            />
+            >
+              <LabelList
+                dataKey="Solar"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Solar"] === value) == chartData.length - 15 ? "Solar" : ""}
+              />
+              </Area>
             <Area
               type="monotone"
               dataKey="Wind"
@@ -84,7 +92,15 @@ export const EnergyShare = ({className, data}) => {
               strokeWidth={2}
               fill="#065374"
               fillOpacity={0.2}
-            />
+            >
+              <LabelList
+                dataKey="Wind"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Wind"] === value) == chartData.length - 5 ? "Wind" : ""}
+              />
+              </Area>
             <Area
               type="monotone"
               dataKey="Nuclear"
@@ -92,7 +108,15 @@ export const EnergyShare = ({className, data}) => {
               strokeWidth={2}
               fill="#ff58df"
               fillOpacity={0.2}
-            />
+            >
+              <LabelList
+                dataKey="Nuclear"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Nuclear"] === value) == chartData.length - 10 ? "Nuclear" : ""}
+              />
+              </Area>
             <Area
               type="monotone"
               dataKey="Hydro"
@@ -100,7 +124,15 @@ export const EnergyShare = ({className, data}) => {
               strokeWidth={2}
               fill="#ff5d83"
               fillOpacity={0.2}
-            />
+            >
+              <LabelList
+                dataKey="Hydro"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Hydro"] === value) == chartData.length - 20 ? "Hydro" : ""}
+              />
+              </Area>
             <Area
               type="monotone"
               dataKey="Gas"
@@ -108,7 +140,15 @@ export const EnergyShare = ({className, data}) => {
               strokeWidth={2}
               fill="#ff5d83"
               fillOpacity={0.2}
-            />
+            >
+              <LabelList
+                dataKey="Gas"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Gas"] === value) == chartData.length - 10 ? "Gas" : ""}
+              />
+              </Area>
             <Area
               type="monotone"
               dataKey="Coal"
@@ -116,7 +156,15 @@ export const EnergyShare = ({className, data}) => {
               strokeWidth={2}
               fill="#b10fff"
               fillOpacity={0.2}
-            />
+            >
+              <LabelList
+                dataKey="Coal"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Coal"] === value) == chartData.length - 15 ? "Coal" : ""}
+              />
+              </Area>
             <Area
               type="monotone"
               dataKey="Oil"
@@ -124,7 +172,15 @@ export const EnergyShare = ({className, data}) => {
               strokeWidth={2}
               fill="#ff58df"
               fillOpacity={0.2}
-            />
+            >
+              <LabelList
+                dataKey="Oil"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Oil"] === value) == chartData.length - 5 ? "Oil" : ""}
+              />
+              </Area>
             <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />
           </AreaChart>
         </ChartContainer>
@@ -234,13 +290,23 @@ export const AnnualEnergyChange = ({className, data}) => {
               content={<ChartTooltipContent labelKey="Year" />}
              />
              <Bar dataKey="Change %" fill="#2eec7d" radius={5}>
-              <LabelList
+             <LabelList
                 dataKey="Change %"
                 position="top"
                 offset={5}
                 fontSize={12}
                 formatter={(value) => `${value ? value.toFixed(0) : "N/A"}%`}
               />
+              {chartData.map((item) => (
+                <Cell
+                  key={item["Change %"]}
+                  fill={
+                    item["Change %"] > 0
+                      ? "#2eec7d"
+                      : "#ef7020"
+                  }
+                />
+              ))}
              </Bar>
            </BarChart>
      </ChartContainer>
@@ -292,12 +358,19 @@ export const AnnualEnergyChange = ({className, data}) => {
               strokeWidth={2}
               dot={false}
             >
+               <LabelList
+                dataKey="Fossil fuels"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Fossil fuels"] === value) == chartData.length - 12 ? "Fossil fuels" : ""}
+              />
               <LabelList
                 dataKey="Fossil fuels"
                 position="top"
                 offset={5}
                 fontSize={12}
-                formatter={(value) => chartData.findIndex(item => item["Fossil fuels"] === value) == chartData.length - 1 ? `${value.toFixed(0)}%` : ""}
+                formatter={(value) => chartData.findIndex(item => item["Fossil fuels"] === value) == chartData.length - 1 ? `${value ? value.toFixed(0) : "N/A"}%` : ""}
               />
               </Line>
             <Line
@@ -309,9 +382,16 @@ export const AnnualEnergyChange = ({className, data}) => {
               <LabelList
                 dataKey="Renewables"
                 position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Renewables"] === value) == chartData.length - 5 ? "Renewables" : ""}
+              />
+              <LabelList
+                dataKey="Renewables"
+                position="top"
                 offset={5}
                 fontSize={12}
-                formatter={(value) => chartData.findIndex(item => item.Renewables === value) == chartData.length - 1 ? `${value.toFixed(0)}%` : ""}
+                formatter={(value) => chartData.findIndex(item => item.Renewables === value) == chartData.length - 1 ? `${value ? value.toFixed(0) : "N/A"}%` : ""}
               />
             </Line>
             <Line 
@@ -320,12 +400,19 @@ export const AnnualEnergyChange = ({className, data}) => {
               strokeWidth={2}
               dot={false} 
             >
+              <LabelList
+                dataKey="Nuclear"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Nuclear"] === value) == chartData.length - 10 ? "Nuclear" : ""}
+              />
                <LabelList
                 dataKey="Nuclear"
                 position="top"
                 offset={5}
                 fontSize={12}
-                formatter={(value) => chartData.findIndex(item => item.Nuclear === value) == chartData.length - 1 ? `${value.toFixed(0)}%` : ""}
+                formatter={(value) => chartData.findIndex(item => item.Nuclear === value) == chartData.length - 1 ? `${value ? value.toFixed(0) : "N/A"}%` : ""}
               />
             </Line>
             <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />
@@ -408,12 +495,19 @@ return (
             fill="#2ccfff"
             fillOpacity={0.2}
           >
+            <LabelList
+                dataKey="Solar"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Solar"] === value) == chartData.length - 6 ? "Solar" : ""}
+              />
              <LabelList
                 dataKey="Solar"
                 position="top"
                 offset={5}
                 fontSize={12}
-                formatter={(value) => chartData.findIndex(item => item.Solar === value) == chartData.length - 1 ? `${value.toFixed(0)}` : ""}
+                formatter={(value) => chartData.findIndex(item => item.Solar === value) == chartData.length - 1 ? `${value ? value.toFixed(0) : "N/A"}` : ""}
               />
             </Area>
           <Area
@@ -427,9 +521,16 @@ return (
             <LabelList
                 dataKey="Wind"
                 position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Wind"] === value) == chartData.length - 8 ? "Wind" : ""}
+              />
+            <LabelList
+                dataKey="Wind"
+                position="top"
                 offset={5}
                 fontSize={12}
-                formatter={(value) => chartData.findIndex(item => item.Wind === value) == chartData.length - 1 ? `${value.toFixed(0)}` : ""}
+                formatter={(value) => chartData.findIndex(item => item.Wind === value) == chartData.length - 1 ? `${value ? value.toFixed(0) : "N/A"}` : ""}
               />
             </Area>
           <Area
@@ -443,9 +544,16 @@ return (
             <LabelList
                 dataKey="Nuclear"
                 position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Nuclear"] === value) == chartData.length - 10 ? "Nuclear" : ""}
+              />
+            <LabelList
+                dataKey="Nuclear"
+                position="top"
                 offset={5}
                 fontSize={12}
-                formatter={(value) => chartData.findIndex(item => item.Nuclear === value) == chartData.length - 1 ? `${value.toFixed(0)}` : ""}
+                formatter={(value) => chartData.findIndex(item => item.Nuclear === value) == chartData.length - 1 ? `${value ? value.toFixed(0) : "N/A"}` : ""}
               />
             </Area>
           <Area
@@ -564,9 +672,16 @@ return (
             <LabelList
                 dataKey="Solar"
                 position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Solar"] === value) == chartData.length - 2 ? "Solar" : ""}
+              />
+            <LabelList
+                dataKey="Solar"
+                position="top"
                 offset={5}
                 fontSize={12}
-                formatter={(value) => chartData.findIndex(item => item.Solar === value) == chartData.length - 1 ? `${value.toFixed(0)}GW` : ""}
+                formatter={(value) => chartData.findIndex(item => item.Solar === value) == chartData.length - 1 ? `${value ? value.toFixed(0) : "N/A"}GW` : ""}
               />
             </Line>
           <Line
@@ -579,9 +694,16 @@ return (
             <LabelList
                 dataKey="Wind"
                 position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Wind"] === value) == chartData.length - 4 ? "Wind" : ""}
+              />
+            <LabelList
+                dataKey="Wind"
+                position="top"
                 offset={5}
                 fontSize={12}
-                formatter={(value) => chartData.findIndex(item => item.Wind === value) == chartData.length - 1 ? `${value.toFixed(0)}GW` : ""}
+                formatter={(value) => chartData.findIndex(item => item.Wind === value) == chartData.length - 1 ? `${value ? value.toFixed(0) : "N/A"}GW` : ""}
               />
             </Line>
           <Line
@@ -594,9 +716,16 @@ return (
             <LabelList
                 dataKey="Nuclear"
                 position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Nuclear"] === value) == chartData.length - 4 ? "Nuclear" : ""}
+              />
+            <LabelList
+                dataKey="Nuclear"
+                position="top"
                 offset={5}
                 fontSize={12}
-                formatter={(value) => chartData.findIndex(item => item.Nuclear === value) == chartData.length - 1 ? `${value.toFixed(0)}GW` : ""}
+                formatter={(value) => chartData.findIndex(item => item.Nuclear === value) == chartData.length - 1 ? `${value ? value.toFixed(0) : "N/A"}GW` : ""}
               />
             </Line>
           <Line
@@ -871,24 +1000,38 @@ return (
             dataKey="Primary energy consumption per capita (kWh/person)"
             stroke='#000000'
             >
+              <LabelList
+                dataKey="Primary energy consumption per capita (kWh/person)"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Primary energy consumption per capita (kWh/person)"] === value) == chartData.length - 10 ? "Energy use per person" : ""}
+              />
             <LabelList
                 dataKey="Primary energy consumption per capita (kWh/person)"
                 position="top"
                 offset={5}
                 fontSize={12}
-                formatter={(value) => chartData.findIndex(item => item["Primary energy consumption per capita (kWh/person)"] === value) == chartData.length - 1 ? `${value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}` : ""}
+                formatter={(value) => chartData.findIndex(item => item["Primary energy consumption per capita (kWh/person)"] === value) == chartData.length - 1 ? `${value ? value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") : "N/A"}` : ""}
               />
           </Line>
           <Line
             dataKey="GDP per capita, PPP (constant 2017 international $)"
             stroke='#fe4311'
           >
+            <LabelList
+                dataKey="GDP per capita, PPP (constant 2017 international $)"
+                position="top"
+                offset={10}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["GDP per capita, PPP (constant 2017 international $)"] === value) == chartData.length - 10 ? "GDP per capita" : ""}
+              />
              <LabelList
                 dataKey="GDP per capita, PPP (constant 2017 international $)"
                 position="top"
                 offset={5}
                 fontSize={12}
-                formatter={(value) => chartData.findIndex(item => item["GDP per capita, PPP (constant 2017 international $)"] === value) == chartData.length - 1 ? `$${value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}` : ""}
+                formatter={(value) => chartData.findIndex(item => item["GDP per capita, PPP (constant 2017 international $)"] === value) == chartData.length - 1 ? `$${value ? value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") : "N/A"}` : ""}
               />
           </Line>
           <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />

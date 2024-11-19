@@ -3,11 +3,12 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ShareRenewables } from '@/components/charts/energy';
 import { ArrowUp } from 'lucide-react';
-import { getDomainData } from '@/lib/utils';
+import { getDomainData, removeNAN } from '@/lib/utils';
 
 export const RenewableShare = ({className, data, country}) => {
-    data = getDomainData(data, country, "e-3-%").map(item => ({ Year: item.Year, ["Renewables"]: item["Renewables"] + item["Nuclear"] }))
+    data = getDomainData(data, country, "elc-3-%").map(item => ({ Year: item.Year, ["Renewables"]: item["Renewables"] + item["Nuclear"] }))
     let value = (((data.at(-1)["Renewables"] - data.at(-2)["Renewables"]) / data.at(-2)["Renewables"]) * 100).toFixed(1);
+    // console.log(data)
 
     return (
         <div className={`chart overflow-auto text-white bg-black border-none px-0 pb-0 ${className}`}>

@@ -13,7 +13,7 @@
     }
 
     .main {
-        @apply absolute top-0 left-0 w-full px-3 h-full py-[50px] bg-slate-50 
+        @apply absolute top-0 left-0 w-full px-3 py-[50px] bg-slate-50 
     }
     .main-body{
         @apply w-full mt-6 md:mt-2
@@ -51,7 +51,7 @@
         @apply text-[13px] px-2 mt-2 absolute bottom-0 h-[65px] font-a1 
     }
     .third-page {
-        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-[#463f3a] font-planer-m text-[70px]
     }
 
 

@@ -3,10 +3,10 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ShareFossils } from '@/components/charts/energy';
 import { ArrowUp } from 'lucide-react';
-import { getDomainData } from '@/lib/utils';
+import { getDomainData, removeNAN } from '@/lib/utils';
 
 export const FossilShare = ({className, data, country}) => {
-    data = getDomainData(data, country, "e-3-%").map(item => ({ Year: item.Year, ["Fossil fuels"]: item["Fossil fuels"] }))
+    data = removeNAN(getDomainData(data, country, "elc-3-%").map(item => ({ Year: item.Year, ["Fossil fuels"]: item["Fossil fuels"] })))
     let value = (((data.at(-1)["Fossil fuels"] - data.at(-2)["Fossil fuels"]) / data.at(-2)["Fossil fuels"]) * 100).toFixed(1);
 
     return (
