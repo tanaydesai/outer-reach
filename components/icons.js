@@ -1,5 +1,6 @@
 "use client"
 import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
 
 export const WindIcon = ({className, size=220}) => {
     return (
@@ -204,12 +205,15 @@ export const MenuIcon = ({className, size=28, onClick, clicked}) => {
         },
       }),
     };
-  
+    
+    useEffect(() => {
+      controls.start(!clicked ? 'normal' : 'animate')
+    })
+
     return (
       <div
         className={`cursor-pointer select-none px-2 text-[#9b9b9b] hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center ${className}`}
         onClick={() => {
-          controls.start(clicked ? 'normal' : 'animate');
           onClick();
         }}
         >

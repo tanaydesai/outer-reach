@@ -27,13 +27,13 @@ export const Navbar = () => {
 
       {open && 
       <div className='fixed top-0 right-0 w-full px-6 p-4 h-full text-center bg-[#d0d0d0]/30 backdrop-blur-[15px] flex flex-col gap-2 items-center justify-center'>
-        <Link href="/"><motion.div whileTap={{scale:0.95}} className='navbar-box absolute top-3 left-3 flex items-center gap-1'>0 <MoveRight size={15}/> {'42'}</motion.div></Link>
+        <Link href="/"  onClick={() => setOpen(false)}><motion.div whileTap={{scale:0.95}} className='navbar-box absolute top-3 left-3 flex items-center gap-1'>0 <MoveRight size={15}/> {'42'}</motion.div></Link>
         
         <Fade>
-          <Link href="/energy"><motion.div whileTap={{scale:0.95}} className="navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none">Road to Energy Abundance</motion.div></Link>
-          <Link href="/nuclear"><motion.div whileTap={{scale:0.95}} className='navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none'>Nuclear's Revenge</motion.div></Link>
-          <Link href="/ai"><motion.div whileTap={{scale:0.95}} className='navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none'>Age of AGI</motion.div></Link>
-          <Link href="/space"><motion.div whileTap={{scale:0.95}} className='navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none'>The Space Race</motion.div></Link>
+          <Link href="/energy" onClick={() => setOpen(false)}><motion.div whileTap={{scale:0.95}} className="navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none">Road to Energy Abundance</motion.div></Link>
+          <Link href="/nuclear"  onClick={() => setOpen(false)}><motion.div whileTap={{scale:0.95}} className='navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none'>Nuclear's Revenge</motion.div></Link>
+          <Link href="/ai"  onClick={() => setOpen(false)}><motion.div whileTap={{scale:0.95}} className='navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none'>Age of AGI</motion.div></Link>
+          <Link href="/space"  onClick={() => setOpen(false)}><motion.div whileTap={{scale:0.95}} className='navbar-box hover:bg-transparent hover:text-[#aaaaaa] text-[30px] border-none'>The Space Race</motion.div></Link>
         </Fade>
       </div>}
 

@@ -5,7 +5,7 @@ import { Navbar } from "@/components/navbar"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Outer Reach',
+  title: 'OUTER REACH',
   description: "Where the bells of progress ring",
 }
 

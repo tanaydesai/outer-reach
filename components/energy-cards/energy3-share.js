@@ -18,10 +18,10 @@ export const Energy3Share = ({className, data, country}) => {
                     <TabsTrigger2 value="elc">Electricity</TabsTrigger2>
                 </TabsList2>
                 <TabsContent2 value="ec" >
-                    <Energy3ShareChange data={getDomainData(data, country, "e-3-%").slice(-20)} className='w-full flex-1 min-h-[350px] mt-4'/>
+                    <Energy3ShareChange data={getDomainData(data, country, "e-3-%").slice(-20)} className='w-full flex-1 h-[400px] mt-4'/>
                 </TabsContent2>
                 <TabsContent2 value="elc">
-                    <Energy3ShareChange data={getDomainData(data, country, "elc-3-%").slice(-20)} className='w-full flex-1 min-h-[350px] mt-4'/>
+                    <Energy3ShareChange data={getDomainData(data, country, "elc-3-%").slice(-20)} className='w-full flex-1 h-[400px] mt-4'/>
                 </TabsContent2>
             </Tabs2>
             <Menu />

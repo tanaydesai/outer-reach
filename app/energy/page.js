@@ -42,11 +42,9 @@ export default function Home() {
               <TabsTrigger value="economics"><div data-value={tab} className="data-[value=economics]:inline-flex hidden tag-box mr-1"/> Economics</TabsTrigger>
               <TabsTrigger value="leaderboard"><div data-value={tab} className="data-[value=leaderboard]:inline-flex hidden tag-box mr-1"/> Leaderboards</TabsTrigger>
             </TabsList>
-            <Select defaultValue={country} onValueChange={setCountry}>
+            <Select onValueChange={setCountry}>
               <SelectTrigger>
-                  <SelectValue placeholder="Country"/>
-                  {/* <div className='hidden sm:block'><SelectValue placeholder="Country"/></div>
-                  <div className='sm:hidden'><SelectValue placeholder={<Earth />} /></div> */}
+                  <SelectValue placeholder={<><div className='hidden sm:block'>Country</div><Earth className='sm:hidden'/></>}/>
               </SelectTrigger>
               <SelectContent>
                 {data.countries.map((c) => (

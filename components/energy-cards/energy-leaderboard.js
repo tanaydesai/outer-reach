@@ -36,16 +36,16 @@ export const EnergyLeaderBoard = ({className, data}) => {
                     ))}
                 </SelectContent>
             </Select>
-            <div className='grid grid-cols-1 lg:grid-cols-3 mb-3 grid-flow-row mx-3 border border-[#d9d9d9] divide-y divide-x lg:divide-y-0 divide-[#d9d9d9] rounded-[10px]'>
-                <div className='h-fit flex-1 py-1'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 mb-3 grid-flow-row mx-3 border border-[#d9d9d9] divide-y lg:divide-x lg:divide-y-0 divide-[#d9d9d9] rounded-[10px]'>
+                <div className='h-fit flex-1 py-3 md:py-1'>
                     <p className='chart-desc text-[14px]'>1st Place <span className='text-white bg-green-400 rounded-[5px] p-1 w-fit'>{result.at(0)["Country"]}</span></p>
                     <div className='chart-number  flex-1'><NumberFlow value={result.at(0)["Value"].toFixed(1)}/>{pick["Unit"]}</div>
                 </div>
-                <div className='h-fit flex-1 py-1'>
+                <div className='h-fit flex-1 py-3 md:py-1'>
                     <p className='chart-desc text-[14px]'>2nd Place <span className='text-white bg-green-400 rounded-[5px] p-1 w-fit'>{result.at(1)["Country"]}</span></p>
                     <div className='chart-number  flex-1'><NumberFlow value={result.at(1)["Value"].toFixed(1)}/>{pick["Unit"]}</div>
                 </div>
-                <div className='h-fit flex-1 py-1'>
+                <div className='h-fit flex-1 py-3 md:py-1'>
                     <p className='chart-desc text-[14px]'>3rd Place <span className='text-white bg-green-400 rounded-[5px] p-1 w-fit'>{result.at(2)["Country"]}</span></p>
                     <div className='chart-number  flex-1'><NumberFlow value={result.at(2)["Value"].toFixed(1)}/>{pick["Unit"]}</div>
                 </div>

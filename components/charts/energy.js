@@ -151,6 +151,7 @@ export const LeaderBoards = ({className, data, unit}) => {
             data={chartData}
             layout="vertical"
             margin={{
+              // top:30,
               left: 10,
               // right: 15,
             }}
@@ -162,6 +163,7 @@ export const LeaderBoards = ({className, data, unit}) => {
               tickMargin={0}
               axisLine={false}
               fontSize={10}
+              hide
             />
             <XAxis dataKey="Value" type="number" hide />
             <Bar
@@ -171,6 +173,14 @@ export const LeaderBoards = ({className, data, unit}) => {
               radius={7}
               barSize={50}
             >
+               <LabelList
+                dataKey="Country"
+                position="insideLeft"
+                offset={5}
+                fill='white'
+                fontSize={14}
+                formatter={(value) => `${chartData.findIndex(item => item.Country === value) + 4}) ${value}`}
+              />
             <LabelList
                 dataKey="Value"
                 position="right"
@@ -220,10 +230,17 @@ export const AnnualEnergyChange = ({className, data}) => {
                axisLine={false}
              />
              <ChartTooltip
-              //  cursor={false}
+               cursor={false}
               content={<ChartTooltipContent labelKey="Year" />}
              />
              <Bar dataKey="Change %" fill="#2eec7d" radius={5}>
+              <LabelList
+                dataKey="Change %"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => `${value ? value.toFixed(0) : "N/A"}%`}
+              />
              </Bar>
            </BarChart>
      </ChartContainer>
@@ -256,6 +273,7 @@ export const AnnualEnergyChange = ({className, data}) => {
          <LineChart accessibilityLayer data={chartData}
             margin={{
               left: -20,
+              right: 20
             }}
             >
             {/* <CartesianGrid vertical={false} /> */}
@@ -273,19 +291,43 @@ export const AnnualEnergyChange = ({className, data}) => {
               stroke="#ef7020"
               strokeWidth={2}
               dot={false}
-            />
+            >
+              <LabelList
+                dataKey="Fossil fuels"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Fossil fuels"] === value) == chartData.length - 1 ? `${value.toFixed(0)}%` : ""}
+              />
+              </Line>
             <Line
               dataKey="Renewables"
               stroke="#3aee7a"
               strokeWidth={2}
               dot={false}
-            />
+            >
+              <LabelList
+                dataKey="Renewables"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item.Renewables === value) == chartData.length - 1 ? `${value.toFixed(0)}%` : ""}
+              />
+            </Line>
             <Line 
               dataKey="Nuclear"
               stroke="#ec7ad7"
               strokeWidth={2}
               dot={false} 
-            />
+            >
+               <LabelList
+                dataKey="Nuclear"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item.Nuclear === value) == chartData.length - 1 ? `${value.toFixed(0)}%` : ""}
+              />
+            </Line>
             <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />
           </LineChart>
      </ChartContainer>
@@ -365,7 +407,15 @@ return (
             strokeWidth={2}
             fill="#2ccfff"
             fillOpacity={0.2}
-          />
+          >
+             <LabelList
+                dataKey="Solar"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item.Solar === value) == chartData.length - 1 ? `${value.toFixed(0)}` : ""}
+              />
+            </Area>
           <Area
             type="monotone"
             dataKey="Wind"
@@ -373,7 +423,15 @@ return (
             strokeWidth={2}
             fill="#065374"
             fillOpacity={0.2}
-          />
+          >
+            <LabelList
+                dataKey="Wind"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item.Wind === value) == chartData.length - 1 ? `${value.toFixed(0)}` : ""}
+              />
+            </Area>
           <Area
             type="monotone"
             dataKey="Nuclear"
@@ -381,7 +439,15 @@ return (
             strokeWidth={2}
             fill="#ff58df"
             fillOpacity={0.2}
-          />
+          >
+            <LabelList
+                dataKey="Nuclear"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item.Nuclear === value) == chartData.length - 1 ? `${value.toFixed(0)}` : ""}
+              />
+            </Area>
           <Area
             type="monotone"
             dataKey="Hydro"
@@ -467,7 +533,7 @@ return (
           margin={{
             top: 15,
             left: -10,
-            // right: 5,
+            right: 22,
           }}
         >
           <CartesianGrid vertical={false} />
@@ -494,21 +560,45 @@ return (
             dot={false}
             stroke="#2ccfff"
             strokeWidth={2}
-          />
+          >
+            <LabelList
+                dataKey="Solar"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item.Solar === value) == chartData.length - 1 ? `${value.toFixed(0)}GW` : ""}
+              />
+            </Line>
           <Line
             type="monotone"
             dataKey="Wind"
             dot={false}
             stroke="#065374"
             strokeWidth={2}
-          />
+          >
+            <LabelList
+                dataKey="Wind"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item.Wind === value) == chartData.length - 1 ? `${value.toFixed(0)}GW` : ""}
+              />
+            </Line>
           <Line
             type="monotone"
             dataKey="Nuclear"
             dot={false}
             stroke="#065374"
             strokeWidth={2}
-          />
+          >
+            <LabelList
+                dataKey="Nuclear"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item.Nuclear === value) == chartData.length - 1 ? `${value.toFixed(0)}GW` : ""}
+              />
+            </Line>
           <Line
             type="monotone"
             dataKey="Hydro"
@@ -756,6 +846,7 @@ return (
           accessibilityLayer
           data={chartData}
           margin={{
+            top:10,
             right:20,
           }}
         >
@@ -780,23 +871,25 @@ return (
             dataKey="Primary energy consumption per capita (kWh/person)"
             stroke='#000000'
             >
-            {/* <LabelList
-              position="top"
-              offset={12}
-              className="fill-foreground"
-              fontSize={12}
-            /> */}
+            <LabelList
+                dataKey="Primary energy consumption per capita (kWh/person)"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["Primary energy consumption per capita (kWh/person)"] === value) == chartData.length - 1 ? `${value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}` : ""}
+              />
           </Line>
           <Line
             dataKey="GDP per capita, PPP (constant 2017 international $)"
             stroke='#fe4311'
           >
-            {/* <LabelList
-              position="bottom"
-              offset={12}
-              className="fill-foreground"
-              fontSize={12}
-            /> */}
+             <LabelList
+                dataKey="GDP per capita, PPP (constant 2017 international $)"
+                position="top"
+                offset={5}
+                fontSize={12}
+                formatter={(value) => chartData.findIndex(item => item["GDP per capita, PPP (constant 2017 international $)"] === value) == chartData.length - 1 ? `$${value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}` : ""}
+              />
           </Line>
           <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />
         </LineChart>

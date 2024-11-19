@@ -20,10 +20,10 @@ export const EnergyMix = ({className, data, country}) => {
                     <TabsTrigger2 value="elc">Electricity</TabsTrigger2>
                 </TabsList2>
                 <TabsContent2 value="ec">
-                    <EnergyShare data={type === "abs" ? getDomainData(data, country, "e-TWh") : getDomainData(data, country, "e-%")} className='w-full flex-1 h-[350px]'/>
+                    <EnergyShare data={type === "abs" ? getDomainData(data, country, "e-TWh") : getDomainData(data, country, "e-%")} className='w-full flex-1 h-[400px]'/>
                 </TabsContent2>
                 <TabsContent2 value="elc">
-                    <EnergyShare data={getDomainData(data, country, "elc-TWh")} className='w-full flex-1 h-[350px]'/>
+                    <EnergyShare data={getDomainData(data, country, "elc-TWh")} className='w-full flex-1 h-[400px]'/>
                 </TabsContent2>
             </Tabs2>
             <div className='flex'>

@@ -13,7 +13,7 @@ export const EnergyChange = ({className, data, country}) => {
     return (
         <div className={`chart ${className}`}>
             <h1 className='chart-title'>Change in primary energy consumption (%), {country}</h1>
-            <AnnualEnergyChange data={data} className='w-full flex-1 min-h-[350px] mt-4'/>
+            <AnnualEnergyChange data={data} className='w-full flex-1 h-[400px] mt-4'/>
             <Menu />
             <div className='cursor-default sm:flex'>
                 <div className='chart-number'><NumberFlow value={value} format={{ style: 'percent' }}/></div>

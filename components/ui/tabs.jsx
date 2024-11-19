@@ -35,7 +35,7 @@ const TabsContent = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "h-[calc(100vh-125px)] pb-5 overflow-auto mt-5",
+      "h-[85vh] lg:h-[calc(100vh-125px)] pb-10 overflow-auto mt-5",
       className
     )}
     {...props} />
