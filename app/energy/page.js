@@ -45,7 +45,7 @@ export default function Home() {
             <TabsContent value="mix">
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span>.</AccordionTrigger>
+                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
                     <AccordionContent>
                       The world already gets almost <span className="acc-span">40% of its electricity </span> from <span className="acc-span">clean energy sources</span> while adopting even more at a <span className="acc-span">rapid pace</span> with <span className="acc-span">nuclear energy</span> making a big comeback.
                     </AccordionContent>
@@ -56,7 +56,7 @@ export default function Home() {
 
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger className="mt-7">Countries like India and is increasing its energy consumption rapidly. While the UK is <span className="acc-span">losing</span> ground. Global share of <span className="acc-span">renewables and nuclear</span> in the mix is <span className="acc-span">evolving at a steady pace</span>.</AccordionTrigger>
+                    <AccordionTrigger className="mt-7">Countries like India and is increasing its energy consumption rapidly. While the UK is <span className="acc-span">losing</span> ground. Global share of <span className="acc-span">renewables and nuclear</span> in the mix is <span className="acc-span">evolving at a steady pace</span></AccordionTrigger>
                     <AccordionContent>
                       More the <span className="acc-span">increase</span> in primary energy consumption, the <span className="acc-span">more prosperous</span> the world becomes.
                       <br /><br />
@@ -72,7 +72,7 @@ export default function Home() {
 
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger><span className="acc-span">Clean energy</span> consumption is <span className="acc-span">rising</span> while fossil fuels remain either <span className="acc-span">stagnant or falling.</span></AccordionTrigger>
+                    <AccordionTrigger icon={false}><span className="acc-span">Clean energy</span> consumption is <span className="acc-span">rising</span> while fossil fuels remain either <span className="acc-span">stagnant or falling.</span></AccordionTrigger>
                   </AccordionItem>
                 </Accordion>
 
@@ -84,7 +84,7 @@ export default function Home() {
             <TabsContent value="capacity">  
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Capacity installations of <span className="acc-span">solar and wind</span> are through the moon and <span className="acc-span">accelerating</span> further.</AccordionTrigger>
+                    <AccordionTrigger>Capacity installations of <span className="acc-span">solar and wind</span> are through the moon and <span className="acc-span">accelerating</span> further</AccordionTrigger>
                     <AccordionContent>
                     Countries like <span className="acc-span">China lead</span> the world in having the largest <span className="acc-span">solar and wind</span> capacity. While the <span className="acc-span">United States</span> leads in <span className="acc-span">nuclear</span> capacity.
                     <br /><br />
@@ -100,14 +100,14 @@ export default function Home() {
 
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Asia leads the world in <span className="acc-span">solar capacity additions</span> at a 46% year-on-year growth. While Europe grew their solar additions by <span className="acc-span">9% every year</span> for the last 5 years.</AccordionTrigger>
+                    <AccordionTrigger icon={false}>Asia leads the world in <span className="acc-span">solar capacity additions</span> at a 46% year-on-year growth. While Europe grew their solar additions by <span className="acc-span">9% every year</span> for the last 5 years.</AccordionTrigger>
                   </AccordionItem>
                 </Accordion>
             </TabsContent>
             <TabsContent value="economics">
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>There is <span className="acc-span">no energy rich poor country.</span> The <span className="acc-span">more energy</span> a country consumes the more <span className="acc-span">prosperous it's citezens are.</span></AccordionTrigger>
+                    <AccordionTrigger>There is <span className="acc-span">no energy rich poor country.</span> The <span className="acc-span">more energy</span> a country consumes the more <span className="acc-span">prosperous it's citezens are</span></AccordionTrigger>
                     <AccordionContent>
                       Countries like <span className="acc-span">France</span> have subsequently grew their <span className="acc-span">nuclear capacity,</span> grew their <span className="acc-span">economy</span> and <span className="acc-span">reduced carbom emissions.</span>
                     </AccordionContent>
@@ -127,7 +127,7 @@ export default function Home() {
             <TabsContent value="leaderboard">      
               <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Find out the countries that are doing it right and the ones that have more work to do.</AccordionTrigger>
+                    <AccordionTrigger>Find out the countries that are doing it right and the ones that have more work to do</AccordionTrigger>
                     <AccordionContent>
                     <span className="acc-span">Iceland, Norway and Luxembourg</span> lead the world in renewables % in their electricity mix. With the former two having the <span className="acc-span">largest energy consumption per capita</span> in the world due to their extreme weather and smaller populations.
                     </AccordionContent>

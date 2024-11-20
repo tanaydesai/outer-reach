@@ -13,7 +13,7 @@ const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (
 ))
 AccordionItem.displayName = "AccordionItem"
 
-const AccordionTrigger = React.forwardRef(({ className, children, ...props }, ref) => (
+const AccordionTrigger = React.forwardRef(({ className, children, icon=true, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
@@ -23,6 +23,7 @@ const AccordionTrigger = React.forwardRef(({ className, children, ...props }, re
       )}
       {...props}>
       {children}
+      {icon && <ChevronDown className="h-3.5 mx-2 inline-flex w-3.5"/>}
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
