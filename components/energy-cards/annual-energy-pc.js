@@ -6,7 +6,7 @@ import { ArrowUp } from 'lucide-react';
 import { getDomainData } from '@/lib/utils';
 
 export const EnergyUse = ({className, data, country}) => {
-    data = getDomainData(data, country, "e-use-pp-gdp-pc")
+    data = getDomainData(data, country, "e-use-pp-gdp-pc").slice(-25)
     let value = (((data.at(-1)["Primary energy consumption per capita (kWh/person)"] - data.at(-2)["Primary energy consumption per capita (kWh/person)"]) / data.at(-2)["Primary energy consumption per capita (kWh/person)"]) * 100).toFixed(1);
     
     return (

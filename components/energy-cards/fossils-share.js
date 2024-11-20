@@ -6,7 +6,7 @@ import { ArrowUp } from 'lucide-react';
 import { getDomainData, removeNAN } from '@/lib/utils';
 
 export const FossilShare = ({className, data, country}) => {
-    data = removeNAN(getDomainData(data, country, "elc-3-%").map(item => ({ Year: item.Year, ["Fossil fuels"]: item["Fossil fuels"] })))
+    data = removeNAN(getDomainData(data, country, "elc-3-%").map(item => ({ Year: item.Year, ["Fossil fuels"]: item["Fossil fuels"] }))).slice(-25)
     let value = (((data.at(-1)["Fossil fuels"] - data.at(-2)["Fossil fuels"]) / data.at(-2)["Fossil fuels"]) * 100).toFixed(1);
 
     return (
