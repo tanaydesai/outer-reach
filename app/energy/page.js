@@ -51,7 +51,7 @@ export default function Home() {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
-
+                
                 <EnergyMix data={data.mix} country={country} className={'mt-10'}/>
 
                 <Accordion type="single" collapsible>

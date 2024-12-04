@@ -3,6 +3,67 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Area, AreaChart,Line, LineChart,  Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList, Cell } from "recharts"
 import { ChartConfig, ChartContainer,ChartTooltip,ChartTooltipContent,ChartLegend,ChartLegendContent} from "@/components/ui/chart"
 
+
+
+export const MultiCountry = ({className, data}) => {
+  const chartData = data ? data : []
+  const countries = Object.keys(data.at(0)).filter((country) =>  country  !== "Year")
+  
+  const chartConfig = {
+    "Year": {
+      label: "Year",
+    },
+    ...countries.reduce((acc, country) => {
+      acc[country] = {
+        label: country,
+        color: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+      };
+      return acc;
+    }, {}),
+  }
+
+return (
+    <ChartContainer config={chartConfig} className={className}>
+        <LineChart
+          accessibilityLayer
+          data={chartData}
+          margin={{
+            top: 15,
+            left: -5,
+            right: 15,
+          }}
+        >
+          <CartesianGrid vertical={false} />
+          <XAxis
+            dataKey="Year"
+            tickLine={false}
+            axisLine={false}
+            tickMargin={3}
+            tickFormatter={(value) => `${String(value).slice(2, 4)}'`}
+          />
+          <YAxis
+            tickLine={false}
+            axisLine={false}
+            tickMargin={8}
+            tickCount={5}
+          />
+          <ChartTooltip cursor={false} content={<ChartTooltipContent labelKey="Year" indicator="dot" />}/>
+          {countries.map((country) => (
+              <Line
+                key={country}
+                dataKey={country}
+                dot={false}
+                strokeWidth={2}
+                type="monotone"
+                stroke={`#${Math.floor(Math.random() * 16777215).toString(16)}`}
+            />
+          ))}
+          <ChartLegend content={<ChartLegendContent className='w-[85%] flex-wrap mx-auto' />} />
+        </LineChart>
+      </ChartContainer>
+)
+}
+
 export const EnergyShare = ({className, data}) => {
     const chartData = data ? data : []
     

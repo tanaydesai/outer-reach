@@ -9,7 +9,7 @@ import { Menu } from '@/components/menu';
 
 export const EnergyCapacities = ({className, data, country}) => {
     data = getDomainData(data, country)
-    let value =  Object.entries(data.at(-1)).filter(([key]) => ["Solar", "Wind", "Nuclear", "Hydro", "Bioenergy", "Other Renewables"].includes(key)).filter(([key]) => !["Year", "Country"].includes(key)).reduce((acc, [, value]) => acc + (value === "" || value == null ? 0 : value), 0).toFixed(0)
+    let value = data.at(-1)["Total clean energy capacity"];
 
     return (
         <div className={`chart ${className}`}>

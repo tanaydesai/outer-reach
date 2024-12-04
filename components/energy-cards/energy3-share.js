@@ -9,6 +9,9 @@ import { Menu } from '@/components/menu';
 
 export const Energy3Share = ({className, data, country}) => {
 
+    let recent = getDomainData(data, country, "elc-3-%")
+    let value = ((recent.at(-1)["Renewables"] + recent.at(-1)["Nuclear"]) - (recent.at(-5)["Renewables"] + recent.at(-5)["Nuclear"])) / 100
+
     return (
         <div className={`chart ${className}`}>
             <h1 className='chart-title'>Share of Fossil fuel, Renewable & nuclear (%), {country}</h1>
@@ -26,7 +29,7 @@ export const Energy3Share = ({className, data, country}) => {
             </Tabs2>
             <Menu />
             <div className='cursor-default sm:flex'>
-                <div className='chart-number'><NumberFlow value={((getDomainData(data, country, "elc-3-%").at(-1)["Renewables"] + getDomainData(data, country, "elc-3-%").at(-1)["Nuclear"]) - (getDomainData(data, country, "elc-3-%").at(-5)["Renewables"] + getDomainData(data, country, "elc-3-%").at(-5)["Nuclear"])) / 100} format={{ style: 'percent' }}/></div>
+                <div className='chart-number'><NumberFlow value={value} format={{ style: 'percent' }}/></div>
                 <div className='chart-desc'>absolute clean energy share growth in the electricity mix since {data.at(-5)["Year"]}.</div>
             </div>
         </div>

@@ -19,7 +19,7 @@ export const Navbar = () => {
       <div className={`gap-1 ${path == "/" ? "flex" : "hidden"} sm:flex`}>
         <Link href={"/energy"}><motion.div whileTap={{scale:0.95}} className="navbar-box">Energy</motion.div></Link>
         <Link href={"/nuclear"}><motion.div whileTap={{scale:0.95}} className='navbar-box'>Nuclear</motion.div></Link>
-        <Link href={"/ai"}><motion.div whileTap={{scale:0.95}} className='navbar-box'>AI</motion.div></Link>
+        <Link href={"/ai"}><motion.div whileTap={{scale:0.95}} className='navbar-box '>AI</motion.div></Link>
         <Link href={"/space"}><motion.div whileTap={{scale:0.95}} className='navbar-box'>Space</motion.div></Link>
       </div>
 

@@ -34,7 +34,7 @@ export const EnergyMix = ({className, data, country}) => {
                 <Menu />
             </div>
             <div className='cursor-default sm:flex'>
-                <div className='chart-number'><NumberFlow value={Object.entries(getDomainData(data, "China", "e-TWh").at(-1)).filter(([key]) => !["Year", "Code", "Country"].includes(key)).reduce((acc, [, value]) => acc + value, 0).toFixed(0)}/>TWh </div>
+                <div className='chart-number'><NumberFlow value={(getDomainData(data, "China", "e-TWh").at(-1)["Total Consumption"])}/>TWh </div>
                 <div className='chart-desc'>for comparison, is the total cumulative energy consumption of China. It is the world's largest energy consumer.</div>
             </div>
         </div>
