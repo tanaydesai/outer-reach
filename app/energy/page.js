@@ -26,7 +26,7 @@ export default function Home() {
   const [country, setCountry] = useState('World');
 
   if (error) return <div className='third-page'>Error</div>
-  if (isLoading) return <div className='third-page'>Loading...</div>
+  if (isLoading) return <div className='third-page'>Loading data...</div>
 
   return (
     <div className="main pb-0">

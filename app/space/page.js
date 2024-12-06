@@ -11,7 +11,7 @@ export default function Home() {
   const [tab, setTab] = useState('launches');
 
   // if (error) return <div className='third-page'>Error</div>
-  // if (isLoading) return <div className='third-page'>Loading...</div>
+  // if (isLoading) return <div className='third-page'>Loading data...</div>
 
   return (
     <div className="main pb-0">

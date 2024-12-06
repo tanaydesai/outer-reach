@@ -12,19 +12,16 @@ export const NuclearMix = ({className, data, country}) => {
     const [type, setType] = useState("abs")
     
     let countries = sortData(getDomainData(data, false, "e-TWh", 2023).filter(item => !continents.includes(item.Country)), "desc", "Nuclear").slice(0, 10).map(item => item.Country);
-    let result = Object.values(
-        countries.map(c => getDomainData(data, c, type === "abs" ? "e-TWh" : "e-3-%").map(item => ({ Year: item.Year, [c]: item["Nuclear"] }))).flat().reduce((acc, { Year, ...rest }) => {
+    let result = Object.values(countries.map(c => getDomainData(data, c, type === "abs" ? "e-TWh" : "e-3-%").map(item => ({ Year: item.Year, [c]: item["Nuclear"] }))).flat().reduce((acc, { Year, ...rest }) => {
             acc[Year] = { ...acc[Year], Year, ...rest };
             return acc;
         }, {})
         )
-    let result2 =  Object.values(
-        countries.map(c => getDomainData(data, c, type === "abs" ? "elc-TWh" : "elc-3-%").map(item => ({ Year: item.Year, [c]: item["Nuclear"] }))).flat().reduce((acc, { Year, ...rest }) => {
+    let result2 =  Object.values(countries.map(c => getDomainData(data, c, type === "abs" ? "elc-TWh" : "elc-3-%").map(item => ({ Year: item.Year, [c]: item["Nuclear"] }))).flat().reduce((acc, { Year, ...rest }) => {
             acc[Year] = { ...acc[Year], Year, ...rest };
             return acc;
         }, {})
         )
-
 
     return (
         <div className={`chart ${className}`}>

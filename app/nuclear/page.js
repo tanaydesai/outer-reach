@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { NuclearMix } from '@/components/energy-cards/nuclear-mix';
 import { NuclearCapacities } from '@/components/energy-cards/nuclear-capacity';
-import { NuclearCapacityAdditions } from '@/components/energy-cards/nuclear-capacity-additions';
+import { NuclearReactors } from '@/components/energy-cards/nuclear-units';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import { Combobox } from '@/components/ui/combobox'
@@ -16,7 +16,7 @@ export default function Home() {
   const [country, setCountry] = useState('World');
 
   if (error) return <div className='third-page'>Error</div>
-  if (isLoading) return <div className='third-page'>Loading...</div>
+  if (isLoading) return <div className='third-page'>Loading data...</div>
 
   return (
     <div className="main pb-0">
@@ -50,9 +50,15 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
 
-                <NuclearCapacities data={data.capacity} country={country} className={'mt-10'}/>
-                <NuclearCapacityAdditions data={data.capacity} country={country} className={'mt-10'}/>
+                  <NuclearCapacities data={data.capacity} country={country} className={'mt-10'}/>
+                  
+                  <Accordion type="single" collapsible>
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                    </AccordionItem>
+                  </Accordion>
 
+                  <NuclearReactors data={data.nuclearReactors} data2={data.nuclearYear} country={country} className={'mt-5'}/>
             </TabsContent>
           <TabsContent value="safety"><div className='third-page'>Safety</div></TabsContent>
           <TabsContent value="waste"><div className='third-page'>Waste</div></TabsContent>

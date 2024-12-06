@@ -1275,3 +1275,66 @@ return (
       </ChartContainer>
 )
 }
+
+export const NuclearUnits = ({className, data}) => {
+  const chartData = data ? data : []
+
+  const chartConfig = {
+    Country: {
+      label: "Country",
+    },
+    "Operation Units": {
+      label: "Operation",
+    },
+    "Suspended Units": {
+      label: "Suspended",
+    },
+    "Under Construction Units": {
+      label: "Under Construction",
+    },
+  }
+
+  return (
+        <ChartContainer config={chartConfig} className={className}>
+          <BarChart accessibilityLayer data={chartData} 
+           layout="vertical"
+           margin={{
+             left: 30,
+             right: 15,
+           }}
+           >
+            <XAxis
+              hide
+              type="number"
+            />
+            <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
+            <ChartLegend content={<ChartLegendContent />} />
+            <YAxis
+              type="category"
+              dataKey="Country"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+            />
+            <Bar
+              dataKey="Operation Units"
+              stackId="a"
+              fill="#2ccfff"
+              radius={[5, 0, 0, 5]}
+            />
+            {/* <Bar
+              dataKey="Suspended Units"
+              stackId="a"
+              fill="#ff0000"
+              radius={[0, 0, 0, 0]}
+            /> */}
+            <Bar
+              dataKey="Under Construction Units"
+              stackId="a"
+              fill="#0000ff"
+              radius={[0, 5, 5, 0]}
+            />
+          </BarChart>
+        </ChartContainer>
+  )
+}

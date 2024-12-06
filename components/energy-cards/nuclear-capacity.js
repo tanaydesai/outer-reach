@@ -11,8 +11,7 @@ export const NuclearCapacities = ({className, data, country}) => {
     let result = sortData(getDomainData(data, false, false, 2023), "desc", "Nuclear").filter(item => !continents.includes(item.Country)).slice(0, 10).map(item => ({ type: item.Country, value: item["Nuclear"] }));
    
     let countries = result.map(item => item.type);
-    let result2 = Object.values(
-        countries.map(c => getDomainData(data, c).map(item => ({ Year: item.Year, [c]: item["Nuclear"] }))).flat().reduce((acc, { Year, ...rest }) => {
+    let result2 = Object.values(countries.map(c => getDomainData(data, c).map(item => ({ Year: item.Year, [c]: item["Nuclear"] }))).flat().reduce((acc, { Year, ...rest }) => {
             acc[Year] = { ...acc[Year], Year, ...rest };
             return acc;
         }, {})
