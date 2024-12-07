@@ -9,13 +9,14 @@ export async function GET() {
 
   const nuclearFile1 = path.join(process.cwd(), 'public', 'data', 'nuclear_year.json');
   const nuclearFile2 = path.join(process.cwd(), 'public', 'data', 'nuclear.json'); 
+  const safetyFile = path.join(process.cwd(), 'public', 'data', 'safety.json');
 
   const mix = JSON.parse(await fs.readFile(mixFile, 'utf8'));
   const capacity = JSON.parse(await fs.readFile(capacityFile, 'utf8'))
   const countries = JSON.parse(await fs.readFile(countriesFile, 'utf8'))
-
   const nuclearYear = JSON.parse(await fs.readFile(nuclearFile1, 'utf8'));
   const nuclearReactors = JSON.parse(await fs.readFile(nuclearFile2, 'utf8'));
+  const safety = JSON.parse(await fs.readFile(safetyFile, 'utf8'));
 
-  return NextResponse.json({ mix, countries, capacity, nuclearYear, nuclearReactors });  
+  return NextResponse.json({ mix, countries, capacity, nuclearYear, nuclearReactors, safety });  
 }

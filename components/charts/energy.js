@@ -1321,7 +1321,15 @@ export const NuclearUnits = ({className, data}) => {
               stackId="a"
               fill="#2ccfff"
               radius={[5, 0, 0, 5]}
-            />
+            >
+              <LabelList
+                dataKey="Operation Units"
+                position="insideRight"
+                offset={8}
+                className="fill-[--color-label]"
+                fontSize={12}
+              />
+            </Bar>
             {/* <Bar
               dataKey="Suspended Units"
               stackId="a"
@@ -1333,8 +1341,64 @@ export const NuclearUnits = ({className, data}) => {
               stackId="a"
               fill="#0000ff"
               radius={[0, 5, 5, 0]}
-            />
+            >
+               <LabelList
+                dataKey="Under Construction Units"
+                position="right"
+                offset={8}
+                className="fill-[--color-label]"
+                fontSize={12}
+              />
+            </Bar>
           </BarChart>
         </ChartContainer>
+  )
+}
+
+export const EnergySafety = ({className, data, type}) => {
+  const chartData = data ? data : []
+  const key = type == 1 ? "Deaths per TWh of electricity production" : "tCO2e emissions per GWh of electricity over plant lifecycle" 
+  
+  const chartConfig = {
+   Type: {
+     label: "Energy source",
+   },
+  [key]: {
+      label: type == 1 ? "Deaths / TWh" : "tCO2e / GWh",
+      color: "#ff0000",
+    },
+  }
+
+return (
+    <ChartContainer config={chartConfig} className={className}>
+        <BarChart
+            accessibilityLayer
+            data={chartData}
+            layout="vertical"
+            margin={{
+              left: 28,
+              top: 10
+            }}
+          >
+            <YAxis
+              dataKey="Type"
+              type="category"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={10}
+              tickCount={5}
+            />
+            <XAxis type="number" hide/>
+            <ChartTooltip cursor={false} content={<ChartTooltipContent labelKey="Type" />} />
+            <Bar dataKey={key} fill="#2eec7d" radius={5}>
+              <LabelList
+                dataKey={key}
+                position="right"
+                offset={5}
+                fontSize={12}
+              />
+            </Bar>
+          </BarChart>
+    </ChartContainer>
   )
 }

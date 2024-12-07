@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { NuclearMix } from '@/components/energy-cards/nuclear-mix';
 import { NuclearCapacities } from '@/components/energy-cards/nuclear-capacity';
 import { NuclearReactors } from '@/components/energy-cards/nuclear-units';
+import { NuclearSafety }  from '@/components/energy-cards/nuclear-safety';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import { Combobox } from '@/components/ui/combobox'
@@ -59,8 +60,16 @@ export default function Home() {
                   </Accordion>
 
                   <NuclearReactors data={data.nuclearReactors} data2={data.nuclearYear} country={country} className={'mt-5'}/>
-            </TabsContent>
-          <TabsContent value="safety"><div className='third-page'>Safety</div></TabsContent>
+          </TabsContent>
+          <TabsContent value="safety">
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                  </AccordionItem>
+                </Accordion>
+
+                <NuclearSafety data={data.safety} country={country} className={'mt-10'}/>
+          </TabsContent>
           <TabsContent value="waste"><div className='third-page'>Waste</div></TabsContent>
         </Tabs>
       </div>
