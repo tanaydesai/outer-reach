@@ -7,7 +7,7 @@ import NumberFlow from '@number-flow/react'
 import { sortData } from '@/lib/utils';
 import { Menu } from '../menu';
 
-export const NuclearSafety = ({className, data, country}) => {
+export const NuclearSafety = ({className, data}) => {
    
     return (
         <div className={`chart ${className}`}>

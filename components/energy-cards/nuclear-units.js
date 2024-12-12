@@ -8,7 +8,10 @@ import { getDomainData, sortData } from '@/lib/utils';
 import { Menu } from '@/components/menu';
 
 export const NuclearReactors = ({className, data, data2, country}) => {       
-    data = sortData(data.filter(d => d["Country"] !== "World"), "desc", "Operation Units").slice(0, 15);
+    data = sortData(data, "desc", "Operation Units").slice(0, 15);
+    let value1 = data.filter(item => item["Country"] == "World")[0]["Operation Units"].toFixed(0);
+    let value2 = data.filter(item => item["Country"] == "World")[0]["Under Construction Units"].toFixed(0);
+    data = data.filter(d => d["Country"] !== "World")
     data2 = data2.filter(item => item.Country !== "World")
 
     let countries = sortData(getDomainData(data2, false, false, 2023), "desc", "Units").map(item => item.Country).slice(0, 10);
@@ -38,8 +41,8 @@ export const NuclearReactors = ({className, data, data2, country}) => {
             </Tabs2>
             <Menu />
             <div className='cursor-default sm:flex'>
-                <div className='chart-number'><NumberFlow value={result.at(-1)["USA"]} /></div>
-                <div className='chart-desc'>USA has the most number of nuclear reactors in the world. While China is noticbly getting more reactors online fast.</div>
+                <div className='chart-number'><NumberFlow value={value1} /></div>
+                <div className='chart-desc'>is the total number of nuclear reactors in the world. With a total of {value2} currently being in construction. </div>
             </div>
         </div>
     )

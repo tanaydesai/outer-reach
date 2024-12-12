@@ -27,7 +27,7 @@ export const EnergyMix = ({className, data, country}) => {
                 </TabsContent2>
             </Tabs2>
             <div className='flex'>
-                <ToggleGroup type="single" onValueChange={setType} defaultValue="abs">
+                <ToggleGroup type="single" onValueChange={setType}  value={type}>
                     <ToggleGroupItem value="abs">ABS</ToggleGroupItem>
                     <ToggleGroupItem value="%">%</ToggleGroupItem>
                 </ToggleGroup>

@@ -4,6 +4,8 @@ import { NuclearMix } from '@/components/energy-cards/nuclear-mix';
 import { NuclearCapacities } from '@/components/energy-cards/nuclear-capacity';
 import { NuclearReactors } from '@/components/energy-cards/nuclear-units';
 import { NuclearSafety }  from '@/components/energy-cards/nuclear-safety';
+import { NuclearWasteTypes } from '@/components/energy-cards/nuclear-waste-types';
+import { NuclearWaste } from '@/components/energy-cards/nuclear-waste';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import { Combobox } from '@/components/ui/combobox'
@@ -51,7 +53,7 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
 
-                  <NuclearCapacities data={data.capacity} country={country} className={'mt-10'}/>
+                  <NuclearCapacities data={data.nuclearYear} country={country} className={'mt-10'}/>
                   
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-1">
@@ -68,9 +70,19 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
 
-                <NuclearSafety data={data.safety} country={country} className={'mt-10'}/>
+                <NuclearSafety data={data.safety} className={'mt-10'}/>
           </TabsContent>
-          <TabsContent value="waste"><div className='third-page'>Waste</div></TabsContent>
+          <TabsContent value="waste">
+          <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                  </AccordionItem>
+                </Accordion>
+
+                <NuclearWaste data={data.nuclearWaste} country={country} className={'mt-10'}/>          
+                
+                <NuclearWasteTypes className={'mt-10'}/>
+          </TabsContent>
         </Tabs>
       </div>
     </div>

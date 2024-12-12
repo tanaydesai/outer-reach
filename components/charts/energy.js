@@ -1,7 +1,8 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react'
-import { Area, AreaChart,Line, LineChart,  Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList, Cell } from "recharts"
+import { Area, AreaChart,Line, LineChart,  Bar, Sector, Pie, PieChart, BarChart, CartesianGrid, XAxis, YAxis, LabelList, Cell } from "recharts"
 import { ChartConfig, ChartContainer,ChartTooltip,ChartTooltipContent,ChartLegend,ChartLegendContent} from "@/components/ui/chart"
+import { fill } from 'three/src/extras/TextureUtils'
 
 
 
@@ -1400,5 +1401,134 @@ return (
             </Bar>
           </BarChart>
     </ChartContainer>
+  )
+}
+
+export const NuclearWasteTypesChart = ({className, data}) => {
+  const chartData = [
+    { type: "Low-Level", value: 90, fill: "#ff0000", desc: "Tools and work clothing (1% radioactivity in total waste)" },
+    { type: "Intermediate-Level",  fill: "#0000ff", value: 7, desc: "Used filters, steel components (4% radioactivity in total waste)" },
+    { type: "High-Level", value: 3, fill: "#2eec7d", desc: "Spent fuel (95% radioactivity in total waste)" },
+  ]
+
+  const chartConfig = {
+    value: {
+      label: "%",
+    },
+    "High-Level": {
+      label: "High-Level",
+      fill: "#ff0000",
+    },
+    "Intermediate-Level": {
+      label: "Intermediate-Level",
+      fill: "#0000ff",
+    },
+    "Low-Level": {
+      label: "Low-Level",
+      fill: "#2eec7d",
+    },
+  }
+
+return (
+    <ChartContainer config={chartConfig} className={className} >
+          <PieChart>
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent hideLabel />}
+            />
+            <Pie
+              data={chartData}
+              dataKey="value"
+              innerRadius={60}
+              strokeWidth={5}
+              activeIndex={0}
+              activeShape={({
+                outerRadius = 0,
+                ...props
+              }) => (
+                <Sector {...props} outerRadius={outerRadius + 10} />
+              )}
+              labelLine={false}
+              label={({ payload, ...props }) => {
+                return (
+                  <text
+                    cx={props.cx}
+                    cy={props.cy}
+                    x={props.x}
+                    y={props.y}
+                    textAnchor={props.textAnchor}
+                    dominantBaseline={props.dominantBaseline}
+                    fill="hsla(var(--foreground))"
+                  >
+                    {payload.type} ({payload.value}%)
+                  </text>
+                )
+              }}>
+            </Pie>
+            {/* <ChartLegend content={<ChartLegendContent nameKey="type"/>} /> */}
+          </PieChart>
+        </ChartContainer>
+  )
+}
+
+export const NuclearWasteChart = ({className, data, column}) => {
+  const chartData = data ? data : []
+
+  const chartConfig = {
+    Country: {
+      label: "Country",
+    },
+    "Discharged %": {
+      label: "Produced (% of total global waste)",
+    },
+    "Reprocessed %": {
+      label: "Recycled (% of total global recycled waste)",
+    },
+    "Discharged tHM": {
+      label: "Produced tHM",
+    },
+    "Reprocessed tHM": {
+      label: "Recycled tHM",
+    },
+  }
+
+  return (
+        <ChartContainer config={chartConfig} className={className}>
+          <BarChart accessibilityLayer data={chartData} 
+           layout="vertical"
+           margin={{
+             left: 30,
+             right: 20,
+           }}
+           >
+            <XAxis
+              hide
+              type="number"
+            />
+            <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
+            <ChartLegend content={<ChartLegendContent />} />
+            <YAxis
+              type="category"
+              dataKey="Country"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+            />
+            <Bar
+              dataKey={column}
+              stackId="a"
+              fill="#2ccfff"
+              radius={5}
+            >
+              <LabelList
+                dataKey={column}
+                position="right"
+                offset={8}
+                className="fill-[--color-label]"
+                fontSize={12}
+              />
+            </Bar>
+          </BarChart>
+        </ChartContainer>
   )
 }

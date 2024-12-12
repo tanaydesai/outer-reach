@@ -8,10 +8,14 @@ import { getDomainData, sortData, continents } from '@/lib/utils';
 import { Menu } from '@/components/menu';
 
 export const NuclearCapacities = ({className, data, country}) => {
-    let result = sortData(getDomainData(data, false, false, 2023), "desc", "Nuclear").filter(item => !continents.includes(item.Country)).slice(0, 10).map(item => ({ type: item.Country, value: item["Nuclear"] }));
+    let newData = sortData(getDomainData(data, false, false, 2023), "desc", "Capacity (MW)")
+    let value1 = (newData.filter(item => item.Country == "World")[0]["Capacity (MW)"] / 1000).toFixed(0);
+    let value2 = newData.filter(item => item.Country == "World")[0]["Units"]
+
+    let result = newData.filter(item => !continents.includes(item.Country)).slice(0, 10).map(item => ({ type: item.Country, value: (item["Capacity (MW)"] / 1000).toFixed(1) }));
    
     let countries = result.map(item => item.type);
-    let result2 = Object.values(countries.map(c => getDomainData(data, c).map(item => ({ Year: item.Year, [c]: item["Nuclear"] }))).flat().reduce((acc, { Year, ...rest }) => {
+    let result2 = Object.values(countries.map(c => getDomainData(data, c).map(item => ({ Year: item.Year, [c]: (item["Capacity (MW)"] / 1000).toFixed(1) }))).flat().reduce((acc, { Year, ...rest }) => {
             acc[Year] = { ...acc[Year], Year, ...rest };
             return acc;
         }, {})
@@ -38,8 +42,8 @@ export const NuclearCapacities = ({className, data, country}) => {
             </Tabs2>
             <Menu />
             <div className='cursor-default sm:flex'>
-                <div className='chart-number'><NumberFlow value={result.at(0)["value"]} />GW</div>
-                <div className='chart-desc'>is {countries[0]}'s current installed capacity of nuclear energy, the largest in the world.</div>
+                <div className='chart-number'><NumberFlow value={value1} />GW</div>
+                <div className='chart-desc'>is the World's current cummulative installed capacity of nuclear energy with a total of {value2} reactor units.</div>
             </div>
         </div>
     )
