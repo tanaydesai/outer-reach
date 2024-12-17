@@ -1,89 +1,50 @@
 "use client"
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { TypeAnimation } from 'react-type-animation';
-import { Fade } from 'react-awesome-reveal';
-import {DecryptText} from '@/components/decrypt'
-import { WindIcon, NuclearPlantIcon, RoverIcon, AIIcon, RocketIcon , FlaskIcon} from '@/components/icons';
+import Image from 'next/image';
 import Marquee from "react-fast-marquee";
-import ReactCurvedText from 'react-curved-text';
+import { motion } from 'framer-motion';
+import { InViewFade } from '@/components/fade'
+import { TextRevealWipe } from '@/components/text';
+import { EarthIcon } from '@/components/icons';
+import img from "@/assests/images/c.png"
+import img2 from "@/assests/images/a.png"
+import img3 from "@/assests/images/d.png"
 
 export default function Home() {
+
   return (
-      <div className='main py-[60px]'>
-  
-          <Fade className='h-[70px] sm:h-[80px] w-full'><TypeAnimation speed={10} cursor={false} sequence={[200,"Welcome", "Welcome to", 'Welcome to']} className='title leading-[85px] md:leading-[85px]'/></Fade>
-          <Fade className='min-h-[80px] w-full'><TypeAnimation speed={20} cursor={false} sequence={[1600,"Outer Reach"]} className='title leading-[70px] md:leading-[85px]'/></Fade>
-          
-          <div className='font-a1 hidden lg:block absolute top-[85px] right-10'>
-            <div className='relative'>
-                <div className='absolute -top-[25px] -left-[25px]'>
-                  <ReactCurvedText width={150} height={150} cx={75} cy={75} rx={75} ry={75} reversed={false} textProps={{ style: { fontSize: 17 } }} text="WE NEED MORE ENERGY • WE NEED MORE NUCLEAR •" />
-                </div>
-                <ReactCurvedText width={100} height={100} cx={50} cy={50} rx={50} ry={50} reversed={false} textProps={{ style: { fontSize: 11 } }} text="WE NEED MORE INTELLIGENCE • WE NEED MORE SPACE •"/>
+      <div className='main'>
+        <div className='frame'>
+
+         <div className='frame-content'>
+            <Marquee delay={3} className='h-[320px] md:h-[450px] mt-10 sm:mt-5 lg:mt-8 overflow-hidden' autoFill speed={50}>
+              <InViewFade delay={600} className='w-full px-5 gap-10 grid grid-cols-3'>
+                <Image src={img} className='w-[250px] md:w-[300px] h-auto'/>
+                <Image src={img2} className='w-[270px] md:w-[315px] h-auto'/>
+                <Image src={img3} className='w-[250px] md:w-[300px] h-auto'/>
+              </InViewFade>
+            </Marquee>
+            <InViewFade initialDelay={500}><TextRevealWipe className='title'>Welcome to,</TextRevealWipe></InViewFade>
+            <div className='h-[100px] items-center flex w-full'>
+                <InViewFade initialDelay={1000}><TextRevealWipe delay={1} className='title'>Outer</TextRevealWipe></InViewFade>
+                <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2, duration: 0.6}}}><EarthIcon className='stroke-[#837e77] hover:stroke-[#f4f4e4] mt-4 w-fit' size={70}/></motion.div>
+                <TextRevealWipe delay={1.3} className='title'>Reach</TextRevealWipe>
+            </div>
+            <InViewFade initialDelay={2500} className='description'>Data and insights tracking the progress and contribution of humanity's frontier technologies that are leading us to a world of abundance</InViewFade>
+          </div>
+
+          <div className='frame-bar'>
+            <div className='md:absolute bottom-0 flex md:block w-full'>
+              <InViewFade initialDelay={600} className='flex-1 py-3'>
+                <h1 className='tag justify-between flex-1'>EST <h1>06/2024</h1></h1>
+                <h1 className='tag justify-between flex-1 my-3'>BY <Link href={'https://tanaydesai.com'} className='hover:text-[#f4f4e4]'>Tanay Desai</Link></h1>
+              </InViewFade>
+              <div className='frame-button'>Next</div>
             </div>
           </div>
-
-          <Marquee className='min-h-[350px] overflow-hidden' autoFill speed={50}>
-            <div className='w-full grid grid-cols-4'>
-              <WindIcon className="group-hover:rotate-12 transition-all duration-300"/>   
-              <NuclearPlantIcon className="group-hover:-rotate-12 transition-all duration-300"/>
-              <AIIcon className="group-hover:rotate-12 transition-all duration-300"/>
-              <RocketIcon className="group-hover:-rotate-12 transition-all duration-300"/>     
-            </div>
-          </Marquee>
-
-          <div className='tag'><div className='tag-box'/><DecryptText text='Description' /></div>
-          <div className='description mt-2'>Data and insights tracking the progress of humanity's frontier technologies that are leading us to a world of abundance</div>
-          <div className='description mr-0 ml-auto text-right mt-5'>Highlighting how they contribute to humanity's prosperity while demystifying some negative misconceptions</div>
-
-          <div className='mt-10 tag'><div className='tag-box bg-teal-400'/><DecryptText text='Topics' /></div>
-          <div className='mt-5 w-full grid gap-2 grid-flow-row md:grid-cols-2 lg:grid-cols-4'>
-              <Link href={'/energy'}>
-              <div className='box group'>
-                  <div className='box-title'><FlaskIcon size={20}/>Road to Energy Abundance</div>    
-                  <WindIcon size={220} className="group-hover:rotate-12 transition-all duration-300"/>   
-                  <div className='box-desc'>Global energy mix, renewables and capacity growth, leaderboards, per capita and more.</div>
-              </div>
-              </Link>
-
-              <Link href={'/nuclear'}>
-              <div className='box group'>
-                  <div className='box-title'><FlaskIcon size={20}/>Nuclear's Revenge</div>    
-                  <NuclearPlantIcon size={220} className="group-hover:-rotate-12 transition-all duration-300"/>
-                  <div className='box-desc'>World's nuclear landscape, return to glory, truth about safety and recycling metrics.</div>
-              </div>
-              </Link>
-
-              <Link href={'/agi'}>
-              <div className='box group'>
-                  <div className='box-title'><FlaskIcon size={20}/>Age of AGI</div>
-                  <AIIcon  size={200} className="group-hover:rotate-12 transition-all duration-300"/>
-                  <div className='box-desc'>World's largest GPU clusters, global data center rollout, increasing energy demand and AGI's promise.</div>
-              </div>
-              </Link>
-
-              <Link href={'/space'}>
-              <div className='box group'>
-                  <div className='box-title'><FlaskIcon size={20}/>The Space Race</div> 
-                  <RocketIcon  size={200} className="group-hover:-rotate-12 transition-all duration-300"/>     
-                  <div className='box-desc'>The blessing of SpaceX, reducing launch costs, impact and need for space exploitation.</div>
-              </div>
-              </Link>
-          </div>
-
-          <div className="w-full absolute pointer-events-none -z-1 top-0 left-0 h-[85vh] sm:h-[100vh] grid grid-cols-3">
-            {Array.from({ length: 3*3 }).map((_, index) => (
-              <div key={index} className="relative">
-                <div className="absolute inset-0 rotate-45 flex items-center justify-center">
-                  <svg width="10" height="10" viewBox="0 0 10 10" className="text-[#463f3a]">
-                    <path d="M5 0v10M0 5h10" stroke="#1b1919" strokeWidth="0.5" />
-                  </svg>
-                </div>
-              </div>
-            ))}
-          </div>
-
+        
+        </div>     
       </div>
   )
 }

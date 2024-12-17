@@ -55,7 +55,7 @@ module.exports = {
   			'rajdhani-regular': ['rajdhani-regular', 'sans-serif'],
   			'planer-m': ['planer-m', 'sans-serif'],
   			'a1': ['a1', 'sans-serif'],
-  			'a2': ['a2', 'sans-serif']
+  			'a2': ['a2', 'sans-serif'],
   		}
   	}
   },

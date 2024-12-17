@@ -5,7 +5,7 @@ const chars = "!@#$%^&*()+=[]{}|;:,.<>?";
 
 export const DecryptText = ({
   text="Decrypt",
-  interval = 65,
+  interval = 80,
   className
 }) => {
   const [outputText, setOutputText] = useState("");
@@ -45,7 +45,7 @@ export const DecryptText = ({
   }
 
   return (
-    <div className={`min-h-[27px] flex items-center ${className}`}>
+    <div className={`min-h-[19px] flex items-center ${className}`}>
       {outputText}
       {remainder}
     </div>

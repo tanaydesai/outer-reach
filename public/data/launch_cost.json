@@ -154,6 +154,13 @@
     "launch_class": "Heavy"
   },
   {
+    "Entity": "Starship",
+    "Code": "",
+    "Year": 2030,
+    "cost_per_kg": 200,
+    "launch_class": "Heavy"
+  },
+  {
     "Entity": "GSLV",
     "Code": "",
     "Year": 2001,

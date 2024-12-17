@@ -10,7 +10,7 @@ const Command = React.forwardRef(({ className, ...props }, ref) => (
   <CommandPrimitive
     ref={ref}
     className={cn(
-      "flex h-full w-full flex-col overflow-hidden rounded-md text-stone-950 dark:bg-stone-950 dark:text-stone-50",
+      "flex h-full w-full flex-col text-stone-950 dark:bg-stone-950 dark:text-stone-50",
       className
     )}
     {...props} />
@@ -35,11 +35,11 @@ const CommandDialog = ({
 
 const CommandInput = React.forwardRef(({ className, ...props }, ref) => (
   <div className="flex items-center border-b px-2" cmdk-input-wrapper="">
-    <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+    <Search className="mr-2 h-4 w-4 shrink-0 stroke-[#837e77] opacity-50" />
     <CommandPrimitive.Input
       ref={ref}
       className={cn(
-        "flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-stone-500 disabled:cursor-not-allowed disabled:opacity-50 dark:placeholder:text-stone-400",
+        "flex h-11 w-full rounded-md py-3 text-sm bg-transparent outline-none placeholder:text-[#837e77] disabled:cursor-not-allowed disabled:opacity-50 dark:placeholder:text-stone-400",
         className
       )}
       {...props} />
@@ -58,7 +58,7 @@ const CommandList = React.forwardRef(({ className, ...props }, ref) => (
 CommandList.displayName = CommandPrimitive.List.displayName
 
 const CommandEmpty = React.forwardRef((props, ref) => (
-  <CommandPrimitive.Empty ref={ref} className="py-6 text-center text-sm" {...props} />
+  <CommandPrimitive.Empty ref={ref} className="" {...props} />
 ))
 
 CommandEmpty.displayName = CommandPrimitive.Empty.displayName
@@ -67,7 +67,7 @@ const CommandGroup = React.forwardRef(({ className, ...props }, ref) => (
   <CommandPrimitive.Group
     ref={ref}
     className={cn(
-      "overflow-hidden p-1 pb-5 text-stone-950 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-stone-500 dark:text-stone-50 dark:[&_[cmdk-group-heading]]:text-stone-400",
+      "text-stone-950 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-stone-500 dark:text-stone-50 dark:[&_[cmdk-group-heading]]:text-stone-400",
       className
     )}
     {...props} />
@@ -87,7 +87,7 @@ const CommandItem = React.forwardRef(({ className, ...props }, ref) => (
   <CommandPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full items-center cursor-default font-a1 rounded-[8px] select-none py-1.5 px-1 text-[15px] outline-none focus:bg-[#463f3a] focus:text-white data-[selected=true]:bg-[#463f3a] data-[selected=true]:text-white data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 dark:data-[selected='true']:bg-stone-800 dark:data-[selected=true]:text-stone-50",
+      "relative flex w-full items-center cursor-default font-a1 select-none py-1.5 px-1 text-[12px] outline-none focus:bg-[#463f3a] text-[#837e77] focus:text-white data-[selected=true]:bg-[#463f3a] data-[selected=true]:text-white data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 dark:data-[selected='true']:bg-stone-800 dark:data-[selected=true]:text-stone-50",
       className
     )}
     {...props} />

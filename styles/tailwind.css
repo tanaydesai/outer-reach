@@ -4,64 +4,54 @@
 
 
 @layer components {
-    * {
-        @apply outline-none
-    }
-
-    html {
-        @apply bg-slate-50
-    }
-
     .main {
-        @apply absolute top-0 left-0 w-full px-3 py-[50px] bg-slate-50 
+        @apply absolute top-0 left-0 w-full h-full p-4 flex 
     }
-    .main-body{
-        @apply w-full mt-6 md:mt-2
+    .frame { 
+        @apply w-full border-white border h-full md:flex
     }
+    .frame-content {
+        @apply h-[calc(100%-80px)] md:h-full flex-1 py-10 pb-10 md:pt-3 relative overflow-auto px-4
+    }
+    .frame-bar {
+        @apply md:w-[215px] relative md:pt-10 md:h-full w-full flex md:block border-t border-t-white md:border-t-0 md:border-l md:border-l-white
+    }
+    .frame-button {
+        @apply h-[80px] w-[145px] md:w-full border-t bg-[#f4f4e4] border-t-white flex uppercase items-center justify-center text-[40px] font-a1
+    }
+    .loading-page {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-[#463f3a] font-planer-m text-[35px] md:text-[70px]
+    }
+
+
     .navbar-box {
-        @apply rounded-[5px] outline-none hover:text-white hover:bg-[#463f3a] border-[1.5px] border-[#d9d9d9] py-1 px-2.5 cursor-default text-[#aaaaaa] text-[13px] uppercase font-a1
+        @apply py-2 px-3 cursor-default text-[#837e77] hover:text-[#f4f4e4] text-[11px] uppercase font-a1
     }
     .title {
-        @apply text-[70px] sm:text-[90px] lg:text-[80px] text-[#463f3a] font-planer-m whitespace-nowrap
+        @apply text-[40px] md:text-[65px] w-fit text-[#f4f4e4] font-a1 md:leading-[70px] md:h-[75px]
     }
     .description {
-        @apply text-[19px] sm:text-[22px] w-full md:w-[85%] lg:w-[55%] leading-6 sm:leading-8 font-a1
-    }
-    .description-tag {
-        @apply text-[25px] text-[#aaaaaa] font-planer-m h-[27px] gap-2 flex items-center uppercase
+        @apply text-[15px] md:w-[75%] text-[#f4f4e4] leading-6 font-a1 mt-2 h-auto
     }
     .tag {
-        @apply text-[12px] uppercase font-a1 h-[27px] flex items-center
+        @apply text-[11px] uppercase px-4 text-[#837e77] font-a1 flex items-center
     }
     .tag-box {
-        @apply w-2.5 h-2.5 inline-flex rounded-[2px] bg-red-400 mr-2
+        @apply w-2.5 h-2.5 inline-flex bg-[#f4f4e4] mr-2
     }
 
-    .box {
-        @apply flex-1 min-h-[350px] border-[1.5px] border-[#d9d9d9] relative overflow-auto rounded-[5px] mt-4 sm:mt-0
-    }
-    .box-title {
-        @apply text-[15px] h-[30px] px-1 m-2 flex gap-1.5 items-center w-fit rounded-[5px] font-a1
-    }
-    .box-desc {
-        @apply text-[13px] px-2 mt-2 absolute bottom-0 h-[65px] font-a1 
-    }
-    .third-page {
-        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-[#463f3a] font-planer-m text-[70px]
-    }
-
-
+ 
     .chart {
-        @apply py-3 rounded-[10px] border border-[#d9d9d9] overflow-auto flex-col flex
+        @apply py-3 overflow-auto flex-col flex bg-teal-950 rounded-[5px]
     }
     .chart-title {
-        @apply text-[17px] font-a1 mx-3 rounded-[5px] w-fit
+        @apply text-[17px] font-a1 mx-3 rounded-[5px] w-fit text-[#f4f4e4]
     }
     .chart-desc {
         @apply text-[14.5px] mt-0 px-3 sm:mt-3 font-a1 lg:w-[45%] text-[#aaaaaa]
     }
     .chart-number {
-        @apply text-[30px] md:text-[40px] font-a1 pl-3 text-[#656565] whitespace-nowrap
+        @apply text-[30px] md:text-[40px] font-a1 pl-3 text-[#aaaaaa] whitespace-nowrap
     }
     .chart-data {
         @apply text-[30px] px-6 text-right font-a1
@@ -70,6 +60,6 @@
         @apply text-[11px] text-white pl-2 font-a1 inline-flex items-end gap-1
     }
     .acc-span {
-        @apply text-[#463f3a]
+        @apply text-[#f4f4e4]
     }
 }

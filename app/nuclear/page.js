@@ -1,41 +1,44 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useRef,useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { TextRevealWipe } from '@/components/text';
+import { InViewFade } from '@/components/fade'
+import useSWR from 'swr'
+
 import { NuclearMix } from '@/components/energy-cards/nuclear-mix';
 import { NuclearCapacities } from '@/components/energy-cards/nuclear-capacity';
 import { NuclearReactors } from '@/components/energy-cards/nuclear-units';
 import { NuclearSafety }  from '@/components/energy-cards/nuclear-safety';
 import { NuclearWasteTypes } from '@/components/energy-cards/nuclear-waste-types';
 import { NuclearWaste } from '@/components/energy-cards/nuclear-waste';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
-import { Combobox } from '@/components/ui/combobox'
-import useSWR from 'swr'
+
 
 export default function Home() {
   const fetcher = (...args) => fetch(...args).then(res => res.json())
   
   const { data, error, isLoading } = useSWR('/api/energy', fetcher)
-  const [tab, setTab] = useState('gen');
+  const [tab, setTab] = useState('home');
   const [country, setCountry] = useState('World');
 
-  if (error) return <div className='third-page'>Error</div>
-  if (isLoading) return <div className='third-page'>Loading data...</div>
+  if (error) return <div className='loading-page'>Error</div>
+  if (isLoading) return <div className='loading-page'>Loading data...</div>
 
   return (
-    <div className="main pb-0">
-      <div className='main-body overflow-x-hidden'>
-        <Tabs defaultValue="gen" onValueChange={setTab} value={tab}>
-          <div className='flex gap-2 justify-start items-center'>
-            <TabsList>
-              <TabsTrigger value="gen"><div data-value={tab} className="data-[value=gen]:inline-flex hidden tag-box mr-1"/> Generation</TabsTrigger>
-              <TabsTrigger value="capacity"><div data-value={tab} className="data-[value=capacity]:inline-flex hidden tag-box mr-1"/> Capacity</TabsTrigger>
-              <TabsTrigger value="safety"><div data-value={tab} className="data-[value=safety]:inline-flex hidden tag-box mr-1"/> Safety</TabsTrigger>
-              <TabsTrigger value="waste"><div data-value={tab} className="data-[value=waste]:inline-flex hidden tag-box mr-1"/> Waste</TabsTrigger>
-            </TabsList>
-            <Combobox values={data.countries} value={country} setValue={setCountry}/>
-          </div>
+    <div className='main'>
+        <Tabs defaultValue="home" className='frame' onValueChange={setTab} value={tab}>
+
+          <TabsContent value="home">
+              <InViewFade delay={500} className='flex-1 absolute bottom-3'>
+                <TextRevealWipe className='title'>Nuclear Seeks</TextRevealWipe>
+                <TextRevealWipe delay={1.2} className='title'>Vengeance</TextRevealWipe>
+                <div className='description'><div>World's nuclear landscape, return to glory, truth about safety and {"\n"} recycling metrics.</div></div>
+              </InViewFade>
+          </TabsContent>
+
           <TabsContent value="gen">
-                <Accordion type="single" collapsible>
+                <Accordion className='my-10' type="single" collapsible>
                   <AccordionItem value="item-1">
                     <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
                     <AccordionContent>
@@ -44,47 +47,67 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
                 
-                <NuclearMix data={data.mix} country={country} className={'mt-10'}/>
+                <InViewFade className='my-10'><NuclearMix data={data.mix} country={country}/></InViewFade>
           </TabsContent>
+
           <TabsContent value="capacity">
-                <Accordion type="single" collapsible>
+                <Accordion className='my-10' type="single" collapsible>
                   <AccordionItem value="item-1">
                     <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
                   </AccordionItem>
                 </Accordion>
 
-                  <NuclearCapacities data={data.nuclearYear} country={country} className={'mt-10'}/>
+                <InViewFade className='my-10'><NuclearCapacities data={data.nuclearYear} country={country}/></InViewFade>
                   
-                  <Accordion type="single" collapsible>
+                <Accordion className='my-10' type="single" collapsible>
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                    </AccordionItem>
+                </Accordion>
+
+                <InViewFade className='my-10'><NuclearReactors data={data.nuclearReactors} data2={data.nuclearYear} country={country} className={'mt-5'}/></InViewFade>
+          </TabsContent>
+
+          <TabsContent value="safety">
+                <Accordion className='my-10' type="single" collapsible>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                  </AccordionItem>
+                </Accordion>
+
+                <InViewFade className='my-10'><NuclearSafety data={data.safety} /></InViewFade>
+          </TabsContent>
+
+          <TabsContent value="waste">
+                <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
                       <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
                     </AccordionItem>
                   </Accordion>
 
-                  <NuclearReactors data={data.nuclearReactors} data2={data.nuclearYear} country={country} className={'mt-5'}/>
-          </TabsContent>
-          <TabsContent value="safety">
-                <Accordion type="single" collapsible>
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
-                  </AccordionItem>
-                </Accordion>
-
-                <NuclearSafety data={data.safety} className={'mt-10'}/>
-          </TabsContent>
-          <TabsContent value="waste">
-          <Accordion type="single" collapsible>
-                <AccordionItem value="item-1">
-                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
-                  </AccordionItem>
-                </Accordion>
-
-                <NuclearWaste data={data.nuclearWaste} country={country} className={'mt-10'}/>          
+                <InViewFade className='my-10'><NuclearWaste data={data.nuclearWaste} country={country}/></InViewFade>          
                 
-                <NuclearWasteTypes className={'mt-10'}/>
+                <Accordion className='my-10' type="single" collapsible>
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                    </AccordionItem>
+                </Accordion>
+
+                <InViewFade className='my-10'><NuclearWasteTypes/></InViewFade>
           </TabsContent>
-        </Tabs>
-      </div>
+
+          <TabsList>
+            <InViewFade initialDelay={600} className='flex-1 overflow-auto h-[80px] md:h-[calc(100%-127px)]'>
+              <h1 className='tag mt-2'><div className='tag-box' />SUB-TOPICS</h1>
+              <TabsTrigger value="gen" className='mt-5'><div className='font-mono'>01</div> Generation</TabsTrigger>
+              <TabsTrigger value="capacity"><div className='font-mono'>02</div> Capacity</TabsTrigger>
+              <TabsTrigger value="safety"><div className='font-mono'>03</div> Safety</TabsTrigger>
+              <TabsTrigger value="waste"><div className='font-mono'>04</div> Waste</TabsTrigger>
+            </InViewFade>
+            <div className='frame-button md:absolute bottom-0'>Next</div>
+          </TabsList>
+        
+        </Tabs>     
     </div>
   )
 }

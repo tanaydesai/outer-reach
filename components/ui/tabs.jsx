@@ -11,7 +11,7 @@ const TabsList = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.List
     ref={ref}
     className={cn(
-      "w-full sm:w-fit px-1.5 py-1 text-center rounded-[10px] flex border border-[#d9d9d9] items-center justify-start gap-3 overflow-auto dark:bg-stone-800 dark:text-stone-400",
+      "frame-bar dark:bg-stone-800 dark:text-stone-400",
       className
     )}
     {...props}></TabsPrimitive.List>
@@ -19,15 +19,13 @@ const TabsList = React.forwardRef(({ className, ...props }, ref) => (
 TabsList.displayName = TabsPrimitive.List.displayName
 
 const TabsTrigger = React.forwardRef(({ className, ...props }, ref) => (
-  <div>
       <TabsPrimitive.Trigger
       ref={ref}
       className={cn(
-        "font-a1 group py-1 px-2 text-[#aaaaaa] data-[state=active]:bg-[#eeeeee] hover:bg-[#eeeeee] hover:text-black outline-none transition-all rounded-[5px] text-[14px] whitespace-nowrap disabled:pointer-events-none  data-[state=active]:text-black data-[state=active]:stroke-[#1e1f2b] dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
+        "text-[12px] py-2.5 mb-2 w-[90%] mx-auto border-t border-t-[#837e77]/[0.5] px-4 flex justify-between uppercase font-a1 text-[#837e77] hover:text-[#f4f4e4] whitespace-nowrap disabled:pointer-events-none data-[state=active]:text-[#f4f4e4] dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
         className
       )}
       {...props} />
-  </div>
 ))
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 
@@ -35,7 +33,7 @@ const TabsContent = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "h-[75vh] lg:h-[calc(100vh-125px)] pb-10 overflow-auto mt-5",
+      "frame-content",
       className
     )}
     {...props} />
@@ -61,7 +59,7 @@ const TabsList2 = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.List
     ref={ref}
     className={cn(
-      "w-fit ml-3 px-1.5 py-1 text-center rounded-[10px] flex border border-[#d9d9d9] items-center justify-start gap-3 overflow-auto dark:bg-stone-800 dark:text-stone-400",
+      "w-fit ml-3 px-1 py-0.5 text-center flex border rounded-[6px] border-white items-center justify-start gap-1 overflow-auto dark:bg-stone-800 dark:text-stone-400",
       className
     )}
     {...props}></TabsPrimitive.List>
@@ -73,7 +71,7 @@ const TabsTrigger2 = React.forwardRef(({ className, ...props }, ref) => (
       <TabsPrimitive.Trigger
       ref={ref}
       className={cn(
-        "font-a1 group py-1 px-2 text-[#aaaaaa] data-[state=active]:bg-[#eeeeee] hover:bg-[#eeeeee] hover:text-black outline-none transition-all rounded-[5px] text-[14px] whitespace-nowrap disabled:pointer-events-none  data-[state=active]:text-black data-[state=active]:stroke-[#1e1f2b] dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
+        "font-a1 group py-0.5 px-1.5 text-[#837e77] rounded-[4px] data-[state=active]:bg-[#f4f4e4] hover:bg-[#f4f4e4] hover:text-black outline-none transition-all text-[12px] whitespace-nowrap disabled:pointer-events-none  data-[state=active]:text-black data-[state=active]:stroke-[#1e1f2b] dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300 dark:data-[state=active]:bg-stone-950 dark:data-[state=active]:text-stone-50",
         className
       )}
       {...props} />
@@ -85,7 +83,7 @@ const TabsContent2 = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "mt-5 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300",
+      "mt-10 mb-5 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300",
       className
     )}
     {...props} />

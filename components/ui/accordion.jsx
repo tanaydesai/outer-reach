@@ -1,10 +1,11 @@
 "use client"
-
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"
-
+import { InViewFade } from '@/components/fade'
 import { cn } from "@/lib/utils"
+
+
 
 const Accordion = AccordionPrimitive.Root
 
@@ -14,18 +15,20 @@ const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (
 AccordionItem.displayName = "AccordionItem"
 
 const AccordionTrigger = React.forwardRef(({ className, children, icon=true, ...props }, ref) => (
-  <AccordionPrimitive.Header className="flex">
-    <AccordionPrimitive.Trigger
-      ref={ref}
-      className={cn(
-        "text-[#aaaaaa] text-left my-5 text-[17px] sm:text-[20px] px-1 font-a1 h-fit leading-8 w-full md:w-[50%] transition-all [&[data-state=open]>svg]:rotate-180",
-        className
-      )}
-      {...props}>
-      {children}
-      {icon && <ChevronDown className="h-3.5 mx-2 inline-flex w-3.5"/>}
-    </AccordionPrimitive.Trigger>
-  </AccordionPrimitive.Header>
+  <InViewFade>
+      <AccordionPrimitive.Header className="flex">
+        <AccordionPrimitive.Trigger
+          ref={ref}
+          className={cn(
+            "text-[#837e77] text-left my-5 text-[17px] sm:text-[20px] px-1 font-a1 h-fit leading-8 w-full md:w-[65%] transition-all [&[data-state=open]>svg]:rotate-180",
+            className
+          )}
+          {...props}>
+            {children}
+            {icon && <ChevronDown className="h-3.5 mx-2 inline-flex w-3.5"/>}
+        </AccordionPrimitive.Trigger>
+      </AccordionPrimitive.Header>
+  </InViewFade>
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 

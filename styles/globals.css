@@ -25,6 +25,13 @@
   display: none;
 }
 
+* {
+  outline: none;
+}
+
+html {
+  @apply bg-[#0e0d0d]
+}
 
   @font-face {
     font-family: "rajdhani-bold";

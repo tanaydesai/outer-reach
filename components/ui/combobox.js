@@ -13,13 +13,11 @@ export function Combobox({ values, value="", setValue }) {
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <div className="font-a1 cursor-default flex bg-transparent whitespace-nowrap overflow-auto group p-2 mx-0 text-[#aaaaaa] hover:text-black text-[14px] no-underline rounded-[10px] border border-[#d9d9d9]">
-          {value == "World" ? <Earth size={22} /> : value ? values.find((framework) => framework.value === value)?.label : <Earth size={22} />}
-            <ChevronDown size={18} className="pt-1"/>
-        </div>
+      <PopoverTrigger className="font-a1 w-full gap-1 cursor-default flex justify-center bg-transparent whitespace-nowrap overflow-auto group text-[#837e77] hover:text-[#f4f4e4] uppercase h-[80px] md:h-auto text-[12px] px-4 py-2.5 no-underline border-l border-l-white md:border-l-0 md:border-t md:border-t-white">
+          {value ? values.find((framework) => framework.value === value)?.label : "Country"}
+          <ChevronDown size={18}/>
       </PopoverTrigger>
-      <PopoverContent className="z-50 min-w-[15rem] max-h-[300px] overflow-hidden rounded-[10px] shadow-md mt-2  border border-[#d9d9d9] bg-[#f3f3f3] p-1">
+      <PopoverContent className="z-50 w-[215px] max-h-[300px] overflow-hidden bg-[#f4f4e4] shadow-md border-t border-t-white">
         <Command>
           <CommandInput placeholder="Search..." />
           <CommandList>
