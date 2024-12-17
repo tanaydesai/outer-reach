@@ -5,7 +5,7 @@
 
 @layer components {
     .main {
-        @apply absolute top-0 left-0 w-full h-full p-4 flex 
+        @apply absolute top-0 left-0 w-full h-full p-2 flex 
     }
     .frame { 
         @apply w-full border-white border h-full md:flex
@@ -17,7 +17,7 @@
         @apply md:w-[215px] relative md:pt-10 md:h-full w-full flex md:block border-t border-t-white md:border-t-0 md:border-l md:border-l-white
     }
     .frame-button {
-        @apply h-[80px] w-[145px] md:w-full border-t bg-[#f4f4e4] border-t-white flex uppercase items-center justify-center text-[40px] font-a1
+        @apply h-[80px] w-[105px] md:w-full border-t bg-[#f4f4e4] border-t-white flex uppercase items-center justify-center text-[35px] font-a1
     }
     .loading-page {
         @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-[#463f3a] font-planer-m text-[35px] md:text-[70px]

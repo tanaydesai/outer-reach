@@ -37,7 +37,7 @@ export default function Home() {
         <Tabs defaultValue="home" className='frame' onValueChange={setTab} value={tab}>
 
           <TabsContent value="home">
-              <InViewFade delay={500} className='absolute bottom-3'>
+              <InViewFade delay={500} className='absolute bottom-4'>
                 <TextRevealWipe className='title'>Road to Energy</TextRevealWipe>
                 <TextRevealWipe delay={1.2} className='title'>Abundance</TextRevealWipe>
                 <div className='description'>Global energy mix, renewables and capacity growth, leaderboards, per capita and more.</div>

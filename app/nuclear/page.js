@@ -30,7 +30,7 @@ export default function Home() {
         <Tabs defaultValue="home" className='frame' onValueChange={setTab} value={tab}>
 
           <TabsContent value="home">
-              <InViewFade delay={500} className='flex-1 absolute bottom-3'>
+              <InViewFade delay={500} className='flex-1 absolute bottom-4'>
                 <TextRevealWipe className='title'>Nuclear Seeks</TextRevealWipe>
                 <TextRevealWipe delay={1.2} className='title'>Vengeance</TextRevealWipe>
                 <div className='description'><div>World's nuclear landscape, return to glory, truth about safety and {"\n"} recycling metrics.</div></div>
