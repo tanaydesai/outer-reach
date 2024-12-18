@@ -25,7 +25,7 @@ export default function Home() {
         <Tabs defaultValue="home" className='frame' onValueChange={setTab} value={tab}>
 
           <TabsContent value="home">
-              <InViewFade delay={500} className='flex-1 absolute bottom-3'>
+              <InViewFade delay={500} className='flex-1 absolute bottom-3 pr-3'>
                 <TextRevealWipe className='title'>The Space Race</TextRevealWipe>
                 <div className='description'><div>The blessing of SpaceX, reducing launch costs, impact and need for space exploration.</div></div>
               </InViewFade>
@@ -41,7 +41,7 @@ export default function Home() {
                     </AccordionItem>
                 </Accordion>
             
-                <InViewFade initialDelay={600} className='my-10'><SpaceLaunches data={data.country} /></InViewFade>
+                <InViewFade initialDelay={600} className='my-10'><SpaceLaunches className='bg-[--tertiary-chart-bg]' data={data.country} /></InViewFade>
 
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
@@ -52,7 +52,7 @@ export default function Home() {
                     </AccordionItem>
                 </Accordion>
 
-                <InViewFade initialDelay={600} className='my-10'><RocketLaunches data={data.rocket} /></InViewFade>
+                <InViewFade initialDelay={600} className='my-10'><RocketLaunches className='bg-[--tertiary-chart-bg]' data={data.rocket} /></InViewFade>
           </TabsContent>
 
           <TabsContent value="cost">
@@ -65,7 +65,7 @@ export default function Home() {
                     </AccordionItem>
                 </Accordion>
 
-                <InViewFade initialDelay={600} className='my-10'><RocketCosts data={data.cost}/></InViewFade>
+                <InViewFade initialDelay={600} className='my-10'><RocketCosts className='bg-[--tertiary-chart-bg]' data={data.cost}/></InViewFade>
             
           </TabsContent>
 
@@ -73,7 +73,7 @@ export default function Home() {
 
           <TabsList>
             <InViewFade initialDelay={600} className='flex-1 overflow-auto h-[80px] md:h-[calc(100%-127px)]'>
-              <h1 className='tag mt-2'><div className='tag-box' />SUB-TOPICS</h1>
+              <h1 className='tag mt-2' onClick={() => setTab('home')}><div className='tag-box' />SUB-TOPICS</h1>
               <TabsTrigger value="launch" className='mt-5'><div className='font-mono'>01</div> Launches</TabsTrigger>
               <TabsTrigger value="cost"><div className='font-mono'>02</div> Costs</TabsTrigger>
               <TabsTrigger value="mass"><div className='font-mono'>03</div> Mass to Orbit</TabsTrigger>

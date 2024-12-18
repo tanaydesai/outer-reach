@@ -59,7 +59,7 @@ export const SpaceLunchesCountry = ({className, data}) => {
                         name={Country}
                         />
                     ))}
-              <ChartLegend content={<ChartLegendContent className='w-[85%] text-[#f4f4e4] flex-wrap mx-auto' />} />
+              <ChartLegend content={<ChartLegendContent className='w-[85%] text-[--primary-text] flex-wrap mx-auto' />} />
             </LineChart>
       </ChartContainer>
     )
@@ -79,7 +79,7 @@ export const SpaceLunchesRocket = ({className, data}) => {
     
     const countries = ["Starship", "Falcon", "Vulcan", "Long March", "Firefly", "Electron", "Delta", "Ariane", "PSLV"]
     
-    const colors = ["#ef7020", "#1e4fa2", "#3aee7a", "#ec7ad7", "#fe4ad6", "#a3a3a3", "#f4f4e4", "#b3acf2", "#e4e4e4", "#f2f2f2"]
+    const colors = ["#ef7020", "#1e4fa2", "#3aee7a", "#ec7ad7", "#fe4ad6", "#a3a3a3", "--primary-text", "#b3acf2", "#e4e4e4", "#f2f2f2"]
 
     const chartConfig = Object.fromEntries(
           countries.map((Rocket, index) => [
@@ -120,7 +120,7 @@ export const SpaceLunchesRocket = ({className, data}) => {
                         name={Rocket}
                         />
                     ))}
-              <ChartLegend content={<ChartLegendContent className='w-[85%] text-[#f4f4e4] flex-wrap mx-auto' />} />
+              <ChartLegend content={<ChartLegendContent className='w-[85%] text-[--primary-text] flex-wrap mx-auto' />} />
             </LineChart>
       </ChartContainer>
     )
@@ -140,7 +140,7 @@ export const SpaceLunchesRocket = ({className, data}) => {
     
     const countries = ["Starship", "Falcon 1", "Falcon 9", "Falcon Heavy", "Saturn V", "Long March 11", "Electron","GSLV", "PSLV"]
     
-    const colors = ["#ef7020", "#1e4fa2", "#3aee7a", "#ec7ad7", "#fe4ad6", "#a3a3a3", "#f4f4e4", "#b3acf2", "#e4e4e4", "#f2f2f2"]
+    const colors = ["#ef7020", "#1e4fa2", "#3aee7a", "#ec7ad7", "#fe4ad6", "#a3a3a3", "--primary-text", "#b3acf2", "#e4e4e4", "#f2f2f2"]
 
     const chartConfig = Object.fromEntries(
           countries.map((Entity, index) => [
@@ -183,7 +183,7 @@ export const SpaceLunchesRocket = ({className, data}) => {
                             <LabelList dataKey={Entity} position="top" fill={colors[index]} offset={10} formatter={(value) => Entity}/>
                     </Line>
                     ))}
-              <ChartLegend content={<ChartLegendContent className='w-[85%] text-[#f4f4e4] flex-wrap mx-auto' />} />
+              <ChartLegend content={<ChartLegendContent className='w-[85%] text-[--primary-text] flex-wrap mx-auto' />} />
             </LineChart>
       </ChartContainer>
     )

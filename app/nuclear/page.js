@@ -30,7 +30,7 @@ export default function Home() {
         <Tabs defaultValue="home" className='frame' onValueChange={setTab} value={tab}>
 
           <TabsContent value="home">
-              <InViewFade delay={500} className='flex-1 absolute bottom-4'>
+              <InViewFade delay={500} className='flex-1 absolute bottom-4 pr-3'>
                 <TextRevealWipe className='title'>Nuclear Seeks</TextRevealWipe>
                 <TextRevealWipe delay={1.2} className='title'>Vengeance</TextRevealWipe>
                 <div className='description'><div>World's nuclear landscape, return to glory, truth about safety and {"\n"} recycling metrics.</div></div>
@@ -47,7 +47,7 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
                 
-                <InViewFade className='my-10'><NuclearMix data={data.mix} country={country}/></InViewFade>
+                <InViewFade className='my-10'><NuclearMix className="bg-[--secondary-chart-bg]" data={data.mix} country={country}/></InViewFade>
           </TabsContent>
 
           <TabsContent value="capacity">
@@ -57,7 +57,7 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
 
-                <InViewFade className='my-10'><NuclearCapacities data={data.nuclearYear} country={country}/></InViewFade>
+                <InViewFade className='my-10'><NuclearCapacities className="bg-[--secondary-chart-bg]" data={data.nuclearYear} country={country}/></InViewFade>
                   
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
@@ -65,7 +65,7 @@ export default function Home() {
                     </AccordionItem>
                 </Accordion>
 
-                <InViewFade className='my-10'><NuclearReactors data={data.nuclearReactors} data2={data.nuclearYear} country={country} className={'mt-5'}/></InViewFade>
+                <InViewFade className='my-10'><NuclearReactors className="bg-[--secondary-chart-bg]" data={data.nuclearReactors} data2={data.nuclearYear} country={country} /></InViewFade>
           </TabsContent>
 
           <TabsContent value="safety">
@@ -75,7 +75,7 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
 
-                <InViewFade className='my-10'><NuclearSafety data={data.safety} /></InViewFade>
+                <InViewFade className='my-10'><NuclearSafety className="bg-[--secondary-chart-bg]" data={data.safety} /></InViewFade>
           </TabsContent>
 
           <TabsContent value="waste">
@@ -85,7 +85,7 @@ export default function Home() {
                     </AccordionItem>
                   </Accordion>
 
-                <InViewFade className='my-10'><NuclearWaste data={data.nuclearWaste} country={country}/></InViewFade>          
+                <InViewFade className='my-10'><NuclearWaste className="bg-[--secondary-chart-bg]" data={data.nuclearWaste} country={country}/></InViewFade>          
                 
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
@@ -93,12 +93,12 @@ export default function Home() {
                     </AccordionItem>
                 </Accordion>
 
-                <InViewFade className='my-10'><NuclearWasteTypes/></InViewFade>
+                <InViewFade className='my-10'><NuclearWasteTypes className="bg-[--secondary-chart-bg]"/></InViewFade>
           </TabsContent>
 
           <TabsList>
             <InViewFade initialDelay={600} className='flex-1 overflow-auto h-[80px] md:h-[calc(100%-127px)]'>
-              <h1 className='tag mt-2'><div className='tag-box' />SUB-TOPICS</h1>
+              <h1 className='tag mt-2' onClick={() => setTab('home')}><div className='tag-box' />SUB-TOPICS</h1>
               <TabsTrigger value="gen" className='mt-5'><div className='font-mono'>01</div> Generation</TabsTrigger>
               <TabsTrigger value="capacity"><div className='font-mono'>02</div> Capacity</TabsTrigger>
               <TabsTrigger value="safety"><div className='font-mono'>03</div> Safety</TabsTrigger>

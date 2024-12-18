@@ -10,15 +10,17 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+
+
+    --primary-text: #f4f4e4;
+    --secondary-text: #837e77;
+    --primary-chart-bg: #042f2e;
+    --secondary-chart-bg: #881337;
+    --tertiary-chart-bg: #172554;
+    --primary-radius: 5px;
+    --primary-border: white
   }
 
-  .dark {
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
 }
 
 * ::-webkit-scrollbar {
@@ -33,27 +35,27 @@ html {
   @apply bg-[#0e0d0d]
 }
 
-  @font-face {
-    font-family: "rajdhani-bold";
-    src: url("../assests/fonts/Rajdhani/Rajdhani-SemiBold.otf") format("opentype");
-  }
+@font-face {
+  font-family: "rajdhani-bold";
+  src: url("../assests/fonts/Rajdhani/Rajdhani-SemiBold.otf") format("opentype");
+}
 
-  @font-face {
-    font-family: "rajdhani-regular";
-    src: url("../assests/fonts/Rajdhani/Rajdhani-Regular.otf") format("opentype");
-  }
+@font-face {
+  font-family: "rajdhani-regular";
+  src: url("../assests/fonts/Rajdhani/Rajdhani-Regular.otf") format("opentype");
+}
 
-  @font-face {
-    font-family: "planer-m";
-    src: url("../assests/fonts/Planer/PlanerTest-Light-BF662b1a5e1e838.otf") format("opentype");
-  }
+@font-face {
+  font-family: "planer-m";
+  src: url("../assests/fonts/Planer/PlanerTest-Light-BF662b1a5e1e838.otf") format("opentype");
+}
 
-  @font-face {
-    font-family: "a1";
-    src: url("../assests/fonts/Alliance/A1.otf") format("opentype");
-  }
+@font-face {
+  font-family: "a1";
+  src: url("../assests/fonts/Alliance/A1.otf") format("opentype");
+}
 
-  @font-face {
-    font-family: "a2";
-    src: url("../assests/fonts/Alliance/A2.otf") format("opentype");
-  }
+@font-face {
+  font-family: "a2";
+  src: url("../assests/fonts/Alliance/A2.otf") format("opentype");
+}

@@ -11,8 +11,8 @@ export const RenewableShare = ({className, data, country}) => {
     // console.log(data)
 
     return (
-        <div className={`chart overflow-auto text-[#f4f4e4] bg-teal-950 border-none px-0 pb-0 ${className}`}>
-            <h1 className='chart-title text-[#f4f4e4]'>Share of clean energy in the electricity mix</h1>
+        <div className={`chart overflow-auto text-[--primary-text]  border-none px-0 pb-0 ${className}`}>
+            <h1 className='chart-title text-[--primary-text]'>Share of clean energy in the electricity mix</h1>
             <div className='chart-data'>{data.at(-1)["Renewables"].toFixed(1)}%<div className='chart-data-span'><ArrowUp size={17} data-value={value > 0 ? true : false} className='text-[#2eec7d] data-[value=false]:text-[#ec542e] data-[value=false]:rotate-180'/>{value}% YoY</div></div>
             <ShareRenewables data={data} className='w-full h-[150px]'/>
         </div>

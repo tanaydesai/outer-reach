@@ -37,7 +37,7 @@ export default function Home() {
         <Tabs defaultValue="home" className='frame' onValueChange={setTab} value={tab}>
 
           <TabsContent value="home">
-              <InViewFade delay={500} className='absolute bottom-4'>
+              <InViewFade delay={500} className='absolute bottom-4 pr-3'>
                 <TextRevealWipe className='title'>Road to Energy</TextRevealWipe>
                 <TextRevealWipe delay={1.2} className='title'>Abundance</TextRevealWipe>
                 <div className='description'>Global energy mix, renewables and capacity growth, leaderboards, per capita and more.</div>
@@ -150,7 +150,7 @@ export default function Home() {
 
           <TabsList>
             <InViewFade initialDelay={600} className='flex-1 overflow-auto h-[80px] md:h-[calc(100%-118px)]'>
-              <h1 className='tag mt-2'><div className='tag-box' />SUB-TOPICS</h1>
+              <h1 className='tag mt-2' onClick={() => setTab('home')}><div className='tag-box' />SUB-TOPICS</h1>
               <TabsTrigger value="mix" className='mt-5'><div className='font-mono'>01</div> Energy Mix</TabsTrigger>
               <TabsTrigger value="capacity"><div className='font-mono'>02</div> Capacity</TabsTrigger>
               <TabsTrigger value="economics"><div className='font-mono'>03</div> Economics</TabsTrigger>

@@ -13,11 +13,11 @@ export function Combobox({ values, value="", setValue }) {
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger className="font-a1 w-full gap-1 cursor-default flex justify-center bg-transparent whitespace-nowrap overflow-auto group text-[#837e77] hover:text-[#f4f4e4] uppercase h-[80px] md:h-auto text-[12px] px-4 py-2.5 no-underline border-l border-l-white md:border-l-0 md:border-t md:border-t-white">
+      <PopoverTrigger className="font-a1 w-full gap-1 cursor-default flex justify-center bg-transparent whitespace-nowrap overflow-auto group text-[--secondary-text] hover:text-[--primary-text] uppercase h-[80px] md:h-auto text-[12px] items-center px-3 py-2.5 no-underline border-l border-l-[--primary-border] md:border-l-0 md:border-t md:border-t-[--primary-border]">
           {value ? values.find((framework) => framework.value === value)?.label : "Country"}
           <ChevronDown size={18}/>
       </PopoverTrigger>
-      <PopoverContent className="z-50 w-[215px] max-h-[300px] overflow-hidden bg-[#f4f4e4] shadow-md border-t border-t-white">
+      <PopoverContent className="z-50 w-[215px] max-h-[300px] overflow-hidden bg-[--primary-text] shadow-md border-t border-t-[--primary-border]">
         <Command>
           <CommandInput placeholder="Search..." />
           <CommandList>

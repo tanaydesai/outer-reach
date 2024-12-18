@@ -20,7 +20,7 @@ const AccordionTrigger = React.forwardRef(({ className, children, icon=true, ...
         <AccordionPrimitive.Trigger
           ref={ref}
           className={cn(
-            "text-[#837e77] text-left my-5 text-[17px] sm:text-[20px] px-1 font-a1 h-fit leading-8 w-full md:w-[65%] transition-all [&[data-state=open]>svg]:rotate-180",
+            "text-[--secondary-text] text-left my-5 text-[17px] sm:text-[20px] px-1 font-a1 h-fit leading-8 w-full md:w-[65%] transition-all [&[data-state=open]>svg]:rotate-180",
             className
           )}
           {...props}>

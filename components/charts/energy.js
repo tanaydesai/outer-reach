@@ -59,7 +59,7 @@ return (
                 stroke={`#${Math.floor(Math.random() * 16777215).toString(16)}`}
             />
           ))}
-          <ChartLegend content={<ChartLegendContent className='w-[85%] text-[#f4f4e4] flex-wrap mx-auto' />} />
+          <ChartLegend content={<ChartLegendContent className='w-[85%] text-[--primary-text] flex-wrap mx-auto' />} />
         </LineChart>
       </ChartContainer>
 )
@@ -243,7 +243,7 @@ export const EnergyShare = ({className, data}) => {
                 formatter={(value) => chartData.findIndex(item => item["Oil"] === value) == chartData.length - 5 ? "Oil" : ""}
               />
               </Area>
-            <ChartLegend content={<ChartLegendContent className='w-[85%] text-[#f4f4e4] flex-wrap mx-auto' />} />
+            <ChartLegend content={<ChartLegendContent className='w-[85%] text-[--primary-text] flex-wrap mx-auto' />} />
           </AreaChart>
         </ChartContainer>
   )
@@ -477,7 +477,7 @@ export const AnnualEnergyChange = ({className, data}) => {
                 formatter={(value) => chartData.findIndex(item => item.Nuclear === value) == chartData.length - 1 ? `${value ? value.toFixed(0) : "N/A"}%` : ""}
               />
             </Line>
-            <ChartLegend content={<ChartLegendContent className='w-[85%] text-[#f4f4e4] flex-wrap mx-auto' />} />
+            <ChartLegend content={<ChartLegendContent className='w-[85%] text-[--primary-text] flex-wrap mx-auto' />} />
           </LineChart>
      </ChartContainer>
    )
@@ -650,7 +650,7 @@ return (
             fill="#ff58df"
             fillOpacity={0.2}
           /> */}
-          <ChartLegend content={<ChartLegendContent className='w-[85%] text-[#f4f4e4] flex-wrap mx-auto' />} />
+          <ChartLegend content={<ChartLegendContent className='w-[85%] text-[--primary-text] flex-wrap mx-auto' />} />
         </AreaChart>
       </ChartContainer>
 )
@@ -817,7 +817,7 @@ return (
             stroke="#ff58df"
             strokeWidth={2}
           />
-          <ChartLegend content={<ChartLegendContent className='w-[85%] text-[#f4f4e4] flex-wrap mx-auto' />} />
+          <ChartLegend content={<ChartLegendContent className='w-[85%] text-[--primary-text] flex-wrap mx-auto' />} />
         </LineChart>
       </ChartContainer>
   )
@@ -1008,7 +1008,7 @@ return (
               fontSize={12}
             />
           </Line>
-          <ChartLegend content={<ChartLegendContent className='w-[85%] text-[#f4f4e4] flex-wrap mx-auto' />} />
+          <ChartLegend content={<ChartLegendContent className='w-[85%] text-[--primary-text] flex-wrap mx-auto' />} />
         </LineChart>
       </ChartContainer>
 )
@@ -1096,7 +1096,7 @@ return (
                 formatter={(value) => chartData.findIndex(item => item["GDP per capita, PPP (constant 2017 international $)"] === value) == chartData.length - 1 ? `$${value ? value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") : "N/A"}` : ""}
               />
           </Line>
-          <ChartLegend content={<ChartLegendContent className='w-[85%] text-[#f4f4e4] flex-wrap mx-auto' />} />
+          <ChartLegend content={<ChartLegendContent className='w-[85%] text-[--primary-text] flex-wrap mx-auto' />} />
         </LineChart>
       </ChartContainer>
 )
