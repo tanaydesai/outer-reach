@@ -1,5 +1,6 @@
 "use client"
 import React, { useRef,useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Combobox } from '@/components/ui/combobox';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -14,15 +15,14 @@ import { EnergyChange } from '@/components/energy-cards/annual-energy-change';
 import { Energy3Share } from '@/components/energy-cards/energy3-share';
 import { EnergyCapacities } from '@/components/energy-cards/energy-capacity';
 import { EnergyCapacityAdditions } from '@/components/energy-cards/capacity-additions';
-import { AvgHouse } from '@/components/energy-cards/annual-avg-house';
 import { EnergyUse } from '@/components/energy-cards/annual-energy-pc';
 import { RenewableShare } from '@/components/energy-cards/renewable-share';
 import { FossilShare } from '@/components/energy-cards/fossils-share';
-import { EnergyGDP } from '@/components/energy-cards/energy-gdp';
 import { EnergyGDPPC } from '@/components/energy-cards/energy-gdp-pc';
 
 
 export default function Home() {
+  const router = useRouter()
   const fetcher = (...args) => fetch(...args).then(res => res.json())
   
   const { data, error, isLoading } = useSWR('/api/energy',fetcher)
@@ -70,7 +70,7 @@ export default function Home() {
                 <InViewFade initialDelay={600}>
                   <div className='md:flex gap-5 my-10'>
                     <EnergyChange data={data.mix} country={country} className={'flex-1'}/>
-                    <Energy3Share data={data.mix} country={country} className={'flex-1 mt-5 md:mt-0'}/>
+                    <Energy3Share data={data.mix} country={country} className={'flex-1 mt-10 md:mt-0'}/>
                   </div>
                 </InViewFade>
 
@@ -82,7 +82,7 @@ export default function Home() {
 
                 <InViewFade initialDelay={600} className='md:flex gap-5 mt-10'>
                   <RenewableShare data={data.mix} country={country} className={'flex-1'}/>
-                  <FossilShare data={data.mix} country={country} className={'flex-1 mt-5 md:mt-0'}/>
+                  <FossilShare data={data.mix} country={country} className={'flex-1 mt-10 md:mt-0'}/>
                 </InViewFade>
           </TabsContent>
 
@@ -101,7 +101,7 @@ export default function Home() {
                 <InViewFade initialDelay={600}>
                   <div className='md:flex gap-2 my-10'>
                     <EnergyCapacities data={data.capacity} country={country} className={'flex-1'}/>
-                    <EnergyCapacityAdditions data={data.capacity} country={country} className={'flex-1 mt-5 md:mt-0'}/>
+                    <EnergyCapacityAdditions data={data.capacity} country={country} className={'flex-1 mt-10 md:mt-0'}/>
                   </div>
                 </InViewFade>
 
@@ -122,17 +122,9 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
                 
-                <InViewFade initialDelay={600}>
-                  <div className='md:flex gap-2 my-10'>            
-                    <EnergyGDP className={'flex-1'}/>
-                    <EnergyGDPPC data={data.mix} country={country} className={'flex-1 mt-5 md:mt-0'}/>
-                  </div>  
-                </InViewFade>
+                <InViewFade initialDelay={600} className='my-10'><EnergyGDPPC data={data.mix} country={country} /></InViewFade>
                 
-                <InViewFade initialDelay={600} className='md:flex gap-2 my-10'>
-                  <EnergyUse data={data.mix} country={country} className={'flex-1'}/>
-                  <AvgHouse className={'flex-1 mt-5 md:mt-0'}/>
-                </InViewFade>
+                <InViewFade initialDelay={600} className='my-10'><EnergyUse data={data.mix} country={country} /></InViewFade>
           </TabsContent>
           
           <TabsContent value="leaderboards">
@@ -151,13 +143,13 @@ export default function Home() {
           <TabsList>
             <InViewFade initialDelay={600} className='flex-1 overflow-auto h-[80px] md:h-[calc(100%-118px)]'>
               <h1 className='tag mt-2' onClick={() => setTab('home')}><div className='tag-box' />SUB-TOPICS</h1>
-              <TabsTrigger value="mix" className='mt-5'><div className='font-mono'>01</div> Energy Mix</TabsTrigger>
+              <TabsTrigger value="mix" className='mt-10'><div className='font-mono'>01</div> Energy Mix</TabsTrigger>
               <TabsTrigger value="capacity"><div className='font-mono'>02</div> Capacity</TabsTrigger>
               <TabsTrigger value="economics"><div className='font-mono'>03</div> Economics</TabsTrigger>
               <TabsTrigger value="leaderboards"><div className='font-mono'>04</div> Leaderboards</TabsTrigger>
             </InViewFade>
             <InViewFade initialDelay={600}><Combobox values={data.countries} value={country} setValue={setCountry}/></InViewFade>        
-            <div className='frame-button'>Next</div>
+            <div className='frame-button' onClick={() => tab === "leaderboards" ? router.push('/nuclear') : setTab(["mix", "capacity", "economics", "leaderboards"][["mix", "capacity", "economics", "leaderboards"].indexOf(tab) + 1])}>Next</div>
           </TabsList>
         
         </Tabs>     

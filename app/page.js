@@ -40,7 +40,7 @@ export default function Home() {
                 <h1 className='tag justify-between flex-1'>EST <h1>06/2024</h1></h1>
                 <h1 className='tag justify-between flex-1 my-3'>BY <Link href={'https://tanaydesai.com'} className='hover:text-[--primary-text]'>Tanay Desai</Link></h1>
               </InViewFade>
-              <div className='frame-button'>Next</div>
+              <Link className='frame-button' href={'/energy'}>Next</Link>
             </div>
           </div>
         

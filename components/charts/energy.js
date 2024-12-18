@@ -331,7 +331,8 @@ export const AnnualEnergyChange = ({className, data}) => {
              accessibilityLayer
              data={chartData}
              margin={{
-               left: -20,
+               left: -25,
+               right:10,
              }}
            >
              {/* <CartesianGrid vertical={false} /> */}
@@ -873,7 +874,7 @@ export const PlannedCapacity = ({className}) => {
                 dataKey="capacity"
                 position="insideLeft"
                 offset={8}
-                className="fill-[--color-label]"
+                className="fill-[--primary-text]"
                 fontSize={12}
               />
             </Bar>
@@ -922,96 +923,13 @@ export const CurrentCapacity = ({className, data}) => {
                 dataKey="value"
                 position="right"
                 offset={8}
-                className="fill-[--color-label]"
+                className="fill-[--primary-text]"
                 fontSize={12}
               />
             </Bar>
           </BarChart>
         </ChartContainer>
   )
-}
-
-export const EnergyConsumptionGDP = ({className}) => {
-  const chartData = [
-    { year: 2000, energy: 5, gdp: 10 },
-    { year: 2001, energy: 20, gdp: 10 },
-    { year: 2002, energy: 37, gdp: 20 },
-    { year: 2014, energy: 103, gdp: -0 },
-    { year: 2015, energy: 153, gdp: 50 },
-    { year: 2018, energy: 353, gdp: 150 },
-    { year: 2019, energy: 453, gdp: 150 },
-    { year: 2020, energy: 553, gdp: 150 },
-    { year: 2023, energy: 609, gdp: 260 },
-    { year: 2024, energy: 814, gdp: 300 },
-  ]
-  
-  const chartConfig = {
-    year: {
-      label: "Year",
-    },
-    energy: {
-      label: "Energy Consumption",
-      color: "#220706",
-    },
-    gdp: {
-      label: "GDP",
-      color: "#de4311",
-    },
-  }
-
-return (
-    <ChartContainer config={chartConfig} className={className}>
-        <LineChart
-          accessibilityLayer
-          data={chartData}
-          margin={{
-            left: -10,
-            right:20,
-          }}
-        >
-          <CartesianGrid vertical={false} />
-          <XAxis
-            dataKey="year"
-            tickLine={false}
-            axisLine={false}
-            tickMargin={3}
-          />
-          <YAxis
-            tickLine={false}
-            axisLine={false}
-            tickMargin={8}
-            tickCount={5}
-          />
-          <ChartTooltip
-            cursor={false}
-            content={<ChartTooltipContent labelKey="year" />}
-          />
-          <Line
-            dataKey="energy"
-            stroke='#000000'
-            >
-            <LabelList
-              position="top"
-              offset={12}
-              className="fill-foreground"
-              fontSize={12}
-            />
-          </Line>
-          <Line
-            dataKey="gdp"
-            stroke='#fe4311'
-          >
-            <LabelList
-              position="bottom"
-              offset={12}
-              className="fill-foreground"
-              fontSize={12}
-            />
-          </Line>
-          <ChartLegend content={<ChartLegendContent className='w-[85%] text-[--primary-text] flex-wrap mx-auto' />} />
-        </LineChart>
-      </ChartContainer>
-)
 }
 
 export const EnergyConsumptionGDPPC = ({className, data}) => {
@@ -1100,61 +1018,6 @@ return (
         </LineChart>
       </ChartContainer>
 )
-}
-
-export const AnnualHouse = ({className}) => {
-  const chartData = [
-    { year: 2012, use: 1236 },
-    { year: 2014, use: 2235 },
-    { year: 2015, use: 3447 },
-    { year: 2016, use: 3550 },
-    { year: 2017, use: 6053 },
-    { year: 2018, use: 6263 },
-    { year: 2019, use: 7275 },
-    { year: 2024, use: 8389 },
-  ]
-    const chartConfig = {
-      year: {
-        label: "Year",
-      },
-      use: {
-        label: "Electricity Use",
-        color: "#b10fff",
-      },
-    }
-
-  return (
-        <ChartContainer config={chartConfig} className={className}>
-          <AreaChart
-            accessibilityLayer
-            data={chartData}
-            margin={{
-              left: 0,
-              right: 0,
-            }}
-          >
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent indicator="dot" className="text-black" labelKey="year" />}
-            />
-            <Area
-              dataKey="use"
-              type="natural"
-              fill="#b10fff"
-              // dot={true}
-              radius={2}
-              stroke="#b10fff"
-            >
-              <LabelList
-              position="top"
-              offset={12}
-              className="fill-foreground"
-              fontSize={12}
-            />
-            </Area>
-          </AreaChart>
-        </ChartContainer>
-  )
 }
 
 export const EnergyUsePP = ({className, data}) => {
@@ -1309,7 +1172,7 @@ export const NuclearUnits = ({className, data}) => {
               type="number"
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
-            <ChartLegend content={<ChartLegendContent />} />
+            <ChartLegend content={<ChartLegendContent className="text-[--primary-text]"/>} />
             <YAxis
               type="category"
               dataKey="Country"
@@ -1327,7 +1190,7 @@ export const NuclearUnits = ({className, data}) => {
                 dataKey="Operation Units"
                 position="insideRight"
                 offset={8}
-                className="fill-[--color-label]"
+                className="fill-[--primary-text]"
                 fontSize={12}
               />
             </Bar>
@@ -1347,7 +1210,7 @@ export const NuclearUnits = ({className, data}) => {
                 dataKey="Under Construction Units"
                 position="right"
                 offset={8}
-                className="fill-[--color-label]"
+                className="fill-[--primary-text]"
                 fontSize={12}
               />
             </Bar>
@@ -1377,7 +1240,7 @@ return (
             data={chartData}
             layout="vertical"
             margin={{
-              left: 28,
+              left: 32,
               top: 10
             }}
           >
@@ -1458,7 +1321,7 @@ return (
                     y={props.y}
                     textAnchor={props.textAnchor}
                     dominantBaseline={props.dominantBaseline}
-                    fill="hsla(var(--foreground))"
+                    className='fill-[--primary-text]'
                   >
                     {payload.type} ({payload.value}%)
                   </text>
@@ -1506,7 +1369,7 @@ export const NuclearWasteChart = ({className, data, column}) => {
               type="number"
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
-            <ChartLegend content={<ChartLegendContent />} />
+            <ChartLegend content={<ChartLegendContent className="text-[--primary-text]" />} />
             <YAxis
               type="category"
               dataKey="Country"
@@ -1524,7 +1387,7 @@ export const NuclearWasteChart = ({className, data, column}) => {
                 dataKey={column}
                 position="right"
                 offset={8}
-                className="fill-[--color-label]"
+                className="fill-[--primary-text]"
                 fontSize={12}
               />
             </Bar>

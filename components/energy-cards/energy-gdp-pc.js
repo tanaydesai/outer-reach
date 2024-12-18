@@ -14,7 +14,7 @@ export const EnergyGDPPC = ({className, data, country}) => {
     return (
         <div className={`chart ${className}`}>
             <h1 className='chart-title'>Change in energy use per capita and GDP per capita, {country}</h1>
-            <EnergyConsumptionGDPPC data={data} className='w-full flex-1 h-[350px] mt-4'/>
+            <EnergyConsumptionGDPPC data={data} className='w-full h-[350px] mt-4'/>
             <Menu />
             <div className='cursor-default sm:flex'>
                 <div className='chart-number'><NumberFlow value={value} format={{ style: 'percent' }}/></div>

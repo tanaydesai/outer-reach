@@ -1,12 +1,5 @@
 [
   {
-    "Entity": "Angara",
-    "Code": "",
-    "Year": 2014,
-    "cost_per_kg": 4500,
-    "launch_class": "Heavy"
-  },
-  {
     "Entity": "Antares",
     "Code": "",
     "Year": 2013,
@@ -14,87 +7,10 @@
     "launch_class": "Medium"
   },
   {
-    "Entity": "Ariane 44",
-    "Code": "",
-    "Year": 1988,
-    "cost_per_kg": 18300,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Ariane 5G",
-    "Code": "",
-    "Year": 1997,
-    "cost_per_kg": 10200,
-    "launch_class": "Heavy"
-  },
-  {
-    "Entity": "Athena 1",
-    "Code": "",
-    "Year": 1997,
-    "cost_per_kg": 19200,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Atlas Centaur",
-    "Code": "",
-    "Year": 1963,
-    "cost_per_kg": 29500,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Atlas II",
-    "Code": "",
-    "Year": 1991,
-    "cost_per_kg": 18700,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Atlas III",
-    "Code": "",
-    "Year": 2000,
-    "cost_per_kg": 16000,
-    "launch_class": "Medium"
-  },
-  {
     "Entity": "Atlas V",
     "Code": "",
     "Year": 2002,
     "cost_per_kg": 8100,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Delta 3000-Series",
-    "Code": "",
-    "Year": 1975,
-    "cost_per_kg": 21400,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Delta 3910",
-    "Code": "",
-    "Year": 1980,
-    "cost_per_kg": 32800,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Delta E",
-    "Code": "",
-    "Year": 1965,
-    "cost_per_kg": 177900,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Delta II",
-    "Code": "",
-    "Year": 1990,
-    "cost_per_kg": 38800,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Delta III",
-    "Code": "",
-    "Year": 1999,
-    "cost_per_kg": 18000,
     "launch_class": "Medium"
   },
   {
@@ -112,24 +28,10 @@
     "launch_class": "Heavy"
   },
   {
-    "Entity": "Dnepr",
-    "Code": "",
-    "Year": 1999,
-    "cost_per_kg": 9600,
-    "launch_class": "Medium"
-  },
-  {
     "Entity": "Electron",
     "Code": "",
     "Year": 2018,
     "cost_per_kg": 23100,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Epsilon",
-    "Code": "",
-    "Year": 2013,
-    "cost_per_kg": 34500,
     "launch_class": "Small"
   },
   {
@@ -168,27 +70,6 @@
     "launch_class": "Medium"
   },
   {
-    "Entity": "H-II",
-    "Code": "",
-    "Year": 1994,
-    "cost_per_kg": 10500,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Kosmos",
-    "Code": "",
-    "Year": 1962,
-    "cost_per_kg": 14900,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Kuaizhou",
-    "Code": "",
-    "Year": 2013,
-    "cost_per_kg": 10600,
-    "launch_class": "Small"
-  },
-  {
     "Entity": "LVM3",
     "Code": "",
     "Year": 2017,
@@ -203,81 +84,11 @@
     "launch_class": "Small"
   },
   {
-    "Entity": "Long March 2A",
-    "Code": "",
-    "Year": 1975,
-    "cost_per_kg": 17500,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Long March 2C",
-    "Code": "",
-    "Year": 1982,
-    "cost_per_kg": 8300,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Long March 2D",
-    "Code": "",
-    "Year": 1992,
-    "cost_per_kg": 9100,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Long March 2E",
-    "Code": "",
-    "Year": 1990,
-    "cost_per_kg": 9900,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Long March 3A",
-    "Code": "",
-    "Year": 1994,
-    "cost_per_kg": 8700,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Long March 3B",
-    "Code": "",
-    "Year": 1997,
-    "cost_per_kg": 6200,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Long March 4B",
-    "Code": "",
-    "Year": 1999,
-    "cost_per_kg": 7600,
-    "launch_class": "Medium"
-  },
-  {
     "Entity": "Long March 5",
     "Code": "",
     "Year": 2016,
     "cost_per_kg": 7900,
     "launch_class": "Heavy"
-  },
-  {
-    "Entity": "M-V",
-    "Code": "",
-    "Year": 1997,
-    "cost_per_kg": 45800,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Minotaur I",
-    "Code": "",
-    "Year": 2000,
-    "cost_per_kg": 73100,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Minotaur IV",
-    "Code": "",
-    "Year": 2010,
-    "cost_per_kg": 30500,
-    "launch_class": "Small"
   },
   {
     "Entity": "PSLV",
@@ -287,41 +98,6 @@
     "launch_class": "Medium"
   },
   {
-    "Entity": "Pegasus",
-    "Code": "",
-    "Year": 1990,
-    "cost_per_kg": 41100,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Pegasus XL",
-    "Code": "",
-    "Year": 1996,
-    "cost_per_kg": 50600,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Proton",
-    "Code": "",
-    "Year": 1965,
-    "cost_per_kg": 8200,
-    "launch_class": "Heavy"
-  },
-  {
-    "Entity": "R-36 / Cyclone",
-    "Code": "",
-    "Year": 1966,
-    "cost_per_kg": 8400,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Rokot",
-    "Code": "",
-    "Year": 1994,
-    "cost_per_kg": 20600,
-    "launch_class": "Small"
-  },
-  {
     "Entity": "Saturn V",
     "Code": "",
     "Year": 1967,
@@ -329,108 +105,10 @@
     "launch_class": "Heavy"
   },
   {
-    "Entity": "Scout",
-    "Code": "",
-    "Year": 1961,
-    "cost_per_kg": 118500,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Shavit",
-    "Code": "",
-    "Year": 1988,
-    "cost_per_kg": 31100,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Shian Quxian",
-    "Code": "",
-    "Year": 2019,
-    "cost_per_kg": 17300,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Shtil",
-    "Code": "",
-    "Year": 1998,
-    "cost_per_kg": 19100,
-    "launch_class": "Small"
-  },
-  {
     "Entity": "Soyuz",
     "Code": "",
     "Year": 1966,
     "cost_per_kg": 17900,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Space Shuttle",
-    "Code": "",
-    "Year": 1981,
-    "cost_per_kg": 65400,
-    "launch_class": "Heavy"
-  },
-  {
-    "Entity": "Start",
-    "Code": "",
-    "Year": 1993,
-    "cost_per_kg": 23600,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Strela",
-    "Code": "",
-    "Year": 2003,
-    "cost_per_kg": 11200,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Taurus",
-    "Code": "",
-    "Year": 1994,
-    "cost_per_kg": 34600,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Titan II",
-    "Code": "",
-    "Year": 1964,
-    "cost_per_kg": 30600,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Titan III+",
-    "Code": "",
-    "Year": 1965,
-    "cost_per_kg": 21000,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Titan IV",
-    "Code": "",
-    "Year": 1989,
-    "cost_per_kg": 30800,
-    "launch_class": "Heavy"
-  },
-  {
-    "Entity": "Vega",
-    "Code": "",
-    "Year": 2012,
-    "cost_per_kg": 20000,
-    "launch_class": "Small"
-  },
-  {
-    "Entity": "Zenit 2",
-    "Code": "",
-    "Year": 1985,
-    "cost_per_kg": 5100,
-    "launch_class": "Medium"
-  },
-  {
-    "Entity": "Zenit 3SL",
-    "Code": "",
-    "Year": 1999,
-    "cost_per_kg": 8900,
     "launch_class": "Medium"
   }
 ]

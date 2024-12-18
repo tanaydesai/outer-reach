@@ -1,5 +1,6 @@
 "use client"
 import React, { useRef,useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -16,6 +17,7 @@ import { NuclearWaste } from '@/components/energy-cards/nuclear-waste';
 
 
 export default function Home() {
+  const router = useRouter()
   const fetcher = (...args) => fetch(...args).then(res => res.json())
   
   const { data, error, isLoading } = useSWR('/api/energy', fetcher)
@@ -104,7 +106,7 @@ export default function Home() {
               <TabsTrigger value="safety"><div className='font-mono'>03</div> Safety</TabsTrigger>
               <TabsTrigger value="waste"><div className='font-mono'>04</div> Waste</TabsTrigger>
             </InViewFade>
-            <div className='frame-button md:absolute bottom-0'>Next</div>
+            <div className='frame-button md:absolute bottom-0' onClick={() => tab === "waste" ? router.push('/space') : setTab(["gen", "capacity", "safety", "waste"][["gen", "capacity", "safety", "waste"].indexOf(tab) + 1])}>Next</div>
           </TabsList>
         
         </Tabs>     

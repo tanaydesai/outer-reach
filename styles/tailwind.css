@@ -25,7 +25,7 @@
 
 
     .navbar-box {
-        @apply py-2 px-3 cursor-default text-[--secondary-text] hover:text-[--primary-text] text-[11.5px] uppercase font-a1
+        @apply py-2 px-3 cursor-default text-[--secondary-text] hover:text-[--primary-text] text-[11px] uppercase font-a1
     }
     .title {
         @apply text-[40px] md:text-[65px] w-fit text-[--primary-text] font-a1 md:leading-[70px] md:h-[75px]
