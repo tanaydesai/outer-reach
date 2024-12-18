@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Combobox } from '@/components/ui/combobox';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
-import { TextRevealWipe } from '@/components/text';
+import { TextRevealWipe } from '@/components/swipe';
 import { InViewFade } from '@/components/fade'
 import useSWR from 'swr'
 

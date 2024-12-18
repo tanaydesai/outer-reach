@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { TextRevealWipe } from '@/components/text';
+import { TextRevealWipe } from '@/components/swipe';
 import { InViewFade } from '@/components/fade'
 import useSWR from 'swr'
 

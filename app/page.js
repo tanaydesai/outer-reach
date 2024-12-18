@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Marquee from "react-fast-marquee";
 import { motion } from 'framer-motion';
 import { InViewFade } from '@/components/fade'
-import { TextRevealWipe } from '@/components/text';
+import { TextRevealWipe } from '@/components/swipe'
 import { EarthIcon } from '@/components/icons';
 import img from "@/assests/images/c.png"
 import img2 from "@/assests/images/a.png"

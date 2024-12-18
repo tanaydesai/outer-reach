@@ -3,6 +3,7 @@ import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"
 import { InViewFade } from '@/components/fade'
+import { TextRevealWipe } from "@/components/swipe"
 import { cn } from "@/lib/utils"
 
 
@@ -15,7 +16,8 @@ const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (
 AccordionItem.displayName = "AccordionItem"
 
 const AccordionTrigger = React.forwardRef(({ className, children, icon=true, ...props }, ref) => (
-  <InViewFade>
+  <InViewFade initialDelay={200}>
+    <TextRevealWipe threshold={0.2} delay={0.15}>
       <AccordionPrimitive.Header className="flex">
         <AccordionPrimitive.Trigger
           ref={ref}
@@ -28,6 +30,7 @@ const AccordionTrigger = React.forwardRef(({ className, children, icon=true, ...
             {icon && <ChevronDown className="h-3.5 mx-2 inline-flex w-3.5"/>}
         </AccordionPrimitive.Trigger>
       </AccordionPrimitive.Header>
+    </TextRevealWipe>
   </InViewFade>
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
