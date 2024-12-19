@@ -31,7 +31,7 @@ export default function Home() {
           <TabsContent value="home">
               <InViewFade delay={500} className='flex-1 absolute bottom-3 pr-3'>
                 <TextRevealWipe className='title'>The Space Race</TextRevealWipe>
-                <div className='description'><div>The blessing of SpaceX, reducing launch costs, impact and need for space exploration.</div></div>
+                <div className='description'>Historical space launch data, private orbital service providers and their launch costs, and the impact of starlink.</div>
               </InViewFade>
           </TabsContent>
 

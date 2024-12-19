@@ -93,7 +93,7 @@ export const EnergyShare = ({className, data}) => {
         color: "#ff5d83",
       },
       "Coal": {
-        label: "Fosils",
+        label: "Coal",
         color: "#b10fff",
       },
       "Oil": {
@@ -258,7 +258,7 @@ export const LeaderBoards = ({className, data, unit}) => {
     },
     Value: {
       label: "Value",
-      color: "hsl(var(--chart-2))",
+      color: "hsl(var(--tertiary-chart-bg))",
     },
   } 
 
@@ -287,8 +287,8 @@ export const LeaderBoards = ({className, data, unit}) => {
             <Bar
               dataKey="Value"
               layout="vertical"
-              fill="#2eec7d"
-              radius={7}
+              fill="#047857"
+              radius={5}
               barSize={50}
             >
                <LabelList

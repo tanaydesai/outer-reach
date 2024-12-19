@@ -35,7 +35,7 @@ export default function Home() {
               <InViewFade delay={500} className='flex-1 absolute bottom-4 pr-3'>
                 <TextRevealWipe className='title'>Nuclear Seeks</TextRevealWipe>
                 <TextRevealWipe delay={1.2} className='title'>Vengeance</TextRevealWipe>
-                <div className='description'><div>World's nuclear landscape, return to glory, truth about safety and {"\n"} recycling metrics.</div></div>
+                <div className='description'>World's nuclear landscape, reactors, pipeline capacity and the bright side of nuclear waste recycling and safety.</div>
               </InViewFade>
           </TabsContent>
 
