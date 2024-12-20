@@ -28,7 +28,7 @@ export const NuclearCapacities = ({className, data, country}) => {
                 <TabsList2 className="my-3">
                     <TabsTrigger2 value="cc">Current</TabsTrigger2>
                     <TabsTrigger2 value="yc">Yearly</TabsTrigger2>
-                    <TabsTrigger2 value="pc">Projected (2030)</TabsTrigger2>
+                    {/* <TabsTrigger2 value="pc">Projected (2030)</TabsTrigger2> */}
                 </TabsList2>
                 <TabsContent2 value="cc">
                     <CurrentCapacity data={result} className='w-full h-[400px] mt-4'/>
@@ -36,9 +36,9 @@ export const NuclearCapacities = ({className, data, country}) => {
                 <TabsContent2 value="yc"> 
                     <MultiCountry data={result2} className='w-full h-[400px] mt-4'/>
                 </TabsContent2>
-                <TabsContent2 value="pc">
+                {/* <TabsContent2 value="pc">
                     <PlannedCapacity className='w-full h-[400px] mt-4'/>
-                </TabsContent2>
+                </TabsContent2> */}
             </Tabs2>
             <Menu />
             <div className='cursor-default sm:flex'>

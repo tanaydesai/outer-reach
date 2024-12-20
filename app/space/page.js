@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { TextRevealWipe } from '@/components/swipe';
 import { InViewFade } from '@/components/fade'
+import { Card } from '@/components/card';
 import useSWR from 'swr'
 
 import { SpaceLaunches } from '@/components/space-cards/country-launches';
@@ -13,6 +14,7 @@ import { RocketLaunches } from '@/components/space-cards/rocket-laucnhes';
 import { RocketCosts } from '@/components/space-cards/rocket-costs';
 import { StarlinkSats } from '@/components/space-cards/starlink-sats';
 import { StarlinkSubs } from '@/components/space-cards/starlink-subs';
+import pic from '@/assests/images/a.png'
 
 export default function Home() {
   const router = useRouter()
@@ -29,8 +31,10 @@ export default function Home() {
         <Tabs defaultValue="home" className='frame' onValueChange={setTab} value={tab}>
 
           <TabsContent value="home">
+              <Card img={pic}/>
               <InViewFade delay={500} className='flex-1 absolute bottom-3 pr-3'>
-                <TextRevealWipe className='title'>The Space Race</TextRevealWipe>
+                <TextRevealWipe className='title'>The Golden Age</TextRevealWipe>
+                <TextRevealWipe delay={1.2} className='title'>for Space</TextRevealWipe>
                 <div className='description'>Historical space launch data, private orbital service providers and their launch costs, and the impact of starlink.</div>
               </InViewFade>
           </TabsContent>

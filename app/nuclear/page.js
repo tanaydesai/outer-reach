@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { TextRevealWipe } from '@/components/swipe';
 import { InViewFade } from '@/components/fade'
+import { Card } from '@/components/card';
 import useSWR from 'swr'
 
 import { NuclearMix } from '@/components/energy-cards/nuclear-mix';
@@ -14,6 +15,7 @@ import { NuclearReactors } from '@/components/energy-cards/nuclear-units';
 import { NuclearSafety }  from '@/components/energy-cards/nuclear-safety';
 import { NuclearWasteTypes } from '@/components/energy-cards/nuclear-waste-types';
 import { NuclearWaste } from '@/components/energy-cards/nuclear-waste';
+import pic from '@/assests/images/d.png'
 
 
 export default function Home() {
@@ -32,6 +34,7 @@ export default function Home() {
         <Tabs defaultValue="home" className='frame' onValueChange={setTab} value={tab}>
 
           <TabsContent value="home">
+              <Card img={pic}/>
               <InViewFade delay={500} className='flex-1 absolute bottom-4 pr-3'>
                 <TextRevealWipe className='title'>Nuclear Seeks</TextRevealWipe>
                 <TextRevealWipe delay={1.2} className='title'>Vengeance</TextRevealWipe>
@@ -42,9 +45,9 @@ export default function Home() {
           <TabsContent value="gen">
                 <Accordion className='my-10' type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                    <AccordionTrigger>Nuclear energy stands out for its ability to provide <span className='acc-span'>continuous, reliable, low-carbon power on a massive scale</span>. <span className='acc-span'>Decades of nuclear usage</span> by France and South Korea with <span className='acc-span'>minimal-to-no incidents</span> and major strides in <span className='acc-span'>nuclear fuel recycling</span> and long-term waste management is testament to this</AccordionTrigger>
                     <AccordionContent>
-                      The world already gets almost <span className="acc-span">40% of its electricity </span> from <span className="acc-span">clean energy sources</span> while adopting even more at a <span className="acc-span">rapid pace</span> with <span className="acc-span">nuclear energy</span> making a big comeback.
+                      The rapid increase in China's nuclear energy generation <span className="acc-span">should serve as a wake up call</span> for a ever more power hungry world to follow suit and <span className='acc-span'>accelerate</span> their nuclear energy programs, <span className='acc-span'>undoing the decades worth of damage </span> caused by <span className='acc-span'>nuclear fearmongering</span>.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -55,7 +58,7 @@ export default function Home() {
           <TabsContent value="capacity">
                 <Accordion className='my-10' type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                    <AccordionTrigger icon={false}>Nuclear energy requires far less land than wind or solar farms, preserving natural habitats. Modern reactors are safer than ever, and advancements in nuclear waste recycling reduce long-term storage concerns.</AccordionTrigger>
                   </AccordionItem>
                 </Accordion>
 
@@ -63,7 +66,10 @@ export default function Home() {
                   
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                      <AccordionTrigger><span className='acc-span'>China and India</span> are the only countries with significant number of nuclear reactors <span className='acc-span'>under construction</span>. China's unified reactor design and <span className='acc-span'>lack of legal barriers with minimal public opposition</span> allows it to rapidly expand its capacity which will soon exceed that of the U.S</AccordionTrigger>
+                      <AccordionContent>
+                        Other developed countries are <span className='acc-span'>plagued by their own regulations and policies</span> along with an aversion to risk around nuclear power, have hindered the construction of new nuclear reactors. <span className='acc-span'>Better education around its benifits, safety, economic incentives and reduction in regulations</span> is paramount to the development of new reactors that are in <span className='acc-span'>higher need and demand</span> today than ever before.
+                      </AccordionContent>
                     </AccordionItem>
                 </Accordion>
 
@@ -73,7 +79,10 @@ export default function Home() {
           <TabsContent value="safety">
                 <Accordion className='my-10' type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                    <AccordionTrigger>Nuclear energy countinues to be the <span className='acc-span'>safest and cleanest form of energy</span> mankind has ever known, even after <span className='acc-span'>extremely rare accidents</span> like Chernobyl are taken into consideration</AccordionTrigger>
+                    <AccordionContent>
+                      Since adopting nuclear energy, France has seen <span className='acc-span'>economic growth and reduced carbon emissions.</span> Nuclear power fueled industrial expansion, <span className='acc-span'>provided stable, low-cost energy, and reduced emissions</span>, making <span className='acc-span'>France's per capita CO₂ emissions among the lowest in the developed world.</span>
+                    </AccordionContent>
                   </AccordionItem>
                 </Accordion>
 
@@ -83,7 +92,10 @@ export default function Home() {
           <TabsContent value="waste">
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                      <AccordionTrigger>Nuclear waste is <span className='acc-span'>highly recyclable, with spent fuel containing up to 90% of its energy potential</span>. Countries like France, Russia, and Japan already reprocess nuclear waste. The technology already exists and needs to be <span className='acc-span'>scaled up</span> to be more effective</AccordionTrigger>
+                      <AccordionContent>
+                          The U.S. stockpile of used nuclear fuel conatins <span className='acc-span'>enough energy to power the nation for 200 years</span>. The untapped potential of nuclear recycling can enhance energy security and sustainability.
+                      </AccordionContent>
                     </AccordionItem>
                   </Accordion>
 
@@ -91,7 +103,7 @@ export default function Home() {
                 
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                      <AccordionTrigger>The myth that nuclear waste is an insurmountable problem is exaggerated. It is categorized into four types based on radioactivity and longevity: High-Level Waste (HLW) consists mainly of spent nuclear fuel, Intermediate-Level Waste (ILW) and Low-Level Waste (LLW) which includes items like contaminated clothing, tools, and filters, each type has its own storage requirements</AccordionTrigger>
                     </AccordionItem>
                 </Accordion>
 

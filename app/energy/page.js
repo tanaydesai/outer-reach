@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import { TextRevealWipe } from '@/components/swipe';
 import { InViewFade } from '@/components/fade'
+import { Card } from '@/components/card';
 import useSWR from 'swr'
 
 import { EnergyLeaderBoard } from '@/components/energy-cards/energy-leaderboard';
@@ -19,7 +20,7 @@ import { EnergyUse } from '@/components/energy-cards/annual-energy-pc';
 import { RenewableShare } from '@/components/energy-cards/renewable-share';
 import { FossilShare } from '@/components/energy-cards/fossils-share';
 import { EnergyGDPPC } from '@/components/energy-cards/energy-gdp-pc';
-
+import pic from '@/assests/images/c.png'
 
 export default function Home() {
   const router = useRouter()
@@ -37,6 +38,7 @@ export default function Home() {
         <Tabs defaultValue="home" className='frame' onValueChange={setTab} value={tab}>
 
           <TabsContent value="home">
+              <Card img={pic} />
               <InViewFade delay={500} className='absolute bottom-4 pr-3'>
                 <TextRevealWipe className='title'>Road to Energy</TextRevealWipe>
                 <TextRevealWipe delay={1.2} className='title'>Abundance</TextRevealWipe>
@@ -139,7 +141,7 @@ export default function Home() {
           <TabsList>
             <InViewFade initialDelay={600} className='flex-1 overflow-auto h-[80px] md:h-[calc(100%-118px)]'>
               <h1 className='tag mt-2' onClick={() => setTab('home')}><div className='tag-box' />SUB-TOPICS</h1>
-              <TabsTrigger value="mix" className='mt-10'><div className='font-mono'>01</div> Energy Mix</TabsTrigger>
+              <TabsTrigger value="mix" className='mt-5'><div className='font-mono'>01</div> Energy Mix</TabsTrigger>
               <TabsTrigger value="capacity"><div className='font-mono'>02</div> Capacity</TabsTrigger>
               <TabsTrigger value="economics"><div className='font-mono'>03</div> Economics</TabsTrigger>
               <TabsTrigger value="leaderboards"><div className='font-mono'>04</div> Leaderboards</TabsTrigger>

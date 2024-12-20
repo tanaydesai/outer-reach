@@ -18,7 +18,7 @@ export const EnergyCapacities = ({className, data, country}) => {
                 <TabsList2 className="my-3">
                     <TabsTrigger2 value="cc">Current</TabsTrigger2>
                     <TabsTrigger2 value="yc">Yearly</TabsTrigger2>
-                    <TabsTrigger2 value="pc">Projected (2030)</TabsTrigger2>
+                    {/* <TabsTrigger2 value="pc">Projected (2030)</TabsTrigger2> */}
                 </TabsList2>
                 <TabsContent2 value="cc">
                     <CurrentCapacity data={sortData(Object.entries(data.at(-1)).filter(([key]) => key === "Solar" || key === "Wind" || key === "Nuclear" || key === "Hydro" || key === "Bioenergy" || key === "Other Renewables").map(([type, value]) => ({ type, value })), "desc", "value")} className='w-full h-[400px] mt-4'/>
@@ -26,9 +26,9 @@ export const EnergyCapacities = ({className, data, country}) => {
                 <TabsContent2 value="yc"> 
                     <Capacity data={data} className='w-full h-[400px] mt-4'/>
                 </TabsContent2>
-                <TabsContent2 value="pc">
+                {/* <TabsContent2 value="pc">
                     <PlannedCapacity className='w-full h-[400px] mt-4'/>
-                </TabsContent2>
+                </TabsContent2> */}
             </Tabs2>
             <Menu />
             <div className='cursor-default sm:flex'>
