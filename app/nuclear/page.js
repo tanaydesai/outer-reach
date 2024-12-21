@@ -57,7 +57,7 @@ export default function Home() {
           <TabsContent value="capacity">
                 <Accordion className='my-10' type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger icon={false}>Nuclear energy requires far less land than wind or solar farms, preserving natural habitats. Modern reactors are safer than ever, and advancements in nuclear waste recycling reduce long-term storage concerns.</AccordionTrigger>
+                    <AccordionTrigger icon={false}>Nuclear energy requires <span className="acc-span">far less land than wind or solar farms</span>, preserving natural habitats. Modern reactors are <span className="acc-span">safer than ever</span>, and advancements in <span className="acc-span">nuclear waste recycling</span> reduce long-term storage concerns.</AccordionTrigger>
                   </AccordionItem>
                 </Accordion>
 

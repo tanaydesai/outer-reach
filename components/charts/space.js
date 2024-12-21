@@ -101,7 +101,7 @@ export const SpaceRockeCost = ({className, data}) => {
         )
   return (
       <ChartContainer config={chartConfig} className={className}>
-          <LineChart accessibilityLayer data={chartData} margin={{ left: 10, right: 30, top: 10 }}>
+          <LineChart accessibilityLayer data={chartData} margin={{ left: 0, right: 30, top: 10 }}>
              <XAxis dataKey="Year" tickLine={false} tickMargin={10} axisLine={false} />
              <YAxis tickLine={false} tickMargin={10} axisLine={false} tickFormatter={value => `${value / 1e3}K $`}/>
               <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
@@ -127,7 +127,7 @@ export const StarlinkSatellites = ({className, data}) => {
     } 
     return (
           <ChartContainer config={chartConfig} className={className}>
-             <BarChart accessibilityLayer data={chartData} layout="vertical" margin={{ left: 30, right: 15 }}>
+             <BarChart accessibilityLayer data={chartData} layout="vertical" margin={{ left: 0, right: 25 }}>
               <XAxis type="number" hide />
               <YAxis dataKey="Year" type="category" tickLine={false} tickMargin={10} axisLine={false} />
               <ChartTooltip cursor={false} content={<ChartTooltipContent labelKey="Year" labelFormatter={value => `${value}`}/>} />

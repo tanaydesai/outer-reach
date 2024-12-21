@@ -12,7 +12,7 @@ export const Navbar = () => {
     <div className="fixed top-2 px-3 z-[100] w-full flex items-center justify-between h-[40px]">
       <Link href="/"><DecryptText className='navbar-box font-mono backdrop-blur-[10px] flex-1' text='Zero -> 42'/></Link>
     
-      <div className="flex relative">
+      <div className="flex relative  backdrop-blur-[10px]">
         <Link href={"/energy"} className='group'>
           <DecryptText className="navbar-box" text='Energy'/>
           <div data-path={pathname} className='hidden group-hover:data-[path="/"]:md:block navbar-box left-0 absolute top-10'>Global energy mix, renewables and capacity growth, leaderboards, per capita and more.</div>

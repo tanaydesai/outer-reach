@@ -30,7 +30,7 @@ return (
           data={chartData}
           margin={{
             top: 15,
-            left: -5,
+            left: -15,
             right: 15,
           }}
         >
@@ -902,8 +902,8 @@ export const CurrentCapacity = ({className, data}) => {
             data={chartData}
             layout="vertical"
             margin={{
-              left: 30,
-              right: 15,
+              left: 20,
+              right: 20,
             }}
           >
             <XAxis type="number" hide />
@@ -1294,11 +1294,7 @@ export const NuclearWasteTypesChart = ({className, data}) => {
 
 return (
     <ChartContainer config={chartConfig} className={className} >
-          <PieChart>
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent hideLabel />}
-            />
+          <PieChart >
             <Pie
               data={chartData}
               dataKey="value"
@@ -1360,8 +1356,8 @@ export const NuclearWasteChart = ({className, data, column}) => {
           <BarChart accessibilityLayer data={chartData} 
            layout="vertical"
            margin={{
-             left: 30,
-             right: 20,
+             left: 15,
+             right: 25,
            }}
            >
             <XAxis

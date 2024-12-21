@@ -34,7 +34,7 @@ export default function Home() {
               <Card img={pic}/>
               <InViewFade delay={500} className='flex-1 absolute bottom-3 pr-3'>
                 <TextRevealWipe className='title'>The Golden Age</TextRevealWipe>
-                <TextRevealWipe delay={1.2} className='title'>for Space</TextRevealWipe>
+                <TextRevealWipe delay={1.2} className='title'>of Space</TextRevealWipe>
                 <div className='description'>Historical space launch data, private orbital service providers and their launch costs, and the impact of starlink.</div>
               </InViewFade>
           </TabsContent>
@@ -52,7 +52,7 @@ export default function Home() {
 
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                    <AccordionTrigger icon={false}>Falcon 9s cost efficiency has encouraged a surge in commercial satellite deployments, government and international customers and SpaceX’s Starlink constellation, contributing significantly to the overall number of launches.</AccordionTrigger>
+                    <AccordionTrigger icon={false}>Falcon 9's cost efficiency has encouraged a surge in commercial satellite deployments, government and international customers and SpaceX’s Starlink constellation has contributed significantly to the overall number of launches.</AccordionTrigger>
                     </AccordionItem>
                 </Accordion>
 
