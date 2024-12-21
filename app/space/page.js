@@ -42,10 +42,9 @@ export default function Home() {
           <TabsContent value="launch">
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
+                    <AccordionTrigger>SpaceX's Falcon 9 have been transformative in the growth of orbital launches for the U.S., <span className='acc-span'>making space more accessible and affordable</span>. Falcon 9s reusability has dramatically reduced launch can making <span className='acc-span'>traditional expendable rockets look antique</span></AccordionTrigger>
                     <AccordionContent>
-                        The world already gets almost <span className="acc-span">40% of its electricity </span> from <span className="acc-span">clean energy sources</span> while adopting even more at a <span className="acc-span">rapid pace</span> with <span className="acc-span">nuclear energy</span> making a big comeback.
-                    </AccordionContent>
+                        SpaceX's <span className='acc-span'>rapid turnaround times and streamlined operations</span> has bolstered confidence in U.S. launch capabilities and allowed it to perform more annual launches than any other nation leading to <span className='acc-span'>F9s dominance in the global launch market</span>.</AccordionContent>
                     </AccordionItem>
                 </Accordion>
             
@@ -53,10 +52,7 @@ export default function Home() {
 
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
-                    <AccordionContent>
-                        The world already gets almost <span className="acc-span">40% of its electricity </span> from <span className="acc-span">clean energy sources</span> while adopting even more at a <span className="acc-span">rapid pace</span> with <span className="acc-span">nuclear energy</span> making a big comeback.
-                    </AccordionContent>
+                    <AccordionTrigger icon={false}>Falcon 9s cost efficiency has encouraged a surge in commercial satellite deployments, government and international customers and SpaceX’s Starlink constellation, contributing significantly to the overall number of launches.</AccordionTrigger>
                     </AccordionItem>
                 </Accordion>
 
@@ -66,23 +62,23 @@ export default function Home() {
           <TabsContent value="cost">
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
-                    <AccordionContent>
-                        The world already gets almost <span className="acc-span">40% of its electricity </span> from <span className="acc-span">clean energy sources</span> while adopting even more at a <span className="acc-span">rapid pace</span> with <span className="acc-span">nuclear energy</span> making a big comeback.
-                    </AccordionContent>
+                    <AccordionTrigger icon={false}>SpaceX’s <span className='acc-span'>rapidly and fully reusable</span> Starship is poised to <span className='acc-span'>revolutionize space exploration</span> and foster new off-planet industries. Starship’s <span className='acc-span'>interplanetary capabilities</span> make it the centerpiece of plans for <span className='acc-span'>human settlement on Mars</span>, with the ability to transport up to 100 passengers and refuel in orbit for <span className='acc-span'>interplanetary missions</span>. It will accelerate the deployment of the <span className='acc-span'>Starlink mega-constellation</span>, deliver large telescopes and probes, and enable the construction of <span className='acc-span'>space-based infrastructure</span> like stations and asteroid mining facilities.</AccordionTrigger>
                     </AccordionItem>
                 </Accordion>
 
                 <InViewFade initialDelay={600} className='my-10'><RocketCosts className='bg-[--tertiary-chart-bg]' data={data.cost}/></InViewFade>
+                
+                <Accordion className='my-10' type="single" collapsible>
+                    <AccordionItem value="item-1">
+                    <AccordionTrigger icon={false}>Beyond space, Starship’s <span className='acc-span'>suborbital capabilities</span> promise to <span className='acc-span'>revolutionize Earth-based travel</span>, offering the potential for <span className='acc-span'>global journeys in under an hour</span>. By making space more <span className='acc-span'>accessible and economically viable</span>, Starship represents a <span className='acc-span'>transformative leap</span>, shifting humanity’s role from explorers of space to active participants in its <span className='acc-span'>development and habitation</span>.</AccordionTrigger>
+                    </AccordionItem>
+                </Accordion>
           </TabsContent>
 
           <TabsContent value="starlink">
                 <Accordion className='my-10' type="single" collapsible>
                       <AccordionItem value="item-1">
-                      <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
-                      <AccordionContent>
-                          The world already gets almost <span className="acc-span">40% of its electricity </span> from <span className="acc-span">clean energy sources</span> while adopting even more at a <span className="acc-span">rapid pace</span> with <span className="acc-span">nuclear energy</span> making a big comeback.
-                      </AccordionContent>
+                      <AccordionTrigger icon={false}>SpaceX's <span className='acc-span'>Starlink</span> is redefining <span className='acc-span'>global connectivity</span> by creating a vast network of <span className='acc-span'>low Earth orbit (LEO) satellites</span> that deliver <span className='acc-span'>high-speed, low-latency internet</span> to even the most <span className='acc-span'>remote regions of the planet</span>. Starlink has been the <span className='acc-span'>back-bone of the Ukrainian military</span> since the Russian invasion. Several cruise lines and airlines, including <span className='acc-span'>Royal Caribbean, Qatar Airways, United, Air France</span>, are rapidly adopting Starlink for high-speed internet <span className='acc-span'>at sea and in-flight</span> with over <span className='acc-span'>2,500 aircraft on contract</span>.</AccordionTrigger>
                       </AccordionItem>
                   </Accordion>
 
@@ -90,10 +86,7 @@ export default function Home() {
                 
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland</span> get {">"} 90% of their electricity from <span className="acc-span">Renewables and Nuclear</span></AccordionTrigger>
-                    <AccordionContent>
-                        The world already gets almost <span className="acc-span">40% of its electricity </span> from <span className="acc-span">clean energy sources</span> while adopting even more at a <span className="acc-span">rapid pace</span> with <span className="acc-span">nuclear energy</span> making a big comeback.
-                    </AccordionContent>
+                    <AccordionTrigger icon={false}>Starlink is available in <span className='acc-span'>113 countries</span> and accounts for <span className='acc-span'>{">"}50% of all active orbital satellites</span>. With the <span className='acc-span'>Plug-and-Play design</span> of Starlink kits, users need <span className='acc-span'>minimal technical expertise</span>, allowing households, businesses, and governments to <span className='acc-span'>activate the service immediately</span> or easily ship to <span className='acc-span'>disaster zones or war-torn areas</span> and be <span className='acc-span'>operational within hours</span>.</AccordionTrigger>
                     </AccordionItem>
                 </Accordion>
 

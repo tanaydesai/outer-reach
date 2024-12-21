@@ -6,17 +6,18 @@ import NumberFlow from '@number-flow/react'
 import { sortData } from '@/lib/utils';
 import { Menu } from '@/components/menu';
 
-export const StarlinkSats = ({className, data, country}) => {
+export const StarlinkSats = ({className, data}) => {
     data = sortData(data, "desc", 'Year')
+    let value = data.filter(item => item["Year"] == 2024)[0]["In Orbit"]
 
     return (
         <div className={`chart ${className}`}>
-            <h1 className='chart-title'>Cumulative Starlink satellites launched by year</h1>
+            <h1 className='chart-title'>Cumulative Starlink satellites launched per year</h1>
             <StarlinkSatellites data={data} className='w-full h-[450px] mt-4'/>
-            <Menu />
+            <Menu sources={{"Wikipedia": "https://en.wikipedia.org/wiki/Starlink"}}/>
             <div className='cursor-default sm:flex'>
-                <div className='chart-number'><NumberFlow value={200} format={{ style: 'percent' }}/></div>
-                <div className='chart-desc'>absolute clean energy share growth in the electricity mix since.</div>
+                <div className='chart-number'><NumberFlow value={value}/></div>
+                <div className='chart-desc'>No of. Starlink satellites currently in orbit and operational as of 2024. Note some satellites that have been recently launched are not yet in orbit</div>
             </div>
         </div>
         

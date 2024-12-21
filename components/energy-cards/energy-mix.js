@@ -31,11 +31,11 @@ export const EnergyMix = ({className, data, country}) => {
                     <ToggleGroupItem value="abs">ABS</ToggleGroupItem>
                     <ToggleGroupItem value="%">%</ToggleGroupItem>
                 </ToggleGroup>
-                <Menu />
+                <Menu sources={{"Energy mix":"https://ourworldindata.org/grapher/primary-sub-energy-source/", "Electricity mix": "https://ourworldindata.org/grapher/electricity-prod-source-stacked", "Enegy share": "https://ourworldindata.org/grapher/share-energy-source-sub"}}/>
             </div>
             <div className='cursor-default sm:flex'>
-                <div className='chart-number'><NumberFlow value={(getDomainData(data, "China", "e-TWh").at(-1)["Total Consumption"]).toFixed(0)}/>TWh </div>
-                <div className='chart-desc'>for comparison, is the total cumulative energy consumption of China. It is the world's largest energy consumer.</div>
+                <div className='chart-number'><NumberFlow value={(getDomainData(data, country, "e-TWh").at(-1)["Total Consumption"]).toFixed(0)}/>TWh </div>
+                <div className='chart-desc'>{country}'s total cumulative energy consumption. China remains the the world's largest energy consumer.</div>
             </div>
         </div>
     )

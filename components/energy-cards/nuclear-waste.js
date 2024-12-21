@@ -8,13 +8,13 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { sortData, removeNAN } from '@/lib/utils';
 import { Menu } from '../menu';
 
-export const NuclearWaste = ({className, data, country}) => {
+export const NuclearWaste = ({className, data}) => {
     const [type, setType] = useState("%")
     data = sortData(data, "desc", "Discharged %");
 
     return (
         <div className={`chart ${className}`}>
-            <h1 className='chart-title'>Nuclear historical waste production and recycling by countries</h1>
+            <h1 className='chart-title'>Nuclear waste production and recycling by countries (tHM)</h1>
             <Tabs2 defaultValue="d">
                 <TabsList2 className="my-3">
                     <TabsTrigger2 value="d">Prodcued</TabsTrigger2>
@@ -32,7 +32,7 @@ export const NuclearWaste = ({className, data, country}) => {
                     <ToggleGroupItem value="abs">ABS</ToggleGroupItem>
                     <ToggleGroupItem value="%">%</ToggleGroupItem>
                 </ToggleGroup>
-                <Menu />
+                <Menu sources={{"IAEA: Nuclear Technology Review 2024": "https://www.iaea.org/sites/default/files/gc/gc68-inf-4.pdf"}}/>
             </div>
             <div className='cursor-default sm:flex'>
                 <div className='chart-number'><NumberFlow value={data.at(0)["Discharged tHM"]} />tHM</div>

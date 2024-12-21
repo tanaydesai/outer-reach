@@ -60,7 +60,7 @@ export default function Home() {
                
                <Accordion className="my-10" type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>The more energy a nation consumes, the <span className="acc-span">more prosperous</span> it becomes. Countries like <span className="acc-span">India</span> are increasing their energy consumption rapidly  while some like <span className="acc-span">the UK</span> are <span className="acc-span">losing</span> ground. Global share of <span className="acc-span">renewables and nuclear</span> in the mix is <span className="acc-span">continues to rise at an evolving pace</span></AccordionTrigger>
+                  <AccordionTrigger>The more energy a nation consumes, the <span className="acc-span">more prosperous</span> it becomes. Countries like <span className="acc-span">India</span> are increasing their energy consumption rapidly  while some like <span className="acc-span">the UK</span> are <span className="acc-span">losing</span> ground. Global share of <span className="acc-span">renewables and nuclear</span> in the mix <span className="acc-span">continues to rise at an evolving pace</span></AccordionTrigger>
                   <AccordionContent>
                    France is one of the few developed countries that has realised the <span className="acc-span">full potential of nuclear energy</span>. While the fateful decision of <span className="acc-span">Germany</span>-a country already heavily reliant on <span className="acc-span">energy imports</span>-<span className="acc-span">to phase out its</span> nuclear reactors after caving into <span className="acc-span">anti-nuclear sentiment</span> amoung <span className="acc-span">misinformed</span> environmentalists is only just being realised as a <span className="acc-span">grave mistake</span> amid the <span className="acc-span">2022 Russia-Ukraine war</span>, rising <span className="acc-span">fossil fuel emissions</span> and <span className="acc-span">economic instability</span>.
                   </AccordionContent>
@@ -76,7 +76,7 @@ export default function Home() {
 
                 <Accordion className="my-10" type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger className="my-10" icon={false}><span className="acc-span">Clean energy</span> consumption is <span className="acc-span">rising</span> while fossil fuels remain either <span className="acc-span">stagnant or falling.</span></AccordionTrigger>
+                    <AccordionTrigger className="my-10" icon={false}><span className="acc-span">Clean energy</span> consumption is <span className="acc-span">on the rise</span> while fossil fuel consumption is <span className="acc-span">falling or remains stagnant</span>.</AccordionTrigger>
                   </AccordionItem>
                 </Accordion>
 
@@ -113,7 +113,7 @@ export default function Home() {
           <TabsContent value="economics">
                 <Accordion className="my-10" type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>There is <span className="acc-span">no energy rich poor country.</span> Nations like Norway, Qatar, and the U.S. have leveraged energy abundance into becoming economic powerhouses</AccordionTrigger>
+                    <AccordionTrigger>There is <span className="acc-span">no energy rich poor country.</span> Nations like Norway, Qatar, and the U.S. have leveraged <span className="acc-span">energy abundance</span> into becoming economic powerhouses</AccordionTrigger>
                     <AccordionContent>
                       The <span className='acc-span'>direct corelation</span> between energy consumption and prosperity can perfectly be seen in developing economies like <span className="acc-span">India and Indonesia</span> where the <span className="acc-span">rise in energy consumption</span> has resulted in an <span className="acc-span">simultaneous increase in GDP per capita </span> in the past decade.
                     </AccordionContent>

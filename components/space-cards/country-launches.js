@@ -5,19 +5,21 @@ import { SpaceLunchesCountry } from '@/components/charts/space';
 import NumberFlow from '@number-flow/react'
 import { getDomainData } from '@/lib/utils';
 import { Menu } from '@/components/menu';
+import { Slice } from 'lucide-react';
 
-export const SpaceLaunches = ({className, data, country}) => {
+export const SpaceLaunches = ({className, data}) => {
 
     data = getDomainData(data, ["United States", "China", "India", "Russia", "Europe"])
+    let value = data.filter(item => item["Country"] == "United States").slice(-1)[0]["Launches"];
 
     return (
         <div className={`chart ${className}`}>
-            <h1 className='chart-title'>Orbital launches by country</h1>
+            <h1 className='chart-title'>Historical orbital launches per year by country</h1>
             <SpaceLunchesCountry data={data} className='w-full h-[450px] mt-4'/>
-            <Menu />
+            <Menu sources={{"Wikipedia": "https://en.wikipedia.org/wiki/2024_in_spaceflight"}}/>
             <div className='cursor-default sm:flex'>
-                <div className='chart-number'><NumberFlow value={200} format={{ style: 'percent' }}/></div>
-                <div className='chart-desc'>absolute clean energy share growth in the electricity mix since.</div>
+                <div className='chart-number'><NumberFlow value={value} /></div>
+                <div className='chart-desc'>Number of orbital launches in 2023 for the United States, the highest in the world</div>
             </div>
         </div>
         

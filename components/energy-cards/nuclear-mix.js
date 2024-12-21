@@ -8,10 +8,10 @@ import NumberFlow from '@number-flow/react'
 import { getDomainData, sortData, continents } from '@/lib/utils';
 import { Menu } from '@/components/menu';
 
-export const NuclearMix = ({className, data, country}) => {   
+export const NuclearMix = ({className, data}) => {   
     const [type, setType] = useState("abs")
     
-    let countries = sortData(getDomainData(data, false, "e-TWh", 2023).filter(item => !continents.includes(item.Country)), "desc", "Nuclear").slice(0, 10).map(item => item.Country);
+    let countries = sortData(getDomainData(data, false, "e-TWh", 2023).filter(item => !continents.includes(item.Country)), "desc", "Nuclear").slice(0, 11).map(item => item.Country);
     let result = Object.values(countries.map(c => getDomainData(data, c, type === "abs" ? "e-TWh" : "e-3-%").map(item => ({ Year: item.Year, [c]: item["Nuclear"] }))).flat().reduce((acc, { Year, ...rest }) => {
             acc[Year] = { ...acc[Year], Year, ...rest };
             return acc;
@@ -25,7 +25,7 @@ export const NuclearMix = ({className, data, country}) => {
 
     return (
         <div className={`chart ${className}`}>
-            <h1 className='chart-title'>Top nuclear energy producers by countries (TWh)</h1>
+            <h1 className='chart-title'>Top nuclear energy producers in the world (TWh)</h1>
             <Tabs2 defaultValue="ec">
                 <TabsList2 className="my-3">
                     <TabsTrigger2 value="ec">Energy</TabsTrigger2>
@@ -43,11 +43,11 @@ export const NuclearMix = ({className, data, country}) => {
                     <ToggleGroupItem value="abs">ABS</ToggleGroupItem>
                     <ToggleGroupItem value="%">%</ToggleGroupItem>
                 </ToggleGroup>
-                <Menu />
+                <Menu sources={{"Energy mix":"https://ourworldindata.org/grapher/primary-sub-energy-source/", "Electricity mix": "https://ourworldindata.org/grapher/electricity-prod-source-stacked", "Share of Fossil fuel, Renewable & nuclear":"https://ourworldindata.org/grapher/electricity-fossil-renewables-nuclear-line"}}/>
             </div>
-            <div className='cursor-default sm:flex'>
+            <div className='cursor-default'>
                 <div className='chart-number'><NumberFlow value={(result2.at(-1)["France"]).toFixed(0)} />{type === "abs" ? "TWh" : "%"}</div>
-                <div className='chart-desc'>of France's electricity production comes from nuclear energy. It is the world's largest energy consumer.</div>
+                <div className='chart-desc'>of France's electricity production comes from nuclear energy.</div>
             </div>
         </div>
     )

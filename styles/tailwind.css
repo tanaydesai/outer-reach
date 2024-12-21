@@ -48,7 +48,7 @@
         @apply text-[17px] font-a1 mx-3 rounded-[--primary-radius] w-fit text-[--primary-text]
     }
     .chart-desc {
-        @apply text-[14.5px] mt-0 px-3 sm:mt-3 font-a1 lg:w-[45%] text-[#aaaaaa]
+        @apply text-[14.5px] mt-0 px-3 sm:mt-3 font-a1 lg:w-[55%] text-[#aaaaaa]
     }
     .chart-number {
         @apply text-[30px] md:text-[40px] font-a1 pl-3 text-[#aaaaaa] whitespace-nowrap

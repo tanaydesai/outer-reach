@@ -14,7 +14,7 @@ export const EnergyCapacityAdditions = ({className, data, country}) => {
         <div className={`chart ${className}`}>
             <h1 className='chart-title'>Renewable capacity additions by sources (GW), {country}</h1>
             <CapacityAdditions data={data} className='w-full md:flex-1 h-[400px] mt-4'/>
-            <Menu />
+            <Menu sources={{"Ember data":"https://ember-energy.org/data/electricity-data-explorer/"}}/>
             <div className='cursor-default sm:flex'>
                 <div className='chart-number'><NumberFlow value={value} format={{ style: 'percent' }}/></div>
                 <div className='chart-desc'>average YoY growth in solar capacity additions since {data.at(-5)["Year"]}.</div>

@@ -14,7 +14,7 @@ export const EnergyChange = ({className, data, country}) => {
         <div className={`chart ${className}`}>
             <h1 className='chart-title'>Change in primary energy consumption (%), {country}</h1>
             <AnnualEnergyChange data={data} className='w-full flex-1 h-[400px] mt-4'/>
-            <Menu />
+            <Menu sources={{"Annual energy change":"https://ourworldindata.org/grapher/change-energy-consumption"}}/>
             <div className='cursor-default sm:flex'>
                 <div className='chart-number'><NumberFlow value={value} format={{ style: 'percent' }}/></div>
                 <div className='chart-desc'>overall growth in primary energy consumption since {data.at(-5)["Year"]}.</div>

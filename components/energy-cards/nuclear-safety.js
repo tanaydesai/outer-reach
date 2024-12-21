@@ -24,7 +24,7 @@ export const NuclearSafety = ({className, data}) => {
                     <EnergySafety data={sortData(data, "desc", "tCO2e emissions per GWh of electricity over plant lifecycle")} type={2} className='w-full flex-1 h-[400px] mt-4'/>
                 </TabsContent2>
             </Tabs2>
-            <Menu />
+            <Menu sources={{"Ourworldindata: What are the safest and cleanest sources of energy?": "https://ourworldindata.org/safest-sources-of-energy"}}/>
             <div className='cursor-default sm:flex'>
                 <div className='chart-number'><NumberFlow value={data.filter(item => item["Type"] == "Nuclear")[0]["Deaths per TWh of electricity production"]} /></div>
                 <div className='chart-desc'>deaths / TWh. Nuclear energy is one of the safest and cleanest sources of energy production. These are including deaths associated with extremely rare accidents such as Chernobyl, Banqiao dam etc and emissions over the lifecycle of a plant.</div>

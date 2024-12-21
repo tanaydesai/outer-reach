@@ -27,7 +27,7 @@ export const Energy3Share = ({className, data, country}) => {
                     <Energy3ShareChange data={getDomainData(data, country, "elc-3-%").slice(-20)} className='w-full flex-1 h-[400px] mt-4'/>
                 </TabsContent2>
             </Tabs2>
-            <Menu />
+            <Menu sources={{"Share of Fossil fuel, Renewable & nuclear":"https://ourworldindata.org/grapher/electricity-fossil-renewables-nuclear-line"}}/>
             <div className='cursor-default sm:flex'>
                 <div className='chart-number'><NumberFlow value={value} format={{ style: 'percent' }}/></div>
                 <div className='chart-desc'>absolute clean energy share growth in the electricity mix since {data.at(-5)["Year"]}.</div>

@@ -24,7 +24,6 @@ export default function Home() {
   
   const { data, error, isLoading } = useSWR('/api/energy', fetcher)
   const [tab, setTab] = useState('home');
-  const [country, setCountry] = useState('World');
 
   if (error) return <div className='loading-page'>Error</div>
   if (isLoading) return <div className='loading-page'>Loading data...</div>
@@ -52,7 +51,7 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
                 
-                <InViewFade className='my-10'><NuclearMix className="bg-[--secondary-chart-bg]" data={data.mix} country={country}/></InViewFade>
+                <InViewFade className='my-10'><NuclearMix className="bg-[--secondary-chart-bg]" data={data.mix}/></InViewFade>
           </TabsContent>
 
           <TabsContent value="capacity">
@@ -62,24 +61,24 @@ export default function Home() {
                   </AccordionItem>
                 </Accordion>
 
-                <InViewFade className='my-10'><NuclearCapacities className="bg-[--secondary-chart-bg]" data={data.nuclearYear} country={country}/></InViewFade>
+                <InViewFade className='my-10'><NuclearCapacities className="bg-[--secondary-chart-bg]" data={data.nuclearYear}/></InViewFade>
                   
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
                       <AccordionTrigger><span className='acc-span'>China and India</span> are the only countries with significant number of nuclear reactors <span className='acc-span'>under construction</span>. China's unified reactor design and <span className='acc-span'>lack of legal barriers with minimal public opposition</span> allows it to rapidly expand its capacity which will soon exceed that of the U.S</AccordionTrigger>
                       <AccordionContent>
-                        Other developed countries are <span className='acc-span'>plagued by their own regulations and policies</span> along with an aversion to risk around nuclear power, have hindered the construction of new nuclear reactors. <span className='acc-span'>Better education around its benifits, safety, economic incentives and reduction in regulations</span> is paramount to the development of new reactors that are in <span className='acc-span'>higher need and demand</span> today than ever before.
+                        Other developed countries are <span className='acc-span'>plagued by their own regulations and policies</span> along with an aversion to risk around nuclear power, have hindered the construction of new nuclear reactors. <span className='acc-span'>Better education around its benefits, safety, economic incentives and reduction in regulations</span> is paramount to the development of new reactors that are in <span className='acc-span'>higher need and demand</span> today than ever before.
                       </AccordionContent>
                     </AccordionItem>
                 </Accordion>
 
-                <InViewFade className='my-10'><NuclearReactors className="bg-[--secondary-chart-bg]" data={data.nuclearReactors} data2={data.nuclearYear} country={country} /></InViewFade>
+                <InViewFade className='my-10'><NuclearReactors className="bg-[--secondary-chart-bg]" data={data.nuclearReactors} data2={data.nuclearYear} /></InViewFade>
           </TabsContent>
 
           <TabsContent value="safety">
                 <Accordion className='my-10' type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Nuclear energy countinues to be the <span className='acc-span'>safest and cleanest form of energy</span> mankind has ever known, even after <span className='acc-span'>extremely rare accidents</span> like Chernobyl are taken into consideration</AccordionTrigger>
+                    <AccordionTrigger>Nuclear energy continues to be the <span className='acc-span'>safest and cleanest form of energy</span> mankind has ever known, even after <span className='acc-span'>extremely rare accidents</span> like Chernobyl are taken into consideration</AccordionTrigger>
                     <AccordionContent>
                       Since adopting nuclear energy, France has seen <span className='acc-span'>economic growth and reduced carbon emissions.</span> Nuclear power fueled industrial expansion, <span className='acc-span'>provided stable, low-cost energy, and reduced emissions</span>, making <span className='acc-span'>France's per capita CO₂ emissions among the lowest in the developed world.</span>
                     </AccordionContent>
@@ -92,18 +91,18 @@ export default function Home() {
           <TabsContent value="waste">
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger>Nuclear waste is <span className='acc-span'>highly recyclable, with spent fuel containing up to 90% of its energy potential</span>. Countries like France, Russia, and Japan already reprocess nuclear waste. The technology already exists and needs to be <span className='acc-span'>scaled up</span> to be more effective</AccordionTrigger>
+                      <AccordionTrigger>Nuclear waste is <span className='acc-span'>highly recyclable, with spent fuel containing up to 90% of its energy potential</span>. Countries like France, Russia, and Japan have been reprocessing nuclear waste for years. The technology already exists and needs to be <span className='acc-span'>scaled up</span> to be more effective</AccordionTrigger>
                       <AccordionContent>
                           The U.S. stockpile of used nuclear fuel conatins <span className='acc-span'>enough energy to power the nation for 200 years</span>. The untapped potential of nuclear recycling can enhance energy security and sustainability.
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
 
-                <InViewFade className='my-10'><NuclearWaste className="bg-[--secondary-chart-bg]" data={data.nuclearWaste} country={country}/></InViewFade>          
+                <InViewFade className='my-10'><NuclearWaste className="bg-[--secondary-chart-bg]" data={data.nuclearWaste}/></InViewFade>          
                 
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger>The myth that nuclear waste is an insurmountable problem is exaggerated. It is categorized into four types based on radioactivity and longevity: High-Level Waste (HLW) consists mainly of spent nuclear fuel, Intermediate-Level Waste (ILW) and Low-Level Waste (LLW) which includes items like contaminated clothing, tools, and filters, each type has its own storage requirements</AccordionTrigger>
+                      <AccordionTrigger icon={false}>The myth that nuclear waste is an insurmountable problem is exaggerated. <span className='acc-span'>Only a small fraction of waste about 3%</span>, is required to either be <span className='acc-span'>recycled</span> or disposed off into long-term isolation in well-managed geological repositories <span className='acc-span'>isolated from human contact and the environment</span>. The total volume of waste globally is <span className='acc-span'>minimal</span> compared to waste from fossil fuels.</AccordionTrigger>
                     </AccordionItem>
                 </Accordion>
 

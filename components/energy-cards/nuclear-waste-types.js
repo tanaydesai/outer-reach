@@ -11,10 +11,10 @@ export const NuclearWasteTypes = ({className}) => {
         <div className={`chart ${className}`}>
             <h1 className='chart-title'>Breakdown of nuclear waste by type</h1>
             <NuclearWasteTypesChart className='w-full h-[300px] mt-4'/>
-            <Menu />
-            <div className='cursor-default sm:flex'>
+            <Menu sources={{"World Nuclear Association": "https://world-nuclear.org/nuclear-essentials/what-is-nuclear-waste-and-what-do-we-do-with-it"}}/>
+            <div className='cursor-default'>
                 <div className='chart-number'><NumberFlow value={0.03} format={{style: 'percent'}}/></div>
-                <div className='chart-desc'>of nuclear waste is high-level waste i.e spent fuel (95% radioactivity) contrary to myths about nuclear energy producing a lot of radioactive waste</div>
+                <div className='chart-desc'>of nuclear waste is high-level waste i.e spent fuel (95% radioactivity).</div>
             </div>
         </div>
     )

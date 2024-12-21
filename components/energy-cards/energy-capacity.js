@@ -30,7 +30,7 @@ export const EnergyCapacities = ({className, data, country}) => {
                     <PlannedCapacity className='w-full h-[400px] mt-4'/>
                 </TabsContent2> */}
             </Tabs2>
-            <Menu />
+            <Menu sources={{"Ember data":"https://ember-energy.org/data/electricity-data-explorer/"}}/>
             <div className='cursor-default sm:flex'>
                 <div className='chart-number'><NumberFlow value={value}/>GW</div>
                 <div className='chart-desc'>current comulative clean energy capacity as of {data.at(-1)["Year"]}.</div>
