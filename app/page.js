@@ -18,21 +18,23 @@ export default function Home() {
       <div className='main'>
         <div className='frame'>
 
-         <div className='frame-content'>
-            <Marquee delay={3} className='h-[260px] sm:h-[310px] md:h-[450px] mt-3 overflow-hidden' autoFill speed={50}>
-              <InViewFade delay={600} className='w-full px-5 gap-10 grid grid-cols-3'>
-                <Image src={img} className='w-[250px] md:w-[300px] h-auto'/>
-                <Image src={img2} className='w-[270px] md:w-[315px] h-auto'/>
-                <Image src={img3} className='w-[250px] md:w-[300px] h-auto'/>
+         <div className='frame-content px-0'>
+            <Marquee delay={3} className='h-[50%] md:h-[60%] mt-10 overflow-hidden' autoFill speed={50}>
+              <InViewFade delay={600} className='w-full px-3 gap-10 grid grid-cols-3'>
+                <Image src={img} className='w-[280px] md:w-[300px] h-auto'/>
+                <Image src={img2} className='w-[300px] md:w-[315px] h-auto'/>
+                <Image src={img3} className='w-[280px] md:w-[300px] h-auto'/>
               </InViewFade>
             </Marquee>
-            <InViewFade initialDelay={500}><TextRevealWipe className='title mt-7'>Welcome to,</TextRevealWipe></InViewFade>
-            <div className='h-[80px] items-center flex w-full'>
-                <InViewFade initialDelay={1000}><TextRevealWipe delay={1} className='title'>Outer</TextRevealWipe></InViewFade>
-                <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2, duration: 0.6}}}><EarthIcon className='stroke-[#837e77] hover:stroke-[--primary-text] mt-4 w-fit' size={65}/></motion.div>
-                <TextRevealWipe delay={1.3} className='title'>Reach</TextRevealWipe>
+            <div className='absolute bottom-4 px-3 w-full'>
+              <InViewFade initialDelay={500}><TextRevealWipe className='title mt-7'>Welcome to,</TextRevealWipe></InViewFade>
+              <div className='h-[80px] items-center flex w-full'>
+                  <InViewFade initialDelay={1000}><TextRevealWipe delay={1} className='title'>Outer</TextRevealWipe></InViewFade>
+                  <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2, duration: 0.6}}}><EarthIcon className='stroke-[#837e77] hover:stroke-[--primary-text] mt-4 w-fit' size={65}/></motion.div>
+                  <TextRevealWipe delay={1.3} className='title'>Reach</TextRevealWipe>
+              </div>
+              <InViewFade initialDelay={2500} className='description'>Data and insights tracking the progress and contribution of humanity's frontier technologies that are leading us to a world of abundance</InViewFade>
             </div>
-            <InViewFade initialDelay={2500} className='description'>Data and insights tracking the progress and contribution of humanity's frontier technologies that are leading us to a world of abundance</InViewFade>
           </div>
 
           <div className='frame-bar'>
