@@ -31,7 +31,7 @@
         @apply text-[40px] sm:text-[55px] md:text-[65px] w-fit text-[--primary-text] font-a1 md:leading-[65px] md:h-[75px]
     }
     .description {
-        @apply text-[15px] md:w-[75%] text-[--primary-text] leading-6 font-a1 mt-2 h-auto
+        @apply text-[15px] sm:w-[75%] text-[--primary-text] leading-6 font-a1 mt-2 h-auto
     }
     .tag {
         @apply text-[11px] uppercase px-4 text-[--secondary-text] font-a1 flex items-center cursor-default

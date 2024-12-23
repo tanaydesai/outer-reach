@@ -19,11 +19,11 @@ export default function Home() {
         <div className='frame'>
 
          <div className='frame-content px-0'>
-            <Marquee delay={3} className='h-[50%] md:h-[60%] mt-10 overflow-hidden' autoFill speed={50}>
+            <Marquee delay={3} className='h-[50%] sm:h-[60%] mt-10 overflow-hidden' autoFill speed={50}>
               <InViewFade delay={600} className='w-full px-3 gap-10 grid grid-cols-3'>
-                <Image src={img} className='w-[280px] md:w-[300px] h-auto'/>
-                <Image src={img2} className='w-[300px] md:w-[315px] h-auto'/>
-                <Image src={img3} className='w-[280px] md:w-[300px] h-auto'/>
+                <Image src={img} className='w-[280px] sm:w-[300px] h-auto'/>
+                <Image src={img2} className='w-[300px] sm:w-[315px] h-auto'/>
+                <Image src={img3} className='w-[280px] sm:w-[300px] h-auto'/>
               </InViewFade>
             </Marquee>
             <div className='absolute bottom-4 px-3 w-full'>
