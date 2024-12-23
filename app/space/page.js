@@ -42,7 +42,7 @@ export default function Home() {
           <TabsContent value="launch">
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                    <AccordionTrigger>SpaceX's Falcon 9 have been transformative in the growth of orbital launches for the U.S., <span className='acc-span'>making space more accessible and affordable</span>. Falcon 9s reusability has dramatically reduced launch can making <span className='acc-span'>traditional expendable rockets look antique</span></AccordionTrigger>
+                    <AccordionTrigger>SpaceX's Falcon 9 have been transformative in the growth of orbital launches for the U.S. <span className='acc-span'>making space more accessible and affordable</span>. Falcon 9s reusability has dramatically reduced launch can making <span className='acc-span'>traditional expendable rockets look antique</span></AccordionTrigger>
                     <AccordionContent>
                         SpaceX's <span className='acc-span'>rapid turnaround times and streamlined operations</span> has bolstered confidence in U.S. launch capabilities and allowed it to perform more annual launches than any other nation leading to <span className='acc-span'>F9s dominance in the global launch market</span>.</AccordionContent>
                     </AccordionItem>

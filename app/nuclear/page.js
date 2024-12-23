@@ -44,9 +44,9 @@ export default function Home() {
           <TabsContent value="gen">
                 <Accordion className='my-10' type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Nuclear energy stands out for its ability to provide <span className='acc-span'>continuous, reliable, low-carbon power on a massive scale</span>. <span className='acc-span'>Decades of nuclear usage</span> by France and South Korea with <span className='acc-span'>minimal-to-no incidents</span> and major strides in <span className='acc-span'>nuclear fuel recycling</span> and long-term waste management is testament to this</AccordionTrigger>
+                    <AccordionTrigger>Nuclear energy remains unparalleled in its ability to deliver <span className='acc-span'>continuous, reliable, and low-carbon power on a large scale</span>. France and South Korea's <span className='acc-span'>decades-long use</span> of nuclear energy, with <span className='acc-span'>minimal incidents</span> and advancements in <span className='acc-span'>fuel recycling</span> and waste management, underscores its safety and sustainability</AccordionTrigger>
                     <AccordionContent>
-                      The rapid increase in China's nuclear energy generation <span className="acc-span">should serve as a wake up call</span> for a ever more power hungry world to follow suit and <span className='acc-span'>accelerate</span> their nuclear energy programs, <span className='acc-span'>undoing the decades worth of damage </span> caused by <span className='acc-span'>nuclear fearmongering</span>.
+                      China's <span className='acc-span'>rapid expansion</span> in nuclear generation serves as a critical wake-up call for an increasingly energy-hungry world. It highlights the urgent need to <span className='acc-span'>accelerate nuclear programs</span> and counteract the decades of setbacks caused by <span className='acc-span'>unfounded nuclear fearmongering</span>.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -65,9 +65,9 @@ export default function Home() {
                   
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger><span className='acc-span'>China and India</span> are the only countries with significant number of nuclear reactors <span className='acc-span'>under construction</span>. China's unified reactor design and <span className='acc-span'>lack of legal barriers with minimal public opposition</span> allows it to rapidly expand its capacity which will soon exceed that of the U.S</AccordionTrigger>
+                    <AccordionTrigger><span className='acc-span'>China and India</span> are leading the way in nuclear expansion, with a significant number of reactors <span className='acc-span'>under construction</span>. <span className='acc-span'>China's</span> streamlined reactor design, <span className='acc-span'>absence of legal barriers,</span> and <span className='acc-span'>minimal public opposition</span> have enabled it to rapidly grow its capacity, which is poised to <span className='acc-span'>surpass</span> that of the United States</AccordionTrigger>
                       <AccordionContent>
-                        Other developed countries are <span className='acc-span'>plagued by their own regulations and policies</span> along with an aversion to risk around nuclear power, have hindered the construction of new nuclear reactors. <span className='acc-span'>Better education around its benefits, safety, economic incentives and reduction in regulations</span> is paramount to the development of new reactors that are in <span className='acc-span'>higher need and demand</span> today than ever before.
+                        In contrast, many developed nations are hampered by <span className='acc-span'>restrictive regulations</span>, <span className='acc-span'>risk aversion</span>, and <span className='acc-span'>outdated policies</span> that stifle nuclear development. Addressing these challenges through <span className='acc-span'>better public education</span> on nuclear energy's safety and benefits, coupled with <span className='acc-span'>economic incentives</span> and reduced regulatory hurdles, is critical to meeting the surging demand for <span className='acc-span'>reliable, clean energy</span>. 
                       </AccordionContent>
                     </AccordionItem>
                 </Accordion>
@@ -78,9 +78,9 @@ export default function Home() {
           <TabsContent value="safety">
                 <Accordion className='my-10' type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Nuclear energy continues to be the <span className='acc-span'>safest and cleanest form of energy</span> mankind has ever known, even after <span className='acc-span'>extremely rare accidents</span> like Chernobyl are taken into consideration</AccordionTrigger>
+                    <AccordionTrigger>Nuclear energy remains the <span className='acc-span'>safest and cleanest energy source</span> humanity has ever harnessed, even when accounting for <span className='acc-span'>rare incidents</span> like Chernobyl</AccordionTrigger>
                     <AccordionContent>
-                      Since adopting nuclear energy, France has seen <span className='acc-span'>economic growth and reduced carbon emissions.</span> Nuclear power fueled industrial expansion, <span className='acc-span'>provided stable, low-cost energy, and reduced emissions</span>, making <span className='acc-span'>France's per capita CO₂ emissions among the lowest in the developed world.</span>
+                      France's adoption of nuclear power has driven <span className='acc-span'>significant economic growth</span> and <span className='acc-span'>reduced carbon emissions</span>. It has powered <span className='acc-span'>industrial expansion</span>, ensured <span className='acc-span'>stable and low-cost electricity</span>, and contributed to making France's <span className='acc-span'>per capita CO₂ emissions among the lowest</span> in the developed world.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -91,9 +91,9 @@ export default function Home() {
           <TabsContent value="waste">
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger>Nuclear waste is <span className='acc-span'>highly recyclable, with spent fuel containing up to 90% of its energy potential</span>. Countries like France, Russia, and Japan have been reprocessing nuclear waste for years. The technology already exists and needs to be <span className='acc-span'>scaled up</span> to be more effective</AccordionTrigger>
+                      <AccordionTrigger>Nuclear waste is <span className='acc-span'>highly recyclable, with spent fuel containing up to 90% of its energy potential</span>. Countries like France, Russia, and Japan have been reprocessing nuclear waste for years. While the technology already exists, it needs to be broadly <span className='acc-span'>scaled up</span> to be more impactful</AccordionTrigger>
                       <AccordionContent>
-                          The U.S. stockpile of used nuclear fuel conatins <span className='acc-span'>enough energy to power the nation for 200 years</span>. The untapped potential of nuclear recycling can enhance energy security and sustainability.
+                          The current U.S. stockpile of used nuclear fuel conatins <span className='acc-span'>enough energy to power the nation for 200 years</span>. The untapped potential of nuclear recycling can enhance energy security and global sustainability.
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -102,7 +102,7 @@ export default function Home() {
                 
                 <Accordion className='my-10' type="single" collapsible>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger icon={false}>The myth that nuclear waste is an insurmountable problem is exaggerated. <span className='acc-span'>Only a small fraction of waste about 3%</span>, is required to either be <span className='acc-span'>recycled</span> or disposed off into long-term isolation in well-managed geological repositories <span className='acc-span'>isolated from human contact and the environment</span>. The total volume of waste globally is <span className='acc-span'>minimal</span> compared to waste from fossil fuels.</AccordionTrigger>
+                      <AccordionTrigger icon={false}>The myth that nuclear waste is an insurmountable problem is exaggerated. <span className='acc-span'>Only a small fraction (3%) of waste </span>, is required to either be <span className='acc-span'>recycled</span> or disposed off into long-term isolation in well-managed geological repositories <span className='acc-span'>isolated from human contact and the environment</span>. The total volume of waste globally is <span className='acc-span'>minimal</span> compared to waste from fossil fuels.</AccordionTrigger>
                     </AccordionItem>
                 </Accordion>
 

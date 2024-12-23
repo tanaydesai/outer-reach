@@ -49,9 +49,9 @@ export default function Home() {
           <TabsContent value="mix">
                 <Accordion className='my-10' type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland get {">"} 90%</span> of their electricity from <span className="acc-span">Renewables and Nuclear</span>, strengthening their <span className="acc-span">energy security</span>, lowering their <span className="acc-span">carbon emissions</span> and growing their <span className="acc-span">economies</span></AccordionTrigger>
+                    <AccordionTrigger>Countries like <span className="acc-span">Norway, France and Iceland derive over 90%</span> of their electricity from a mix of <span className="acc-span">Renewables and Nuclear power</span>, demonstrating the dual benefits of <span className="acc-span">enhanced energy security</span> and drastically <span className="acc-span">reduced carbon emissions</span> while fueling <span className="acc-span">sustained economic growth</span></AccordionTrigger>
                     <AccordionContent>
-                      While the world already gets almost <span className="acc-span">40% of its electricity </span> from <span className="acc-span">clean energy sources</span>, it is racing to get more capacity online especially <span className="acc-span">Nuclear</span> given it's reliability and energy output to power major <span className="acc-span">power hungry developing nations</span> and industries particularly in <span className="acc-span">artificial intelligence and data centers</span>.
+                      Globally, <span className="acc-span">clean energy sources</span> already account for nearly <span className="acc-span">40% of electricity generation</span>, but the urgent push to scale capacity is accelerating, with <span className="acc-span">nuclear energy</span> at the forefront. Its unparalleled <span className="acc-span">reliability</span> and high <span className="acc-span">energy output</span> make it indispensable for powering <span className="acc-span">energy-intensive industries</span>, especially <span className="acc-span">artificial intelligence</span> and <span className="acc-span">data centers</span>, and the growing needs of <span className="acc-span">developing nations</span>.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -60,9 +60,9 @@ export default function Home() {
                
                <Accordion className="my-10" type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>The more energy a nation consumes, the <span className="acc-span">more prosperous</span> it becomes. Countries like <span className="acc-span">India</span> are increasing their energy consumption rapidly  while some like <span className="acc-span">the UK</span> are <span className="acc-span">losing</span> ground. Global share of <span className="acc-span">renewables and nuclear</span> in the mix <span className="acc-span">continues to rise at an evolving pace</span></AccordionTrigger>
+                  <AccordionTrigger>Energy consumption is a direct driver of <span className="acc-span">prosperity</span>—nations that consume more energy have <span className="acc-span">greater economic growth</span>. Countries like <span className="acc-span">India</span> are rapidly increasing their energy use to fuel <span className="acc-span">modernization</span>, while others like <span className="acc-span">the UK</span> risk <span className="acc-span">stagnation</span> as energy consumption declines. The global share of <span className="acc-span">renewables and nuclear energy</span> continues to rise, reshaping the energy mix at an <span className="acc-span">accelerating pace</span></AccordionTrigger>
                   <AccordionContent>
-                   France is one of the few developed countries that has realised the <span className="acc-span">full potential of nuclear energy</span>. While the fateful decision of <span className="acc-span">Germany</span>-a country already heavily reliant on <span className="acc-span">energy imports</span>-<span className="acc-span">to phase out its</span> nuclear reactors after caving into <span className="acc-span">anti-nuclear sentiment</span> amoung <span className="acc-span">misinformed</span> environmentalists is only just being realised as a <span className="acc-span">grave mistake</span> amid the <span className="acc-span">2022 Russia-Ukraine war</span>, rising <span className="acc-span">fossil fuel emissions</span> and <span className="acc-span">economic instability</span>.
+                    France stands out as a developed nation that has fully harnessed the <span className="acc-span">potential of nuclear energy</span>, securing both <span className="acc-span">economic stability</span> and <span className="acc-span">energy independence</span>. In stark contrast, Germany's <span className="acc-span">ill-advised decision</span>, taken by a country heavily reliant on energy imports, to phase out its nuclear reactors, influenced by political motives and <span className="acc-span">anti-nuclear sentiment</span> among <span className="acc-span">misinformed environmentalists</span>, is only now being finally recognized as a <span className="acc-span">critical error</span>. This <span className="acc-span">misstep</span>, compounded by the <span className="acc-span">2022 Russia-Ukraine war</span>, has exposed Germany’s vulnerability to <span className="acc-span">energy security</span>, <span className="acc-span">rising fossil fuel emissions</span>, and <span className="acc-span">economic instability</span>.
                   </AccordionContent>
                 </AccordionItem>
                </Accordion>
@@ -76,7 +76,7 @@ export default function Home() {
 
                 <Accordion className="my-10" type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger className="my-10" icon={false}><span className="acc-span">Clean energy</span> consumption is <span className="acc-span">on the rise</span> while fossil fuel consumption is <span className="acc-span">falling or remains stagnant</span>.</AccordionTrigger>
+                    <AccordionTrigger className="my-10" icon={false}><span className="acc-span">Clean energy</span> consumption is <span className="acc-span">steadily rising</span>, driven by the global shift toward <span className="acc-span">renewables and nuclear power</span>, while <span className="acc-span">fossil fuel consumption</span> is either <span className="acc-span">stagnant or declining</span> in many regions.</AccordionTrigger>
                   </AccordionItem>
                 </Accordion>
 
@@ -89,9 +89,9 @@ export default function Home() {
           <TabsContent value="capacity">
                 <Accordion className="my-10" type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>Capacity additions of <span className="acc-span">solar and wind</span> are through the moon and <span className="acc-span">accelerating</span> further. The projected 2030 clean energy capacity is <span className="acc-span">six times</span> the current levels and becoming <span className="acc-span">more plausible</span> everyday</AccordionTrigger>
+                    <AccordionTrigger><span className="acc-span">Solar and wind</span> capacity additions are <span className="acc-span">skyrocketing</span> and continue to <span className="acc-span">accelerate</span>. Projections for 2030 estimate <span className="acc-span">clean energy</span> capacity to reach <span className="acc-span">six times</span> current levels, a target that grows more <span className="acc-span">attainable</span> each day</AccordionTrigger>
                     <AccordionContent>
-                    Countries like <span className="acc-span">China lead</span> the world in <span className="acc-span">solar and wind</span> capacity and upcoming nuclear installations. While the <span className="acc-span">United States</span> leads in <span className="acc-span">nuclear</span> capacity.
+                      <span className="acc-span">China</span> dominates in <span className="acc-span">solar and wind</span> installations while also advancing upcoming <span className="acc-span">nuclear</span> projects, whereas the <span className="acc-span">United States</span> remains the global leader in <span className="acc-span">nuclear</span> capacity.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -113,9 +113,9 @@ export default function Home() {
           <TabsContent value="economics">
                 <Accordion className="my-10" type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger>There is <span className="acc-span">no energy rich poor country.</span> Nations like Norway, Qatar, and the U.S. have leveraged <span className="acc-span">energy abundance</span> into becoming economic powerhouses</AccordionTrigger>
+                    <AccordionTrigger>There are <span className="acc-span">no energy-rich poor countries</span>. Nations like <span className="acc-span">Norway, Qatar, and the U.S.</span> have leveraged <span className="acc-span">energy abundance</span> into becoming <span className="acc-span">global powerhouses</span></AccordionTrigger>
                     <AccordionContent>
-                      The <span className='acc-span'>direct corelation</span> between energy consumption and prosperity can perfectly be seen in developing economies like <span className="acc-span">India and Indonesia</span> where the <span className="acc-span">rise in energy consumption</span> has resulted in an <span className="acc-span">simultaneous increase in GDP per capita </span> in the past decade.
+                      This <span className="acc-span">direct correlation</span> between <span className="acc-span">energy consumption</span> and <span className="acc-span">prosperity</span> is evident in developing economies like <span className="acc-span">India and Indonesia</span>, where <span className="acc-span">rising energy consumption</span> over the past decade has driven <span className="acc-span">simultaneous increases in GDP per capita </span>.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -128,9 +128,9 @@ export default function Home() {
           <TabsContent value="leaderboards" className="overflow-none">
                 <Accordion className="my-10" type="single" collapsible>
                   <AccordionItem value="item-1">
-                    <AccordionTrigger><span className="acc-span">Iceland, Norway and Luxembourg</span> lead the world in share of <span className="acc-span">renewables</span> in the electricity mix. With the former two having the <span className="acc-span">largest energy consumption per capitas</span> in the world</AccordionTrigger>
+                    <AccordionTrigger><span className="acc-span">Iceland, Norway, and Luxembourg</span> lead the world in the share of <span className="acc-span">renewables</span> in their electricity mix, with the former two having the <span className="acc-span">largest energy consumption per capitas</span> in the world</AccordionTrigger>
                     <AccordionContent>
-                      Where as <span className="acc-span">France and Denmark</span> have the highest <span className="acc-span">share of nuclear and wind energy</span> in their electricity mix, respectively. <span className='acc-span'>Norway</span> is the global leader in <span className="acc-span">hydro power</span> with a share of 65% of the energy mix.
+                      <span className="acc-span">France and Denmark</span> dominate in <span className="acc-span">nuclear and wind energy</span>, respectively, with the highest shares in their electricity mix. Meanwhile, <span className="acc-span">Norway</span> stands as the global leader in <span className="acc-span">hydropower</span>, which accounts for 65% of its total energy mix.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

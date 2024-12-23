@@ -18,7 +18,7 @@ export default function Home() {
         <div className='frame'>
 
          <div className='frame-content'>
-            <Marquee delay={3} className='h-[260px] sm:h-[310px] md:h-[450px] mt-6 sm:mt-5 lg:mt-6 overflow-hidden' autoFill speed={50}>
+            <Marquee delay={3} className='h-[260px] sm:h-[310px] md:h-[450px] mt-3 overflow-hidden' autoFill speed={50}>
               <InViewFade delay={600} className='w-full px-5 gap-10 grid grid-cols-3'>
                 <Image src={img} className='w-[250px] md:w-[300px] h-auto'/>
                 <Image src={img2} className='w-[270px] md:w-[315px] h-auto'/>
