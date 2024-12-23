@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { InViewFade } from '@/components/fade'
 import { TextRevealWipe } from '@/components/swipe'
 import { EarthIcon } from '@/components/icons';
+import { Github } from 'lucide-react';
 import img from "@/assests/images/c.png"
 import img2 from "@/assests/images/a.png"
 import img3 from "@/assests/images/d.png"
@@ -38,7 +39,7 @@ export default function Home() {
             <div className='md:absolute bottom-0 flex md:block w-full'>
               <InViewFade initialDelay={600} className='flex-1 py-3'>
                 <h1 className='tag justify-between flex-1'>EST <h1>2024</h1></h1>
-                <h1 className='tag justify-between flex-1 my-3'>BY <Link href={'https://tanaydesai.com'} className='hover:text-[--primary-text]'>Tanay Desai</Link></h1>
+                <h1 className='tag justify-between flex-1 my-3'>BY <div className='flex gap-1 items-center'><Link href={'https://tanaydesai.com'} className='hover:text-[--primary-text]'>Tanay Desai /</Link><Link href={'https://github.com/tanaydesai/outer-reach'} className='hover:text-[--primary-text]'><Github size={11} /></Link></div></h1>
               </InViewFade>
               <Link className='frame-button' href={'/energy'}>Next</Link>
             </div>
