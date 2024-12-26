@@ -33,8 +33,8 @@ export default function Home() {
           <TabsContent value="home">
               <Card img={pic}/>
               <InViewFade delay={500} className='flex-1 absolute bottom-3 pr-3'>
-                <TextRevealWipe className='title'>The Golden Age</TextRevealWipe>
-                <TextRevealWipe delay={1.2} className='title'>of Space</TextRevealWipe>
+                <TextRevealWipe className='title'>The Space</TextRevealWipe>
+                <TextRevealWipe delay={1.2} className='title'>Renaissance</TextRevealWipe>
                 <div className='description'>Historical space launch data, private orbital service providers and their launch costs, and the impact of starlink.</div>
               </InViewFade>
           </TabsContent>
