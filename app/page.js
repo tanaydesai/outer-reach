@@ -33,7 +33,7 @@ export default function Home() {
                   <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2, duration: 0.6}}}><EarthIcon className='stroke-[#837e77] hover:stroke-[--primary-text] mt-4 w-fit' size={65}/></motion.div>
                   <TextRevealWipe delay={1.3} className='title'>Reach</TextRevealWipe>
               </div>
-              <InViewFade initialDelay={2500} className='description'>Data and insights tracking the progress and contribution of humanity's frontier technologies that are leading us to a world of abundance</InViewFade>
+              <InViewFade initialDelay={2500} className='description'>A positive, unified and factual way to look at the progress and contribution of humanity's frontier technologies that are leading us to a world of abundance</InViewFade>
             </div>
           </div>
 
