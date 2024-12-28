@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 const title = 'OUTER REACH'
 const description = "Where the bells of progress ring"
-const url = 'https://outerreach.vercel.app/'
+const url = 'https://outerreach.xyz/'
 const image =`${url}og.png`
 
 export const metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body className={inter.className}>
           <Navbar />
